@@ -916,7 +916,7 @@ MonoBehaviour:
   m_XAxis:
     Value: 0
     m_SpeedMode: 0
-    m_MaxSpeed: 300
+    m_MaxSpeed: 150
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: 
@@ -1095,7 +1095,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600546080}
-  m_LocalRotation: {x: 0.067480974, y: 0.000001875708, z: -0.00000012686378, w: 0.9977206}
+  m_LocalRotation: {x: 0.06748099, y: 0.000001875708, z: -0.00000012686381, w: 0.9977206}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1180,7 +1180,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659438774}
-  m_LocalRotation: {x: 0.031194292, y: 0.0000018791453, z: -0.000000058647156, w: 0.9995133}
+  m_LocalRotation: {x: 0.031194294, y: 0.0000018447157, z: -0.000000057572624, w: 0.9995133}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
