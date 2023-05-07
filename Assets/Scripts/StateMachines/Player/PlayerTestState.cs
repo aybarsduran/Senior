@@ -10,25 +10,24 @@ public class PlayerTestState : PlayerBaseState
 
     public override void Enter()
     {
-        stateMachine.InputReader.JumpEvent += OnJump;
+
     }
     public override void Tick(float deltaTime)
     {
+        Vector3 movement = new Vector3();
+        movement.x = stateMachine.InputReader.MovementValue.x;
+        movement.y = 0; //we don't want to any player fly :)
+        movement.z = stateMachine.InputReader.MovementValue.y;
 
-        timer += deltaTime;
-        Debug.Log(timer);
-
-       
+        //stateMachine.transform.Translate(movement * deltaTime );
+        stateMachine.CharacterController.Move(movement * stateMachine.FreeLookMovementSpeed * deltaTime);
+        //for see n the console debug
+        //Debug.Log(stateMachine.InputReader.MovementValue);
     }
     public override void Exit()
     {
-        stateMachine.InputReader.JumpEvent -= OnJump ;
     }
 
-    private void OnJump()
-    {
-        stateMachine.SwitchState(new PlayerTestState(stateMachine));
-
-    }
+   
 
 }
