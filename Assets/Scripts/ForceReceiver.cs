@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class ForceReceiver : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private CharacterController controller;
 
-    // Update is called once per frame
-    void Update()
+    private float verticalVelocity;
+    
+    public Vector3 Movement => Vector3.up * verticalVelocity;
+
+    private void Update()
     {
-        
+        if (verticalVelocity < 0f  && controller.isGrounded)
+        {
+            verticalVelocity = Physics.gravity.y * Time.deltaTime;
+        }
+        else
+        {
+            verticalVelocity += Physics.gravity.y * Time.deltaTime;
+        }
     }
 }

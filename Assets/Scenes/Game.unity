@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2159.747, g: 2263.621, b: 3286.6172, a: 1}
+  m_IndirectSpecularColor: {r: 2025.4912, g: 1991.5605, b: 2398.6445, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -944,7 +944,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1968780300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.7708564, y: 2.741631, z: -1.2111213}
+  m_LocalPosition: {x: 5.7708564, y: -0.79, z: -1.2111213}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1139,17 +1139,17 @@ PrefabInstance:
     - target: {fileID: 3643704174962354419, guid: 75313a3751be37144a83e6fbe2dca00b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.031194294
+      value: 0.031194292
       objectReference: {fileID: 0}
     - target: {fileID: 3643704174962354419, guid: 75313a3751be37144a83e6fbe2dca00b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000018790447
+      value: 0.0000018446151
       objectReference: {fileID: 0}
     - target: {fileID: 3643704174962354419, guid: 75313a3751be37144a83e6fbe2dca00b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000058644016
+      value: -0.000000057569476
       objectReference: {fileID: 0}
     - target: {fileID: 3643704175288798057, guid: 75313a3751be37144a83e6fbe2dca00b,
         type: 3}
@@ -1179,12 +1179,12 @@ PrefabInstance:
     - target: {fileID: 3643704175288798057, guid: 75313a3751be37144a83e6fbe2dca00b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000018413737
+      value: 0.000001875708
       objectReference: {fileID: 0}
     - target: {fileID: 3643704175288798057, guid: 75313a3751be37144a83e6fbe2dca00b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000001245416
+      value: -0.00000012686381
       objectReference: {fileID: 0}
     - target: {fileID: 4158836097057911175, guid: 75313a3751be37144a83e6fbe2dca00b,
         type: 3}
