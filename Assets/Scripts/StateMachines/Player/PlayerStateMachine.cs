@@ -12,7 +12,10 @@ public class PlayerStateMachine : StateMachine
 
     [field: SerializeField] public float RotationDamping { get; private set; }
     [field: SerializeField] public Animator Animator{ get; private set; }
+
+    [field: SerializeField] public Targeter Targeter { get; private set; }
     public Transform MainCameraTransform { get; private set; }
+
 
 
     private void Start()
