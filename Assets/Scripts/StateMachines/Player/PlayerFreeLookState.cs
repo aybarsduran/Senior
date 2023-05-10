@@ -26,8 +26,10 @@ public class PlayerFreeLookState : PlayerBaseState
         //movement.y = 0; //we don't want to any player fly :)
         //movement.z = stateMachine.InputReader.MovementValue.y;
 
+        Move(movement * stateMachine.FreeLookMovementSpeed, deltaTime);
+
         //  stateMachine.transform.Translate(movement * deltaTime );
-        stateMachine.CharacterController.Move(movement * stateMachine.FreeLookMovementSpeed * deltaTime);
+        //stateMachine.CharacterController.Move(movement * stateMachine.FreeLookMovementSpeed * deltaTime);
         //for see n the console debug
         //Debug.Log(stateMachine.InputReader.MovementValue);
 
