@@ -21,6 +21,11 @@ public class PlayerTargetingState : PlayerBaseState
     }
     public override void Tick(float deltaTime)
     {
+        if (stateMachine.InputReader.IsAttacking)
+        {
+            stateMachine.SwitchState(new PlayerAttackingState(stateMachine, 0)); //We always want to go to the frst attack in the list.
+            return; 
+        }
         if(stateMachine.Targeter.CurrentTarget == null)
         {
             stateMachine.SwitchState(new PlayerFreeLookState(stateMachine));
