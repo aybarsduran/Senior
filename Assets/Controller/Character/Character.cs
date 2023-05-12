@@ -37,7 +37,7 @@ namespace IdenticalStudios
             SetupBaseReferences();
         }
 
-        protected virtual void Start()
+        protected virtual void Start() // virtual alt siniflarýn methodu yeniden tanýimlayabilmesi icin
         {
             IsInitialized = true;
             Initialized?.Invoke();
