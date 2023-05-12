@@ -13,20 +13,20 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PostProcessOverlay
+  - IgnoreCharacter
+  - ThirdPerson
+  - FirstPerson
+  - PostProcessWorld
+  - Buildable
+  - BuildablePreview
+  - Ragdoll
+  - Hitbox
+  - Character
+  - Ground
+  - CharacterPreview
+  - IgnoreCollisions
+  - CharacterTrigger
   - 
   - 
   - 
