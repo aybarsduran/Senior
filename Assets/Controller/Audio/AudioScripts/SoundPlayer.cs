@@ -64,6 +64,7 @@ namespace IdenticalStudios
                 return;
 
             AudioClip clipToPlay = m_AudioClips.Select(ref m_LastClipPlayed, selectionMethod);
+            AudioManager.Play2D(clipToPlay, m_Volume.Jitter(m_VolumeJitter) * volumeFactor);
         }
 
         protected virtual bool CanPlay() => m_AudioClips.Length != 0;
