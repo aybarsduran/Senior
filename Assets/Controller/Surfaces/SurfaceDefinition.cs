@@ -10,8 +10,10 @@ namespace IdenticalStudios.Surfaces
     {
         #region Internal
         [Serializable]
+
         public class EffectPair
         {
+            public SoundPlayer AudioEffect;
             public GameObject VisualEffect;
         }
         #endregion
