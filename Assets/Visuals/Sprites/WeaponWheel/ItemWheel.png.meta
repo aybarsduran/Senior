@@ -1,0 +1,384 @@
+fileFormatVersion: 2
+guid: 88dbe77672a18a349997bf645e89ccfe
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3723448796723132483
+    second: ItemWheel_0
+  - first:
+      213: -4814893422132477732
+    second: ItemWheel_1
+  - first:
+      213: 5340741974242286234
+    second: ItemWheel_2
+  - first:
+      213: 3848382851142171708
+    second: ItemWheel_3
+  - first:
+      213: -3248888023910153045
+    second: ItemWheel_4
+  - first:
+      213: 2338561432587462050
+    second: ItemWheel_5
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 0
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ItemWheel_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 529
+        width: 519
+        height: 997
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 348b904f3f85ca330800000000000000
+      internalID: 3723448796723132483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemWheel_1
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 1318
+        width: 865
+        height: 713
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd0cd6661ff0e2db0800000000000000
+      internalID: -4814893422132477732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemWheel_2
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 1313
+        width: 862
+        height: 717
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9adab377802e1a40800000000000000
+      internalID: 5340741974242286234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemWheel_3
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 522
+        width: 521
+        height: 997
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3cb80240d3386530800000000000000
+      internalID: 3848382851142171708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemWheel_4
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 4
+        width: 862
+        height: 729
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba480db3e81a9e2d0800000000000000
+      internalID: -3248888023910153045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemWheel_5
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 14
+        width: 868
+        height: 717
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a5edc29b3d347020800000000000000
+      internalID: 2338561432587462050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -48, y: -1022}
+      - {x: -45, y: -1021}
+      - {x: -45, y: -1018}
+      - {x: -48, y: -1017}
+      - {x: -50, y: -1019}
+    - - {x: -506, y: -289}
+      - {x: -867, y: -428}
+      - {x: -867, y: -603}
+      - {x: -607, y: -1015}
+      - {x: -1, y: -1015}
+      - {x: -1, y: -558}
+      - {x: -465, y: -289}
+    - - {x: 452, y: -291}
+      - {x: 4, y: -564}
+      - {x: 4, y: -1012}
+      - {x: 348, y: -1012}
+      - {x: 876, y: -693}
+      - {x: 876, y: -500}
+      - {x: 554, y: -291}
+    - - {x: 753, y: -672}
+      - {x: 756, y: -677}
+      - {x: 759, y: -676}
+      - {x: 759, y: -672}
+      - {x: 757, y: -670}
+      - {x: 755, y: -670}
+    - - {x: 208, y: -515}
+      - {x: 208, y: -516}
+      - {x: 210, y: -518}
+      - {x: 213, y: -518}
+      - {x: 217, y: -514}
+      - {x: 216, y: -511}
+      - {x: 212, y: -511}
+    - - {x: 838, y: 497}
+      - {x: 491, y: 288}
+      - {x: 491, y: -342}
+      - {x: 780, y: -504}
+      - {x: 945, y: -504}
+      - {x: 1016, y: -218}
+      - {x: 1016, y: 297}
+      - {x: 883, y: 497}
+    - - {x: 281, y: -495}
+      - {x: 283, y: -496}
+      - {x: 285, y: -494}
+      - {x: 284, y: -495}
+      - {x: 282, y: -495}
+      - {x: 281, y: -496}
+      - {x: 282, y: -496}
+    - - {x: -861, y: 504}
+      - {x: -896, y: 504}
+      - {x: -1017, y: 383}
+      - {x: -1017, y: -253}
+      - {x: -974, y: -251}
+      - {x: -968, y: -244}
+      - {x: -967, y: -240}
+      - {x: -970, y: -237}
+      - {x: -972, y: -237}
+      - {x: -971, y: -236}
+      - {x: -968, y: -238}
+      - {x: -967, y: -240}
+      - {x: -966, y: -243}
+      - {x: -974, y: -254}
+      - {x: -975, y: -261}
+      - {x: -978, y: -290}
+      - {x: -941, y: -410}
+      - {x: -887, y: -497}
+      - {x: -857, y: -497}
+      - {x: -514, y: -312}
+      - {x: -494, y: -283}
+      - {x: -494, y: 232}
+      - {x: -495, y: 289}
+    - - {x: 465, y: 287}
+      - {x: 500, y: 287}
+      - {x: 870, y: 464}
+      - {x: 870, y: 597}
+      - {x: 710, y: 902}
+      - {x: 288, y: 1008}
+      - {x: 4, y: 1008}
+      - {x: 4, y: 538}
+    - - {x: -245, y: 1009}
+      - {x: -558, y: 916}
+      - {x: -870, y: 584}
+      - {x: -870, y: 473}
+      - {x: -851, y: 442}
+      - {x: -650, y: 292}
+      - {x: -247, y: 292}
+      - {x: -1, y: 544}
+      - {x: -1, y: 1009}
+    - - {x: -645, y: 827}
+      - {x: -647, y: 825}
+      - {x: -647, y: 822}
+      - {x: -645, y: 820}
+      - {x: -643, y: 820}
+      - {x: -640, y: 823}
+      - {x: -640, y: 825}
+      - {x: -642, y: 827}
+    - - {x: -462, y: 913}
+      - {x: -464, y: 911}
+      - {x: -464, y: 909}
+      - {x: -462, y: 907}
+      - {x: -460, y: 907}
+      - {x: -458, y: 909}
+      - {x: -458, y: 911}
+      - {x: -460, y: 913}
+    - - {x: -200, y: 1004}
+      - {x: -200, y: 1000}
+      - {x: -199, y: 997}
+      - {x: -189, y: 997}
+      - {x: -187, y: 998}
+      - {x: -187, y: 1001}
+      - {x: -191, y: 1005}
+      - {x: -198, y: 1005}
+    physicsShape: []
+    bones: []
+    spriteID: 569644131648802478b11ae3fa362374
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ItemWheel_2: 5340741974242286234
+      ItemWheel_0: 3723448796723132483
+      ItemWheel_3: 3848382851142171708
+      ItemWheel_1: -4814893422132477732
+      ItemWheel_4: -3248888023910153045
+      ItemWheel_5: 2338561432587462050
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
