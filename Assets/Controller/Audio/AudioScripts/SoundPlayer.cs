@@ -25,7 +25,8 @@ namespace IdenticalStudios
         [SerializeField, Range(0f, 0.5f)]
         protected float m_PitchJitter = 0.1f;
 
-        protected AudioClip[] m_AudioClips;
+      
+        public AudioClip[] m_AudioClips;
 
         protected int m_LastClipPlayed = -1;
 
