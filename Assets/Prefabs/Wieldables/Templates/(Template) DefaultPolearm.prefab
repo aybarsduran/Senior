@@ -1,0 +1,231 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3215517348330387606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2719503366286588037}
+  - component: {fileID: 7410252382933697957}
+  - component: {fileID: 7022657975396351349}
+  - component: {fileID: 2767706440137161203}
+  - component: {fileID: 8565870384692060253}
+  m_Layer: 0
+  m_Name: (Template) DefaultPolearm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2719503366286588037
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3215517348330387606}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8849472044664072435}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7410252382933697957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3215517348330387606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3fae7bec6d06547bd04c3f570713bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BaseCrosshair: 0
+  m_EquipDuration: 0.5
+  m_EquipEffects:
+    m_StaticEffects:
+    - rid: 4109054478827913310
+  m_HolsterDuration: 0.5
+  m_HolsterEffects:
+    m_StaticEffects: []
+    m_DynamicEffects:
+    - rid: 4109054478827913311
+  m_SwingContinuously: 1
+  m_ComboHandler: {fileID: 2767706440137161203}
+  m_BaseAimer: {fileID: 8565870384692060253}
+  references:
+    version: 2
+    RefIds:
+    - rid: 4109054478827913310
+      type: {class: AnimationWieldableEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
+      data:
+        m_Parameters:
+        - m_Type: 1
+          m_Name: EquipSpeed
+          m_Value: 1
+        - m_Type: 9
+          m_Name: Equip
+          m_Value: 1
+    - rid: 4109054478827913311
+      type: {class: AnimationWieldableEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
+      data:
+        m_Parameters:
+        - m_Type: 1
+          m_Name: HolsterSpeed
+          m_Value: 1
+        - m_Type: 9
+          m_Name: Holster
+          m_Value: 1
+--- !u!114 &7022657975396351349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3215517348330387606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a9369b4fb68f8448275b056000c381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DefaultItemDefinition:
+    m_Value: 0
+--- !u!114 &2767706440137161203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3215517348330387606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fa41b404976c3d4ba377b2d9cae68d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Combos: []
+--- !u!114 &8565870384692060253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3215517348330387606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e9e6efc9a027de4dae721ffefb4d7b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EnableMode: 0
+  m_AttachOnStart: 1
+  m_AimThreshold: 0.3
+  m_HipAccuracyMod: 1
+  m_AimAccuracyMod: 1
+  m_HipRecoilMod: 1
+  m_AimRecoilMod: 1
+  m_FOVSetDuration: 0.4
+  m_WorldFOVMod: 1
+  m_OverlayFOVMod: 1
+  m_AimCrosshairIndex: 0
+  m_AimEffects:
+    m_StaticEffects: []
+  m_AimEndEffects:
+    m_StaticEffects: []
+  references:
+    version: 2
+    RefIds: []
+--- !u!1 &4254223855030184638
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8849472044664072435}
+  - component: {fileID: 7778201306860703372}
+  - component: {fileID: 5562422460266934607}
+  - component: {fileID: 993213053253813590}
+  m_Layer: 11
+  m_Name: Model
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8849472044664072435
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4254223855030184638}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2719503366286588037}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7778201306860703372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4254223855030184638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ab9d914a3930ac4f9b589b84e0607e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Animator: {fileID: 0}
+  m_Clips:
+    m_Controller: {fileID: 9100000, guid: 331d7aaa0653df24c8c786fb084c51e7, type: 2}
+    m_Clips:
+    - Original: {fileID: 7400000, guid: 6fcd4ef4b0dd5df49a09e341d846c3d2, type: 2}
+      Override: {fileID: 0}
+    - Original: {fileID: 7400000, guid: 4966c1d6c082a3d46a96afb0b9716e91, type: 2}
+      Override: {fileID: 0}
+    - Original: {fileID: 7400000, guid: 1cee0a70c42f89f44ba4b62f9490d37d, type: 2}
+      Override: {fileID: 0}
+--- !u!114 &5562422460266934607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4254223855030184638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad5a5600841d1d42b5ac9d96385a86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TargetTransform: {fileID: 8849472044664072435}
+  m_MixMode: 4
+  m_PivotPosition: {x: 0.0524, y: 1.498, z: -0.0362}
+  m_PositionOffset: {x: 0, y: 0, z: 0}
+  m_RotationOffset: {x: 0, y: 0, z: 0}
+  m_MotionPreset: {fileID: 11400000, guid: f491f73b564a2e545a6a389790fdc4c6, type: 2}
+--- !u!114 &993213053253813590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4254223855030184638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b348558de08d7494fabe320e8d297a31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BaseOverlayFOV: 55
+  m_DOFMultiplier: 1
