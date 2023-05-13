@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace IdenticalStudios.InputSystem.Behaviours
 {
-    public abstract class InputReader : MonoBehaviour
+    public abstract class InputBehaviour : MonoBehaviour
     {
         
         private InputContext m_Context;
