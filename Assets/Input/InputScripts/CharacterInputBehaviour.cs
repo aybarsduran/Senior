@@ -6,11 +6,7 @@ namespace IdenticalStudios.InputSystem.Behaviours
 {
     public abstract class CharacterInputBehaviour : InputBehaviour
     {
-#if UNITY_EDITOR
-        protected Character Character { get; private set; }
-#else
         protected Character Character;
-#endif
 
         private bool m_Initialized;
 
