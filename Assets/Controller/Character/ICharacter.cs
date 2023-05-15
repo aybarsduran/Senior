@@ -20,7 +20,9 @@ namespace IdenticalStudios // Define the namespace for the interface
        // Define an event that is triggered when the character is initialized
         event UnityAction Initialized;
 
-        
+        bool TryGetModule<T>(out T module) where T : class, ICharacterModule;
+        void GetModule<T>(out T module) where T : class, ICharacterModule;
+        T GetModule<T>() where T : class, ICharacterModule;
 
         // Define a method that checks if the character has a specific collider
         bool HasCollider(Collider collider);
