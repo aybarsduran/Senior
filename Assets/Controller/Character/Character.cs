@@ -21,6 +21,49 @@ namespace IdenticalStudios
         //[SerializeField, NotNull]
         private Transform m_View;
 
+        private Dictionary<Type, ICharacterModule> m_ModulesByType;
+        private static readonly List<ICharacterModule> s_CachedModules = new(32);
+
+
+        
+        // Returns child module of specified type from this character.
+        public bool TryGetModule<T>(out T module) where T : class, ICharacterModule
+        {
+            if (m_ModulesByType != null && m_ModulesByType.TryGetValue(typeof(T), out ICharacterModule charModule))
+            {
+                module = (T)charModule;
+                return true;
+            }
+            else
+            {
+                module = default;
+                return false;
+            }
+        }
+
+     
+        // Returns child module of specified type from this character.
+        public void GetModule<T>(out T module) where T : class, ICharacterModule
+        {
+            if (m_ModulesByType != null && m_ModulesByType.TryGetValue(typeof(T), out ICharacterModule charModule))
+            {
+                module = (T)charModule;
+                return;
+            }
+
+            module = default;
+        }
+
+      
+        // Returns child module of specified type from this character. 
+        public T GetModule<T>() where T : class, ICharacterModule
+        {
+            if (m_ModulesByType != null && m_ModulesByType.TryGetValue(typeof(T), out ICharacterModule charModule))
+                return (T)charModule;
+
+            return default;
+        }
+
         public bool HasCollider(Collider collider)
         {
             for (int i = 0; i < Colliders.Length; i++)
@@ -46,6 +89,31 @@ namespace IdenticalStudios
         protected virtual void SetupBaseReferences()
         {          
             Colliders = GetComponentsInChildren<Collider>(true);
+        }
+
+        private void SetupModules()
+        {
+            // Find & Setup all of the Modules
+            GetComponentsInChildren(s_CachedModules);
+            for (int i = 0; i < s_CachedModules.Count; i++)
+            {
+                ICharacterModule module = s_CachedModules[i];
+
+                Type[] interfaces = module.GetType().GetInterfaces();
+                foreach (Type interfaceType in interfaces)
+                {
+                    if (interfaceType.GetInterface(typeof(ICharacterModule).Name) != null)
+                    {
+                        if (m_ModulesByType == null)
+                            m_ModulesByType = new Dictionary<Type, ICharacterModule>();
+
+                        if (!m_ModulesByType.ContainsKey(interfaceType))
+                            m_ModulesByType.Add(interfaceType, module);
+                        //else
+                        //    Debug.LogError($"2 Modules of the same type ({module.GetType()}) found under {gameObject.name}.");
+                    }
+                }
+            }
         }
     }
 }
