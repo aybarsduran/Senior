@@ -2,7 +2,7 @@ using IdenticalStudios.MovementSystem;
 using IdenticalStudios;
 using UnityEngine;
 
-namespace PolymindGames.MovementSystem
+namespace IdenticalStudios.MovementSystem
 {
     public interface ICharacterMotionState
     {
