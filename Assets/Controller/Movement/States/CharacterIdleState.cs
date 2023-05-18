@@ -3,7 +3,7 @@ using IdenticalStudios;
 using UnityEngine;
 using UnityEngine.InputSystem.XR;
 
-namespace IdenticalStudio.MovementSystem
+namespace IdenticalStudios.MovementSystem
 {
     public sealed class CharacterIdleState : CharacterMotionState
     {
