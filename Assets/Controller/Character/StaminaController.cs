@@ -64,8 +64,8 @@ namespace IdenticalStudios
 
         [SerializeField, Range(0.1f, 25f)]
         private float m_BreathingHeavyDuration;
-
-        
+        //TODO
+        //Add StandardSound
 
         private float m_Stamina = 1f;
 
@@ -86,12 +86,15 @@ namespace IdenticalStudios
             m_Movement.StateChanged += OnStateChanged;
 
             m_CurrentState = GetStateOfType(m_Movement.ActiveState);
-
+            //TODO
+            //Add UpdateManager
         }
 
         protected override void OnBehaviourDisabled()
         {
             m_Movement.StateChanged -= OnStateChanged;
+            //TODO
+            //Add UpdateManager
         }
 
         private void UpdateStamina(float deltaTime)
@@ -119,6 +122,8 @@ namespace IdenticalStudios
 
             if (m_Stamina < 0.01f)
             {
+                //TODO
+                //Add AudioPlayer
                 m_LastHeavyBreathTime = Time.time;
             }
         }
