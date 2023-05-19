@@ -58,7 +58,7 @@ namespace IdenticalStudios
         private float m_RegenerationPause = 3f;
 
         [SerializeField]
-        
+        [ReorderableList(ListStyle.Boxed, childLabel: "StateType")]
         private StaminaState[] m_StaminaStates;
 
 
