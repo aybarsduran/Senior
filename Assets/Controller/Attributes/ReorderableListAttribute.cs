@@ -1,18 +1,39 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System;
+using System.Diagnostics;
 
-public class ReorderableListAttribute : MonoBehaviour
+namespace UnityEngine
 {
-    // Start is called before the first frame update
-    void Start()
+    // Draws collection in form of the reorderable list.
+    // <para>Supported types: any <see cref="System.Collections.IList"/>.</para>
+    [AttributeUsage(AttributeTargets.Field, AllowMultiple = false)]
+    [Conditional("UNITY_EDITOR")]
+    public class ReorderableListAttribute : ToolboxListPropertyAttribute
     {
-        
+        public ReorderableListAttribute(ListStyle style = ListStyle.Round, string childLabel = null, bool fixedSize = false, bool draggable = true)
+        {
+            Draggable = draggable;
+            FixedSize = fixedSize;
+            ListStyle = style;
+            ChildLabel = childLabel;
+        }
+
+        public bool Draggable { get; private set; }
+        public bool FixedSize { get; private set; }
+        public ListStyle ListStyle { get; private set; }
+        public string ChildLabel { get; private set; }
+
+        // Indicates whether list should be allowed to fold in and out.
+        public bool Foldable { get; set; }
+        // Indicates whether list should have a label above elements.
+        public bool HasHeader { get; set; } = true;
+        // Indicates whether each element should have an additional label.
+        public bool HasLabels { get; set; } = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public enum ListStyle
     {
-        
+        Round,
+        Boxed,
+        Lined
     }
 }
