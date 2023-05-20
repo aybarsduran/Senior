@@ -1,11 +1,9 @@
+using UnityEngine; 
+using UnityEngine.Events; 
 
-
-using UnityEngine; // Import the UnityEngine namespace
-using UnityEngine.Events; // Import the UnityEvent class
-
-namespace IdenticalStudios // Define the namespace for the interface
+namespace IdenticalStudios 
 {
-    public interface ICharacter // Define the ICharacter interface
+    public interface ICharacter 
     {
         // Define a boolean property that indicates whether the character has been initialized or not
         bool IsInitialized { get; }
