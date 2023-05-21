@@ -5,8 +5,8 @@ using UnityEngine.InputSystem;
 
 namespace IdenticalStudios.InputSystem.Behaviours
 {
-    [AddComponentMenu("Input/Look Input")]
-    public class FPSLookInput : CharacterInputBehaviour
+    
+    public class LookInput : CharacterInputBehaviour
     {
         [SerializeField]
         private InputActionReference m_LookInput;
