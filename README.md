@@ -2,4 +2,4 @@
  Senior design project
 
 
-![Class Diagram]("\Assets\ClassDiagrams\CharacterClassDiagram.png")
+![Class Diagram]("Senior/Assets/ClassDiagrams/CharacterClassDiagram.png")
