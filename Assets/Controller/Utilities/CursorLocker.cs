@@ -7,7 +7,7 @@ namespace IdenticalStudios
     {
         private static readonly List<Object> s_CursorUnlockers = new List<Object>();
 
-
+        //When the UI is closed this method called.
         public static void RemoveCursorUnlocker(Object obj)
         {
             if (s_CursorUnlockers.Remove(obj))
@@ -21,6 +21,7 @@ namespace IdenticalStudios
             }
         }
 
+        //When the UI is opened this method called.
         public static void AddCursorUnlocker(Object obj)
         {
             if (s_CursorUnlockers.Contains(obj))
@@ -33,6 +34,7 @@ namespace IdenticalStudios
             Cursor.lockState = CursorLockMode.None;
         }
 
+        //To remove null references from the list.
         private static void RemoveAllNullUnlockers()
         {
             int i = 0;
