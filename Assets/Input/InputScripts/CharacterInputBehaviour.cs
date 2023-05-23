@@ -1,5 +1,3 @@
-using IdenticalStudios.InputSystem.Behaviours;
-using IdenticalStudios;
 using UnityEngine;
 
 namespace IdenticalStudios.InputSystem.Behaviours
