@@ -742,6 +742,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1889388316}
+  - component: {fileID: 1889388317}
   m_Layer: 17
   m_Name: MovementModule
   m_TagString: Untagged
@@ -764,3 +765,23 @@ Transform:
   m_Father: {fileID: 1247236343}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1889388317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889388315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ba78801dce5ce41a16e02214fbacbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MoveInput: {fileID: 0}
+  m_RunType: 0
+  m_RunInput: {fileID: 0}
+  m_CrouchType: 0
+  m_CrouchInput: {fileID: 0}
+  m_JumpType: 0
+  m_JumpReleaseDelay: 0.05
+  m_JumpInput: {fileID: 0}
