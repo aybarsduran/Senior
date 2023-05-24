@@ -14,8 +14,13 @@ namespace IdenticalStudios
         // Define a Collider[] property that represents an array of colliders that the character has
         Collider[] Colliders { get; }
 
+        IAudioPlayer AudioPlayer { get; }
 
-       // Define an event that is triggered when the character is initialized
+        // The character's health manager module
+        IHealthManager HealthManager { get; }
+
+
+        // Define an event that is triggered when the character is initialized
         event UnityAction Initialized;
 
         bool TryGetModule<T>(out T module) where T : class, ICharacterModule;

@@ -16,6 +16,9 @@ namespace IdenticalStudios
         public Transform ViewTransform => m_View;
         public Collider[] Colliders { get; private set; }
 
+        public IAudioPlayer AudioPlayer { get; private set; }
+        public IHealthManager HealthManager { get; private set; }
+
         public event UnityAction Initialized;
 
         //[SerializeField, NotNull]
