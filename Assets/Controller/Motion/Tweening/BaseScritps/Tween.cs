@@ -7,7 +7,7 @@ using UnityEngine.Serialization;
 
 namespace IdenticalStudios.ProceduralMotion
 {
-    internal interface ITween
+    public interface ITween
     {
         bool IsPlaying { get; }
 
