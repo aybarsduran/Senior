@@ -8,7 +8,7 @@ using UnityEngine.Serialization;
 
 namespace IdenticalStudios.ProceduralMotion
 {
-    [CreateAssetMenu(menuName = "Polymind Games/Motion/Motion Preset", fileName = "(Motion) ", order = 100)]
+    [CreateAssetMenu(menuName = "IdenticalStudios/Motion/Motion Preset", fileName = "(Motion) ", order = 100)]
     public class MotionPreset : ScriptableObject
     {
         #region Internal
