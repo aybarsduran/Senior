@@ -1,25 +1,31 @@
-using IdenticalStudios;
-using UnityEngine.Events;
+using IdenticalStudios.ProceduralMotion;
+using System;
+using UnityEngine;
 
-namespace IdenticalStudios
+namespace IdenticalStudios.ProceduralMotion
 {
-    public interface IInteractionHandler : ICharacterModule
+    [Serializable]
+    public sealed class TweenSequence
     {
-        bool InteractionEnabled { get; set; }
-        HoverInfo HoverInfo { get; }
-        float HoveredObjectDistance { get; }
+        [SerializeReference, ReorderableList(ListStyle.Boxed, childLabel: "Tween", HasHeader = false)]
+        private ITween[] m_Tweens;
 
-        /// <summary>
-        /// Interaction progress 0 - 1 Range
-        /// </summary>
-        float InteractProgress { get; }
 
-        event UnityAction<HoverInfo> HoverInfoChanged;
-        event UnityAction<float> InteractProgressChanged;
-        event UnityAction<IInteractable> Interacted;
-        event UnityAction<bool> InteractionEnabledChanged;
+        public void PlayAnimation()
+        {
+            for (int i = 0; i < m_Tweens.Length; i++)
+                m_Tweens[i].Play();
+        }
 
-        void StartInteraction();
-        void StopInteraction();
+        public void CancelAnimation()
+        {
+            for (int i = 0; i < m_Tweens.Length; i++)
+                m_Tweens[i].Cancel();
+        }
+
+        public void OnValidate(GameObject gameObject)
+        {
+
+        }
     }
 }

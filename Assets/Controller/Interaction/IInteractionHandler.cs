@@ -1,18 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using IdenticalStudios;
+using UnityEngine.Events;
 
-public class IInteractionHandler : MonoBehaviour
+namespace IdenticalStudios
 {
-    // Start is called before the first frame update
-    void Start()
+    public interface IInteractionHandler : ICharacterModule
     {
-        
-    }
+        bool InteractionEnabled { get; set; }
+        HoverInfo HoverInfo { get; }
+        float HoveredObjectDistance { get; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        /// <summary>
+        /// Interaction progress 0 - 1 Range
+        /// </summary>
+        float InteractProgress { get; }
+
+        event UnityAction<HoverInfo> HoverInfoChanged;
+        event UnityAction<float> InteractProgressChanged;
+        event UnityAction<IInteractable> Interacted;
+        event UnityAction<bool> InteractionEnabledChanged;
+
+        void StartInteraction();
+        void StopInteraction();
     }
 }
