@@ -1,6 +1,5 @@
 using IdenticalStudios.WieldableSystem;
 using IdenticalStudios;
-using IdenticalStudios.WieldableSystem;
 using UnityEngine.Events;
 
 namespace IdenticalStudios
