@@ -356,18 +356,18 @@ namespace IdenticalStudios.InventorySystem
         //    return false;
         //}
 
-        public override void Reset()
-        {
-            base.Reset();
-            m_Pickup = null;
-        }
+        //public override void Reset()
+        //{
+        //    base.Reset();
+        //    m_Pickup = null;
+        //}
 
-        protected override void OnValidate()
-        {
-            ListExtensions.DistinctPreserveNull(ref m_Actions);
+        //protected override void OnValidate()
+        //{
+        //    ListExtensions.DistinctPreserveNull(ref m_Actions);
 
-            base.OnValidate();
-        }
+        //    base.OnValidate();
+        //}
 #endif
         #endregion
     }
