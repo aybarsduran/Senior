@@ -10,7 +10,6 @@ namespace IdenticalStudios.InventorySystem
     /// Basic item pickup.
     /// References one item from the Database.
     /// </summary>
-	[HelpURL("https://polymindgames.gitbook.io/welcome-to-gitbook/qgUktTCVlUDA7CAODZfe/interaction/interactable/demo-interactables")]
     public class ItemPickup : ItemPickupBase, ISaveableComponent
     {
         public IItem AttachedItem { get; private set; }

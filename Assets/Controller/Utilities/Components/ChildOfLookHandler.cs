@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 namespace IdenticalStudios
 {
-    [HelpURL("https://polymindgames.gitbook.io/welcome-to-gitbook/qgUktTCVlUDA7CAODZfe/player/modules-and-behaviours/wieldable#player-look-follow-behaviour")]
     public sealed class ChildOfLookHandler : CharacterBehaviour
     {
         public event UnityAction OnMove;
