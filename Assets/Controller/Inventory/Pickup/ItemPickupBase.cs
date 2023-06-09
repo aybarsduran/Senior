@@ -4,9 +4,7 @@ using IdenticalStudios.UISystem;
 using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 
-/// <summary>
-/// Item pickup base class.
-/// </summary>
+// Item pickup base class.
 namespace IdenticalStudios.InventorySystem
 {
     public abstract class ItemPickupBase : Interactable

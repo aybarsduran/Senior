@@ -1,5 +1,4 @@
-using IdenticalStudios;
-
+using IdenticalStudios.InventorySystem;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +17,8 @@ namespace IdenticalStudios
 
         public IAudioPlayer AudioPlayer { get; private set; }
         public IHealthManager HealthManager { get; private set; }
+
+        public IInventory Inventory => throw new NotImplementedException();
 
         public event UnityAction Initialized;
 

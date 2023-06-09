@@ -1,3 +1,4 @@
+using IdenticalStudios.InventorySystem;
 using UnityEngine; 
 using UnityEngine.Events; 
 
@@ -18,6 +19,8 @@ namespace IdenticalStudios
 
         // The character's health manager module
         IHealthManager HealthManager { get; }
+
+        IInventory Inventory { get; }
 
 
         // Define an event that is triggered when the character is initialized
