@@ -21,20 +21,5 @@ namespace IdenticalStudios.InventorySystem
 
         [SerializeField, ReorderableList(HasLabels = false)]
         private ItemAction[] m_BaseActions = Array.Empty<ItemAction>();
-
-
-#if UNITY_EDITOR
-        /// <summary>
-        /// Warning: This is an editor method, don't call it at runtime.
-        /// </summary>
-        public override void AddDefaultDataToDefinition(ItemDefinition itemDef)
-        {
-            if (itemDef == null)
-                return;
-
-            if (!m_DefaultTag.IsNull)
-                itemDef.SetTag(m_DefaultTag);
-        }
-#endif
     }
 }
