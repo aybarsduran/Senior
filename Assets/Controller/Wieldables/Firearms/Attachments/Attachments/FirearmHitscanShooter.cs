@@ -31,7 +31,7 @@ namespace IdenticalStudios.WieldableSystem
         [SerializeField]
         private QueryTriggerInteraction m_TriggerInteraction;
 
-        [SerializeField, PrefabObjectOnly]
+        [SerializeField]
         private ParticleSystem m_TracerPrefab;
 
         [SerializeField, ReorderableList(HasLabels = false, Foldable = true)]
