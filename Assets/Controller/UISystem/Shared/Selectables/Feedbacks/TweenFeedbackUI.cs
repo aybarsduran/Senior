@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using IdenticalStudios.ProceduralMotion;
 
 namespace IdenticalStudios.UISystem
 {
