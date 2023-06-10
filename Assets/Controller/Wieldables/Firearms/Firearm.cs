@@ -39,25 +39,25 @@ namespace IdenticalStudios.WieldableSystem
         private EffectCollection m_StopFireEffects;
 
 
-        [SerializeField, NotNull("This attachment has to be assigned (Press on ''Setup Firearm'' to add a default attachment.")]
+        [SerializeField]
         private FirearmAimerBehaviour m_BaseAimer;
 
-        [SerializeField, NotNull("This attachment has to be assigned (Press on ''Setup Firearm'' to add a default attachment.")]
+        [SerializeField]
         private FirearmTriggerBehaviour m_BaseTrigger;
 
-        [SerializeField, NotNull("This attachment has to be assigned (Press on ''Setup Firearm'' to add a default attachment.")]
+        [SerializeField]
         private FirearmShooterBehaviour m_BaseShooter;
 
-        [SerializeField, NotNull("This attachment has to be assigned (Press on ''Setup Firearm'' to add a default attachment.")]
+        [SerializeField]
         private FirearmAmmoBehaviour m_BaseAmmo;
 
-        [SerializeField, NotNull("This attachment has to be assigned (Press on ''Setup Firearm'' to add a default attachment.")]
+        [SerializeField]
         private FirearmReloaderBehaviour m_BaseReloader;
 
-        [SerializeField, NotNull("This attachment has to be assigned (Press on ''Setup Firearm'' to add a default attachment.")]
+        [SerializeField]
         private FirearmRecoilBehaviour m_BaseRecoil;
 
-        [SerializeField, NotNull("This attachment has to be assigned (Press on ''Setup Firearm'' to add a default attachment.")]
+        [SerializeField]
         private FirearmProjectileEffectBehaviour m_BaseProjectileEffect;
 
         private float m_HeatValue;
