@@ -21,5 +21,7 @@ namespace IdenticalStudios.InventorySystem
 
         [SerializeField, ReorderableList(HasLabels = false)]
         private ItemAction[] m_BaseActions = Array.Empty<ItemAction>();
+
+
     }
 }
