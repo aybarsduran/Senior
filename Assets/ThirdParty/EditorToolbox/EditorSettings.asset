@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b97690dbca7025a4ebeae4ac93229110, type: 3}
+  m_Name: EditorSettings
+  m_EditorClassIdentifier: 
+  useToolboxHierarchy: 1
+  drawHorizontalLines: 1
+  showSelectionsCount: 0
+  rowDataTypes: 020000000100000000000000
+  useToolboxFolders: 1
+  largeIconScale: 0.9
+  smallIconScale: 0.75
+  largeIconPadding: {x: 0, y: 0.1}
+  smallIconPadding: {x: 0.15, y: 0.15}
+  customFolders:
+  - dataType: 1
+    name: Definitions
+    path: 
+    tooltip: 'Here''s where you should place all your definitions.
+
+      Make sure
+      the folder name corresponds with the definition type. (e.g. Item Definition
+      = Item/Items)'
+    iconType: 0
+    largeIcon: {fileID: 2800000, guid: 58fb06efa51905048a9bd4d992d44ac4, type: 3}
+    smallIcon: {fileID: 2800000, guid: 58fb06efa51905048a9bd4d992d44ac4, type: 3}
+    iconName: 
+  - dataType: 1
+    name: PolymindGames
+    path: 
+    tooltip: 'Here''s where you should place all your definitions.
+
+      Make sure
+      the folder name corresponds with the definition type. (e.g. Item Definition
+      = Item/Items)'
+    iconType: 0
+    largeIcon: {fileID: 2800000, guid: 2e16ed01e16b1524db7e27b5a7e7b5c2, type: 3}
+    smallIcon: {fileID: 2800000, guid: f96d2555ac221f94aad78f5b14ff8394, type: 3}
+    iconName: 
+  - dataType: 1
+    name: Managers
+    path: 
+    tooltip: Here's where you should place all your managers.
+    iconType: 0
+    largeIcon: {fileID: 2800000, guid: 1aa397fe7e9ff8b45bb80fa9e4dc1f3b, type: 3}
+    smallIcon: {fileID: 2800000, guid: 1aa397fe7e9ff8b45bb80fa9e4dc1f3b, type: 3}
+    iconName: 
+  useToolboxDrawers: 1
+  forceDefaultLists: 0
+  decoratorDrawerHandlers:
+  - typeReference: Toolbox.Editor.Drawers.BeginGroupAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.BeginHorizontalAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.BeginHorizontalGroupAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.BeginIndentAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.BeginVerticalAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.DynamicHelpAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.EditorButtonAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.EndGroupAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.EndHorizontalAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.EndHorizontalGroupAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.EndIndentAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.EndVerticalAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.GuiColorAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.HelpAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.HighlightAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.ImageAreaAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.IndentAreaAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.LabelAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.LineAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.SpaceAreaAttributeDrawer, Toolbox.Editor
+  conditionDrawerHandlers:
+  - typeReference: Toolbox.Editor.Drawers.DisableAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.DisableIfAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.DisableInPlayModeAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.EnableIfAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.HideAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.HideDisabledIfAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.HideIfAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.ShowDisabledIfAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.ShowIfAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.ShowWarningIfAttributeDrawer, Toolbox.Editor
+  selfPropertyDrawerHandlers:
+  - typeReference: Toolbox.Editor.Drawers.DynamicMinMaxSliderAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.DynamicRangeAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.IgnoreParentAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.InLineEditorAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.ReferencePickerAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.RegexValueAttributeDrawer, Toolbox.Editor
+  listPropertyDrawerHandlers:
+  - typeReference: Toolbox.Editor.Drawers.ReorderableListAttributeDrawer, Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.ReorderableListExposedAttributeDrawer,
+      Toolbox.Editor
+  - typeReference: Toolbox.Editor.Drawers.ScrollableItemsAttributeDrawer, Toolbox.Editor
+  targetTypeDrawerHandlers:
+  - typeReference: Toolbox.Editor.Drawers.SerializedDictionaryDrawer, Toolbox.Editor
