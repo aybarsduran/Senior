@@ -24,13 +24,9 @@ namespace IdenticalStudios.ResourceGathering
 
         //Collider to DISABLE when a character interacts with this gatherable
         [SerializeField]
-        
         private Collider m_Collider;
 
-        [Title("Gathering")]
-
         [SerializeField, Range(0f, 1000f)]
-        [NewLabel("Health")]
         private float m_MaxHealth = 100f;
 
         [SerializeField]
@@ -39,7 +35,7 @@ namespace IdenticalStudios.ResourceGathering
         [SerializeField, Range(0.1f, 1f)]
         private float m_GatherRadius = 0.35f;
 
-        [SerializeField, Disable]
+        [SerializeField]
         private float m_Health;
 
         private GatherableBehaviour[] m_Behaviours;

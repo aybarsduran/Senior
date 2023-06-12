@@ -1,7 +1,9 @@
 using IdenticalStudios.InputSystem.Behaviours;
 using IdenticalStudios.InputSystem;
 using UnityEngine;
+using IdenticalStudios.WieldableSystem;
 using UnityEngine.InputSystem;
+
 
 namespace IdenticalStudios.InputSystem.Behaviours
 {

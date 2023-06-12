@@ -21,7 +21,7 @@ namespace IdenticalStudios.BuildingSystem
         [SerializeField]
         private string m_BuildableName;
 
-        [SerializeField, SpritePreview]
+        [SerializeField]
         [Tooltip("Item Icon.")]
         private Sprite m_Icon;
 
@@ -56,13 +56,6 @@ namespace IdenticalStudios.BuildingSystem
             return Definitions.Where((BuildableDefinition def) => def.Prefab.GetType() == typeof(T)).ToArray();
         }
 
-#if UNITY_EDITOR
-        public override void Reset()
-        {
-            base.Reset();
 
-            m_Prefab = null;
-        }
-#endif
     }
 }

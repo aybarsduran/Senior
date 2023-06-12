@@ -2,7 +2,6 @@ using UnityEngine;
 
 namespace IdenticalStudios.WieldableSystem
 {
-	[AddComponentMenu("PolymindGames/Wieldables/Firearms/Triggers/Semi Auto Trigger")]
 	public class FirearmSemiAutoTrigger : FirearmTriggerBehaviour
     {
 		[SerializeField, Range(0f, 10f)]

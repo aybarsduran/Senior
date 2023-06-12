@@ -3,10 +3,9 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace PolymindGames.BuildingSystem
+namespace IdenticalStudios.BuildingSystem
 {
     [RequireComponent(typeof(IBuildingController))]
-    [HelpURL("https://polymindgames.gitbook.io/welcome-to-gitbook/qgUktTCVlUDA7CAODZfe/player/modules-and-behaviours/building#character-structure-detector-module")]
     public class CharacterStructureDetector : CharacterBehaviour, IStructureDetector
     {
         public BuildablePreview StructureInView
@@ -58,7 +57,7 @@ namespace PolymindGames.BuildingSystem
         [SerializeField, Range(0f, 5f)]
         private float m_CancelPreviewDuration = 0.3f;
 
-        [Title("Building Previews Detection")]
+        //Building Previews Detection
 
         [SerializeField, Range(0f, 10f)]
         [Tooltip("The max detection building preview distance.")]

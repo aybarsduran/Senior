@@ -1,12 +1,11 @@
 using System.Collections;
 using UnityEngine;
 
-namespace PolymindGames.WieldableSystem
+namespace IdenticalStudios.WieldableSystem
 {
-    [AddComponentMenu("PolymindGames/Wieldables/First Person/FP Firearm Projectile Corrector")]
     public sealed class FPFirearmProjectileCorrector : MonoBehaviour
     {
-        [SerializeField, NotNull]
+        [SerializeField]
         private FPFirearmCartridge m_FPCartridge;
 
         [SerializeField, Range(0f, 10f)]
