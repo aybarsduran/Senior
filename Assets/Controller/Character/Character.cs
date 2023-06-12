@@ -1,4 +1,5 @@
 using IdenticalStudios.InventorySystem;
+using IdenticalStudios;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,31 +7,37 @@ using UnityEngine.Events;
 
 namespace IdenticalStudios
 {
-
+    /// <summary>
+    /// Main character class used by every entity in the game.
+    /// It acts as a hub for accessing modules.
+    /// </summary>
     public class Character : MonoBehaviour, ICharacter
     {
         public bool IsInitialized { get; private set; }
-
-        // The property returns a reference to the Transform component named m_View.
         public Transform ViewTransform => m_View;
         public Collider[] Colliders { get; private set; }
 
         public IAudioPlayer AudioPlayer { get; private set; }
         public IHealthManager HealthManager { get; private set; }
+        public IInventory Inventory { get; private set; }
 
-        public IInventory Inventory => throw new NotImplementedException();
-
+        /// <summary>
+        /// This message will be sent after all modules are created and initialized.
+        /// </summary>
         public event UnityAction Initialized;
 
-        //[SerializeField, NotNull]
+        [SerializeField]
+        [Tooltip("The view transform, you can think of it as the eyes of the character")]
         private Transform m_View;
 
         private Dictionary<Type, ICharacterModule> m_ModulesByType;
         private static readonly List<ICharacterModule> s_CachedModules = new(32);
 
 
-        
-        // Returns child module of specified type from this character.
+        /// <summary>
+        /// <para> Returns child module of specified type from this character. </para>
+        /// Use this if you are NOT sure this character has a module of the given type.
+        /// </summary>
         public bool TryGetModule<T>(out T module) where T : class, ICharacterModule
         {
             if (m_ModulesByType != null && m_ModulesByType.TryGetValue(typeof(T), out ICharacterModule charModule))
@@ -45,8 +52,10 @@ namespace IdenticalStudios
             }
         }
 
-     
-        // Returns child module of specified type from this character.
+        /// <summary>
+        /// <para> Returns child module of specified type from this character. </para>
+        /// Use this if you ARE sure this character has a module of the given type.
+        /// </summary>
         public void GetModule<T>(out T module) where T : class, ICharacterModule
         {
             if (m_ModulesByType != null && m_ModulesByType.TryGetValue(typeof(T), out ICharacterModule charModule))
@@ -58,8 +67,10 @@ namespace IdenticalStudios
             module = default;
         }
 
-      
-        // Returns child module of specified type from this character. 
+        /// <summary>
+        /// <para> Returns child module of specified type from this character. </para>
+        /// Use this if you ARE sure this character has a module of the given type.
+        /// </summary>
         public T GetModule<T>() where T : class, ICharacterModule
         {
             if (m_ModulesByType != null && m_ModulesByType.TryGetValue(typeof(T), out ICharacterModule charModule))
@@ -68,6 +79,9 @@ namespace IdenticalStudios
             return default;
         }
 
+        /// <summary>
+        /// Returns true if the passed collider is part of this character.
+        /// </summary>
         public bool HasCollider(Collider collider)
         {
             for (int i = 0; i < Colliders.Length; i++)
@@ -80,18 +94,23 @@ namespace IdenticalStudios
         }
 
         protected virtual void Awake()
-        {            
+        {
+            SetupModules();
             SetupBaseReferences();
         }
 
-        protected virtual void Start() // virtual alt siniflarýn methodu yeniden tanýimlayabilmesi icin
+        protected virtual void Start()
         {
             IsInitialized = true;
             Initialized?.Invoke();
         }
 
         protected virtual void SetupBaseReferences()
-        {          
+        {
+            AudioPlayer = GetModule<IAudioPlayer>();
+            HealthManager = GetModule<IHealthManager>();
+            Inventory = GetModule<IInventory>();
+
             Colliders = GetComponentsInChildren<Collider>(true);
         }
 

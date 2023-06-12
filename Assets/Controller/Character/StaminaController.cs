@@ -1,7 +1,6 @@
 using IdenticalStudios;
 using UnityEngine;
 using UnityEngine.Events;
-using static UnityEditorInternal.VersionControl.ListControl;
 
 namespace IdenticalStudios
 {
@@ -64,8 +63,9 @@ namespace IdenticalStudios
 
         [SerializeField, Range(0.1f, 25f)]
         private float m_BreathingHeavyDuration;
-        //TODO
-        //Add StandardSound
+        
+        [SerializeField]
+        private StandardSound m_BreathingHeavyAudio;
 
         private float m_Stamina = 1f;
 
@@ -86,15 +86,14 @@ namespace IdenticalStudios
             m_Movement.StateChanged += OnStateChanged;
 
             m_CurrentState = GetStateOfType(m_Movement.ActiveState);
-            //TODO
-            //Add UpdateManager
+
+            UpdateManager.AddFixedUpdate(UpdateStamina);
         }
 
         protected override void OnBehaviourDisabled()
         {
             m_Movement.StateChanged -= OnStateChanged;
-            //TODO
-            //Add UpdateManager
+            UpdateManager.RemoveFixedUpdate(UpdateStamina);
         }
 
         private void UpdateStamina(float deltaTime)
@@ -122,8 +121,7 @@ namespace IdenticalStudios
 
             if (m_Stamina < 0.01f)
             {
-                //TODO
-                //Add AudioPlayer
+                Character.AudioPlayer.LoopSound(m_BreathingHeavyAudio, m_BreathingHeavyDuration);
                 m_LastHeavyBreathTime = Time.time;
             }
         }
