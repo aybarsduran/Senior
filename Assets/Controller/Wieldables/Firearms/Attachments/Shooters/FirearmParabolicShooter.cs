@@ -42,7 +42,7 @@ namespace IdenticalStudios.WieldableSystem
         [SerializeField]
         private DynamicEffectCollection m_ShootEffects;
 
-        [SerializeField, ReorderableList(HasLabels = false)]
+        [SerializeField]
         private WieldableVFXBehaviour[] m_VisualEffects;
 
 

@@ -37,7 +37,7 @@ namespace IdenticalStudios.WieldableSystem
 		private ItemInteractionMode m_ItemInteraction = ItemInteractionMode.RemoveAndLinkToPickup;
 
 
-		[SerializeField, ReorderableList(HasLabels = false)]
+		[SerializeField]
 		private Transform[] m_ObjectsToDisableOnThrow;
 
 

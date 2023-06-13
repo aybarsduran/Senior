@@ -44,7 +44,7 @@ namespace IdenticalStudios.WieldableSystem
         private WieldableAnimator m_WieldableAnimator;
 
 
-        [SerializeField, ReorderableList]
+        [SerializeField]
         private AnimationTrigger[] m_AnimationTriggers;
 
         private IMovementController m_Movement;

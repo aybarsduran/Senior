@@ -97,7 +97,7 @@ namespace IdenticalStudios.UISystem
         [SerializeField]
         protected NavigationUI m_Navigation = NavigationUI.defaultNavigation;
 
-        [SerializeReference, ReorderableList(childLabel: "Feedback")]
+        [SerializeReference]
         protected IInteractableFeedbackUI[] m_Feedbacks = Array.Empty<IInteractableFeedbackUI>();
 
         [SerializeField]

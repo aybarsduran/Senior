@@ -29,7 +29,7 @@ namespace IdenticalStudios.UISystem
         [SerializeField, ReorderableList(HasLabels = false)]
         private GameObject[] m_SocketBuildableObjects;
 
-        [SerializeField, ReorderableList(HasLabels = false)]
+        [SerializeField]
         private GameObject[] m_FreeBuildableObjects;
 
         private Tween<float> m_CanvasGroupTween;
