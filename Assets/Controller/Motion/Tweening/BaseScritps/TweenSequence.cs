@@ -7,7 +7,7 @@ namespace IdenticalStudios.ProceduralMotion
     [Serializable]
     public sealed class TweenSequence
     {
-        [SerializeReference, ReorderableList(ListStyle.Boxed, childLabel: "Tween", HasHeader = false)]
+        [SerializeReference]
         private ITween[] m_Tweens;
 
 

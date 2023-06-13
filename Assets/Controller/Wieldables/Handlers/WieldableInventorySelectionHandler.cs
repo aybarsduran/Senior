@@ -36,7 +36,7 @@ namespace IdenticalStudios.WieldableSystem
         private int m_StartingSlot = 1;
 
 
-        [SerializeField, ReorderableList(HasLabels = false)]
+        [SerializeField]
         private List<WieldableItem> m_WieldablesList;
 
         private int m_SelectedIndex = -1;

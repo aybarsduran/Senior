@@ -12,7 +12,7 @@ namespace IdenticalStudios.WieldableSystem
             public MovementStateType State;
             public TriggerType TriggerType;
 
-            [SerializeField, ReorderableList(ListStyle.Boxed)]
+            [SerializeField]
             private AnimatorParameterTrigger[] m_Parameters;
 
             private Animator m_Animator;
