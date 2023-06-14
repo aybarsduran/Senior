@@ -9,7 +9,28 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![LinkedIn][linkedin-shield]][linkedinA-url]
 
+<p >
+  We are the Identical Studios two students and independent game developers who studying computer science and engineering at Akdeniz University.
+  
+  For the Senior Design Project course, we will develop a computer game. This game is going to be a survival game based on a story. 
+</p>
 <img src="https://github.com/aybarsduran/Senior/blob/main/Poster%20Presentation/Primitive%20Pursuit.gif"> 
+
+<p>
+Mockups were designed on Canva website. You can find them in /Mockups directory. For more information please see the content below.  
+    <br />
+    <a href="https://github.com/aybarsduran/Senior/tree/main/Mockups"><strong>Explore the mockups »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/aybarsduran/Senior/tree/main/Documentation"><strong>Explore the documentations »</strong></a>
+    <br />
+    <br />
+    <a href="">View Demo</a>
+    ·
+    <a href="https://github.com/aybarsduran/Senior/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/aybarsduran/Senior/issues">Request Feature</a>
+  </p>
 
 ![Class Diagram](Assets/ClassDiagrams/CharacterClassDiagram.png)
 
