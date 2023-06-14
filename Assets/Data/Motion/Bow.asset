@@ -9,7 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce344b2b3f144ff4da0b804ac5aa16c0, type: 3}
-  m_Name: Sleep
+  m_Script: {fileID: 11500000, guid: 3a0cc5685a3dc124c8f07b272ebb7c47, type: 3}
+  m_Name: Bow
   m_EditorClassIdentifier: 
-  m_Subcontexts: []
+  m_BasePreset: {fileID: 0}
+  m_MotionData:
+  - State: -1
+    Data: []
+  references:
+    version: 2
+    RefIds: []

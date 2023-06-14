@@ -17,19 +17,26 @@ namespace IdenticalStudios.ProceduralMotion
         {
             public MovementStateType State;
 
-            //[SerializeReference, ReorderableList(ListStyle.Boxed, "Data"), ReferencePicker]
-            [SerializeReference, ReorderableList(ListStyle.Boxed, "Data")]
+            [SerializeReference, ReorderableList(ListStyle.Boxed, "Data"), ReferencePicker]
             public MotionData[] Data;
         }
         #endregion
 
         [SerializeField]
-
+#if UNITY_EDITOR
+        [OnValueChanged(nameof(PresetChanged))]
+#endif
+        [Help("Fallback preset. If a certain type of data is not found in this preset, the default preset will be used instead.")]
         private MotionPreset m_BasePreset;
+
+        [SpaceArea]
 
         [SerializeField]
         [FormerlySerializedAs("m_StateData")]
-
+        [Help("The data from the ''None'' state will be used if no data of the needed type is found in the current state.")]
+#if UNITY_EDITOR
+        [ReorderableListExposed(ListStyle.Lined, childLabel: "State", OverrideNewElementMethodName = nameof(GetNewState))]
+#endif
         private StateData[] m_MotionData;
 
         private Dictionary<int, Dictionary<Type, MotionData>> m_StatesDict;
@@ -87,6 +94,10 @@ namespace IdenticalStudios.ProceduralMotion
                     m_StatesDict.Add(stateType, dict);
                 }
             }
+
+#if !UNITY_EDITOR
+            m_MotionData = null;
+#endif
         }
 
 #if UNITY_EDITOR
