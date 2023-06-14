@@ -32,6 +32,39 @@ Mockups were designed on Canva website. You can find them in /Mockups directory.
     <a href="https://github.com/aybarsduran/Senior/issues">Request Feature</a>
   </p>
 
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#configuration-steps">Configuration Steps</a></li>
+      </ul>
+    </li>
+    <li><a href="#how-to-use">How to use?</a></li>
+    <li><a href="#demo">Demo</a></li>
+    <li><a href="#future-work">Future Work</a></li>
+    <li><a href="#class-diagram">Class Diagram</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
+
+<img src="https://github.com/aybarsduran/Senior/blob/main/Poster%20Presentation/poster.png">
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+Primitive Pursuit takes you on an immersive journey into a harsh and unforgiving world. Crafted by Identical Studios, this gripping survival game pushes your limits as you navigate treacherous terrains and gather resources. Embrace your primal instincts and face the ultimate test of survival in this thrilling adventure.
+
+<!-- CLASS DIAGRAM -->
+## Class Diagram
 ![Class Diagram](Assets/ClassDiagrams/CharacterClassDiagram.png)
 
 <!-- MARKDOWN LINKS & IMAGES -->
