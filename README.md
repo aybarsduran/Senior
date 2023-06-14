@@ -6,8 +6,12 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 <!--[![MIT License][license-shield]][license-url]-->
-[![LinkedIn][linkedin-shield]][linkedin-url]
-[![LinkedIn][linkedin-shield]][linkedinA-url]
+<a href="https://www.linkedin.com/in/bengisu-sahin/" target="_blank">
+<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
+</a>
+<a href="https://www.linkedin.com/in/aybarsduran/" target="_blank">
+<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
+</a>
 
 <p >
   We are the Identical Studios two students and independent game developers who studying computer science and engineering at Akdeniz University.
@@ -48,7 +52,7 @@ Mockups were designed on Canva website. You can find them in /Mockups directory.
         <li><a href="#configuration-steps">Configuration Steps</a></li>
       </ul>
     </li>
-    <li><a href="#how-to-use">How to use?</a></li>
+    <li><a href="#how-to-play">How to play?</a></li>
     <li><a href="#demo">Demo</a></li>
     <li><a href="#future-work">Future Work</a></li>
     <li><a href="#class-diagram">Class Diagram</a></li>
@@ -63,9 +67,22 @@ Mockups were designed on Canva website. You can find them in /Mockups directory.
 ## About The Project
 Primitive Pursuit takes you on an immersive journey into a harsh and unforgiving world. Crafted by Identical Studios, this gripping survival game pushes your limits as you navigate treacherous terrains and gather resources. Embrace your primal instincts and face the ultimate test of survival in this thrilling adventure.
 
+### Built With
+
+* [Unity 2021.3.18f1](https://unity.com/releases/editor/whats-new/2021.3.18)
+
 <!-- CLASS DIAGRAM -->
 ## Class Diagram
 ![Class Diagram](Assets/ClassDiagrams/CharacterClassDiagram.png)
+
+<!-- CONTACT -->
+## Contact
+
+Bengisu Şahin - bengisusaahin@gmail.com
+
+Selim Aybars Duran - aybarsduran@outlook.com
+
+Project Link: [https://github.com/aybarsduran/Senior](https://github.com/aybarsduran/Senior)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -79,8 +96,8 @@ Primitive Pursuit takes you on an immersive journey into a harsh and unforgiving
 [issues-url]: https://github.com/aybarsduran/Senior/issues
 [license-shield]: https://img.shields.io/github/license/aybarsduran/Senior.svg?style=for-the-badge
 [license-url]: https://github.com/aybarsduran/Senior/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+<!-- [linkedin-shield]: https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;"
 [linkedin-url]: https://www.linkedin.com/in/bengisu-sahin/
-[linkedinA-url]: https://www.linkedin.com/in/aybarsduran/
+[linkedinA-url]: https://www.linkedin.com/in/aybarsduran/--!>
 
 <!--Reference: https://github.com/othneildrew/Best-README-Template -->
