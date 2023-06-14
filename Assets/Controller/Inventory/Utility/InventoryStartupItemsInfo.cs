@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace IdenticalStudios.InventorySystem
 {
-    [CreateAssetMenu(menuName = "IdenticalStudios/Items/Startup Items", order = 10)]
+    [CreateAssetMenu(menuName = "Identical Studios/Items/Startup Items", order = 10)]
     public class InventoryStartupItemsInfo : ScriptableObject
     {
         #region Internal

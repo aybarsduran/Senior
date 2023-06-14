@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace IdenticalStudios.InventorySystem
 {
-    [CreateAssetMenu(menuName = "Polymind Games/Items/Actions/Drop Action", fileName = "(Action) Drop")]
+    [CreateAssetMenu(menuName = "Identical Studios/Items/Actions/Drop Action", fileName = "(Action) Drop")]
     public sealed class DropAction : ItemAction
     {
         [Title("Dropping")]

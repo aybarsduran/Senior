@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 namespace IdenticalStudios.InputSystem
 {
-    [CreateAssetMenu(menuName = "IdenticalStudios/ Managers/Input", fileName = "InputManager")]
+    [CreateAssetMenu(menuName = "Identical Studios/Managers/Input", fileName = "InputManager")]
     public class InputManager : Manager<InputManager>
     {
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]

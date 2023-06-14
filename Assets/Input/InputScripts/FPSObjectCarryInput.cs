@@ -3,8 +3,6 @@ using UnityEngine.InputSystem;
 
 namespace IdenticalStudios.InputSystem.Behaviours
 {
-    [AddComponentMenu("Input/Object Carry Input")]
-    [HelpURL("https://polymindgames.gitbook.io/welcome-to-gitbook/qgUktTCVlUDA7CAODZfe/player/modules-and-behaviours/object-carry#player-object-carry-input-behaviour")]
     public class FPSObjectCarryInput : CharacterInputBehaviour
     {
         [Title("Actions")]

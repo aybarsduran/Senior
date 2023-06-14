@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace IdenticalStudios.InventorySystem
 {
-    [CreateAssetMenu(menuName = "Polymind Games/Items/Actions/Equip Action", fileName = "(Action) Equip")]
+    [CreateAssetMenu(menuName = "Identical Studios/Items/Actions/Equip Action", fileName = "(Action) Equip")]
     public sealed class EquipAction : ItemAction
     {
         [Title("Equipping")]
