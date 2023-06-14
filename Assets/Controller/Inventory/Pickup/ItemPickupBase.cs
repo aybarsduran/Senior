@@ -1,7 +1,6 @@
 using IdenticalStudios.InventorySystem;
 using IdenticalStudios;
 using IdenticalStudios.UISystem;
-using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 
 // Item pickup base class.

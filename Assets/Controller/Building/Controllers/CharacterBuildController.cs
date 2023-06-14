@@ -1,8 +1,7 @@
-﻿using IdenticalStudios.InputSystem;
-using IdenticalStudios.ProceduralMotion;
+﻿using IdenticalStudios.ProceduralMotion;
 using UnityEngine;
 using UnityEngine.Events;
-
+using IdenticalStudios.InputSystem;
 namespace IdenticalStudios.BuildingSystem
 {
     /// <summary>
