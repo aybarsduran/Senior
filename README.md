@@ -9,6 +9,7 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![LinkedIn][linkedin-shield]][linkedinA-url]
 
+<img src="https://github.com/aybarsduran/Senior/blob/main/Poster%20Presentation/Primitive%20Pursuit.gif"> 
 
 ![Class Diagram](Assets/ClassDiagrams/CharacterClassDiagram.png)
 
