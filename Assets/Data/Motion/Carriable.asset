@@ -9,6 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f046328a386cb0429075535823cf2fb, type: 3}
-  m_Name: f
+  m_Script: {fileID: 11500000, guid: 3a0cc5685a3dc124c8f07b272ebb7c47, type: 3}
+  m_Name: Carriable
   m_EditorClassIdentifier: 
+  m_BasePreset: {fileID: 0}
+  m_MotionData:
+  - State: -1
+    Data: []
+  references:
+    version: 2
+    RefIds: []
