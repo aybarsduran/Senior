@@ -3,6 +3,7 @@ using UnityEngine;
 namespace IdenticalStudios.ProceduralMotion
 {
     [System.Serializable]
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceAssembly: "Assembly-CSharp")]
     public class BobMotionData : BobMotionDataBase
     {
         public override BobMode BobType => m_BobType;

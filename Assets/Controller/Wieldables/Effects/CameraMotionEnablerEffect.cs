@@ -6,6 +6,7 @@ using UnityEngine.Serialization;
 namespace IdenticalStudios.WieldableSystem.Effects
 {
     [Serializable]
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceAssembly: "Assembly-CSharp")]
     public sealed class CameraMotionEnablerEffect : WieldableEffect
     {
         [FormerlySerializedAs("m_Motions")]

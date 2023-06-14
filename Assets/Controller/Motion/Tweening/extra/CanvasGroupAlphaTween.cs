@@ -15,6 +15,7 @@ namespace IdenticalStudios.ProceduralMotion
     /// The driver is responsible for updating the tween's state.
     /// </summary>
     [System.Serializable]
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceAssembly: "IdenticalStudios.ProceduralMotion.Tweening")]
     public sealed class CanvasGroupAlphaTween : Tween<float, CanvasGroup>
     {
         /// <summary>

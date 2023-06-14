@@ -3,6 +3,7 @@
 namespace IdenticalStudios.UISystem
 {
     [System.Serializable]
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceAssembly: "Assembly-CSharp")]
     public sealed class AnimationFeedbackUI : IInteractableFeedbackUI
     {
         [SerializeField]

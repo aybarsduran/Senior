@@ -5,6 +5,8 @@ using UnityEngine.InputSystem.XR;
 
 namespace IdenticalStudios.MovementSystem
 {
+    [System.Serializable]
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceAssembly: "Assembly-CSharp")]
     public sealed class CharacterIdleState : CharacterMotionState
     {
         public override MovementStateType StateType => MovementStateType.Idle;

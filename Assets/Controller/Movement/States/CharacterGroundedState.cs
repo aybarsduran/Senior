@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace IdenticalStudios.MovementSystem
 {
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceAssembly: "Assembly-CSharp")]
     public abstract class CharacterGroundedState : CharacterMotionState
     {
         public override bool ApplyGravity => false;
