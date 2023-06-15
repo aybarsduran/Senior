@@ -13,11 +13,9 @@
 <img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
 </a>
 
-<p >
   We are the Identical Studios two students and independent game developers who studying computer science and engineering at Akdeniz University.
   
   For the Senior Design Project course, we will develop a computer game. This game is going to be a survival game based on a story. 
-</p>
 <img src="https://github.com/aybarsduran/Senior/blob/main/Poster%20Presentation/Primitive%20Pursuit.gif"> 
 
 <p>
@@ -133,6 +131,29 @@ If the user presses the tab button it will open a inventory menu. In the invento
 
 At the left, there is Crafting UI and it shows the crafting list that can be made by hand. Also, it shows the recipes for craft items. If the user has enough ingredients he/she can craft items. At the right, there is Character UI and it shows the clothes on the character. There are sections for the head, torso, legs, and feet clothes. The user can remove them by dragging or can wear them by dragging. 
 
+<img src="https://github.com/aybarsduran/Senior/blob/main/Poster%20Presentation/Open%20Book.gif"> 
+
+While playing pressing the "B" button from the keyboard will open the building book. There are sections like fire, shelter, storage, workstation, and building. These sections have builds regarding their section. These builds need ingredients to build. If the user has enough ingredients, he/she can place them by clicking on them. Also, the book has an exit button to close the book.
+
+<img src="https://github.com/aybarsduran/Senior/blob/main/Poster%20Presentation/Cut%20Tree.gif"> 
+
+Hit the tree to cut using the left click on the mouse.
+
+<img src="https://github.com/aybarsduran/Senior/blob/main/Poster%20Presentation/Eat%20Grapes.gif"> 
+
+Hold down the "E" button to eat grapes.
+
+<img src="https://github.com/aybarsduran/Senior/blob/main/Poster%20Presentation/Take%20Stone.gif"> 
+
+Press the "E" button to take a stone to your hands.
+
+<img src="https://github.com/aybarsduran/Senior/blob/main/Poster%20Presentation/Throw.gif"> 
+
+Press the right mouse button to aim, then press the left mouse button to throw the spear.
+
+<img src="https://github.com/aybarsduran/Senior/blob/main/Poster%20Presentation/Wood%20Collection.gif"> 
+
+Press the "E" button to take a wood to your shoulders.
 
 ## Future Expectation
 
