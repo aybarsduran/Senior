@@ -16,7 +16,7 @@
   We are the Identical Studios two students and independent game developers who studying computer science and engineering at Akdeniz University.
   
   For the Senior Design Project course, we will develop a computer game. This game is going to be a survival game based on a story. 
-<img src="https://github.com/aybarsduran/Senior/blob/main/Poster%20Presentation/Primitive%20Pursuit.gif"> 
+<img src="https://github.com/aybarsduran/Senior/blob/main/Poster%20Presentation/PrimitivePursuit.gif"> 
 
 <p>
 Primitive Pursuit is an immersive survival game that pushes your endurance to its limits. In this game, you must navigate a challenging wilderness environment while managing your basic needs such as hunger, health, and sleep.
@@ -154,6 +154,10 @@ Press the right mouse button to aim, then press the left mouse button to throw t
 <img src="https://github.com/aybarsduran/Senior/blob/main/Poster%20Presentation/Wood%20Collection.gif"> 
 
 Press the "E" button to take a wood to your shoulders.
+
+## Demo
+
+[Download the Demo](https://drive.google.com/drive/folders/1SdJEDmyy7iuLBB9IO0VjSimZtUJxFlPN?usp=sharing)
 
 ## Future Expectation
 
