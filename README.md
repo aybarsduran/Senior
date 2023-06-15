@@ -157,7 +157,7 @@ Press the "E" button to take a wood to your shoulders.
 
 ## Demo
 
-[Download the Demo](https://drive.google.com/drive/folders/1SdJEDmyy7iuLBB9IO0VjSimZtUJxFlPN?usp=sharing)
+[Download the Demo Release v.1.0](https://drive.google.com/drive/folders/1SdJEDmyy7iuLBB9IO0VjSimZtUJxFlPN?usp=sharing)
 
 ## Future Expectation
 
