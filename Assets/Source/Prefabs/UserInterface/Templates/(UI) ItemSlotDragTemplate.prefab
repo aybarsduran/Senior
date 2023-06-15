@@ -79,6 +79,70 @@ PrefabInstance:
       propertyPath: m_Interactable
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8468727096728884224, guid: 2b647622575235e4cad51d2a8f442fee, type: 3}
+      propertyPath: managedReferences[1000].m_NormalColor.a
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468727096728884224, guid: 2b647622575235e4cad51d2a8f442fee, type: 3}
+      propertyPath: managedReferences[1000].m_NormalColor.b
+      value: 0.16078432
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468727096728884224, guid: 2b647622575235e4cad51d2a8f442fee, type: 3}
+      propertyPath: managedReferences[1000].m_NormalColor.g
+      value: 0.16078432
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468727096728884224, guid: 2b647622575235e4cad51d2a8f442fee, type: 3}
+      propertyPath: managedReferences[1000].m_NormalColor.r
+      value: 0.16078432
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468727096728884224, guid: 2b647622575235e4cad51d2a8f442fee, type: 3}
+      propertyPath: managedReferences[1000].m_PressedColor.a
+      value: 0.7254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468727096728884224, guid: 2b647622575235e4cad51d2a8f442fee, type: 3}
+      propertyPath: managedReferences[1000].m_PressedColor.b
+      value: 0.26666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468727096728884224, guid: 2b647622575235e4cad51d2a8f442fee, type: 3}
+      propertyPath: managedReferences[1000].m_PressedColor.g
+      value: 0.5137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468727096728884224, guid: 2b647622575235e4cad51d2a8f442fee, type: 3}
+      propertyPath: managedReferences[1000].m_PressedColor.r
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468727096728884224, guid: 2b647622575235e4cad51d2a8f442fee, type: 3}
+      propertyPath: managedReferences[1000].m_SelectedColor.a
+      value: 0.7254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468727096728884224, guid: 2b647622575235e4cad51d2a8f442fee, type: 3}
+      propertyPath: managedReferences[1000].m_SelectedColor.b
+      value: 0.29411766
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468727096728884224, guid: 2b647622575235e4cad51d2a8f442fee, type: 3}
+      propertyPath: managedReferences[1000].m_SelectedColor.g
+      value: 0.5686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468727096728884224, guid: 2b647622575235e4cad51d2a8f442fee, type: 3}
+      propertyPath: managedReferences[1000].m_SelectedColor.r
+      value: 0.7529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468727096728884224, guid: 2b647622575235e4cad51d2a8f442fee, type: 3}
+      propertyPath: managedReferences[1000].m_HighlightedColor.a
+      value: 0.7254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468727096728884224, guid: 2b647622575235e4cad51d2a8f442fee, type: 3}
+      propertyPath: managedReferences[1000].m_HighlightedColor.b
+      value: 0.31764707
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468727096728884224, guid: 2b647622575235e4cad51d2a8f442fee, type: 3}
+      propertyPath: managedReferences[1000].m_HighlightedColor.g
+      value: 0.63529414
+      objectReference: {fileID: 0}
+    - target: {fileID: 8468727096728884224, guid: 2b647622575235e4cad51d2a8f442fee, type: 3}
+      propertyPath: managedReferences[1000].m_HighlightedColor.r
+      value: 0.8509804
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 784231558326617123, guid: 2b647622575235e4cad51d2a8f442fee, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2b647622575235e4cad51d2a8f442fee, type: 3}
@@ -102,19 +166,19 @@ MonoBehaviour:
   m_PlayOnStart: 1
   m_TweenSequence:
     m_Tweens:
-    - rid: 8457711132232647455
+    - rid: 3692120820353335316
   references:
     version: 2
     RefIds:
-    - rid: 8457711132232647455
-      type: {class: LocalScaleTween, ns: PolymindGames.ProceduralMotion, asm: PolymindGames}
+    - rid: 3692120820353335316
+      type: {class: LocalScaleTween, ns: IdenticalStudios.ProceduralMotion, asm: IdenticalStudios}
       data:
         m_IsFromLocked: 1
         m_ValueFrom: {x: 1.1, y: 1.1, z: 1.1}
         m_IsToRelative: 0
         m_ValueTo: {x: 1.25, y: 1.25, z: 1.25}
         m_Delay: 0
-        m_Duration: 0.3
+        m_Duration: 1
         m_EaseType: 21
         m_LoopCount: 10000000
         m_HasPingPong: 1

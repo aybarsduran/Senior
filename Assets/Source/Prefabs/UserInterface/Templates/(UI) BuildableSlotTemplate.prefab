@@ -344,7 +344,7 @@ MonoBehaviour:
   m_PixelsPerUnitMultiplier: 1
 --- !u!95 &1653391135133545924
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -361,7 +361,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &7766332682072608270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,24 +399,24 @@ MonoBehaviour:
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Feedbacks:
-  - rid: 3001165655466573826
-  - rid: 3001165693290283101
+  - rid: 3692120820353335311
+  - rid: 3692120820353335312
   m_OnSelected:
     m_PersistentCalls:
       m_Calls: []
   references:
     version: 2
     RefIds:
-    - rid: 3001165655466573826
-      type: {class: AnimationFeedbackUI, ns: PolymindGames.UISystem, asm: PolymindGames}
+    - rid: 3692120820353335311
+      type: {class: AnimationFeedbackUI, ns: IdenticalStudios.UISystem, asm: IdenticalStudios}
       data:
         m_Animator: {fileID: 1653391135133545924}
         m_NormalTrigger: Normal
         m_HighlightTrigger: Highlighted
         m_SelectedTrigger: Selected
         m_PressedTrigger: Pressed
-    - rid: 3001165693290283101
-      type: {class: AudioFeedbackUI, ns: PolymindGames.UISystem, asm: PolymindGames}
+    - rid: 3692120820353335312
+      type: {class: AudioFeedbackUI, ns: IdenticalStudios.UISystem, asm: IdenticalStudios}
       data:
         m_HighlightSound:
           m_Volume: 0.5

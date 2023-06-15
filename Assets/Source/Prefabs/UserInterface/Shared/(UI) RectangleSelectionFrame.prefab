@@ -113,13 +113,13 @@ MonoBehaviour:
   m_PlayOnStart: 1
   m_TweenSequence:
     m_Tweens:
-    - rid: 8457711132232647568
-    - rid: 8457711132232647569
+    - rid: 3692120820353335328
+    - rid: 3692120820353335329
   references:
     version: 2
     RefIds:
-    - rid: 8457711132232647568
-      type: {class: LocalScaleTween, ns: PolymindGames.ProceduralMotion, asm: PolymindGames}
+    - rid: 3692120820353335328
+      type: {class: LocalScaleTween, ns: IdenticalStudios.ProceduralMotion, asm: IdenticalStudios}
       data:
         m_IsFromLocked: 0
         m_ValueFrom: {x: 0, y: 0, z: 0}
@@ -132,8 +132,8 @@ MonoBehaviour:
         m_HasPingPong: 1
         m_DefaultFrom: {x: 1, y: 1, z: 1}
         component: {fileID: 8606802453121811313}
-    - rid: 8457711132232647569
-      type: {class: GraphicAlphaTween, ns: PolymindGames.ProceduralMotion, asm: PolymindGames}
+    - rid: 3692120820353335329
+      type: {class: GraphicAlphaTween, ns: IdenticalStudios.ProceduralMotion, asm: IdenticalStudios}
       data:
         m_IsFromLocked: 0
         m_ValueFrom: 0

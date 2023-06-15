@@ -677,10 +677,12 @@ MonoBehaviour:
   m_UseCooldown: 0.3
   m_UseEffects:
     m_StaticEffects:
-    - rid: 3001165671230865426
+    - rid: 3692120820353335339
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 0
       type: {class: DelayedSoundsEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
       data:
@@ -741,8 +743,8 @@ MonoBehaviour:
         - m_Volume: 0.3
           m_Delay: 0.1
           m_Clip: {fileID: 8300000, guid: 6d1718786428c9542a34ac4882ea6f6d, type: 3}
-    - rid: 3001165671230865426
-      type: {class: WieldableShakeEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
+    - rid: 3692120820353335339
+      type: {class: WieldableShakeEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
       data:
         m_PositionShake:
           XAmplitude: 0.1
@@ -1231,7 +1233,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &8069630632700600277
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1248,7 +1250,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 1
+  m_KeepAnimatorStateOnDisable: 1
 --- !u!114 &761503643504284115
 MonoBehaviour:
   m_ObjectHideFlags: 0

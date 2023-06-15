@@ -92,12 +92,12 @@ MonoBehaviour:
   m_PlayOnStart: 1
   m_TweenSequence:
     m_Tweens:
-    - rid: 8457711132232647567
+    - rid: 3692120820353335324
   references:
     version: 2
     RefIds:
-    - rid: 8457711132232647567
-      type: {class: LocalScaleTween, ns: PolymindGames.ProceduralMotion, asm: PolymindGames}
+    - rid: 3692120820353335324
+      type: {class: LocalScaleTween, ns: IdenticalStudios.ProceduralMotion, asm: IdenticalStudios}
       data:
         m_IsFromLocked: 1
         m_ValueFrom: {x: 0.98, y: 0.98, z: 0.98}

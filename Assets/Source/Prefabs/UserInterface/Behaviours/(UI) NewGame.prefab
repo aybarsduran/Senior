@@ -499,15 +499,15 @@ MonoBehaviour:
     m_Cooldown: 0.5
   m_ShowAnimation:
     m_Tweens:
-    - rid: 5916104957919756288
+    - rid: 3692120820353335301
   m_HideAnimation:
     m_Tweens:
-    - rid: 5916104957919756289
+    - rid: 3692120820353335302
   references:
     version: 2
     RefIds:
-    - rid: 5916104957919756288
-      type: {class: CanvasGroupAlphaTween, ns: PolymindGames.ProceduralMotion, asm: PolymindGames}
+    - rid: 3692120820353335301
+      type: {class: CanvasGroupAlphaTween, ns: IdenticalStudios.ProceduralMotion, asm: IdenticalStudios}
       data:
         m_IsFromLocked: 0
         m_ValueFrom: 0
@@ -520,8 +520,8 @@ MonoBehaviour:
         m_HasPingPong: 0
         m_DefaultFrom: 1
         component: {fileID: 2034169324000478743}
-    - rid: 5916104957919756289
-      type: {class: CanvasGroupAlphaTween, ns: PolymindGames.ProceduralMotion, asm: PolymindGames}
+    - rid: 3692120820353335302
+      type: {class: CanvasGroupAlphaTween, ns: IdenticalStudios.ProceduralMotion, asm: IdenticalStudios}
       data:
         m_IsFromLocked: 0
         m_ValueFrom: 0
@@ -549,18 +549,21 @@ MonoBehaviour:
   m_LoadDelay: 2
   m_MapSlotTemplate: {fileID: -5599735819438667654, guid: 977893ca660a4654d827a932ca988ba2, type: 3}
   m_SpawnRoot: {fileID: 7224465683857484078}
+  m_SelectMapEvent:
+    m_PersistentCalls:
+      m_Calls: []
   m_Maps:
   - Scene:
       sceneReference: {fileID: 102900000, guid: a6e50490bf36ab04bbf75c74f74ce870, type: 3}
       sceneName: Showcase
-      scenePath: Assets/PolymindGames/SurvivalTemplatePro/Samples/Demo/_Scenes/Showcase.unity
-      buildIndex: 0
+      scenePath: Assets/Source/Demo/_Scenes/Showcase.unity
+      buildIndex: 1
     Name: Showcase
     Sprite: {fileID: 21300000, guid: 169435141e3d86a499b26b81fd0b0ad8, type: 3}
   - Scene:
       sceneReference: {fileID: 102900000, guid: afcaeb59c360a39479751b5206e7cfa0, type: 3}
-      sceneName: 
-      scenePath: 
-      buildIndex: -1
+      sceneName: Forest
+      scenePath: Assets/Source/Demo/_Scenes/Forest.unity
+      buildIndex: 2
     Name: Forest
     Sprite: {fileID: 21300000, guid: b34447a933ec70a49822278bf4fbdd07, type: 3}

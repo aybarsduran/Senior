@@ -52,20 +52,20 @@ MonoBehaviour:
   m_EquipDuration: 0.5
   m_EquipEffects:
     m_StaticEffects:
-    - rid: 4109054478827913310
+    - rid: 3692120820353335344
   m_HolsterDuration: 0.5
   m_HolsterEffects:
     m_StaticEffects: []
     m_DynamicEffects:
-    - rid: 4109054478827913311
+    - rid: 3692120820353335345
   m_SwingContinuously: 1
   m_ComboHandler: {fileID: 2767706440137161203}
   m_BaseAimer: {fileID: 8565870384692060253}
   references:
     version: 2
     RefIds:
-    - rid: 4109054478827913310
-      type: {class: AnimationWieldableEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
+    - rid: 3692120820353335344
+      type: {class: AnimationWieldableEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
       data:
         m_Parameters:
         - m_Type: 1
@@ -73,9 +73,9 @@ MonoBehaviour:
           m_Value: 1
         - m_Type: 9
           m_Name: Equip
-          m_Value: 1
-    - rid: 4109054478827913311
-      type: {class: AnimationWieldableEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
+          m_Value: 0
+    - rid: 3692120820353335345
+      type: {class: AnimationWieldableEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
       data:
         m_Parameters:
         - m_Type: 1
@@ -83,7 +83,7 @@ MonoBehaviour:
           m_Value: 1
         - m_Type: 9
           m_Name: Holster
-          m_Value: 1
+          m_Value: 0
 --- !u!114 &7022657975396351349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,7 +125,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EnableMode: 0
   m_AttachOnStart: 1
-  m_AimThreshold: 0.3
   m_HipAccuracyMod: 1
   m_AimAccuracyMod: 1
   m_HipRecoilMod: 1
