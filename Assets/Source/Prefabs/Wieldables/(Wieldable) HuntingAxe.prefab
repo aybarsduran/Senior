@@ -789,23 +789,33 @@ MonoBehaviour:
   m_EquipDuration: 0.75
   m_EquipEffects:
     m_StaticEffects:
-    - rid: 1
-    - rid: 0
-    - rid: 3001165716421869617
+    - rid: 3692120820353335419
+    - rid: 3692120820353335420
+    - rid: 3692120820353335421
   m_HolsterDuration: 0.55
   m_HolsterEffects:
     m_StaticEffects: []
     m_DynamicEffects:
-    - rid: 3
-    - rid: 2
-    - rid: 3001165716421869589
+    - rid: 3692120820353335422
+    - rid: 3692120820353335423
+    - rid: 3692120820353335424
   m_SwingContinuously: 1
   m_ComboHandler: {fileID: 2854358389640253395}
   references:
     version: 2
     RefIds:
-    - rid: 0
-      type: {class: DelayedSoundsEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
+    - rid: 3692120820353335419
+      type: {class: AnimationWieldableEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
+      data:
+        m_Parameters:
+        - m_Type: 1
+          m_Name: EquipSpeed
+          m_Value: 1.1
+        - m_Type: 9
+          m_Name: Equip
+          m_Value: 0
+    - rid: 3692120820353335420
+      type: {class: DelayedSoundsEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
       data:
         m_Sounds:
         - m_Volume: 0.3
@@ -814,47 +824,8 @@ MonoBehaviour:
         - m_Volume: 0.5
           m_Delay: 0.175
           m_Clip: {fileID: 8300000, guid: 9271f804281c17847824a66eecfe71af, type: 3}
-    - rid: 1
-      type: {class: AnimationWieldableEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
-      data:
-        m_Parameters:
-        - m_Type: 1
-          m_Name: EquipSpeed
-          m_Value: 1.1
-        - m_Type: 9
-          m_Name: Equip
-          m_Value: 1
-    - rid: 2
-      type: {class: DelayedSoundsEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
-      data:
-        m_Sounds:
-        - m_Volume: 0.5
-          m_Delay: 0
-          m_Clip: {fileID: 8300000, guid: 6d1718786428c9542a34ac4882ea6f6d, type: 3}
-    - rid: 3
-      type: {class: AnimationWieldableEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
-      data:
-        m_Parameters:
-        - m_Type: 1
-          m_Name: HolsterSpeed
-          m_Value: 1.15
-        - m_Type: 9
-          m_Name: Holster
-          m_Value: 1
-    - rid: 3001165716421869589
-      type: {class: CameraDelayedForcesEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
-      data:
-        m_CameraForces:
-        - Delay: 0
-          SpringForce:
-            Force: {x: 0.3, y: 0.2, z: -0.4}
-            Duration: 0.125
-        - Delay: 0.25
-          SpringForce:
-            Force: {x: 0.4, y: -0.3, z: 0.45}
-            Duration: 0.125
-    - rid: 3001165716421869617
-      type: {class: CameraDelayedForcesEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
+    - rid: 3692120820353335421
+      type: {class: CameraDelayedForcesEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
       data:
         m_CameraForces:
         - Delay: 0.1
@@ -864,6 +835,35 @@ MonoBehaviour:
         - Delay: 0.4
           SpringForce:
             Force: {x: -0.4, y: 0, z: 0.4}
+            Duration: 0.125
+    - rid: 3692120820353335422
+      type: {class: AnimationWieldableEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
+      data:
+        m_Parameters:
+        - m_Type: 1
+          m_Name: HolsterSpeed
+          m_Value: 1.15
+        - m_Type: 9
+          m_Name: Holster
+          m_Value: 1.15
+    - rid: 3692120820353335423
+      type: {class: DelayedSoundsEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
+      data:
+        m_Sounds:
+        - m_Volume: 0.5
+          m_Delay: 0
+          m_Clip: {fileID: 8300000, guid: 6d1718786428c9542a34ac4882ea6f6d, type: 3}
+    - rid: 3692120820353335424
+      type: {class: CameraDelayedForcesEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
+      data:
+        m_CameraForces:
+        - Delay: 0
+          SpringForce:
+            Force: {x: 0.3, y: 0.2, z: -0.4}
+            Duration: 0.125
+        - Delay: 0.25
+          SpringForce:
+            Force: {x: 0.4, y: -0.3, z: 0.45}
             Duration: 0.125
 --- !u!114 &8869226593721428430
 MonoBehaviour:
@@ -926,13 +926,13 @@ MonoBehaviour:
   m_DurabilityRemove: 1.5
   m_SwingEffects:
     m_StaticEffects:
-    - rid: 3001165716421869607
-    - rid: 3001165716421869608
-    - rid: 3001165716421869609
+    - rid: 3692120820353335425
+    - rid: 3692120820353335426
+    - rid: 3692120820353335427
   m_HitEffects:
     m_StaticEffects:
-    - rid: 3001165716421869610
-    - rid: 3001165716421869611
+    - rid: 3692120820353335428
+    - rid: 3692120820353335429
   m_ValidGatherables:
   - {fileID: 11400000, guid: ce465e5eff835cd4380a9135a35f1354, type: 2}
   m_MaxGatherDistance: 0.35
@@ -940,8 +940,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 3001165716421869607
-      type: {class: AnimationWieldableEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
+    - rid: 3692120820353335425
+      type: {class: AnimationWieldableEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
       data:
         m_Parameters:
         - m_Type: 9
@@ -953,8 +953,8 @@ MonoBehaviour:
         - m_Type: 1
           m_Name: SwingSpeed
           m_Value: 1.2
-    - rid: 3001165716421869608
-      type: {class: DelayedRandomSoundsEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
+    - rid: 3692120820353335426
+      type: {class: DelayedRandomSoundsEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
       data:
         m_Sounds:
         - m_Volume: 0.5
@@ -963,8 +963,8 @@ MonoBehaviour:
           - {fileID: 8300000, guid: 674fd2f03c8ed5045b212ea20a13e3a0, type: 3}
           - {fileID: 8300000, guid: 24d3d38c05d97e841954876e7453a41c, type: 3}
           - {fileID: 8300000, guid: 1f10c56640e24594e8d0093b0df0597e, type: 3}
-    - rid: 3001165716421869609
-      type: {class: CameraDelayedForcesEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
+    - rid: 3692120820353335427
+      type: {class: CameraDelayedForcesEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
       data:
         m_CameraForces:
         - Delay: 0
@@ -975,8 +975,8 @@ MonoBehaviour:
           SpringForce:
             Force: {x: 1.1, y: -1, z: 1}
             Duration: 0.125
-    - rid: 3001165716421869610
-      type: {class: DelayedRandomSoundsEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
+    - rid: 3692120820353335428
+      type: {class: DelayedRandomSoundsEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
       data:
         m_Sounds:
         - m_Volume: 0.25
@@ -984,8 +984,8 @@ MonoBehaviour:
           m_AudioClips:
           - {fileID: 8300000, guid: a39c5741fa8ad5b438204dacbd530328, type: 3}
           - {fileID: 8300000, guid: 195a5dcd2c7efbc41b8a1d996cbbdccd, type: 3}
-    - rid: 3001165716421869611
-      type: {class: CameraShakeEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
+    - rid: 3692120820353335429
+      type: {class: CameraShakeEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
       data:
         m_PositionShake:
           XAmplitude: 1
@@ -1027,18 +1027,42 @@ MonoBehaviour:
   m_DurabilityRemove: 1
   m_SwingEffects:
     m_StaticEffects:
-    - rid: 3001165716421869612
-    - rid: 3001165716421869613
-    - rid: 3001165716421869614
+    - rid: 3692120820353335433
+    - rid: 3692120820353335434
+    - rid: 3692120820353335435
   m_HitEffects:
     m_StaticEffects:
-    - rid: 3001165716421869615
-    - rid: 3001165716421869619
+    - rid: 3692120820353335431
+    - rid: 3692120820353335432
   references:
     version: 2
     RefIds:
-    - rid: 3001165716421869612
-      type: {class: AnimationWieldableEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
+    - rid: 3692120820353335431
+      type: {class: DelayedRandomSoundsEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
+      data:
+        m_Sounds:
+        - m_Volume: 0.25
+          m_Delay: 0
+          m_AudioClips:
+          - {fileID: 8300000, guid: a39c5741fa8ad5b438204dacbd530328, type: 3}
+          - {fileID: 8300000, guid: 195a5dcd2c7efbc41b8a1d996cbbdccd, type: 3}
+    - rid: 3692120820353335432
+      type: {class: CameraShakeEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
+      data:
+        m_PositionShake:
+          XAmplitude: 0.3
+          YAmplitude: 0.3
+          ZAmplitude: 0.3
+          Duration: 0.5
+          Speed: 28
+        m_RotationShake:
+          XAmplitude: 1
+          YAmplitude: 0.5
+          ZAmplitude: 1
+          Duration: 0.4
+          Speed: 28
+    - rid: 3692120820353335433
+      type: {class: AnimationWieldableEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
       data:
         m_Parameters:
         - m_Type: 9
@@ -1050,8 +1074,8 @@ MonoBehaviour:
         - m_Type: 1
           m_Name: SwingSpeed
           m_Value: 1.1
-    - rid: 3001165716421869613
-      type: {class: DelayedRandomSoundsEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
+    - rid: 3692120820353335434
+      type: {class: DelayedRandomSoundsEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
       data:
         m_Sounds:
         - m_Volume: 0.5
@@ -1060,8 +1084,8 @@ MonoBehaviour:
           - {fileID: 8300000, guid: 674fd2f03c8ed5045b212ea20a13e3a0, type: 3}
           - {fileID: 8300000, guid: 24d3d38c05d97e841954876e7453a41c, type: 3}
           - {fileID: 8300000, guid: 1f10c56640e24594e8d0093b0df0597e, type: 3}
-    - rid: 3001165716421869614
-      type: {class: CameraDelayedForcesEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
+    - rid: 3692120820353335435
+      type: {class: CameraDelayedForcesEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
       data:
         m_CameraForces:
         - Delay: 0
@@ -1070,32 +1094,8 @@ MonoBehaviour:
             Duration: 0.125
         - Delay: 0.25
           SpringForce:
-            Force: {x: 1, y: -0.8, z: 0.8}
+            Force: {x: 1.1, y: -0.8, z: 0.8}
             Duration: 0.125
-    - rid: 3001165716421869615
-      type: {class: DelayedRandomSoundsEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
-      data:
-        m_Sounds:
-        - m_Volume: 0.25
-          m_Delay: 0
-          m_AudioClips:
-          - {fileID: 8300000, guid: a39c5741fa8ad5b438204dacbd530328, type: 3}
-          - {fileID: 8300000, guid: 195a5dcd2c7efbc41b8a1d996cbbdccd, type: 3}
-    - rid: 3001165716421869619
-      type: {class: CameraShakeEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
-      data:
-        m_PositionShake:
-          XAmplitude: 0.3
-          YAmplitude: 0.3
-          ZAmplitude: 0.3
-          Duration: 0.5
-          Speed: 28
-        m_RotationShake:
-          XAmplitude: 1
-          YAmplitude: 0.5
-          ZAmplitude: 2.5
-          Duration: 0.4
-          Speed: 28
 --- !u!1 &4673807304319219512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1525,7 +1525,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &389232644715490034
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1542,7 +1542,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 1
+  m_KeepAnimatorStateOnDisable: 1
 --- !u!114 &1113893191302644313
 MonoBehaviour:
   m_ObjectHideFlags: 0

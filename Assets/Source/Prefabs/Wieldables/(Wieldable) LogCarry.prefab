@@ -369,12 +369,12 @@ MonoBehaviour:
   m_EquipDuration: 0.5
   m_EquipEffects:
     m_StaticEffects:
-    - rid: -2
+    - rid: 3692120820353335453
   m_HolsterDuration: 0.3
   m_HolsterEffects:
     m_StaticEffects: []
     m_DynamicEffects:
-    - rid: -2
+    - rid: 3692120820353335454
   m_UseAction: {fileID: 4912960692732805352}
   m_BaseWeight: 2
   m_DropSettings:
@@ -388,17 +388,47 @@ MonoBehaviour:
   - {fileID: 4894504189451263624}
   m_CarryEffects:
     m_StaticEffects:
-    - rid: -2
+    - rid: 3692120820353335455
   m_UseEffects:
     m_StaticEffects: []
   m_DropEffects:
     m_StaticEffects:
-    - rid: -2
+    - rid: 3692120820353335456
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
+    - rid: 3692120820353335453
+      type: {class: AnimationWieldableEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
+      data:
+        m_Parameters:
+        - m_Type: 1
+          m_Name: EquipSpeed
+          m_Value: 1
+        - m_Type: 9
+          m_Name: Equip
+          m_Value: 0
+    - rid: 3692120820353335454
+      type: {class: AnimationWieldableEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
+      data:
+        m_Parameters:
+        - m_Type: 1
+          m_Name: HolsterSpeed
+          m_Value: 1
+        - m_Type: 9
+          m_Name: Holster
+          m_Value: 0
+    - rid: 3692120820353335455
+      type: {class: SimpleSoundEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
+      data:
+        m_Sound:
+          m_Clip: {fileID: 8300000, guid: 70c0d9af58e5ae44f97f66ea6c433857, type: 3}
+          m_Volume: 0.4
+    - rid: 3692120820353335456
+      type: {class: SimpleSoundEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
+      data:
+        m_Sound:
+          m_Clip: {fileID: 8300000, guid: 1a22249db2dcfc94781032451d7fb760, type: 3}
+          m_Volume: 0.4
 --- !u!114 &4912960692732805352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -717,7 +747,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8858457022857263389
 Transform:
   m_ObjectHideFlags: 0
@@ -1443,7 +1473,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2192679809604474603
 Transform:
   m_ObjectHideFlags: 0

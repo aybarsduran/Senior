@@ -1553,12 +1553,12 @@ MonoBehaviour:
   m_EquipDuration: 0.5
   m_EquipEffects:
     m_StaticEffects:
-    - rid: 0
+    - rid: 3692120820353335405
   m_HolsterDuration: 0.3
   m_HolsterEffects:
     m_StaticEffects: []
     m_DynamicEffects:
-    - rid: 1
+    - rid: 3692120820353335406
   m_UseAction: {fileID: 8578373747728881646}
   m_BaseWeight: 2
   m_DropSettings:
@@ -1573,17 +1573,17 @@ MonoBehaviour:
   - {fileID: 2695241133755792042}
   m_CarryEffects:
     m_StaticEffects:
-    - rid: 8457711178295803906
+    - rid: 3692120820353335407
   m_UseEffects:
     m_StaticEffects: []
   m_DropEffects:
     m_StaticEffects:
-    - rid: 3001165716421869583
+    - rid: 3692120820353335408
   references:
     version: 2
     RefIds:
-    - rid: 0
-      type: {class: AnimationWieldableEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
+    - rid: 3692120820353335405
+      type: {class: AnimationWieldableEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
       data:
         m_Parameters:
         - m_Type: 1
@@ -1591,9 +1591,9 @@ MonoBehaviour:
           m_Value: 1
         - m_Type: 9
           m_Name: Equip
-          m_Value: 1
-    - rid: 1
-      type: {class: AnimationWieldableEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
+          m_Value: 0
+    - rid: 3692120820353335406
+      type: {class: AnimationWieldableEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
       data:
         m_Parameters:
         - m_Type: 1
@@ -1601,19 +1601,19 @@ MonoBehaviour:
           m_Value: 1
         - m_Type: 9
           m_Name: Holster
-          m_Value: 1
-    - rid: 3001165716421869583
-      type: {class: SimpleSoundEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
-      data:
-        m_Sound:
-          m_Clip: {fileID: 8300000, guid: 1a22249db2dcfc94781032451d7fb760, type: 3}
-          m_Volume: 0.4
-    - rid: 8457711178295803906
-      type: {class: SimpleSoundEffect, ns: PolymindGames.WieldableSystem.Effects, asm: PolymindGames}
+          m_Value: 0
+    - rid: 3692120820353335407
+      type: {class: SimpleSoundEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
       data:
         m_Sound:
           m_Clip: {fileID: 8300000, guid: 70c0d9af58e5ae44f97f66ea6c433857, type: 3}
           m_Volume: 0.5
+    - rid: 3692120820353335408
+      type: {class: SimpleSoundEffect, ns: IdenticalStudios.WieldableSystem.Effects, asm: IdenticalStudios}
+      data:
+        m_Sound:
+          m_Clip: {fileID: 8300000, guid: 1a22249db2dcfc94781032451d7fb760, type: 3}
+          m_Volume: 0.4
 --- !u!114 &8578373747728881646
 MonoBehaviour:
   m_ObjectHideFlags: 0
