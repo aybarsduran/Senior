@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: ef2f4858ff73a304686a17fb3ff64c11
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 150
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Libre Baskerville
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c5e9c94a6680ca14b997224bd7729cef, type: 3}
+  - {fileID: 12800000, guid: 7eeaea49d01b40043ba641847d4f49a3, type: 3}
+  customCharacters: 
+  fontRenderingMode: 1
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
