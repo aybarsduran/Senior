@@ -21,6 +21,30 @@
 <img src="https://github.com/aybarsduran/Senior/blob/main/Poster%20Presentation/Primitive%20Pursuit.gif"> 
 
 <p>
+Primitive Pursuit is an immersive survival game that pushes your endurance to its limits. In this game, you must navigate a challenging wilderness environment while managing your basic needs such as hunger, health, and sleep.
+  
+It is a unique survival experience crafted in the Unity game engine. As a player, you're thrown into a dynamic open-world environment where your survival skills are put to the ultimate test. The game offers a realistic experience by integrating various survival elements such as inventory management, health and hunger systems, building capabilities, and even the need for sleep.
+  
+This project demonstrates the use of various Unity modules, handlers, and behaviors to construct a complex and engaging game world.
+
+Features
+  
+* Inventory System: Collect and manage items like weapons, ammunition, food, and more.
+  
+* Health Module: Keep track of your health status. Use items to heal and avoid damage to survive.
+  
+* Hunger System: Ensure you eat enough to maintain energy levels and stay alive.
+  
+* Sleep Mechanism: Sleep to restore your energy and keep sleep deprivation at bay.
+  
+* Building Capabilities: Gather resources and build structures to survive in the wilderness.
+  
+* Immersive Audio: An audio system that offers dynamic sound effects and background music.
+  
+* Realistic Environment: The game includes a day-night cycle and varied weather conditions, making survival even more challenging.
+  
+From strategizing resource management to making quick decisions in critical situations, Senior offers a comprehensive survival experience. Can you survive?
+  
 Mockups were designed on Canva website. You can find them in /Mockups directory. For more information please see the content below.  
     <br />
     <a href="https://github.com/aybarsduran/Senior/tree/main/Mockups"><strong>Explore the mockups »</strong></a>
@@ -111,22 +135,22 @@ At the left, there is Crafting UI and it shows the crafting list that can be mad
 
 ## Future Expectation
 
-* Expansion of Current Modules
+* Expansion of Current Modules:
 We anticipate that the existing modules such as Inventory, Health, Hunger, Audio, Camera, Sleep, Movement, and Building will undergo further expansion to enrich gameplay. This could involve introducing additional item types in the Inventory module, more intricate health dynamics in the Health module, or more complex hunger systems in the Hunger module.
 
-* Introduction of New Modules
+* Introduction of New Modules:
 In order to enhance game complexity and depth, new modules could be introduced. Potential additions include a Climate/Weather module, which could alter player stats and game dynamics; a Quest/Storyline module, to offer specific goals and rewards to players; or an NPC Interaction module, which would enable dialogues or trade with non-player characters in the game world.
 
-* Advanced AI
+* Advanced AI:
 We also foresee the development of more sophisticated AI-controlled characters. These could range from enemies with varying levels of intelligence and behaviour, to ally characters who can assist the player, or neutral characters that can interact with players in unexpected ways.
 
-* Multiplayer Capabilities
+* Multiplayer Capabilities:
 Should the game architecture and design permit, we expect to introduce multiplayer functionality. This could include cooperative play, player versus player dynamics, or a shared online world where players can interact and participate in a shared experience.
 
-* Monetization Strategies
+* Monetization Strategies:
 If this project moves toward commercial distribution, strategies for monetization will become a significant aspect of development. This could involve introducing in-game purchases, developing subscription models, or incorporating ad integrations.
 
-* Optimization and Rigorous Testing
+* Optimization and Rigorous Testing:
 Continuous testing and optimization is a crucial part of future developments. This will involve regular play-testing, feedback collection, and debugging sessions to identify and rectify any performance bottlenecks or gameplay issues.
 
 <!-- CLASS DIAGRAM -->
