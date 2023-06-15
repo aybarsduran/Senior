@@ -51,7 +51,7 @@ Mockups were designed on Canva website. You can find them in /Mockups directory.
     <a href="https://github.com/aybarsduran/Senior/tree/main/Documentation"><strong>Explore the documentations »</strong></a>
     <br />
     <br />
-    <a href="">View Demo</a>
+    <a href="https://drive.google.com/drive/folders/1SdJEDmyy7iuLBB9IO0VjSimZtUJxFlPN?usp=sharing">View Demo</a>
     ·
     <a href="https://github.com/aybarsduran/Senior/issues">Report Bug</a>
     ·
