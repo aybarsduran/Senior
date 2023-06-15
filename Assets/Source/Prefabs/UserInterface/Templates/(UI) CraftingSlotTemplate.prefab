@@ -256,20 +256,20 @@ MonoBehaviour:
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Feedbacks:
-  - rid: 3001165587142148096
+  - rid: 3692120820353335314
   m_OnSelected:
     m_PersistentCalls:
       m_Calls: []
   references:
     version: 2
     RefIds:
-    - rid: 3001165587142148096
-      type: {class: ColorTintFeedbackUI, ns: PolymindGames.UISystem, asm: PolymindGames}
+    - rid: 3692120820353335314
+      type: {class: ColorTintFeedbackUI, ns: IdenticalStudios.UISystem, asm: IdenticalStudios}
       data:
         m_TargetGraphic: {fileID: 501377518068851431}
         m_NormalColor: {r: 0.14901961, g: 0.14901961, b: 0.14901961, a: 0.74509805}
-        m_HighlightedColor: {r: 0.764151, g: 0.5903218, b: 0.34963512, a: 0.49019608}
-        m_SelectedColor: {r: 0.6886792, g: 0.53201836, b: 0.31510323, a: 0.49019608}
+        m_HighlightedColor: {r: 0.7647059, g: 0.5921569, b: 0.34901962, a: 0.49019608}
+        m_SelectedColor: {r: 0.6901961, g: 0.53333336, b: 0.3137255, a: 0.49019608}
         m_PressedColor: {r: 0.6509804, g: 0.49803922, b: 0.2901961, a: 0.49019608}
         m_FadeDuration: 0.1
 --- !u!114 &6623894293824945762

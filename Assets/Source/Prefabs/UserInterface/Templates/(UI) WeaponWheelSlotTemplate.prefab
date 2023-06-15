@@ -431,17 +431,17 @@ MonoBehaviour:
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Feedbacks:
-  - rid: 3001165446827474945
-  - rid: 8457711293380689920
-  - rid: 8457711293380689921
+  - rid: 3692120820353335319
+  - rid: 3692120820353335322
+  - rid: 3692120820353335323
   m_OnSelected:
     m_PersistentCalls:
       m_Calls: []
   references:
     version: 2
     RefIds:
-    - rid: 3001165446827474945
-      type: {class: ColorTintFeedbackUI, ns: PolymindGames.UISystem, asm: PolymindGames}
+    - rid: 3692120820353335319
+      type: {class: ColorTintFeedbackUI, ns: IdenticalStudios.UISystem, asm: IdenticalStudios}
       data:
         m_TargetGraphic: {fileID: 8064936104730329213}
         m_NormalColor: {r: 0.1882353, g: 0.1882353, b: 0.1882353, a: 0.5882353}
@@ -449,8 +449,8 @@ MonoBehaviour:
         m_SelectedColor: {r: 0.7529412, g: 0.5686275, b: 0.29411766, a: 0.7254902}
         m_PressedColor: {r: 0.6784314, g: 0.5137255, b: 0.26666668, a: 0.7254902}
         m_FadeDuration: 0.1
-    - rid: 8457711293380689920
-      type: {class: AudioFeedbackUI, ns: PolymindGames.UISystem, asm: PolymindGames}
+    - rid: 3692120820353335322
+      type: {class: AudioFeedbackUI, ns: IdenticalStudios.UISystem, asm: IdenticalStudios}
       data:
         m_HighlightSound:
           m_Volume: 0.1
@@ -465,8 +465,8 @@ MonoBehaviour:
           m_Pitch: 1
           m_PitchJitter: 0.1
           m_AudioClips: []
-    - rid: 8457711293380689921
-      type: {class: HighlightGraphicFeedbackUI, ns: PolymindGames.UISystem, asm: PolymindGames}
+    - rid: 3692120820353335323
+      type: {class: HighlightGraphicFeedbackUI, ns: IdenticalStudios.UISystem, asm: IdenticalStudios}
       data:
         m_SelectionGraphic: {fileID: 8064936104093154417}
         m_SelectedColor: {r: 0.8862745, g: 0.8862745, b: 0.8862745, a: 0.5882353}

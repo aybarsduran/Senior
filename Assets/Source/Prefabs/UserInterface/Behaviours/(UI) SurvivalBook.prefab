@@ -471,7 +471,7 @@ MonoBehaviour:
   m_PixelsPerUnitMultiplier: 1
 --- !u!95 &1661068294378273437
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -488,7 +488,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &6519324976106036693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1372,7 +1372,7 @@ MonoBehaviour:
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Feedbacks:
-  - rid: 3001165655466573824
+  - rid: 3692120820353335303
   m_OnSelected:
     m_PersistentCalls:
       m_Calls:
@@ -1391,8 +1391,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 3001165655466573824
-      type: {class: ColorTintFeedbackUI, ns: PolymindGames.UISystem, asm: PolymindGames}
+    - rid: 3692120820353335303
+      type: {class: ColorTintFeedbackUI, ns: IdenticalStudios.UISystem, asm: IdenticalStudios}
       data:
         m_TargetGraphic: {fileID: 8063341469942190239}
         m_NormalColor: {r: 0.59607846, g: 0.59607846, b: 0.59607846, a: 1}
@@ -1646,6 +1646,54 @@ PrefabInstance:
       propertyPath: m_ObjectToEnable
       value: 
       objectReference: {fileID: 6452119727840272112}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: m_Feedbacks.Array.data[1]
+      value: 3692120820353335307
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335307]
+      value: IdenticalStudios IdenticalStudios.UISystem.AudioFeedbackUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335307].m_SelectedSound.m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335307].m_HighlightSound.m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335307].m_SelectedSound.m_Volume
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335307].m_HighlightSound.m_Volume
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335307].m_SelectedSound.m_PitchJitter
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335307].m_HighlightSound.m_PitchJitter
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335307].m_SelectedSound.m_VolumeJitter
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335307].m_HighlightSound.m_VolumeJitter
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335307].m_SelectedSound.m_AudioClips.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335307].m_HighlightSound.m_AudioClips.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5272615947120618066, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
       propertyPath: m_Color.b
       value: 0.4056604
@@ -1943,6 +1991,66 @@ PrefabInstance:
       propertyPath: m_ObjectToEnable
       value: 
       objectReference: {fileID: 157944315962189195}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: m_Feedbacks.Array.data[1]
+      value: 3692120820353335304
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335304]
+      value: IdenticalStudios IdenticalStudios.UISystem.AudioFeedbackUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335304].m_SelectedSound.m_Pitch
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335304].m_HighlightSound.m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335304].m_SelectedSound.m_Volume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335304].m_HighlightSound.m_Volume
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335304].m_SelectedSound.m_PitchJitter
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335304].m_HighlightSound.m_PitchJitter
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335304].m_SelectedSound.m_VolumeJitter
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335304].m_HighlightSound.m_VolumeJitter
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335304].m_SelectedSound.m_AudioClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335304].m_HighlightSound.m_AudioClips.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335304].m_SelectedSound.m_AudioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 12338d8044dc42d45829054f4a4bfe8d, type: 3}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335304].m_SelectedSound.m_AudioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1429aef08d6ec0a42a5367cb00595763, type: 3}
+    - target: {fileID: 3892146971451667373, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
+      propertyPath: managedReferences[3692120820353335304].m_SelectedSound.m_AudioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: f877538214c50484db14cd0e4117a997, type: 3}
     - target: {fileID: 5272615947120618066, guid: d185b6ff51da93e48a298028b8ca44f1, type: 3}
       propertyPath: m_Color.b
       value: 0.11992704

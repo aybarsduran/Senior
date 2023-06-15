@@ -300,12 +300,12 @@ MonoBehaviour:
   m_PlayOnStart: 0
   m_TweenSequence:
     m_Tweens:
-    - rid: 3001166033976557569
+    - rid: 3692120820353335337
   references:
     version: 2
     RefIds:
-    - rid: 3001166033976557569
-      type: {class: LocalRotationTween, ns: PolymindGames.ProceduralMotion, asm: PolymindGames}
+    - rid: 3692120820353335337
+      type: {class: LocalRotationTween, ns: IdenticalStudios.ProceduralMotion, asm: IdenticalStudios}
       data:
         m_IsFromLocked: 0
         m_ValueFrom: {x: 0, y: 0, z: 0}
@@ -333,12 +333,12 @@ MonoBehaviour:
   m_PlayOnStart: 0
   m_TweenSequence:
     m_Tweens:
-    - rid: 3001166033976557568
+    - rid: 3692120820353335338
   references:
     version: 2
     RefIds:
-    - rid: 3001166033976557568
-      type: {class: LocalRotationTween, ns: PolymindGames.ProceduralMotion, asm: PolymindGames}
+    - rid: 3692120820353335338
+      type: {class: LocalRotationTween, ns: IdenticalStudios.ProceduralMotion, asm: IdenticalStudios}
       data:
         m_IsFromLocked: 0
         m_ValueFrom: {x: 0, y: 0, z: 0}

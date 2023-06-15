@@ -3907,24 +3907,22 @@ MonoBehaviour:
   m_FiremodeIconImage: {fileID: 6520158552771944202}
   m_ShowAnimation:
     m_Tweens:
-    - rid: 8457711132232647552
-    - rid: 8457711132232647553
-    - rid: 8457711132232647554
+    - rid: 3692120820353335330
+    - rid: 3692120820353335331
+    - rid: 3692120820353335332
   m_UpdateAnimation:
     m_Tweens:
-    - rid: 8457711132232647552
+    - rid: 3692120820353335333
   m_HideAnimation:
     m_Tweens:
-    - rid: 8457711132232647552
-    - rid: 8457711132232647553
-    - rid: 8457711132232647554
+    - rid: 3692120820353335334
+    - rid: 3692120820353335335
+    - rid: 3692120820353335336
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
-    - rid: 8457711132232647552
-      type: {class: AnchoredPositionTween, ns: PolymindGames.ProceduralMotion, asm: PolymindGames}
+    - rid: 3692120820353335330
+      type: {class: AnchoredPositionTween, ns: IdenticalStudios.ProceduralMotion, asm: IdenticalStudios}
       data:
         m_IsFromLocked: 0
         m_ValueFrom: {x: 0, y: 0}
@@ -3937,8 +3935,8 @@ MonoBehaviour:
         m_HasPingPong: 0
         m_DefaultFrom: {x: -230.40002, y: 54.100006}
         component: {fileID: 1479684241123754325}
-    - rid: 8457711132232647553
-      type: {class: GraphicAlphaTween, ns: PolymindGames.ProceduralMotion, asm: PolymindGames}
+    - rid: 3692120820353335331
+      type: {class: GraphicAlphaTween, ns: IdenticalStudios.ProceduralMotion, asm: IdenticalStudios}
       data:
         m_IsFromLocked: 0
         m_ValueFrom: 0
@@ -3947,12 +3945,12 @@ MonoBehaviour:
         m_Delay: 0
         m_Duration: 0.5
         m_EaseType: 0
-        m_LoopCount: 1
+        m_LoopCount: 0
         m_HasPingPong: 0
         m_DefaultFrom: 0.6862745
         component: {fileID: 5547614599017474082}
-    - rid: 8457711132232647554
-      type: {class: GraphicAlphaTween, ns: PolymindGames.ProceduralMotion, asm: PolymindGames}
+    - rid: 3692120820353335332
+      type: {class: GraphicAlphaTween, ns: IdenticalStudios.ProceduralMotion, asm: IdenticalStudios}
       data:
         m_IsFromLocked: 0
         m_ValueFrom: 0
@@ -3961,7 +3959,63 @@ MonoBehaviour:
         m_Delay: 0
         m_Duration: 0.5
         m_EaseType: 0
+        m_LoopCount: 0
+        m_HasPingPong: 0
+        m_DefaultFrom: 0.9019608
+        component: {fileID: 6520158552771944202}
+    - rid: 3692120820353335333
+      type: {class: AnchoredPositionTween, ns: IdenticalStudios.ProceduralMotion, asm: IdenticalStudios}
+      data:
+        m_IsFromLocked: 0
+        m_ValueFrom: {x: 0, y: 0}
+        m_IsToRelative: 1
+        m_ValueTo: {x: -5, y: 5}
+        m_Delay: 0
+        m_Duration: 0.1
+        m_EaseType: 71
+        m_LoopCount: 0
+        m_HasPingPong: 1
+        m_DefaultFrom: {x: 0, y: -6}
+        component: {fileID: 4104370740671965421}
+    - rid: 3692120820353335334
+      type: {class: AnchoredPositionTween, ns: IdenticalStudios.ProceduralMotion, asm: IdenticalStudios}
+      data:
+        m_IsFromLocked: 0
+        m_ValueFrom: {x: 0, y: 0}
+        m_IsToRelative: 1
+        m_ValueTo: {x: 2, y: -8}
+        m_Delay: 0
+        m_Duration: 0.15
+        m_EaseType: 52
         m_LoopCount: 1
+        m_HasPingPong: 0
+        m_DefaultFrom: {x: -230.40002, y: 54.100006}
+        component: {fileID: 1479684241123754325}
+    - rid: 3692120820353335335
+      type: {class: GraphicAlphaTween, ns: IdenticalStudios.ProceduralMotion, asm: IdenticalStudios}
+      data:
+        m_IsFromLocked: 0
+        m_ValueFrom: 0
+        m_IsToRelative: 0
+        m_ValueTo: 0
+        m_Delay: 0
+        m_Duration: 0.1
+        m_EaseType: 0
+        m_LoopCount: 0
+        m_HasPingPong: 0
+        m_DefaultFrom: 0.6862745
+        component: {fileID: 5547614599017474082}
+    - rid: 3692120820353335336
+      type: {class: GraphicAlphaTween, ns: IdenticalStudios.ProceduralMotion, asm: IdenticalStudios}
+      data:
+        m_IsFromLocked: 0
+        m_ValueFrom: 0
+        m_IsToRelative: 0
+        m_ValueTo: 0
+        m_Delay: 0
+        m_Duration: 0.1
+        m_EaseType: 0
+        m_LoopCount: 0
         m_HasPingPong: 0
         m_DefaultFrom: 0.9019608
         component: {fileID: 6520158552771944202}
