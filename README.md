@@ -54,7 +54,7 @@ Mockups were designed on Canva website. You can find them in /Mockups directory.
     </li>
     <li><a href="#how-to-play">How to play?</a></li>
     <li><a href="#demo">Demo</a></li>
-    <li><a href="#future-work">Future Work</a></li>
+    <li><a href="#future-expectation">Future Expectations</a></li>
     <li><a href="#class-diagram">Class Diagram</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -70,6 +70,64 @@ Primitive Pursuit takes you on an immersive journey into a harsh and unforgiving
 ### Built With
 
 * [Unity 2021.3.18f1](https://unity.com/releases/editor/whats-new/2021.3.18)
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+### Why Unity?
+
+Unity is declared the platform for implementation because it is a popular choice for game
+development because it is cross-platform, easy to use, has a large asset library, and has a strong
+community of developers. It also has a number of powerful features that make it a flexible
+choice for creating a wide range of games and interactive content. 
+
+Unity has a large and active community of developers and artists who share tips, advice, and resources with each other. This has been a great resource as we are new to Unity or looking for help with specific issues.
+
+## Configuration Steps
+1. Cloning the repository:
+
+```
+$ https://github.com/aybarsduran/Senior.git
+```
+
+2. Install [Unity Hub](https://docs.unity3d.com/2020.1/Documentation/Manual/GettingStartedInstallingHub.html) 
+3. Install [Install Unity Editor 2021.3.18 Version](https://unity.com/releases/editor/whats-new/2021.3.18) 
+4. Now run the app on your Unity editor with press the play button.
+
+## How to Play?: 
+<img src="https://github.com/aybarsduran/Senior/blob/main/Poster%20Presentation/2.png"> 
+
+Our game starts with a main menu. It shows a text box for the player’s name. User can write whatever it wants. After writing the name he/she can press the save button or cancel it by pressing the back button. If the user saves, the name will be shown in the right corner of the screen. 
+
+In the main menu, left up corner of the screen, if the user presses the new game button, the game will be started. If the user presses the exit game button, the game will be closed. Also, there is a load game button for the continuation from the last saves. To use this there must be at least one save.
+
+<img src="https://github.com/aybarsduran/Senior/blob/main/Poster%20Presentation/3.png"> 
+
+While playing, if the user presses the escape button it will open a pause menu.There are buttons starting with resume. The resume button will close the pause menu and continue playing. The save game button opens another UI for the saving part. The load game button opens another UI for the loading part. The quit to menu button will return to the main menu. The quit to the desktop button will close the game.
+
+If the user presses the tab button it will open a inventory menu. In the inventory interface, there is a backpack in the middle. There are item containers in the backpack. It shows the items that the user picked up. Also, there is a bar that shows the maximum carry weight with the current weight of the backpack.
+
+At the left, there is Crafting UI and it shows the crafting list that can be made by hand. Also, it shows the recipes for craft items. If the user has enough ingredients he/she can craft items. At the right, there is Character UI and it shows the clothes on the character. There are sections for the head, torso, legs, and feet clothes. The user can remove them by dragging or can wear them by dragging. 
+
+## Future Expectation
+
+* Expansion of Current Modules
+We anticipate that the existing modules such as Inventory, Health, Hunger, Audio, Camera, Sleep, Movement, and Building will undergo further expansion to enrich gameplay. This could involve introducing additional item types in the Inventory module, more intricate health dynamics in the Health module, or more complex hunger systems in the Hunger module.
+
+* Introduction of New Modules
+In order to enhance game complexity and depth, new modules could be introduced. Potential additions include a Climate/Weather module, which could alter player stats and game dynamics; a Quest/Storyline module, to offer specific goals and rewards to players; or an NPC Interaction module, which would enable dialogues or trade with non-player characters in the game world.
+
+* Advanced AI
+We also foresee the development of more sophisticated AI-controlled characters. These could range from enemies with varying levels of intelligence and behaviour, to ally characters who can assist the player, or neutral characters that can interact with players in unexpected ways.
+
+* Multiplayer Capabilities
+Should the game architecture and design permit, we expect to introduce multiplayer functionality. This could include cooperative play, player versus player dynamics, or a shared online world where players can interact and participate in a shared experience.
+
+* Monetization Strategies
+If this project moves toward commercial distribution, strategies for monetization will become a significant aspect of development. This could involve introducing in-game purchases, developing subscription models, or incorporating ad integrations.
+
+* Optimization and Rigorous Testing
+Continuous testing and optimization is a crucial part of future developments. This will involve regular play-testing, feedback collection, and debugging sessions to identify and rectify any performance bottlenecks or gameplay issues.
 
 <!-- CLASS DIAGRAM -->
 ## Class Diagram
