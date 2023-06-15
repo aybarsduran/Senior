@@ -85,7 +85,7 @@ Mockups were designed on Canva website. You can find them in /Mockups directory.
 </details>
 
 
-<img src="https://github.com/aybarsduran/Senior/blob/main/Poster%20Presentation/poster.png">
+<img src="https://github.com/aybarsduran/Senior/blob/main/Poster%20Presentation/MainPoster.png">
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -119,19 +119,20 @@ $ https://github.com/aybarsduran/Senior.git
 4. Now run the app on your Unity editor with press the play button.
 
 ## How to Play?: 
-<img src="https://github.com/aybarsduran/Senior/blob/main/Poster%20Presentation/2.png"> 
+<img src="https://github.com/aybarsduran/Senior/blob/main/Poster%20Presentation/How%20to%20Play.png"> 
 
 Our game starts with a main menu. It shows a text box for the player’s name. User can write whatever it wants. After writing the name he/she can press the save button or cancel it by pressing the back button. If the user saves, the name will be shown in the right corner of the screen. 
 
 In the main menu, left up corner of the screen, if the user presses the new game button, the game will be started. If the user presses the exit game button, the game will be closed. Also, there is a load game button for the continuation from the last saves. To use this there must be at least one save.
 
-<img src="https://github.com/aybarsduran/Senior/blob/main/Poster%20Presentation/3.png"> 
+<img src="https://github.com/aybarsduran/Senior/blob/main/Poster%20Presentation/How%20to%20Play01.png"> 
 
 While playing, if the user presses the escape button it will open a pause menu.There are buttons starting with resume. The resume button will close the pause menu and continue playing. The save game button opens another UI for the saving part. The load game button opens another UI for the loading part. The quit to menu button will return to the main menu. The quit to the desktop button will close the game.
 
 If the user presses the tab button it will open a inventory menu. In the inventory interface, there is a backpack in the middle. There are item containers in the backpack. It shows the items that the user picked up. Also, there is a bar that shows the maximum carry weight with the current weight of the backpack.
 
 At the left, there is Crafting UI and it shows the crafting list that can be made by hand. Also, it shows the recipes for craft items. If the user has enough ingredients he/she can craft items. At the right, there is Character UI and it shows the clothes on the character. There are sections for the head, torso, legs, and feet clothes. The user can remove them by dragging or can wear them by dragging. 
+
 
 ## Future Expectation
 
