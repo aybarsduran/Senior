@@ -10,11 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16622b96e87935f4b990ac04f9aeeebc, type: 3}
-  m_Name: (Buildable)
+  m_Name: Anvil
   m_EditorClassIdentifier: 
+  m_Id: -620225015
   m_ParentGroup: {fileID: 11400000, guid: 9cb4926cb4200364d86598d7d5dab037, type: 2}
-  m_BuildableName: 
+  m_BuildableName: Anvil
   m_Icon: {fileID: 0}
   m_Prefab: {fileID: 0}
   m_Description: 
-  m_BuildRequirements: []
+  m_BuildRequirements:
+  - m_BuildMaterial:
+      m_Value: 237179442
+    m_RequiredAmount: 1
+  - m_BuildMaterial:
+      m_Value: 237179442
+    m_RequiredAmount: 1
+  - m_BuildMaterial:
+      m_Value: 237179442
+    m_RequiredAmount: 1
+  - m_BuildMaterial:
+      m_Value: 237179442
+    m_RequiredAmount: 1

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cd6f203bea56504ab01db2076c3fa05, type: 3}
   m_Name: (Surface) Wood
   m_EditorClassIdentifier: 
+  m_Id: -763584068
   VelocityModifier: 1
   SurfaceFriction: 1
   PenetrationResistence: 0.3
@@ -21,6 +22,7 @@ MonoBehaviour:
       m_VolumeJitter: 0.1
       m_Pitch: 1
       m_PitchJitter: 0.1
+      m_AudioClips: []
     VisualEffect: {fileID: 0}
   HardFootstepEffect:
     AudioEffect:
@@ -28,6 +30,7 @@ MonoBehaviour:
       m_VolumeJitter: 0.1
       m_Pitch: 1
       m_PitchJitter: 0.1
+      m_AudioClips: []
     VisualEffect: {fileID: 0}
   FallImpactEffect:
     AudioEffect:
@@ -35,6 +38,7 @@ MonoBehaviour:
       m_VolumeJitter: 0.1
       m_Pitch: 1
       m_PitchJitter: 0.1
+      m_AudioClips: []
     VisualEffect: {fileID: 0}
   BulletHitEffect:
     AudioEffect:
@@ -42,6 +46,7 @@ MonoBehaviour:
       m_VolumeJitter: 0.1
       m_Pitch: 1
       m_PitchJitter: 0.1
+      m_AudioClips: []
     VisualEffect: {fileID: 0}
   SlashEffect:
     AudioEffect:
@@ -49,6 +54,7 @@ MonoBehaviour:
       m_VolumeJitter: 0.1
       m_Pitch: 1
       m_PitchJitter: 0.1
+      m_AudioClips: []
     VisualEffect: {fileID: 0}
   StabEffect:
     AudioEffect:
@@ -56,4 +62,5 @@ MonoBehaviour:
       m_VolumeJitter: 0.1
       m_Pitch: 1
       m_PitchJitter: 0.1
+      m_AudioClips: []
     VisualEffect: {fileID: 0}

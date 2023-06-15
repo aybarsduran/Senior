@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace IdenticalStudios
 {
+    [CreateAssetMenu(menuName = "Identical Studios/Building/Building Settings")]
     public sealed class BuildingManager : Manager<BuildingManager>
 	{
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]

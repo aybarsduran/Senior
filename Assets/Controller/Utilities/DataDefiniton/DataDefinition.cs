@@ -2,7 +2,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using IdenticalStudios;
-using System.Xml.Linq;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace IdenticalStudios
 {
@@ -47,14 +50,18 @@ namespace IdenticalStudios
 
 
         #region Accessing Methods
-        // Tries to return a definition with the given id.
+        /// <summary>
+        /// Tries to return a definition with the given id.
+        /// </summary>
         public static bool TryGetWithId(int id, out T def)
         {
             def = GetWithId(id);
             return def != null;
         }
 
-        //Returns a definition with the given id.
+        /// <summary>
+        /// Returns a definition with the given id.
+        /// </summary>
         public static T GetWithId(int id)
         {
             if (DefinitionsById.TryGetValue(id, out T def))
@@ -63,7 +70,9 @@ namespace IdenticalStudios
             return null;
         }
 
-        // Returns a definition with the given id.
+        /// <summary>
+        /// Returns a definition with the given id.
+        /// </summary>
         public static T GetWithIndex(int index)
         {
             if (index >= 0 && index < Definitions.Length)
@@ -72,14 +81,18 @@ namespace IdenticalStudios
             return null;
         }
 
-        // Tries to return a definition with the given name.
+        /// <summary>
+        /// Tries to return a definition with the given name.
+        /// </summary>
         public static bool TryGetWithName(string name, out T def)
         {
             def = GetWithName(name);
             return def != null;
         }
 
-        // Returns a definition with the given name.
+        /// <summary>
+        /// Returns a definition with the given name.
+        /// </summary>
         public static T GetWithName(string name)
         {
             if (string.IsNullOrEmpty(name))
@@ -128,6 +141,10 @@ namespace IdenticalStudios
             {
                 T def = definitions[i];
 
+#if UNITY_EDITOR
+                if (def.Id == -1 || s_DefinitionsById.ContainsKey(def.Id))
+                    def.AssignID();
+#endif
 
                 try
                 {
@@ -164,5 +181,57 @@ namespace IdenticalStudios
         }
         #endregion
 
+        #region Editor Methods
+#if UNITY_EDITOR
+        public static void ReloadDefinitions()
+        {
+            LoadDefinitions();
+            CreateIdDefinitionsDict();
+            CreateNameDefinitionsDict();
+        }
+
+        public override void Reset()
+        {
+            base.Reset();
+            AssignID();
+        }
+
+        protected override void OnValidate()
+        {
+            base.OnValidate();
+
+            if (m_Id == -1)
+                AssignID();
+        }
+
+        /// <summary>
+        /// Generates and assigns a unique id to this definition.
+        /// </summary>
+        private void AssignID()
+        {
+            var idList = DataDefinitionUtility.GetAllIds<T>();
+
+            const int maxAssignmentTries = 50;
+
+            int assignmentTries = 0;
+
+            while (assignmentTries < maxAssignmentTries)
+            {
+                int assignedId = IdGenerator.GenerateIntegerId();
+                assignmentTries++;
+
+                if (!idList.Contains(assignedId))
+                {
+                    m_Id = assignedId;
+                    EditorUtility.SetDirty(this);
+                    return;
+                }
+            }
+
+            if (assignmentTries == maxAssignmentTries)
+                Debug.LogError("Couldn't generate an unique id for definition: " + Name);
+        }
+#endif
+        #endregion
     }
 }

@@ -3,6 +3,10 @@ using UnityEngine;
 using System;
 using IdenticalStudios;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 namespace IdenticalStudios
 {
     public static class DataDefinitionUtility
@@ -92,5 +96,128 @@ namespace IdenticalStudios
 
             return -1;
         }
+
+#if UNITY_EDITOR
+        public static void ResetAllAssetDefinitionNames()
+        {
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
+
+            foreach (var dataDef in Resources.LoadAll<DataDefinitionBase>(""))
+                ResetDefinitionAssetName(dataDef);
+
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
+        }
+
+        /// <returns> The GUI contents (Name, Description and icon) of all of the definitions.</returns>
+        public static GUIContent[] GetAllGUIContents<T>(bool name, bool tooltip, bool icon, GUIContent including = null) where T : DataDefinition<T>
+        {
+            bool hasExtraElement = including != null;
+
+            var definitions = DataDefinition<T>.Definitions;
+            GUIContent[] contents = new GUIContent[definitions.Length + (hasExtraElement ? 1 : 0)];
+
+            if (hasExtraElement)
+            {
+                contents[0] = including;
+                for (int i = 1; i < contents.Length; i++)
+                {
+                    var definition = definitions[i - 1];
+                    contents[i] = new GUIContent()
+                    {
+                        text = name ? definition.FullName : string.Empty,
+                        tooltip = tooltip ? definition.Description : string.Empty,
+                        image = definition.Icon != null && icon ? AssetPreview.GetAssetPreview(definition.Icon) : null
+                    };
+                }
+            }
+            else
+            {
+                for (int i = 0; i < contents.Length; i++)
+                {
+                    var definition = definitions[i];
+                    contents[i] = new GUIContent()
+                    {
+                        text = name ? definition.FullName : string.Empty,
+                        tooltip = tooltip ? definition.Description : string.Empty,
+                        image = definition.Icon != null && icon ? AssetPreview.GetAssetPreview(definition.Icon) : null
+                    };
+                }
+            }
+
+            return contents;
+        }
+
+        /// <summary>
+        /// Resets the asset name to the Name of this definition + a prefix.
+        /// </summary>
+        public static void ResetDefinitionAssetName(DataDefinitionBase dataDef)
+        {
+            if (dataDef == null)
+            {
+                Debug.LogError("The passed definition cannot be null");
+                return;
+            }
+
+            var assetPath = AssetDatabase.GetAssetPath(dataDef);
+
+            if (assetPath != null && !string.IsNullOrEmpty(assetPath))
+            {
+                string prefix = GetAssetNamePrefix(dataDef.GetType());
+                AssetDatabase.RenameAsset(assetPath, $"({prefix}) " + dataDef.Name);
+                AssetDatabase.Refresh();
+            }
+        }
+
+        public static string GetDefaultDefinitionName(DataDefinitionBase dataDef)
+        {
+            if (dataDef == null)
+            {
+                Debug.LogError("The passed definition cannot be null");
+                return string.Empty;
+            }
+
+            string assetPath = AssetDatabase.GetAssetPath(dataDef);
+
+            if (string.IsNullOrEmpty(assetPath))
+                return dataDef.Name;
+
+            int nameIndex = assetPath.LastIndexOf("/");
+
+            assetPath = assetPath.Remove(0, nameIndex + 1);
+            assetPath = assetPath.Remove(assetPath.IndexOf("."));
+
+            if (assetPath.Contains("("))
+            {
+                int firstIndex = assetPath.IndexOf('(');
+                int lastIndex = assetPath.IndexOf(')');
+
+                if (assetPath.Length > lastIndex + 1)
+                {
+                    if (assetPath.Contains(" "))
+                    {
+                        assetPath = assetPath.Replace(" ", "");
+                        lastIndex++;
+                    }
+                }
+
+                assetPath = assetPath.Remove(firstIndex, lastIndex - firstIndex);
+            }
+
+            return assetPath.ToUnityLikeNameFormat();
+        }
+
+        public static string GetAssetNamePrefix(Type type)
+        {
+            if (type == null)
+                throw new ArgumentNullException("type");
+
+            string name = type.Name;
+            return name.Replace("Definition", "");
+        }
+
+   
+#endif
     }
 }

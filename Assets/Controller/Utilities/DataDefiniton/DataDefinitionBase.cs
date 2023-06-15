@@ -1,4 +1,8 @@
+using IdenticalStudios;
 using UnityEngine;
+
+#if UNITY_EDITOR
+#endif
 
 namespace IdenticalStudios
 {
@@ -20,8 +24,20 @@ namespace IdenticalStudios
         public virtual string Description => string.Empty;
         public virtual Sprite Icon => null;
 
+        [SerializeField, Disable]
         [Tooltip("Unique id (auto generated).")]
         protected int m_Id = -1;
-                
+
+
+        #region Editor
+#if UNITY_EDITOR
+        private bool m_IsDirty;
+        public bool IsDirty() => m_IsDirty;
+        public bool ClearDirty() => m_IsDirty = false;
+        protected virtual void OnValidate() => m_IsDirty = true;
+
+        public virtual void Reset() => Name = DataDefinitionUtility.GetDefaultDefinitionName(this);
+#endif
+        #endregion
     }
 }
