@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BackpackUI
+  m_Controller: {fileID: 9100000, guid: 29cee424c0ad83845953ba8b55fd0efe, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 83cc901621d5f5247a42cf7ce740dab2, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c72760876d1fbfc45ad9dd10f7a747f0, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a2e9c49bafe5fd54992833569ec2363d, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 871bf5a6ace10744889552174ad95095, type: 2}
