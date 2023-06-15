@@ -2,10 +2,12 @@ using UnityEngine;
 
 namespace IdenticalStudios.ProceduralMotion
 {
+    [DisallowMultipleComponent]
+    [AddComponentMenu("IdenticalStudios/Motion/Noise Motion")]
     public sealed class NoiseMotionModule : DataMotionModule<NoiseMotionData>
     {
-        //Interpolation
-
+        [Title("Interpolation")]
+        
         [SerializeField]
         private SpringSettings m_PositionSpring = new(10f, 100f, 1f, 1f);
 
@@ -14,8 +16,8 @@ namespace IdenticalStudios.ProceduralMotion
 
         private const float k_PositionForceMod = 0.01f;
         private const float k_RotationForceMod = 2f;
-
-
+        
+        
         protected override NoiseMotionData GetDataFromPreset(IMotionDataHandler dataHandler)
         {
             return dataHandler.GetData<NoiseMotionData>();

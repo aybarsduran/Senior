@@ -5,12 +5,15 @@ namespace IdenticalStudios.ProceduralMotion
     [RequireComponent(typeof(IMotionDataHandler))]
     public abstract class DataMotionModule<DataType> : MotionModule where DataType : MotionDataBase
     {
-
+#if UNITY_EDITOR
+        protected DataType Data { get; private set; }
+#else
         protected DataType Data;
+#endif
 
         private IMotionDataHandler m_DataHandler;
         private DataType m_PresetData;
-
+        
 
         protected abstract DataType GetDataFromPreset(IMotionDataHandler dataHandler);
         protected virtual void OnDataChanged(DataType data) { }
@@ -26,13 +29,13 @@ namespace IdenticalStudios.ProceduralMotion
         protected override void OnBehaviourDisabled()
         {
             base.OnBehaviourDisabled();
-
+            
             if (m_DataHandler != null)
                 m_DataHandler.Changed -= DataChanged;
 
             m_DataHandler = null;
         }
-
+        
         private void DataChanged(bool forceUpdate)
         {
             m_PresetData = GetDataFromPreset(m_DataHandler);

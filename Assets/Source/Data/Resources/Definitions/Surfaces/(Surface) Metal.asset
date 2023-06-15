@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5f455fef6aaad459434bb61682f7d4, type: 3}
+  m_Name: (Surface) Metal
+  m_EditorClassIdentifier: 
+  m_Id: 9632679
+  VelocityModifier: 1
+  SurfaceFriction: 0.95
+  PenetrationResistence: 0.85
+  SoftFootstepEffect:
+    AudioEffect:
+      m_Volume: 0.65
+      m_VolumeJitter: 0.05
+      m_Pitch: 1
+      m_PitchJitter: 0.05
+      m_AudioClips:
+      - {fileID: 8300000, guid: a39c5741fa8ad5b438204dacbd530328, type: 3}
+      - {fileID: 8300000, guid: 195a5dcd2c7efbc41b8a1d996cbbdccd, type: 3}
+      - {fileID: 8300000, guid: b331ac1ebd9e65f49befa0fd52ecd373, type: 3}
+      - {fileID: 8300000, guid: 3f744aab2ff46fc4690eb1b5f6a64134, type: 3}
+      - {fileID: 8300000, guid: b16b24383465c614e861176b05f2c5ed, type: 3}
+    VisualEffect: {fileID: 0}
+  HardFootstepEffect:
+    AudioEffect:
+      m_Volume: 0.65
+      m_VolumeJitter: 0.05
+      m_Pitch: 1
+      m_PitchJitter: 0.05
+      m_AudioClips:
+      - {fileID: 8300000, guid: a39c5741fa8ad5b438204dacbd530328, type: 3}
+      - {fileID: 8300000, guid: 195a5dcd2c7efbc41b8a1d996cbbdccd, type: 3}
+      - {fileID: 8300000, guid: b331ac1ebd9e65f49befa0fd52ecd373, type: 3}
+      - {fileID: 8300000, guid: 3f744aab2ff46fc4690eb1b5f6a64134, type: 3}
+      - {fileID: 8300000, guid: b16b24383465c614e861176b05f2c5ed, type: 3}
+    VisualEffect: {fileID: 0}
+  FallImpactEffect:
+    AudioEffect:
+      m_Volume: 0.6
+      m_VolumeJitter: 0.05
+      m_Pitch: 1
+      m_PitchJitter: 0.05
+      m_AudioClips:
+      - {fileID: 8300000, guid: 3ba0b34100d6ba94f8b9165b659a3356, type: 3}
+    VisualEffect: {fileID: 0}
+  BulletHitEffect:
+    AudioEffect:
+      m_Volume: 0.6
+      m_VolumeJitter: 0.05
+      m_Pitch: 1
+      m_PitchJitter: 0.05
+      m_AudioClips:
+      - {fileID: 8300000, guid: 8d6bf0a5cec1ad94a9febbb9815a663d, type: 3}
+      - {fileID: 8300000, guid: 469b65d5f826a1f4aa2ec7b5db5f1ae0, type: 3}
+    VisualEffect: {fileID: 1400400831016474, guid: f35c53b65b128c64e9eb1e059b95cd8b, type: 3}
+  SlashEffect:
+    AudioEffect:
+      m_Volume: 0.6
+      m_VolumeJitter: 0.05
+      m_Pitch: 1
+      m_PitchJitter: 0.05
+      m_AudioClips:
+      - {fileID: 8300000, guid: 5011cf025399ca341a7d8b42f42059c2, type: 3}
+      - {fileID: 8300000, guid: 7b719669c086b0248b8c95f302fba92b, type: 3}
+      - {fileID: 8300000, guid: f5eb38bf5ff7298498ecd00cde021d6d, type: 3}
+    VisualEffect: {fileID: 1927458547345702, guid: 5a7529d00e1918e4dab1dc05b50a16da, type: 3}
+  StabEffect:
+    AudioEffect:
+      m_Volume: 0.6
+      m_VolumeJitter: 0.05
+      m_Pitch: 1
+      m_PitchJitter: 0.05
+      m_AudioClips:
+      - {fileID: 8300000, guid: 5011cf025399ca341a7d8b42f42059c2, type: 3}
+      - {fileID: 8300000, guid: 7b719669c086b0248b8c95f302fba92b, type: 3}
+      - {fileID: 8300000, guid: f5eb38bf5ff7298498ecd00cde021d6d, type: 3}
+    VisualEffect: {fileID: 1927458547345702, guid: 5a7529d00e1918e4dab1dc05b50a16da, type: 3}

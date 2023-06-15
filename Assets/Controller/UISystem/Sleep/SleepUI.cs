@@ -12,6 +12,8 @@ namespace IdenticalStudios.UISystem
         [Tooltip("The canvas group used to fade the sleep UI in & out.")]
         private CanvasGroup m_CanvasGroup;
 
+        [SpaceArea]
+
         [SerializeField, Range(0f, 1f)]
         [Tooltip("The max alpha that will be reached when fading in.")]
         private float m_MaxCanvasAlpha = 1f;
@@ -20,6 +22,7 @@ namespace IdenticalStudios.UISystem
         [Tooltip("The speed at which the sleep UI will be faded in & out.")]
         private float m_CanvasLerpSpeed = 3f;
 
+        [SpaceArea]
 
         [SerializeField]
         [Tooltip("A UI text component that's used for displaying the current time while sleeping.")]
@@ -28,6 +31,8 @@ namespace IdenticalStudios.UISystem
         [SerializeField]
         [Tooltip("The background rect of this UI piece.")]
         private RectTransform m_BackgroundRect;
+
+        [SpaceArea]
 
         [SerializeField]
         [Tooltip("Reference to the animator used for the sleeping UI.")]
@@ -41,12 +46,13 @@ namespace IdenticalStudios.UISystem
         [Tooltip("The 'hide' animator trigger.")]
         private string m_HideTrigger = "Hide";
 
+        [SpaceArea]
 
-        [SerializeField] //Number of text templates each side
+        [SerializeField, Help("Number of text templates each side")]
         [Tooltip("How many time templates should be spawned each side.")]
         private int m_NumberOfTemplates;
 
-        [SerializeField]
+        [SerializeField, PrefabObjectOnly]
         [Tooltip("A prefab with a text component on it that will be instantiated.")]
         private TextMeshProUGUI m_TimeTextTemplate;
 

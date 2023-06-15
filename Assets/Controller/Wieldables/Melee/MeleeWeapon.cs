@@ -3,6 +3,7 @@
 namespace IdenticalStudios.WieldableSystem
 {
     [RequireComponent(typeof(MeleeComboHandler))]
+    [AddComponentMenu("IdenticalStudios/Wieldables/Melee/Melee Weapon")]
     public sealed class MeleeWeapon : Wieldable, IUseInputHandler
     {
         public ActionBlockHandler UseBlocker { get; } = new ActionBlockHandler();

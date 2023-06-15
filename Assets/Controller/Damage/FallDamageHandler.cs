@@ -10,13 +10,15 @@ namespace IdenticalStudios
         [SerializeField]
         private bool m_EnableDamage = true;
 
+        [SpaceArea]
 
-        //"At which landing speed, the character will start taking damage
-        [SerializeField, Range(1f, 30f)]
+        [Help("At which landing speed, the character will start taking damage.")]
+        [SerializeField, Range(1f, 30f)] 
         private float m_MinFallSpeed = 12f;
 
+        [SpaceArea]
 
-        //At which landing speed, the character will take maximum damage (die)
+        [Help("At which landing speed, the character will take maximum damage (die).")]
         [SerializeField, Range(1f, 50f)]
         private float m_FatalFallSpeed = 30f;
 

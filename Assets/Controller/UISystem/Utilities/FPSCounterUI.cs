@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace IdenticalStudios.UISystem
 {
-    [RequireComponent(typeof(TextMeshProUGUI))]
+    [RequireComponent(typeof (TextMeshProUGUI))]
     public sealed class FPSCounterUI : MonoBehaviour
     {
         [SerializeField, Range(30f, 1000f)]
@@ -33,7 +33,7 @@ namespace IdenticalStudios.UISystem
 
             if (Time.realtimeSinceStartup > m_FpsNextPeriod)
             {
-                m_CurrentFps = (int)(m_FpsAccumulator / k_FpsMeasurePeriod);
+                m_CurrentFps = (int) (m_FpsAccumulator/k_FpsMeasurePeriod);
                 m_FpsAccumulator = 0;
                 m_FpsNextPeriod += k_FpsMeasurePeriod;
 

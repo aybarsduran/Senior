@@ -16,8 +16,7 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-using IdenticalStudios
-    .OdinSerializer;
+using IdenticalStudios.OdinSerializer;
 
 [assembly: RegisterFormatter(typeof(GradientColorKeyFormatter))]
 

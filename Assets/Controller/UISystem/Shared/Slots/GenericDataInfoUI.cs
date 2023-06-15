@@ -1,5 +1,3 @@
-using IdenticalStudios.UISystem;
-
 namespace IdenticalStudios.UISystem
 {
     public abstract class GenericDataInfoUI : DataInfoBaseUI

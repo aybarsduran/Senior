@@ -10,8 +10,8 @@ namespace IdenticalStudios
     {
         private enum ItemDropType { All, Equipped, None }
 
-        //Items to drop on death.
         [SerializeField]
+        [Help("Items to drop on death.", UnityMessageType.None)]
         private ItemDropType m_ItemDropType = ItemDropType.None;
 
 

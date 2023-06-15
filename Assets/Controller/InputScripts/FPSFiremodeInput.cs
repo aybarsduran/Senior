@@ -1,14 +1,13 @@
-using IdenticalStudios.InputSystem.Behaviours;
-using IdenticalStudios.InputSystem;
-using UnityEngine;
 using IdenticalStudios.WieldableSystem;
+using UnityEngine;
 using UnityEngine.InputSystem;
-
 
 namespace IdenticalStudios.InputSystem.Behaviours
 {
+    [AddComponentMenu("Input/Firemode Input")]
     public class FPSFiremodeInput : InputBehaviour
     {
+        [Title("Actions")]
 
         [SerializeField]
         private InputActionReference m_FiremodeInput;

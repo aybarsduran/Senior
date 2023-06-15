@@ -12,6 +12,8 @@ namespace IdenticalStudios.WieldableSystem
 
         protected virtual float RecoilMultiplier { get; private set; } = 1f;
 
+        [SpaceArea]
+        
         [SerializeField, Range(0f, 1f)]
         private float m_HipfireAccuracyKick = 0.075f;
 

@@ -5,9 +5,10 @@ using UnityEngine.Events;
 namespace IdenticalStudios.WieldableSystem
 {
     [RequireComponent(typeof(Wieldable))]
+    [AddComponentMenu("IdenticalStudios/Wieldables/Utilities/Durability Depleater")]
     public sealed class WieldableDurabilityDepleter : WieldableItemBehaviour
     {
-        [SerializeField]
+        [SerializeField, Suffix(" / sec")]
         private float m_Depletion = 1f;
         
         [SerializeField]
@@ -16,6 +17,7 @@ namespace IdenticalStudios.WieldableSystem
         [SerializeField]
         private StandardSound m_DurabilityDepletedSound;
         
+        [SpaceArea]
         
         [SerializeField]
         private UnityEvent m_OnDurabilityDepleted;

@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace IdenticalStudios.UISystem
 {
+    [AddComponentMenu(k_AddMenuPath  + "Item Property Text Info")]
     public sealed class ItemPropertyTextInfoUI : DataInfoUI<IItem>
     {
         #region Internal

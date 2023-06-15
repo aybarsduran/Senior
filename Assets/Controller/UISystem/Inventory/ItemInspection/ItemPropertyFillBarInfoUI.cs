@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace IdenticalStudios.UISystem
 {
+    [AddComponentMenu(k_AddMenuPath + "Item Property Fill Bar Info")]
     public sealed class ItemPropertyFillBarInfoUI : DataInfoUI<IItem>
     {
         #region Internal

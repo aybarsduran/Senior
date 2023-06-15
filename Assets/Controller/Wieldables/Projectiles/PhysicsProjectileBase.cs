@@ -12,7 +12,7 @@ namespace IdenticalStudios.WieldableSystem
 
         public event UnityAction onHit;
 
-        [SerializeField]
+        [SerializeField, NotNull]
         private Rigidbody m_Rigidbody;
 
         private ICharacter m_Character;

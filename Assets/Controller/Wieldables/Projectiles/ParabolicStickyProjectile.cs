@@ -33,18 +33,21 @@ namespace IdenticalStudios.WieldableSystem
 		}
 		#endregion
 
+		[Title("References")]
 
-		[SerializeField]
+		[SerializeField, ChildObjectOnly, NotNull]
 		private Collider m_Collider;
 
-		[SerializeField]
+		[SerializeField, ChildObjectOnly]
 		private Rigidbody m_Rigidbody;
 
-		[SerializeField]
+		[SerializeField, ChildObjectOnly]
 		private TrailRenderer m_Trail;
 		
-		[SerializeField]
+		[SerializeField, ChildObjectOnly, NotNull]
 		private AudioSource m_AudioSource;
+
+		[Title("Penetration")]
 
 		[SerializeField, Range(-10f, 10f)]
 		private float m_PenetrationOffset = -0.35f;

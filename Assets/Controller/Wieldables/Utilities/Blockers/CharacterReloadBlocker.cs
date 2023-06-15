@@ -4,17 +4,22 @@ namespace IdenticalStudios.WieldableSystem
 {
     public class CharacterReloadBlocker : WieldableInputBlocker
     {
+        [Title("Settings")]
 
-        [SerializeField]
+        [BeginHorizontal]
+        [SerializeField, LeftToggle]
         private bool m_BlockRunning;
 
-        [SerializeField]
+        [EndHorizontal]
+        [SerializeField, LeftToggle]
         private bool m_BlockJumping;
 
-        [SerializeField]
+        [BeginHorizontal]
+        [SerializeField, LeftToggle]
         private bool m_ReloadWhileRunning;
 
-        [SerializeField]
+        [EndHorizontal]
+        [SerializeField, LeftToggle]
         private bool m_ReloadWhileAirborne;
 
         private IReloadInputHandler m_ReloadInputHandler;

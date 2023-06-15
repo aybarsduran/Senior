@@ -13,8 +13,12 @@ namespace IdenticalStudios.InputSystem.Behaviours
         public bool CrouchInput { get; private set; }
         public bool JumpInput { get; private set; }
 
+        [Title(label: "Actions")]
+
         [SerializeField]
         private InputActionReference m_MoveInput;
+
+        [SpaceArea]
 
         [SerializeField]
         private InputActionMode m_RunType;
@@ -22,16 +26,20 @@ namespace IdenticalStudios.InputSystem.Behaviours
         [SerializeField]
         private InputActionReference m_RunInput;
 
+        [SpaceArea]
+
         [SerializeField]
         private InputActionMode m_CrouchType;
 
         [SerializeField]
         private InputActionReference m_CrouchInput;
 
+        [SpaceArea]
+
         [SerializeField]
         private InputActionMode m_JumpType;
 
-        [SerializeField]
+        [SerializeField, ShowIf(nameof(m_JumpType), (int)InputActionMode.Toggle)]
         private float m_JumpReleaseDelay = 0.05f;
 
         [SerializeField]
@@ -40,8 +48,8 @@ namespace IdenticalStudios.InputSystem.Behaviours
         private ICharacterMotor m_Motor;
         private Vector2 m_MovementInputValue;
         private float m_ReleaseJumpBtnTime;
-
-
+        
+        
         #region Initialization
         protected override void OnBehaviourEnabled(ICharacter character)
         {
@@ -70,7 +78,7 @@ namespace IdenticalStudios.InputSystem.Behaviours
         #endregion
 
         #region Input Handling
-        public void ResetAllInputs()
+        public void ResetAllInputs() 
         {
             RunInput = false;
             JumpInput = false;
@@ -81,7 +89,7 @@ namespace IdenticalStudios.InputSystem.Behaviours
         public void UseCrouchInput() => CrouchInput = false;
         public void UseRunInput() => RunInput = false;
         public void UseJumpInput() => JumpInput = false;
-
+        
         protected override void TickInput()
         {
             // Handle movement input.

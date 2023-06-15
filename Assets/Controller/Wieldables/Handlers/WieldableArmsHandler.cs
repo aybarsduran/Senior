@@ -1,10 +1,11 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 namespace IdenticalStudios.WieldableSystem
 {
     public class WieldableArmsHandler : MonoBehaviour, IWieldableArmsHandler
     {
+        #region Internal
         [Serializable]
         private struct ArmSet
         {
@@ -15,16 +16,17 @@ namespace IdenticalStudios.WieldableSystem
             public SkinnedMeshRenderer LeftArm;
             public SkinnedMeshRenderer RightArm;
         }
+        #endregion
 
         public Animator Animator => m_Animator;
 
-        [SerializeField]
+        [SerializeField, NotNull]
         private Animator m_Animator;
 
-        [SerializeField]
+        [SerializeField, NotNull]
         private ChildOfConstraint m_ChildConstraint;
 
-        
+        [SpaceArea]
 
         [SerializeField]
         private SkinnedMeshRenderer m_LeftArm;
@@ -32,7 +34,7 @@ namespace IdenticalStudios.WieldableSystem
         [SerializeField]
         private SkinnedMeshRenderer m_RightArm;
 
-        
+        [SpaceArea]
 
         [SerializeField, ReorderableList]
         private ArmSet[] m_ArmSets;
@@ -51,7 +53,7 @@ namespace IdenticalStudios.WieldableSystem
             void DisableArms() => gameObject.SetActive(enable);
         }
 
-        public void ToggleNextArmSet()
+        public void ToggleNextArmSet() 
         {
             var arms = m_ArmSets.Select(ref m_SelectedArmsIndex, SelectionType.Sequence);
 

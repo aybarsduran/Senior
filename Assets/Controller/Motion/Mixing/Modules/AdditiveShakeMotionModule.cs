@@ -1,14 +1,14 @@
-using IdenticalStudios.ProceduralMotion;
-using IdenticalStudios;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace IdenticalStudios.ProceduralMotion
 {
+    [DisallowMultipleComponent]
+    [AddComponentMenu("IdenticalStudios/Motion/Additive Shake Motion")]
     public sealed class AdditiveShakeMotionModule : MotionModule
     {
-        //Interpolation
-
+        [Title("Interpolation")]
+        
         [SerializeField]
         private SpringSettings m_SlowPositionSpring = new SpringSettings(15f, 150f, 1.1f, 1f);
 

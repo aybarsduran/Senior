@@ -1,10 +1,9 @@
-using IdenticalStudios.ProceduralMotion;
-using IdenticalStudios;
 using UnityEngine;
 
 namespace IdenticalStudios.ProceduralMotion
 {
-   
+    [DisallowMultipleComponent]
+    [AddComponentMenu("IdenticalStudios/Motion/Jump Motion")]
     public sealed class JumpMotionModule : DataMotionModule<CurvesMotionData>
     {
         private float m_CurrentJumpTime;
@@ -31,7 +30,7 @@ namespace IdenticalStudios.ProceduralMotion
         {
             if (dataHandler.TryGetData<GeneralMotionData>(out var data))
                 return data.Jump;
-
+            
             return null;
         }
 
@@ -84,7 +83,7 @@ namespace IdenticalStudios.ProceduralMotion
                 SetTargetRotation(Vector3.zero);
             }
         }
-
+        
         private void OnJump()
         {
             m_CurrentJumpTime = 0f;

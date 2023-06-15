@@ -54,6 +54,20 @@ namespace IdenticalStudios
             InspectionActive = false;
         }
 
+#if UNITY_EDITOR
+        protected override void Reset()
+        {
+            base.Reset();
 
+            UnityUtils.SafeOnValidate(this, () =>
+            {
+                if (TryGetComponent(out Buildable buildable))
+                {
+                    Title = buildable.Definition.Name;
+                    Description = buildable.Definition.Description;
+                }
+            });
+        }
+#endif
     }
 }

@@ -16,6 +16,7 @@ namespace IdenticalStudios.ProceduralMotion
     /// The driver is responsible for updating the tween's state.
     /// </summary>
     [Serializable]
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceAssembly: "IdenticalStudios.ProceduralMotion.Tweening")]
     public sealed class RotationTween : Tween<Vector3, Transform>
     {
         private Quaternion m_QuaternionValueFrom;

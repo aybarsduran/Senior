@@ -1,13 +1,13 @@
-using IdenticalStudios.ProceduralMotion;
-using IdenticalStudios;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace IdenticalStudios.ProceduralMotion
 {
+    [DisallowMultipleComponent]
+    [AddComponentMenu("IdenticalStudios/Motion/Additive Force Motion")]
     public sealed class AdditiveForceMotionModule : MotionModule
     {
-       
+        #region Internal
         private struct DistributedForce
         {
             public readonly Vector3 Force;
@@ -19,10 +19,10 @@ namespace IdenticalStudios.ProceduralMotion
                 EndTime = Time.time + duration;
             }
         }
-      
+        #endregion
 
-        //Interpolation
-
+        [Title("Interpolation")]
+        
         [SerializeField]
         private SpringSettings m_SlowPositionSpring = SpringSettings.Default;
 
@@ -80,7 +80,7 @@ namespace IdenticalStudios.ProceduralMotion
             UpdateManager.InvokeDelayedAction(this, AddForce, force.Delay);
             void AddForce() => AddPositionForce(force.SpringForce, scale, springType);
         }
-
+        
         public void AddRotationForce(DelayedSpringForce3D force, float scale = 1f, SpringType springType = SpringType.SlowSpring)
         {
             UpdateManager.InvokeDelayedAction(this, AddForce, force.Delay);
@@ -90,7 +90,7 @@ namespace IdenticalStudios.ProceduralMotion
         protected override void OnBehaviourEnabled()
         {
             base.OnBehaviourEnabled();
-
+            
             positionSpring.Adjust(m_SlowPositionSpring);
             rotationSpring.Adjust(m_SlowRotationSpring);
         }

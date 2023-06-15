@@ -57,7 +57,7 @@ namespace IdenticalStudios.BuildingSystem
         [SerializeField, Range(0f, 5f)]
         private float m_CancelPreviewDuration = 0.3f;
 
-        //Building Previews Detection
+        [Title("Building Previews Detection")]
 
         [SerializeField, Range(0f, 10f)]
         [Tooltip("The max detection building preview distance.")]

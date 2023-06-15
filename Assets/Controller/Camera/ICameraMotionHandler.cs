@@ -1,4 +1,4 @@
-using IdenticalStudios.ProceduralMotion;
+﻿using IdenticalStudios.ProceduralMotion;
 
 namespace IdenticalStudios
 {

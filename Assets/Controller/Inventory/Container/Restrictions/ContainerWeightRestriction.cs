@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 namespace IdenticalStudios.InventorySystem
@@ -33,8 +33,8 @@ namespace IdenticalStudios.InventorySystem
 
         [SerializeField]
         private float m_WeightPerSlot;
-
-
+        
+        
         public ContainerWeightRestriction(float weightPerSlot)
         {
             m_WeightPerSlot = weightPerSlot;
@@ -50,7 +50,7 @@ namespace IdenticalStudios.InventorySystem
         public override int GetAllowedAddAmount(IItem item, int count)
         {
             int allowCount = count;
-
+			
             if (count == 1)
             {
                 if (m_TotalWeight + item.TotalWeight * count > m_MaxWeight)
@@ -74,7 +74,7 @@ namespace IdenticalStudios.InventorySystem
         {
             float weight = 0f;
             var slots = itemContainer.Slots;
-
+            
             foreach (var slot in slots)
             {
                 if (slot.HasItem)

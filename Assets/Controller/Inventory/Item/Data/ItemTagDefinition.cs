@@ -1,4 +1,3 @@
-using IdenticalStudios;
 using UnityEngine;
 
 namespace IdenticalStudios.InventorySystem
@@ -14,7 +13,7 @@ namespace IdenticalStudios.InventorySystem
 
         public override string FullName => m_TagName;
 
-        [SerializeField]
+        [SerializeField, HideLabel]
         private string m_TagName;
     }
 }

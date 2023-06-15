@@ -6,6 +6,7 @@ namespace IdenticalStudios.UISystem
 {
     public abstract class DataDefinitionInfoUI<T> : DataInfoUI<T> where T : DataDefinition<T>
     {
+        [Title("General")]
 
         [SerializeField]
         protected TextMeshProUGUI m_NameText;

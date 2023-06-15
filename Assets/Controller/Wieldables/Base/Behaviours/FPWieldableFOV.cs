@@ -6,7 +6,7 @@ namespace IdenticalStudios.WieldableSystem
     [AddComponentMenu("IdenticalStudios/Wieldables/FP Field Of View")]
     public class FPWieldableFOV : WieldableBehaviour
     {
-        [SerializeField, Range(10f, 100f)]
+        [SerializeField, Range(10f, 100f), NewLabel("Overlay FOV")]
         private float m_BaseOverlayFOV = 55f;
 
         [SerializeField, Range(0f, 10f)]

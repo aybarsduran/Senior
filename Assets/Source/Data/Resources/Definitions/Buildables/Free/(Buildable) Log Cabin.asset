@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94880c3f6f2321d4ca749870023475cd, type: 3}
+  m_Name: (Buildable) Log Cabin
+  m_EditorClassIdentifier: 
+  m_Id: -4661667
+  m_ParentGroup: {fileID: 11400000, guid: b1970f2739dcc914ba6e1ef988026446, type: 2}
+  m_BuildableName: Log Cabin
+  m_Icon: {fileID: 21300000, guid: e439a58c3644b6e48997a2277b38e5c5, type: 3}
+  m_Prefab: {fileID: 3211766843882115902, guid: dd2b7d3c236b73c46946c7af630cad85, type: 3}
+  m_Description: Premade Log Cabin.
+  m_BuildRequirements:
+  - m_BuildMaterial:
+      m_Value: 2038334
+    m_RequiredAmount: 30
+  - m_BuildMaterial:
+      m_Value: 8802899
+    m_RequiredAmount: 10

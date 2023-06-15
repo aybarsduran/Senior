@@ -1,4 +1,3 @@
-using IdenticalStudios.ProceduralMotion;
 using UnityEngine;
 
 namespace IdenticalStudios.ProceduralMotion

@@ -6,16 +6,20 @@ namespace IdenticalStudios.ResourceGathering
 {
     public sealed class TreeFallBehaviour : GatherableBehaviour, ISaveableComponent
     {
-        [SerializeField]
+        [Title("References")]
+
+        [SerializeField, NotNull]
         private Rigidbody m_FallingTree;
 
-        [SerializeField]
+        [SerializeField, NotNull]
         private GameObject m_TreeStump;
 
-        [SerializeField]
+        [SerializeField, NotNull]
         private ColliderTriggerHandler m_ImpactTrigger;
 
-        [SerializeField]
+        [Title("Logs")]
+
+        [SerializeField, NotNull, PrefabObjectOnly]
         private Rigidbody m_LogPrefab;
 
         [SerializeField, Range(1, 100)]
@@ -24,6 +28,7 @@ namespace IdenticalStudios.ResourceGathering
         [SerializeField, Range(0f, 100f)]
         private float m_LogsOffset = 2f;
 
+        [Title("Effects")]
 
         [SerializeField]
         private GameObject m_TreeImpactFX;

@@ -1,4 +1,3 @@
-using IdenticalStudios.WieldableSystem;
 using UnityEngine;
 
 namespace IdenticalStudios.WieldableSystem.Effects
@@ -6,7 +5,9 @@ namespace IdenticalStudios.WieldableSystem.Effects
     [System.Serializable]
     public sealed class EffectCollection
     {
-        [SerializeReference,  ReorderableList(ListStyle.Lined, childLabel: "Effect")]
+        [SpaceArea(3f, 3f)]
+        [BeginGroup] [EndGroup] [NewLabel("Effects")]
+        [SerializeReference, ReferencePicker, ReorderableList(ListStyle.Lined, childLabel:"Effect")] 
         private IWieldableEffect[] m_StaticEffects;
 
 #if !UNITY_EDITOR

@@ -5,20 +5,20 @@ namespace IdenticalStudios
 {
     public class CameraShakeManager : CameraShakeManagerBase
     {
-        [SerializeField]
+        [SerializeField, NotNull]
         private AdditiveShakeMotionModule m_ShakeMotion;
 
-       
+        [SpaceArea()]
 
         [SerializeField]
         private ShakeSettings3D m_GetHitShake = ShakeSettings3D.Default;
-
-
+        
+        
         protected override void AddShake(ShakeSettings3D shakeSettings, float scale)
         {
             m_ShakeMotion.AddRotationShake(shakeSettings, scale);
         }
-
+        
         protected override void OnBehaviourEnabled()
         {
             base.OnBehaviourEnabled();

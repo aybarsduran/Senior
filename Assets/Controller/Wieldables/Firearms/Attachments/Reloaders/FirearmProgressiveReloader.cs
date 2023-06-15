@@ -9,8 +9,12 @@ namespace IdenticalStudios.WieldableSystem
 		public override int MagazineSize => m_MagazineSize;
 		public override int AmmoToLoad => m_AmmoToLoad;
 
+		[SpaceArea]
+
 		[SerializeField, Range(0, 500)]
 		private int m_MagazineSize;
+
+		[Title("Tactical Reload")]
 
 		[SerializeField, Range(0f, 10f)]
 		private float m_ReloadStartDuration = 0.5f;
@@ -21,6 +25,8 @@ namespace IdenticalStudios.WieldableSystem
 		[SerializeField, Range(0f, 10f)]
 		private float m_ReloadEndDuration = 0.5f;
 
+		[Title("Empty Reload")]
+
 		[SerializeField]
 		private ReloadType m_EmptyReloadType = ReloadType.Standard;
 
@@ -30,6 +36,8 @@ namespace IdenticalStudios.WieldableSystem
 		[SerializeField]
 		private WieldableObjectVFX m_EmptyReloadVFX;
 
+		[Title("Effects")]
+		
 		[SerializeField]
 		private EffectCollection m_ReloadStartEffects;
 

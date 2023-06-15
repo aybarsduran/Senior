@@ -13,15 +13,21 @@ namespace IdenticalStudios.WieldableSystem
         protected float Gravity => m_Gravity;
         protected float Speed => m_Speed;
 
+        [Title("Ammo")]
+        
         [SerializeField, Range(0, 10)]
         private int m_AmmoPerShot = 1;
+
+        [Title("Projectile")]
 
         [SerializeField]
         private LayerMask m_HitMask = Physics.DefaultRaycastLayers;
         
-        [SerializeField]
+        [SerializeField, NotNull]
         private ParabolicProjectileBase m_Projectile;
 
+        [SpaceArea]
+        
         [SerializeField, Range(1, 30)] 
         [Tooltip("The amount of projectiles that will be spawned in the world")]
         private int m_Count = 1;
@@ -39,10 +45,14 @@ namespace IdenticalStudios.WieldableSystem
         [SerializeField, Range(0f, 100f)]
         private float m_MaxSpread = 1.5f;
         
+        [Title("Effects")]
+
         [SerializeField]
         private DynamicEffectCollection m_ShootEffects;
 
-        [SerializeField]
+        [SpaceArea]
+
+        [SerializeField, ReorderableList(HasLabels = false)]
         private WieldableVFXBehaviour[] m_VisualEffects;
 
 

@@ -86,6 +86,10 @@ namespace IdenticalStudios.WieldableSystem
             if (controller.ActiveWieldable != null)
                 OnWieldableChanged(controller.ActiveWieldable);
 
+#if UNITY_EDITOR
+            // Hack...
+            FirearmAttachmentBehaviour.EffectCollectionsRefreshed += m_DataHandler.ForceRefreshData;
+#endif
         }
 
         protected override void OnBehaviourDisabled()
@@ -93,6 +97,10 @@ namespace IdenticalStudios.WieldableSystem
             GetModule<IWieldablesController>().WieldableEquipStarted -= OnWieldableChanged;
             OnWieldableChanged(null);
 
+#if UNITY_EDITOR
+            // Hack...
+            FirearmAttachmentBehaviour.EffectCollectionsRefreshed -= m_DataHandler.ForceRefreshData;
+#endif
         }
 
         private void OnWieldableChanged(IWieldable equippedWieldable)

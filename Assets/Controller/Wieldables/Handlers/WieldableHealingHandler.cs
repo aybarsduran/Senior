@@ -10,9 +10,10 @@ namespace IdenticalStudios.WieldableSystem
         public event UnityAction HealsCountChanged;
         public event UnityAction<HealingItem> OnHeal;
 
-        [SerializeField, DataReferenceDetails(NullElementName = "Untagged", HasLabel = false)]
+        [SerializeField, DataReferenceDetails(NullElementName = "Untagged", HasLabel = false), ReorderableList]
         private DataIdReference<ItemTagDefinition>[] m_ContainerTags;
 
+        [SpaceArea]
 
         [SerializeField]
         private bool m_BlockRunning;

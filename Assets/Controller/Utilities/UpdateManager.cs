@@ -1,4 +1,3 @@
-using IdenticalStudios;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -13,7 +12,7 @@ namespace IdenticalStudios
             public UnityAction UpdateCallback;
             public UnityAction FixedUpdateCallback;
             public UnityAction LateUpdateCallback;
-
+            
             private void Update() => UpdateCallback();
             private void FixedUpdate() => FixedUpdateCallback();
             private void LateUpdate() => LateUpdateCallback();
@@ -38,7 +37,7 @@ namespace IdenticalStudios
         #region Initialization
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         public static void Init() => CreateInstance();
-
+        
         protected override void OnInitialized()
         {
             m_RuntimeObject = CreateRuntimeObject<RuntimeObject>("UpdateRuntimeObject");

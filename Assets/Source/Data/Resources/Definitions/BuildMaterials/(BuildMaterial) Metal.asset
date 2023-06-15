@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfff5b2fee909b4a9081ed5e566cb8e, type: 3}
+  m_Name: (BuildMaterial) Metal
+  m_EditorClassIdentifier: 
+  m_Id: -2823548
+  m_BuildMaterialName: Metal
+  m_Icon: {fileID: 21300000, guid: 9df4aa0abc7861a4991ef3a18d498476, type: 3}
+  m_UseAudio:
+    m_Volume: 0.65
+    m_VolumeJitter: 0.1
+    m_Pitch: 1
+    m_PitchJitter: 0.1
+    m_AudioClips:
+    - {fileID: 8300000, guid: 1af285c86e429424eb11d28dc0064295, type: 3}
+    - {fileID: 8300000, guid: 2f78aab457f73484cb87fb7f95a8cac5, type: 3}

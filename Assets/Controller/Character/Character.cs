@@ -1,5 +1,4 @@
-using IdenticalStudios.InventorySystem;
-using IdenticalStudios;
+﻿using IdenticalStudios.InventorySystem;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +13,7 @@ namespace IdenticalStudios
     public class Character : MonoBehaviour, ICharacter
     {
         public bool IsInitialized { get; private set; }
+
         public Transform ViewTransform => m_View;
         public Collider[] Colliders { get; private set; }
 
@@ -26,7 +26,7 @@ namespace IdenticalStudios
         /// </summary>
         public event UnityAction Initialized;
 
-        [SerializeField]
+        [SerializeField, NotNull]
         [Tooltip("The view transform, you can think of it as the eyes of the character")]
         private Transform m_View;
 
@@ -138,5 +138,12 @@ namespace IdenticalStudios
                 }
             }
         }
+
+#if UNITY_EDITOR
+        protected virtual void Reset()
+        {
+            gameObject.layer = LayerMask.NameToLayer("Character");
+        }
+#endif
     }
 }

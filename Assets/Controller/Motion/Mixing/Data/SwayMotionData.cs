@@ -1,10 +1,10 @@
-using IdenticalStudios.ProceduralMotion;
 using System;
 using UnityEngine;
 
 namespace IdenticalStudios.ProceduralMotion
 {
     [Serializable]
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceAssembly: "Assembly-CSharp")]
     public sealed class SwayMotionData : MotionDataBase
     {
         public SpringSettings PositionSettings => m_PositionSpring;
@@ -13,12 +13,12 @@ namespace IdenticalStudios.ProceduralMotion
         public Vector3 PositionSway => m_PositionSway;
         public Vector3 RotationSway => m_RotationSway;
 
-        //General Settings
+        [Title("General Settings")]
 
         [SerializeField, Range(0f, 100f)]
         private float m_MaxSwayLength = 10f;
-
-        //"Position Settings
+        
+        [Title("Position Settings")]
 
         [SerializeField]
         private SpringSettings m_PositionSpring = SpringSettings.Default;
@@ -26,7 +26,7 @@ namespace IdenticalStudios.ProceduralMotion
         [SerializeField]
         private Vector3 m_PositionSway;
 
-        //Rotation Settings
+        [Title("Rotation Settings")]
 
         [SerializeField]
         private SpringSettings m_RotationSpring = SpringSettings.Default;

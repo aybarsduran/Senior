@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4213430bbd6313b4a89ea1d7e1185c38, type: 3}
+  m_Name: (Item) Military Pants
+  m_EditorClassIdentifier: 
+  m_Id: -2864101
+  m_ParentGroup: {fileID: 11400000, guid: cf5dd5a63069e21458615566eb5d16e7, type: 2}
+  m_ItemName: Military Pants
+  m_Icon: {fileID: 21300000, guid: cb679336840ec1349ac9177db32a20e2, type: 3}
+  m_Pickup: {fileID: 5995184723420080805, guid: 771614685e6f75a4b8e42b2c935c0f1f, type: 3}
+  m_Description: Basic pants, keeps you warm and comfortable while offering some
+    defense.
+  m_Weight: 0.35
+  m_StackSize: 1
+  m_Tag:
+    m_Value: -6432735
+  m_Actions: []
+  m_Properties: []
+  m_Data:
+  - rid: 3692120816393388197
+  - rid: 3692120816393388198
+  references:
+    version: 2
+    RefIds:
+    - rid: 3692120816393388197
+      type: {class: CraftingData, ns: IdenticalStudios.InventorySystem, asm: IdenticalStudios}
+      data:
+        m_Blueprint: []
+        m_CraftAmount: 1
+        m_CraftDuration: 3
+        m_CraftLevel: 0
+        m_DismantleEfficiency: 0.75
+    - rid: 3692120816393388198
+      type: {class: FuelData, ns: IdenticalStudios.InventorySystem, asm: IdenticalStudios}
+      data:
+        m_MinFuel: 30
+        m_MaxFuel: 40

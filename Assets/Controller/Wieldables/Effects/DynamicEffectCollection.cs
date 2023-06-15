@@ -5,12 +5,14 @@ namespace IdenticalStudios.WieldableSystem.Effects
     [System.Serializable]
     public sealed class DynamicEffectCollection
     {
-        [SerializeReference]
+        [BeginGroup]
+        [SerializeReference, ReferencePicker]
         [ReorderableList(ListStyle.Lined, childLabel: "Effect")]
         private IWieldableEffect[] m_StaticEffects;
 
 
-        [SerializeReference]
+        [EndGroup]
+        [SerializeReference, ReferencePicker]
         [ReorderableList(ListStyle.Lined, childLabel: "Effect")]
         private IWieldableEffect[] m_DynamicEffects;
 

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94880c3f6f2321d4ca749870023475cd, type: 3}
+  m_Name: (Buildable) Storage Crate
+  m_EditorClassIdentifier: 
+  m_Id: 5498433
+  m_ParentGroup: {fileID: 11400000, guid: 7ed683c2ea4025e4b891afadf87f424f, type: 2}
+  m_BuildableName: Storage Crate
+  m_Icon: {fileID: 21300000, guid: 01b0076d120a8fa49add1272ee95f439, type: 3}
+  m_Prefab: {fileID: 7073008599214131088, guid: 68e95bb250ca81849a7f00d8991dd002, type: 3}
+  m_Description: Use it to store valuables.
+  m_BuildRequirements:
+  - m_BuildMaterial:
+      m_Value: 2038334
+    m_RequiredAmount: 3
+  - m_BuildMaterial:
+      m_Value: 8802899
+    m_RequiredAmount: 2

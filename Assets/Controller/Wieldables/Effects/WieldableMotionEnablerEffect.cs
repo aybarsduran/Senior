@@ -5,9 +5,10 @@ using UnityEngine;
 namespace IdenticalStudios.WieldableSystem.Effects
 {
     [Serializable]
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceAssembly: "Assembly-CSharp")]
     public sealed class WieldableMotionEnablerEffect : WieldableEffect
     {
-        [SerializeReference]
+        [SerializeReference, ReferencePicker]
         [ReorderableList(ListStyle.Boxed, childLabel: "Motion")]
         private MotionData[] m_OverridesToEnable = Array.Empty<MotionData>();
 

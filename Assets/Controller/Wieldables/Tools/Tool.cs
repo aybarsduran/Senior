@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace IdenticalStudios.WieldableSystem
 {
+    [AddComponentMenu("IdenticalStudios/Wieldables/Tool")]
     public class Tool : Wieldable, IUseInputHandler
     {
         public ActionBlockHandler UseBlocker { get; private set; } = new ActionBlockHandler();

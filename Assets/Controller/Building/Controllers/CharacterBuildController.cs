@@ -1,7 +1,8 @@
-﻿using IdenticalStudios.ProceduralMotion;
+﻿using IdenticalStudios.InputSystem;
+using IdenticalStudios.ProceduralMotion;
 using UnityEngine;
 using UnityEngine.Events;
-using IdenticalStudios.InputSystem;
+
 namespace IdenticalStudios.BuildingSystem
 {
     /// <summary>
@@ -37,6 +38,7 @@ namespace IdenticalStudios.BuildingSystem
         [SerializeField]
         private InputContextGroup m_BuildingContext;
 
+        [SpaceArea]
 
         [SerializeField]
         private FreePlacementState m_FreePlacement;
@@ -44,7 +46,7 @@ namespace IdenticalStudios.BuildingSystem
         [SerializeField]
         private StructurePlacementState m_SocketPlacement;
 
-        //Effects
+        [Title("Effects")]
 
         [SerializeField]
         [Tooltip("Sound to play when the controller tries to place an object but detects a collision.")]
@@ -56,7 +58,7 @@ namespace IdenticalStudios.BuildingSystem
         [SerializeField]
         private CameraEffectSettings m_CameraEffect;
 
-        //Events
+        [Title("Events")]
 
         [SerializeField]
         private UnityEvent m_OnPlaceObject;

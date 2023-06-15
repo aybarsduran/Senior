@@ -4,6 +4,8 @@ namespace IdenticalStudios.WieldableSystem
 {
     public sealed class WieldableRigidbodyVFX : WieldableVFXBehaviour<Rigidbody>
 	{
+		[Title("Rigidbody")]
+
 		[SerializeField, Range(0, 100f)]
 		private float m_Spin = 0.3f;
 

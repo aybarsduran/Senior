@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace IdenticalStudios.ProceduralMotion
 {
-    
+    [AddComponentMenu("IdenticalStudios/Motion/Fall Motion")]
     public sealed class FallMotionModule : DataMotionModule<SingleValueMotionData>
     {
         private ICharacterMotor m_Motor;
@@ -21,7 +21,7 @@ namespace IdenticalStudios.ProceduralMotion
         {
             if (dataHandler.TryGetData<GeneralMotionData>(out var data))
                 return data.Fall;
-
+            
             return null;
         }
 

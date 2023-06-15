@@ -1,12 +1,10 @@
-using IdenticalStudios.ProceduralMotion;
-using IdenticalStudios;
 using UnityEngine;
 
 namespace IdenticalStudios.ProceduralMotion
 {
-    
+    [DisallowMultipleComponent]
     [RequireComponent(typeof(AdditiveForceMotionModule))]
-   
+    [AddComponentMenu("IdenticalStudios/Motion/Lean Motion")]
     public sealed class LeanMotionModule : MotionModule
     {
         public float LeanAngle => m_LeanAngle;
@@ -26,7 +24,7 @@ namespace IdenticalStudios.ProceduralMotion
         [SerializeField]
         private AdditiveForceMotionModule m_ForceModule;
 
-        //nterpolation
+        [Title("Interpolation")]
 
         [SerializeField]
         private SpringSettings m_RotationSpring = SpringSettings.Default;
@@ -34,7 +32,7 @@ namespace IdenticalStudios.ProceduralMotion
         [SerializeField]
         private SpringSettings m_PositionSpring = SpringSettings.Default;
 
-        //Forces
+        [Title("Forces")]
 
         [SerializeField]
         private SpringForce3D m_PositionEnterForce = SpringForce3D.Default;
@@ -42,7 +40,7 @@ namespace IdenticalStudios.ProceduralMotion
         [SerializeField]
         private SpringForce3D m_RotationEnterForce = SpringForce3D.Default;
 
-        //Offsets
+        [Title("Offsets")]
 
         [SerializeField, Range(-90, 90f)]
         private float m_LeanAngle = 35f;

@@ -18,15 +18,22 @@ namespace IdenticalStudios.ResourceGathering
         [SerializeField]
         private GatherableDefinition m_Definition;
 
-        //Visuals to DISABLE when a character interacts with this gatherable
+        [SpaceArea]
+
         [SerializeField]
+        [Help("Visuals to DISABLE when a character interacts with this gatherable.", UnityMessageType.None)]
         private GameObject m_BaseVisuals;
 
-        //Collider to DISABLE when a character interacts with this gatherable
+        [SpaceArea]
+
         [SerializeField]
+        [Help("Collider to DISABLE when a character interacts with this gatherable.", UnityMessageType.None)]
         private Collider m_Collider;
 
+        [Title("Gathering")]
+
         [SerializeField, Range(0f, 1000f)]
+        [NewLabel("Health")]
         private float m_MaxHealth = 100f;
 
         [SerializeField]
@@ -35,7 +42,7 @@ namespace IdenticalStudios.ResourceGathering
         [SerializeField, Range(0.1f, 1f)]
         private float m_GatherRadius = 0.35f;
 
-        [SerializeField]
+        [SerializeField, Disable]
         private float m_Health;
 
         private GatherableBehaviour[] m_Behaviours;

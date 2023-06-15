@@ -6,7 +6,7 @@ namespace IdenticalStudios
 {
     public class CharacterSleepEffects : CharacterBehaviour
     {
-        //Sleep Stats Change
+        [Title("Sleep Stats Change")]
 
         [SerializeField, Range(0, 100f)]
         private float m_HealthIncreasePerHour;
@@ -14,7 +14,7 @@ namespace IdenticalStudios
         [SerializeField, Range(0, 100f)]
         private float m_EnergyIncreasePerHour;
 
-        //Camera Settings
+        [Title("Camera Settings")]
 
         [SerializeField]
         private CameraEffectSettings m_SleepEffects;
@@ -22,7 +22,7 @@ namespace IdenticalStudios
         [SerializeField]
         private BobMotionData m_CameraBob;
 
-        //Audio Settings
+        [Title("Audio Settings")]
 
         [SerializeField, ReorderableList(Foldable = true)]
         private DelayedSound[] m_SleepingSounds;

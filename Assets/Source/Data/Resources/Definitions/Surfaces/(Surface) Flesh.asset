@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5f455fef6aaad459434bb61682f7d4, type: 3}
+  m_Name: (Surface) Flesh
+  m_EditorClassIdentifier: 
+  m_Id: -4710414
+  VelocityModifier: 1
+  SurfaceFriction: 0.75
+  PenetrationResistence: 0.2
+  SoftFootstepEffect:
+    AudioEffect:
+      m_Volume: 0.65
+      m_VolumeJitter: 0.1
+      m_Pitch: 1
+      m_PitchJitter: 0.1
+      m_AudioClips: []
+    VisualEffect: {fileID: 0}
+  HardFootstepEffect:
+    AudioEffect:
+      m_Volume: 0.65
+      m_VolumeJitter: 0.1
+      m_Pitch: 1
+      m_PitchJitter: 0.1
+      m_AudioClips: []
+    VisualEffect: {fileID: 0}
+  FallImpactEffect:
+    AudioEffect:
+      m_Volume: 0.65
+      m_VolumeJitter: 0.1
+      m_Pitch: 1
+      m_PitchJitter: 0.1
+      m_AudioClips: []
+    VisualEffect: {fileID: 0}
+  BulletHitEffect:
+    AudioEffect:
+      m_Volume: 0.5
+      m_VolumeJitter: 0.1
+      m_Pitch: 1
+      m_PitchJitter: 0.1
+      m_AudioClips:
+      - {fileID: 8300000, guid: 97eaeb2c163f4904d88a54ad3512f3b4, type: 3}
+      - {fileID: 8300000, guid: 58ebc7c0eb61074488625f99c0980642, type: 3}
+      - {fileID: 8300000, guid: 8dda710e0a184384faaaa94be85c5a13, type: 3}
+      - {fileID: 8300000, guid: b6c334e4747442047a227900dc669938, type: 3}
+    VisualEffect: {fileID: 269448074529907533, guid: 66f8e95fa454134409bf9bb1467f01e0, type: 3}
+  SlashEffect:
+    AudioEffect:
+      m_Volume: 0.5
+      m_VolumeJitter: 0.1
+      m_Pitch: 1
+      m_PitchJitter: 0.1
+      m_AudioClips:
+      - {fileID: 8300000, guid: 3eb4c2b04fa352f41b6efb99abc62734, type: 3}
+      - {fileID: 8300000, guid: 5925f69a9b76b4046a5c289bded77f69, type: 3}
+      - {fileID: 8300000, guid: 8a842357465f1ab4187f9bd4065a259a, type: 3}
+    VisualEffect: {fileID: 269448074529907533, guid: 48b699870042bd142afc51fc06c37b66, type: 3}
+  StabEffect:
+    AudioEffect:
+      m_Volume: 0.5
+      m_VolumeJitter: 0.1
+      m_Pitch: 1
+      m_PitchJitter: 0.1
+      m_AudioClips:
+      - {fileID: 8300000, guid: 3eb4c2b04fa352f41b6efb99abc62734, type: 3}
+      - {fileID: 8300000, guid: 5925f69a9b76b4046a5c289bded77f69, type: 3}
+      - {fileID: 8300000, guid: 8a842357465f1ab4187f9bd4065a259a, type: 3}
+    VisualEffect: {fileID: 1031705558564164, guid: 6d94b55bf404f7e45867cdf4a6679f25, type: 3}

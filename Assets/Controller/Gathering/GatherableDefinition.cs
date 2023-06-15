@@ -15,7 +15,7 @@ namespace IdenticalStudios.ResourceGathering
         [SerializeField, Multiline]
         private string m_Description;
 
-        [SerializeField]
+        [SerializeField, SpritePreview]
         private Sprite m_Icon;
     }
 }

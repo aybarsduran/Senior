@@ -1,5 +1,4 @@
-using IdenticalStudios;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
 
@@ -26,7 +25,7 @@ namespace IdenticalStudios
             {
                 if (value == m_InteractionEnabled)
                     return;
-
+                
                 m_InteractionEnabled = value;
                 InteractionEnabledChanged?.Invoke();
             }
@@ -65,7 +64,7 @@ namespace IdenticalStudios
             add => m_OnHoverEnd.AddListener(value);
             remove => m_OnHoverEnd.RemoveListener(value);
         }
-
+        
         protected bool HoverActive { get; private set; }
 
         public event UnityAction InteractionEnabledChanged;
@@ -79,6 +78,8 @@ namespace IdenticalStudios
         [Tooltip("How time it takes to interact with this object. (e.g. for how many seconds should the Player hold the interact button).")]
         private float m_HoldDuration = 0f;
 
+        [SpaceArea]
+
         [SerializeField]
         [Tooltip("Interactable text (could be used as a name), shows up in the UI when looking at this object.")]
         private string m_InteractTitle;
@@ -86,6 +87,8 @@ namespace IdenticalStudios
         [SerializeField, Multiline]
         [Tooltip("Interactable description, shows up in the UI when looking at this object.")]
         private string m_InteractDescription;
+
+        [SpaceArea]
 
         [SerializeField]
         [Tooltip("Unity event that will be called when a character interacts with this object.")]
@@ -97,7 +100,9 @@ namespace IdenticalStudios
         [SerializeField]
         private InteractEvent m_OnHoverEnd;
 
-        [SerializeField]
+        [SpaceArea]
+        
+        [SerializeField, ChildObjectOnly(),  FormerlySerializedAs("m_MaterialChanger")]
         private MaterialEffect m_MaterialEffect;
 
 

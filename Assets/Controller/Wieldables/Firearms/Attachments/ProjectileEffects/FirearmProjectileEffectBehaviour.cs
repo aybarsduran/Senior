@@ -4,6 +4,7 @@ namespace IdenticalStudios.WieldableSystem
 {
     public abstract class FirearmProjectileEffectBehaviour : FirearmAttachmentBehaviour, IProjectileEffect
     {
+        [SpaceArea]
         [SerializeField]
         protected DamageType m_DamageType = DamageType.Bullet;
         

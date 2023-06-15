@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -14,6 +14,7 @@ namespace IdenticalStudios.UISystem
         [SerializeField]
         private GraphicRaycaster m_Raycaster;
 
+        [SpaceArea]
 
         [SerializeField]
         private InputActionReference m_CursorDeltaInput;

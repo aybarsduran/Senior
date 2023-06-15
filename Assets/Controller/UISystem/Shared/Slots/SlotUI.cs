@@ -1,5 +1,4 @@
-using IdenticalStudios;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace IdenticalStudios.UISystem
@@ -21,11 +20,17 @@ namespace IdenticalStudios.UISystem
         protected T Data { get; private set; }
 
         [SerializeField]
+        [Help("Specific Info Components")]
         [FormerlySerializedAs("m_InfoComponents")]
-
+        [Disable, ReorderableList(HasLabels = false, HasHeader = false)]
         private DataInfoUI<T>[] m_SpecificInfo;
 
         [SerializeField]
+        [Help("Generic Info Components")]
+        [Disable, ReorderableList(HasLabels = false, HasHeader = false)]
+#if UNITY_EDITOR
+        [EditorButton(nameof(RefreshInfoComponents), "Refresh")]
+#endif
         private GenericDataInfoUI[] m_GenericInfo;
 
         private SelectableUI m_Selectable;
@@ -41,10 +46,10 @@ namespace IdenticalStudios.UISystem
 
         protected void SetData(T data)
         {
-            //#if UNITY_EDITOR
-            //            if (UnityUtils.IsQuittingPlayMode)
-            //                return;
-            //#endif
+//#if UNITY_EDITOR
+//            if (UnityUtils.IsQuittingPlayMode)
+//                return;
+//#endif
 
             Data = data;
 
@@ -65,5 +70,15 @@ namespace IdenticalStudios.UISystem
 
         protected virtual void Awake() => SetData(null);
 
+#if UNITY_EDITOR
+        protected void RefreshInfoComponents()
+        {
+            m_SpecificInfo = GetComponents<DataInfoUI<T>>();
+            m_GenericInfo = GetComponents<GenericDataInfoUI>();
+        }
+
+        protected virtual void Reset() => gameObject.GetOrAddComponent<SelectableUI>();
+        protected virtual void OnValidate() => RefreshInfoComponents();
+#endif
     }
 }

@@ -3,6 +3,7 @@
 namespace IdenticalStudios.WieldableSystem.Effects
 {
     [Serializable]
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceAssembly: "Assembly-CSharp")]
     public abstract class WieldableEffect : IWieldableEffect
     {
 #if UNITY_EDITOR

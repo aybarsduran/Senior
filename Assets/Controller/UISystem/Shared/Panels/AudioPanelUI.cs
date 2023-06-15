@@ -2,13 +2,17 @@ using UnityEngine;
 
 namespace IdenticalStudios.UISystem
 {
+    [AddComponentMenu("IdenticalStudios/UserInterface/Panels/Audio Panel")]
     public class AudioPanelUI : PanelUI
     {
+        [Title("Audio")]
+
         [SerializeField]
         private SoundPlayerWithCooldown m_ShowAudio;
 
         [SerializeField]
         private SoundPlayerWithCooldown m_HideAudio;
+
 
         protected override void ShowPanel() => m_ShowAudio.Play2D();
         protected override void HidePanel() => m_HideAudio.Play2D();

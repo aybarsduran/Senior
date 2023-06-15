@@ -9,8 +9,12 @@ namespace IdenticalStudios.WieldableSystem
     {
         public override int AmmoPerShot => m_AmmoPerShot;
 
+        [Title("Ammo")]
+
         [SerializeField, Range(0, 10)]
         private int m_AmmoPerShot = 1;
+
+        [Title("Ray")]
 
         [SerializeField, Range(1, 30)]
         [Tooltip("The amount of rays that will be sent in the world")]
@@ -31,14 +35,20 @@ namespace IdenticalStudios.WieldableSystem
         [SerializeField]
         private QueryTriggerInteraction m_TriggerInteraction;
 
-        [SerializeField]
+        [Title("Visual Effects")]
+
+        [SerializeField, PrefabObjectOnly]
         private ParticleSystem m_TracerPrefab;
 
         [SerializeField, ReorderableList(HasLabels = false, Foldable = true)]
         private WieldableVFXBehaviour[] m_VisualEffects;
 
+        [Title("Effects")]
+        
         [SerializeField]
         private DynamicEffectCollection m_ShootEffects;
+        
+        [Title("Debug")]
         
         [SerializeField]
         private bool m_DebugHitscanRay;

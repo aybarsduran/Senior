@@ -16,6 +16,7 @@ namespace IdenticalStudios.ProceduralMotion
     /// The driver is responsible for updating the tween's state.
     /// </summary>
     [System.Serializable]
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceAssembly: "IdenticalStudios.ProceduralMotion.Tweening")]
     public sealed class GraphicColorTween : Tween<Color, Graphic>
     {
         /// <summary>

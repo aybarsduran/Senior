@@ -1,12 +1,14 @@
-using IdenticalStudios.ProceduralMotion;
-using IdenticalStudios;
 using UnityEngine;
 
 namespace IdenticalStudios.ProceduralMotion
 {
     public sealed class Spring3D
     {
+#if UNITY_EDITOR
+        public bool IsIdle { get; private set; }
+#else
         public bool IsIdle;
+#endif
 
         public Vector3 Value => m_Value;
         public Vector3 Velocity => m_Velocity;
@@ -21,9 +23,11 @@ namespace IdenticalStudios.ProceduralMotion
         private SpringSettings m_Settings;
 
         private const float k_StepSize = 1f / 61f;
+
+
         public Spring3D() : this(SpringSettings.Default) { }
 
-        public Spring3D(SpringSettings settings)
+        public Spring3D(SpringSettings settings) 
         {
             m_Settings = settings;
 
@@ -35,7 +39,9 @@ namespace IdenticalStudios.ProceduralMotion
 
         public void Adjust(SpringSettings settings) => m_Settings = settings;
 
-        // Reset all values to initial states.
+        /// <summary>
+        /// Reset all values to initial states.
+        /// </summary>
         public void Reset()
         {
             IsIdle = true;
@@ -44,18 +50,22 @@ namespace IdenticalStudios.ProceduralMotion
             m_Acceleration = Vector3.zero;
         }
 
-        // Sets the target value in the middle of motion.
-        // This reuse the current velocity and interpolate the value smoothly afterwards.
-        // <param name="value">Target value</param>
+        /// <summary>
+        /// Sets the target value in the middle of motion.
+        /// This reuse the current velocity and interpolate the value smoothly afterwards.
+        /// </summary>
+        /// <param name="value">Target value</param>
         public void SetTargetValue(Vector3 value)
         {
             m_TargetValue = value;
             IsIdle = false;
         }
 
-        // Sets the target value in the middle of motion but using a new velocity.
-        // <param name="value">Target value</param>
-        // <param name="velocity">New velocity</param>
+        /// <summary>
+        /// Sets the target value in the middle of motion but using a new velocity.
+        /// </summary>
+        /// <param name="value">Target value</param>
+        /// <param name="velocity">New velocity</param>
         public void SetTargetValue(Vector3 value, Vector3 velocity)
         {
             m_TargetValue = value;
@@ -63,9 +73,11 @@ namespace IdenticalStudios.ProceduralMotion
             IsIdle = false;
         }
 
-        // Advance a step by deltaTime(seconds).
-        // <param name="deltaTime">Delta time since previous frame</param>
-        // <returns>Evaluated Value</returns>
+        /// <summary>
+        /// Advance a step by deltaTime(seconds).
+        /// </summary>
+        /// <param name="deltaTime">Delta time since previous frame</param>
+        /// <returns>Evaluated Value</returns>
         public Vector3 Evaluate(float deltaTime)
         {
             if (IsIdle)
@@ -87,7 +99,7 @@ namespace IdenticalStudios.ProceduralMotion
             {
                 var dt = (i - (steps - 1)).GetAbsoluteValue() < 0.01f ? stepSize - i * _stepSize : _stepSize;
 
-                val += vel * dt + acc * (dt * dt * 0.5f);
+                val += vel * dt + acc * (dt * dt * 0.5f); 
 
                 Vector3 _acc = (-stf * (val - m_TargetValue) + (-damp * vel)) / mass;
 

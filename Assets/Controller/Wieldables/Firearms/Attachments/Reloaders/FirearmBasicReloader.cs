@@ -9,9 +9,13 @@ namespace IdenticalStudios.WieldableSystem
         public override int MagazineSize => m_MagazineSize;
         public override int AmmoToLoad => ammoToLoad;
 
+        [Title("Magazine")]
+
         [SerializeField, Range(0,500)]
         private int m_MagazineSize;
         
+        [Title("Tactical Reload")]
+
         [SerializeField, Range(0.01f, 15f)]
         private float m_ReloadDuration;
 

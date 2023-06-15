@@ -10,9 +10,10 @@ namespace IdenticalStudios
         Crouch = 40,
         Jump = 50,
         Airborne = 60,
-        LadderClimb = 70, // Not Implemented   
+        LadderClimb = 70, // Not Implemented
+        // Mantle = 80,      // Not Implemented
         // Swim = 90,        // Not Implemented
-
-       
+        
+        // Here you can add more state types.
     }
 }

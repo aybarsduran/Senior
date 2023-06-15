@@ -10,7 +10,7 @@ namespace IdenticalStudios.WieldableSystem.Effects
     public sealed class CameraMotionDisablerEffect : WieldableEffect
     {
         [FormerlySerializedAs("m_DataTypeToDisable")]
-        [SerializeField]
+        [SerializeField, TypeConstraint(typeof(MotionData))]
         [ReorderableList(ListStyle.Boxed, HasLabels = false)]
         private SerializedType[] m_OverridesToDisable;
 

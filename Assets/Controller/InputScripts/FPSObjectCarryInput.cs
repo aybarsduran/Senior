@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 namespace IdenticalStudios.InputSystem.Behaviours
 {
+    [AddComponentMenu("Input/Object Carry Input")]
     public class FPSObjectCarryInput : CharacterInputBehaviour
     {
         [Title("Actions")]

@@ -1,19 +1,23 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace IdenticalStudios.UISystem
 {
-    // Useful for getting access to callbacks and modules of the Parent Character.
+    /// <summary>
+    /// Useful for getting access to callbacks and modules of the Parent Character.
+    /// </summary>
     public abstract class PlayerUIBehaviour : MonoBehaviour
-    {
+	{
+        #region Internal
         protected enum InitMode
         {
             Start,
             Awake,
             Manually
         }
+        #endregion
 
 #if UNITY_EDITOR
-        protected Player Player { get; private set; }
+        protected Player Player { get; private set;}
 #else
         protected Player Player;
 #endif
@@ -70,28 +74,38 @@ namespace IdenticalStudios.UISystem
 
         protected virtual InitMode GetInitMode() => InitMode.Start;
 
-        // Gets called when the UI gets attached to a Player
+        /// <summary>
+        /// Gets called when the UI gets attached to a Player
+        /// </summary>
         protected virtual void OnAttachment() { }
 
-        // Gets called when the UI gets detached from the Player
+        /// <summary>
+        /// Gets called when the UI gets detached from the Player
+        /// </summary>
         protected virtual void OnDetachment() { }
 
-        // Returns module of specified type from the attached Player.
-        // Use this if you are NOT sure the attached Player has this module.
+        /// <summary>
+        /// <para> Returns module of specified type from the attached Player. </para>
+        /// Use this if you are NOT sure the attached Player has this module.
+        /// </summary>
         protected bool TryGetModule<T>(out T module) where T : class, ICharacterModule
         {
             return Player.TryGetModule(out module);
         }
 
-        //  Returns module of specified type from the attached Player. 
-        // Use this if you are sure the attached Player has this module.
+        /// <summary>
+        /// <para> Returns module of specified type from the attached Player. </para>
+        /// Use this if you are sure the attached Player has this module.
+        /// </summary>
         protected void GetModule<T>(out T module) where T : class, ICharacterModule
         {
             Player.GetModule(out module);
         }
 
-        //  Returns module of specified type from the attached Player.
-		// Use this if you are sure the attached Player has this module.
+        /// <summary>
+        /// <para> Returns module of specified type from the attached Player. </para>
+		/// Use this if you are sure the attached Player has this module.
+        /// </summary>
         protected T GetModule<T>() where T : class, ICharacterModule
         {
             return Player.GetModule<T>();

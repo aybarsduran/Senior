@@ -1,4 +1,4 @@
-using UnityEngine.Events;
+﻿using UnityEngine.Events;
 using UnityEngine;
 
 namespace IdenticalStudios.WieldableSystem
@@ -9,7 +9,7 @@ namespace IdenticalStudios.WieldableSystem
         IAudioPlayer AudioPlayer { get; set; }
         IAccuracyHandler AccuracyHandler { get; set; }
 
-        bool IsVisible { get; }
+        bool IsVisible { get; } 
         float EquipDuration { get; }
         float HolsterDuration { get; }
 
@@ -21,11 +21,11 @@ namespace IdenticalStudios.WieldableSystem
         void OnHolster(float holsterSpeed);
         void SetVisibility(bool visible);
 
-       
+        #region Monobehaviour
         GameObject gameObject { get; }
         Transform transform { get; }
         T GetComponent<T>();
         T GetComponentInChildren<T>(bool inactive = false);
-        
+        #endregion
     }
 }

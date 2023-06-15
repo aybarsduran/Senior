@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 namespace IdenticalStudios.WieldableSystem
 {
+    [AddComponentMenu("IdenticalStudios/Wieldables/Firearms/Firearm")]
     public sealed class Firearm : Wieldable, IFirearm, IUseInputHandler, IAimInputHandler, IReloadInputHandler
     {
         public IAimer Aimer { get; private set; }
@@ -38,26 +39,27 @@ namespace IdenticalStudios.WieldableSystem
         [SerializeField]
         private EffectCollection m_StopFireEffects;
 
+        [Title("Attachments")]
 
-        [SerializeField]
+        [SerializeField, NotNull("This attachment has to be assigned (Press on ''Setup Firearm'' to add a default attachment.")]
         private FirearmAimerBehaviour m_BaseAimer;
 
-        [SerializeField]
+        [SerializeField, NotNull("This attachment has to be assigned (Press on ''Setup Firearm'' to add a default attachment.")]
         private FirearmTriggerBehaviour m_BaseTrigger;
 
-        [SerializeField]
+        [SerializeField, NotNull("This attachment has to be assigned (Press on ''Setup Firearm'' to add a default attachment.")]
         private FirearmShooterBehaviour m_BaseShooter;
 
-        [SerializeField]
+        [SerializeField, NotNull("This attachment has to be assigned (Press on ''Setup Firearm'' to add a default attachment.")]
         private FirearmAmmoBehaviour m_BaseAmmo;
 
-        [SerializeField]
+        [SerializeField, NotNull("This attachment has to be assigned (Press on ''Setup Firearm'' to add a default attachment.")]
         private FirearmReloaderBehaviour m_BaseReloader;
 
-        [SerializeField]
+        [SerializeField, NotNull("This attachment has to be assigned (Press on ''Setup Firearm'' to add a default attachment.")]
         private FirearmRecoilBehaviour m_BaseRecoil;
 
-        [SerializeField]
+        [SerializeField, NotNull("This attachment has to be assigned (Press on ''Setup Firearm'' to add a default attachment.")]
         private FirearmProjectileEffectBehaviour m_BaseProjectileEffect;
 
         private float m_HeatValue;

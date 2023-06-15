@@ -1,17 +1,18 @@
-using IdenticalStudios.InputSystem.Behaviours;
-using IdenticalStudios;
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace IdenticalStudios.InputSystem.Behaviours
 {
-    
+    [AddComponentMenu("Input/Look Input")]
     public class FPSLookInput : CharacterInputBehaviour
     {
+        [Title("Actions")]
+
         [SerializeField]
         private InputActionReference m_LookInput;
 
         private ILookHandler m_LookHandler;
+
 
         #region Initialization
         protected override void OnBehaviourEnabled(ICharacter character)
@@ -21,12 +22,13 @@ namespace IdenticalStudios.InputSystem.Behaviours
 
         protected override void OnInputEnabled()
         {
-            //inputHelper classý olusturulcak
+            m_LookInput.Enable();
             m_LookHandler.SetLookInput(GetInput);
         }
 
         protected override void OnInputDisabled()
         {
+            m_LookInput.TryDisable();
             m_LookHandler.SetLookInput(null);
         }
         #endregion

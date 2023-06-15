@@ -1,5 +1,4 @@
 using IdenticalStudios.ProceduralMotion;
-using IdenticalStudios;
 using UnityEngine;
 
 namespace IdenticalStudios
@@ -23,18 +22,18 @@ namespace IdenticalStudios
         [SerializeField, Range(1f, 100f)]
         private float m_MaxAllowedCharacterSpeed = 4f;
 
-        //"References
+        [Title("References")]
 
-        [SerializeField]
+        [SerializeField, NotNull]
         private Transform m_ReferenceTransfrom;
 
-        [SerializeField]
+        [SerializeField, NotNull]
         private LeanMotionModule m_BodyLeanMotion;
 
-        [SerializeField]
+        [SerializeField, NotNull]
         private LeanMotionModule m_WieldableLeanMotion;
 
-        //Effects
+        [Title("Effects")]
 
         [SerializeField]
         private StandardSound m_LeanSound;

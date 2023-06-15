@@ -4,9 +4,10 @@ using UnityEngine;
 
 namespace IdenticalStudios.WieldableSystem
 {
+    [AddComponentMenu("IdenticalStudios/Wieldables/Melee/Gathering Swing")]
 	public class GatheringMeleeSwing : BasicMeleeSwing
 	{
-		//Gathering Swing"
+		[Title("Gathering Swing")]
 		
 		[SerializeField, ReorderableList(HasLabels = false)]
 		private GatherableDefinition[] m_ValidGatherables;

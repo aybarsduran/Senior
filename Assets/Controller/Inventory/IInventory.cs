@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine.Events;
 
 namespace IdenticalStudios.InventorySystem
@@ -6,12 +6,12 @@ namespace IdenticalStudios.InventorySystem
     public interface IInventory : ICharacterModule
     {
         IReadOnlyList<IItemContainer> Containers { get; }
-
+        
         event UnityAction InventoryChanged;
         event ItemSlotChangedDelegate ItemChanged;
         event UnityAction ContainersCountChanged;
-
-
+        
+        
         /// <summary>
         /// Adds a container to this inventory.
         /// </summary>

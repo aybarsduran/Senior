@@ -3,7 +3,9 @@ using UnityEngine.Events;
 
 namespace IdenticalStudios
 {
-    // TODO: Implement unlocked recipes and crafting queue.
+    /// <summary>
+    /// TODO: Implement unlocked recipes and crafting queue.
+    /// </summary>
     public interface ICraftingManager : ICharacterModule
     {
         bool IsCrafting { get; }

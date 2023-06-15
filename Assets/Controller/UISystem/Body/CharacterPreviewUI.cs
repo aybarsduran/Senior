@@ -5,7 +5,7 @@ namespace IdenticalStudios.UISystem
 {
     public sealed class CharacterPreviewUI : PlayerUIBehaviour
     {
-        //References
+        [Title("References")]
 
         [SerializeField]
         private Camera m_Camera;
@@ -13,7 +13,7 @@ namespace IdenticalStudios.UISystem
         [SerializeField]
         private BodyClothing m_BodyClothing;
 
-        //Equipment Containers
+        [Title("Equipment Containers")]
 
         [SerializeField]
         private string m_HeadContainerName = "Head";

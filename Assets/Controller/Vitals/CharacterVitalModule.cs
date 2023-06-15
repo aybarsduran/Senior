@@ -1,10 +1,11 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace IdenticalStudios
 {
     [RequireComponent(typeof(IHealthManager))]
     public abstract class CharacterVitalModule : MonoBehaviour
     {
+        #region Internal
         protected enum DepletionType
         {
             IncreaseValue,
@@ -17,6 +18,7 @@ namespace IdenticalStudios
             SmallerThan,
             None
         }
+        #endregion
 
         [SerializeField]
         [Range(0f, 1000f)]
@@ -26,6 +28,7 @@ namespace IdenticalStudios
         [Range(0f, 1000f)]
         protected float m_InitialMaxValue = 100f;
 
+        [SpaceArea]
 
         [SerializeField]
         protected DepletionType m_DepletionType = DepletionType.DecreaseValue;
@@ -34,9 +37,10 @@ namespace IdenticalStudios
         [Range(0f, 100f)]
         protected float m_DepletionSpeed = 3f;
 
+        [SpaceArea]
 
         [SerializeField]
-        //After the stat value croses this threshold the character will start taking damage.
+        [Help("After the stat value croses this threshold the character will start taking damage.", UnityMessageType.None)]
         protected ValueThresholdType m_DamageThresholdType = ValueThresholdType.SmallerThan;
 
         [SerializeField]
@@ -47,9 +51,10 @@ namespace IdenticalStudios
         [Range(0f, 100f)]
         protected float m_Damage = 3f;
 
+        [SpaceArea]
 
         [SerializeField]
-        //After the stat value croses this threshold the character's health will start to restore
+        [Help("After the stat value croses this threshold the character's health will start to restore", UnityMessageType.None)]
         protected ValueThresholdType m_HealThresoldType = ValueThresholdType.BiggerThan;
 
         [SerializeField]
@@ -78,7 +83,7 @@ namespace IdenticalStudios
             maxStatValue = m_InitialMaxValue;
         }
 
-        protected void DepleteStat(ref float statValue, float maxStatValue, float deltaTime)
+        protected void DepleteStat(ref float statValue, float maxStatValue, float deltaTime) 
         {
             float depletion = (m_DepletionType == DepletionType.IncreaseValue) ? (m_DepletionSpeed * deltaTime) : -(m_DepletionSpeed * deltaTime);
 
@@ -116,7 +121,7 @@ namespace IdenticalStudios
         }
 
 #if UNITY_EDITOR
-        protected virtual void OnValidate()
+        protected virtual void OnValidate() 
         {
             m_InitialValue = Mathf.Clamp(m_InitialValue, 0f, m_InitialMaxValue);
         }

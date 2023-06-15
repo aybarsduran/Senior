@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace IdenticalStudios.UISystem
 {
+    [AddComponentMenu(k_AddMenuPath + "Buildable Requirement Info")]
     public class BuildableRequirementInfoUI : DataInfoUI<BuildableDefinition>
     {
         [SerializeField, ReorderableList(HasLabels = false)]

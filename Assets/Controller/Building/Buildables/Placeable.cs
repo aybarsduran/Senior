@@ -11,7 +11,7 @@ namespace IdenticalStudios.BuildingSystem
 
         public bool PlaceOnPlaceables => m_PlaceOnPlaceables;
 
-        //Settings (Placeable)
+        [Title("Settings (Placeable)")]
 
         [SerializeField]
         private bool m_PlaceOnPlaceables = true;
@@ -28,6 +28,7 @@ namespace IdenticalStudios.BuildingSystem
         [SerializeField, HideInInspector]
         private Bounds m_LocalBounds;
 
+        [SpaceArea]
 
         [SerializeField]
         private SoundPlayer m_PlacementAudio;

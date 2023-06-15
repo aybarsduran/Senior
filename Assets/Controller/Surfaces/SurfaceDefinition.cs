@@ -1,55 +1,61 @@
-using System;
+﻿using System;
 using UnityEngine;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace IdenticalStudios.Surfaces
 {
     [CreateAssetMenu(menuName = "Identical Studios/Surfaces/Surface Definition", fileName = "(Surface) ")]
-    public sealed class SurfaceDefinition : DataDefinition<SurfaceDefinition>
-    {
-        #region Internal
-        [Serializable]
+	public sealed class SurfaceDefinition : DataDefinition<SurfaceDefinition>
+	{
+		#region Internal
+		[Serializable]
+		public class EffectPair
+		{
+			public SoundPlayer AudioEffect;
 
-        public class EffectPair
-        {
-            public SoundPlayer AudioEffect;
-            public GameObject VisualEffect;
-        }
-        #endregion
+			[SpaceArea]
 
-        public override string Name => this != null ? name.Replace("(Surface) ", "") : string.Empty;
+			public GameObject VisualEffect;
+		}
+		#endregion
 
-        [Title("Settings")]
+		public override string Name => this != null ? name.Replace("(Surface) ", "") : string.Empty;
 
-        [Help("Velocity multiplier applied to a character that steps on this surface", UnityMessageType.None), Range(0.01f, 2f)]
-        public float VelocityModifier = 1f;
+		[Title("Settings")]
 
-        [SpaceArea]
+		[Help("Velocity multiplier applied to a character that steps on this surface", UnityMessageType.None), Range(0.01f, 2f)]
+		public float VelocityModifier = 1f;
 
-        [Help("Determines how rough this surface is (0 - Slippery, 1 - Rough)", UnityMessageType.None), Range(0.01f, 1f)]
-        public float SurfaceFriction = 1f;
+		[SpaceArea]
 
-        [SpaceArea]
+		[Help("Determines how rough this surface is (0 - Slippery, 1 - Rough)", UnityMessageType.None), Range(0.01f, 1f)]
+		public float SurfaceFriction = 1f;
 
-        [Help("Determines how penetrable this surface is (0 - easily penetrable, 1 - not penetrable)", UnityMessageType.None), Range(0f, 1f)]
-        public float PenetrationResistence = 0.3f;
+		[SpaceArea]
 
-        [Title("Effects"), SpaceArea]
+		[Help("Determines how penetrable this surface is (0 - easily penetrable, 1 - not penetrable)", UnityMessageType.None), Range(0f, 1f)]
+		public float PenetrationResistence = 0.3f;
 
-        public EffectPair SoftFootstepEffect;
+		[Title("Effects"), SpaceArea]
 
-        [Line(1f)]
-        public EffectPair HardFootstepEffect;
+		public EffectPair SoftFootstepEffect;
 
-        [Line(1f)]
-        public EffectPair FallImpactEffect;
+		[Line(1f)]
+		public EffectPair HardFootstepEffect;
 
-        [Line(1f)]
-        public EffectPair BulletHitEffect;
+		[Line(1f)]
+		public EffectPair FallImpactEffect;
 
-        [Line(1f)]
-        public EffectPair SlashEffect;
+		[Line(1f)]
+		public EffectPair BulletHitEffect;
 
-        [Line(1f)]
-        public EffectPair StabEffect;
+		[Line(1f)]
+		public EffectPair SlashEffect;
+
+		[Line(1f)]
+		public EffectPair StabEffect;
     }
 }

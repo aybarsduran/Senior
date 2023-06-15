@@ -1,0 +1,154 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1676088558504243719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6969986499486820136}
+  m_Layer: 0
+  m_Name: TeleportPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6969986499486820136
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676088558504243719}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -61.840004, y: 1.98, z: 14.7099695}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8748358524694931576}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2308011425809274886
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6444613217386548877, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+      propertyPath: m_Description
+      value: Teleports you
+      objectReference: {fileID: 0}
+    - target: {fileID: 6444613217386548877, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+      propertyPath: m_InteractDescription
+      value: Teleports you
+      objectReference: {fileID: 0}
+    - target: {fileID: 6444613217386548877, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+      propertyPath: m_OnInteract.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6444613217386548877, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+      propertyPath: m_OnInteractCallback.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6444613217386548877, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+      propertyPath: m_OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6444613217386548877, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+      propertyPath: m_OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8735671923240067466}
+    - target: {fileID: 6444613217386548877, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+      propertyPath: m_OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6444613217386548877, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+      propertyPath: m_OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TeleportPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6444613217386548877, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+      propertyPath: m_OnInteractCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8735671923240067466}
+    - target: {fileID: 6444613217386548877, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+      propertyPath: m_OnInteractCallback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6444613217386548877, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+      propertyPath: m_OnInteractCallback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TeleportPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6444613217386548877, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+      propertyPath: m_OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PolymindGames.Demo.TeleportPlayerBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6444613217386548877, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+      propertyPath: m_OnInteractCallback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SurvivalTemplatePro.Demo.TeleportPlayerBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6444613217386548877, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+      propertyPath: m_OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6444613217386548877, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+      propertyPath: m_OnInteractCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6444613219193729122, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+      propertyPath: m_Name
+      value: Button - Teleport Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6444613219193729150, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6444613219193729150, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6444613219193729150, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6444613219193729150, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8975521040406109491, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+      propertyPath: m_TeleportPoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8975521040406109491, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+      propertyPath: m_TeleportPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 6969986499486820136}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+--- !u!4 &8748358524694931576 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6444613219193729150, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+  m_PrefabInstance: {fileID: 2308011425809274886}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8748358525194557109 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6444613217386548915, guid: 594c3c38fa2433943853801d9e8b636d, type: 3}
+  m_PrefabInstance: {fileID: 2308011425809274886}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8735671923240067466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8748358525194557109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be041fa872cfdb548905092d7d2c53f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TeleportPoints:
+  - {fileID: 6969986499486820136}

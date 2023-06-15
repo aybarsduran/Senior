@@ -5,6 +5,7 @@ namespace IdenticalStudios.WieldableSystem
     [AddComponentMenu("IdenticalStudios/Wieldables/Utilities/Effects Toggler")]
     public sealed class WieldableEffectsToggler : MonoBehaviour
     {
+        [SpaceArea]
         [SerializeField, ReorderableList(HasLabels = false)]
         private LightEffect[] m_LightEffects;
 

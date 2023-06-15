@@ -60,7 +60,7 @@ namespace IdenticalStudios.ProceduralMotion
         {
             positionSpring.Adjust(GetDefaultPositionSpringSettings());
             rotationSpring.Adjust(GetDefaultRotationSpringSettings());
-
+            
             if (motionMixer == null)
                 motionMixer = GetComponent<IMotionMixer>();
 

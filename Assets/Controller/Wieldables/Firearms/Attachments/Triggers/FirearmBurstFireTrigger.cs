@@ -6,6 +6,7 @@ namespace IdenticalStudios.WieldableSystem
 	[AddComponentMenu("IdenticalStudios/Wieldables/Firearms/Triggers/Burst Fire Trigger")]
 	public class FirearmBurstFireTrigger : FirearmTriggerBehaviour
     {
+		[SpaceArea]
 		[SerializeField, Range(0, 100)]
 		[Tooltip("How many times in succesion will the trigger be pressed..")]
 		private int m_BurstLength = 3;

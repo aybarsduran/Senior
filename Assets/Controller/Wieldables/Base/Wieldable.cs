@@ -58,11 +58,13 @@ namespace IdenticalStudios.WieldableSystem
         public event UnityAction EquippingStarted;
         public event UnityAction HolsteringEnded;
         
+        [Title("General")]
 
-        [SerializeField, Range(-1, 100)]
+        [SerializeField, Range(-1, 100), NewLabel("Default Crosshair")]
         [Tooltip("Crosshair index for this wieldable, -1 or lower will result in no crosshair")]
         private int m_BaseCrosshair;
 
+        [Title("Equipping")]
 
         [SerializeField, Range(0f, 5f)]
         private float m_EquipDuration = 0.5f;
@@ -75,7 +77,9 @@ namespace IdenticalStudios.WieldableSystem
                 new AnimatorParameterTrigger(AnimatorControllerParameterType.Trigger, "Equip", 1f))
         });
 
+        [SpaceArea]
 
+        [Title("Holstering")]
 
         [SerializeField, Range(0f, 5f)]
         private float m_HolsterDuration = 0.5f;

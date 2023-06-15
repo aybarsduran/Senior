@@ -18,9 +18,9 @@ namespace IdenticalStudios.InventorySystem
 
         public override int GetAllowedAddAmount(IItem item, int count)
         {
-            if (m_ValidCategories == null)
+            if (m_ValidCategories == null) 
                 return count;
-
+            
             var def = item.Definition;
             bool isValid = false;
 

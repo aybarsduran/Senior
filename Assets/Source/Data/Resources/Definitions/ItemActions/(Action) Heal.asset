@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3621122fa8d0f0c41ab3d004d36b639f, type: 3}
+  m_Name: (Action) Heal
+  m_EditorClassIdentifier: 
+  m_DisplayName: Heal
+  m_DisplayVerb: Healing
+  m_DisplayIcon: {fileID: 21300000, guid: 63ad3abacac8e10438fdd9b52bec48ea, type: 3}
+  m_Duration: 3
+  m_EatSound:
+    m_Volume: 0.4
+    m_VolumeJitter: 0.1
+    m_Pitch: 1
+    m_PitchJitter: 0.1
+    m_AudioClips:
+    - {fileID: 8300000, guid: 4bb17c0dffb703e4b9e5fd1a0748bb26, type: 3}
+    - {fileID: 8300000, guid: df236f3d3267b734696ee0afe7d94712, type: 3}

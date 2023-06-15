@@ -5,6 +5,7 @@ using UnityEngine.Events;
 namespace IdenticalStudios.WieldableSystem.Effects
 {
     [Serializable]
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceAssembly: "Assembly-CSharp")]
     public sealed class UnityEventWieldableEffect : WieldableEffect
     {
         [Serializable]

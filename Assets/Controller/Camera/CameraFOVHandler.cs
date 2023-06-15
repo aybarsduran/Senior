@@ -1,5 +1,4 @@
-using IdenticalStudios.ProceduralMotion;
-using IdenticalStudios;
+﻿using IdenticalStudios.ProceduralMotion;
 using System;
 using UnityEngine;
 
@@ -24,7 +23,7 @@ namespace IdenticalStudios
         public Camera UnityWorldCamera => m_WorldCamera;
         public Camera UnityOverlayCamera => m_OverlayCamera;
 
-        //Settings (World)
+        [Title("Settings (World)")]
 
         [SerializeField]
         private Camera m_WorldCamera;
@@ -38,7 +37,7 @@ namespace IdenticalStudios
         [SerializeField]
         private EaseType m_WorldEaseType;
 
-    
+        [SpaceArea]
 
         [SerializeField, Range(0.1f, 5f)]
         private float m_AirborneFOVMod = 1.05f;
@@ -49,7 +48,7 @@ namespace IdenticalStudios
         [SerializeField]
         private AnimationCurve m_HeightFOVMultiplier = new(new[] { new Keyframe(0f, 1f), new Keyframe(1f, 1f) });
 
-        //Settings (Overlay)
+        [Title("Settings (Overlay)")]
 
         [SerializeField]
         private Camera m_OverlayCamera;

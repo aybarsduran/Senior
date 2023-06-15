@@ -1,6 +1,4 @@
-using IdenticalStudios;
-
-namespace IdenticalStudios
+﻿namespace IdenticalStudios
 {
     public interface ICameraEffectsHandler : ICharacterModule
     {

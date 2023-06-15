@@ -17,17 +17,23 @@ namespace IdenticalStudios.WieldableSystem
         public SpringForce3D RotationForce => m_RotationForce;
         public ShakeSettings3D RecoilShake => m_RotationShake;
 
+        [Title("Spring Settings")]
+
         [SerializeField]
         private SpringSettings m_PositionSpring = SpringSettings.Default;
 
         [SerializeField]
         private SpringSettings m_RotationSpring = SpringSettings.Default;
 
+        [Title("Recoil Pattern")]
+
         [SerializeField]
         private AnimCurves2D m_PositionCurves;
 
         [SerializeField]
         private AnimCurves2D m_RotationCurves;
+
+        [Title("Recoil Forces")]
 
         [SerializeField]
         private SpringForce3D m_PositionForce = SpringForce3D.Default;

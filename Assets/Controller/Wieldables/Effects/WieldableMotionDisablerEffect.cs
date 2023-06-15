@@ -6,10 +6,11 @@ using UnityEngine.Serialization;
 namespace IdenticalStudios.WieldableSystem.Effects
 {
     [Serializable]
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceAssembly: "Assembly-CSharp")]
     public sealed class WieldableMotionDisablerEffect : WieldableEffect
     {
         [FormerlySerializedAs("m_DataTypeToDisable")]
-        [SerializeField]
+        [SerializeField, TypeConstraint(typeof(MotionData))]
         [ReorderableList(ListStyle.Boxed, HasLabels = false)]
         private SerializedType[] m_OverridesToDisable = Array.Empty<SerializedType>();
 

@@ -3,6 +3,7 @@ using UnityEngine;
 namespace IdenticalStudios.WieldableSystem
 {
     [RequireComponent(typeof(MeleeComboHandler))]
+    [AddComponentMenu("IdenticalStudios/Wieldables/Melee/Polearm")]
     public sealed class Polearm : Wieldable, IAimInputHandler, IUseInputHandler
     {
         public bool IsAiming => m_BaseAimer.IsAiming;
@@ -10,6 +11,7 @@ namespace IdenticalStudios.WieldableSystem
         public ActionBlockHandler AimBlocker { get; private set; } = new ActionBlockHandler();
         public ActionBlockHandler UseBlocker { get; } = new ActionBlockHandler();
 
+        [Title("Polearm")]
 
         [SerializeField]
         private bool m_SwingContinuously = true;
@@ -17,7 +19,7 @@ namespace IdenticalStudios.WieldableSystem
         [SerializeField]
         private MeleeComboHandler m_ComboHandler;
 
-        [SerializeField]
+        [SerializeField, NotNull]
         private FirearmAimerBehaviour m_BaseAimer;
 
         private float m_NextTimeCanUse;

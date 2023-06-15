@@ -1,8 +1,4 @@
-
-using IdenticalStudios.MovementSystem;
-using IdenticalStudios;
 using UnityEngine;
-using UnityEngine.InputSystem.XR;
 
 namespace IdenticalStudios.MovementSystem
 {
@@ -12,9 +8,12 @@ namespace IdenticalStudios.MovementSystem
     {
         public override MovementStateType StateType => MovementStateType.Crouch;
 
+        [Space]
+        [Tooltip("The controllers height when crouching.")]
         [SerializeField, Range(0f, 2f)]
         private float m_CrouchHeight = 1f;
 
+        [Tooltip("How long does it take to crouch.")]
         [SerializeField, Range(0f, 1f)]
         private float m_CrouchCooldown = 0.3f;
 

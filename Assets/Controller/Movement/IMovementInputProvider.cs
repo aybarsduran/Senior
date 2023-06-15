@@ -10,8 +10,8 @@ namespace IdenticalStudios.MovementSystem
         bool RunInput { get; }
         bool CrouchInput { get; }
         bool JumpInput { get; }
-
-
+        
+        
         void UseCrouchInput();
         void UseRunInput();
         void UseJumpInput();

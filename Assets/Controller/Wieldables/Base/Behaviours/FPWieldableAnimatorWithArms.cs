@@ -18,13 +18,13 @@ namespace IdenticalStudios.WieldableSystem
         [SerializeField]
         private AnimateMode m_Mode = AnimateMode.AnimateBoth;
 
-        [SerializeField]
+        [SerializeField, NewLabel("Animator"), NotNull]
         private Animator m_WieldableAnimator;
 
-        [SerializeField]
+        [SerializeField, NewLabel("Clips")]
         private AnimationOverrideClips m_WieldableClips;
 
-        [SerializeField]
+        [SerializeField, NewLabel("Clips")]
         private AnimationOverrideClips m_ArmClips;
 
         private static readonly int s_Holster = Animator.StringToHash("Holster");

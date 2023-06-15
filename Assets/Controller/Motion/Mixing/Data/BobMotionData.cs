@@ -11,13 +11,14 @@ namespace IdenticalStudios.ProceduralMotion
 
         public override SpringSettings PositionSettings => m_PositionSpring;
         public override SpringSettings RotationSettings => m_RotationSpring;
-
+        
         public override SpringForce3D PositionStepForce => m_PositionStepForce;
         public override SpringForce3D RotationStepForce => m_RotationStepForce;
 
         public override Vector3 PositionAmplitude => m_PositionAmplitude;
         public override Vector3 RotationAmplitude => m_RotationAmplitude;
 
+        [Title("General")]
 
         [SerializeField]
         protected BobMode m_BobType = BobMode.StepCycleBased;
@@ -25,7 +26,8 @@ namespace IdenticalStudios.ProceduralMotion
         [SerializeField, Range(0.01f, 10f)]
         private float m_BobSpeed = 1f;
 
-        //Position Settings
+        [Title("Position Settings")]
+
         [SerializeField]
         private SpringSettings m_PositionSpring;
 
@@ -35,7 +37,7 @@ namespace IdenticalStudios.ProceduralMotion
         [SerializeField]
         private Vector3 m_PositionAmplitude = Vector3.zero;
 
-        //Rotation Settings
+        [Title("Rotation Settings")]
 
         [SerializeField]
         private SpringSettings m_RotationSpring;

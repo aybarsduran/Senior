@@ -1,10 +1,9 @@
-using IdenticalStudios.ProceduralMotion;
-using IdenticalStudios;
 using UnityEngine;
 
 namespace IdenticalStudios.ProceduralMotion
 {
-   
+    [DisallowMultipleComponent]
+    [AddComponentMenu("IdenticalStudios/Motion/Look Motion")]
     public sealed class LookMotionModule : DataMotionModule<SwayMotionData>
     {
         private ILookHandler m_LookHandler;
@@ -22,7 +21,7 @@ namespace IdenticalStudios.ProceduralMotion
         {
             if (dataHandler.TryGetData<GeneralMotionData>(out var data))
                 return data.Look;
-
+            
             return null;
         }
 

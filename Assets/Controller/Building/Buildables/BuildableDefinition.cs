@@ -18,10 +18,10 @@ namespace IdenticalStudios.BuildingSystem
 
         public BuildRequirementInfo[] BuildRequirements => m_BuildRequirements;
 
-        [SerializeField]
+        [SpaceArea, SerializeField]
         private string m_BuildableName;
 
-        [SerializeField]
+        [SerializeField, SpritePreview]
         [Tooltip("Item Icon.")]
         private Sprite m_Icon;
 
@@ -33,6 +33,7 @@ namespace IdenticalStudios.BuildingSystem
         [Tooltip("Item description to display in the UI.")]
         private string m_Description;
 
+        [SpaceArea]
 
         [SerializeField, ReorderableList]
         private BuildRequirementInfo[] m_BuildRequirements;
@@ -56,6 +57,13 @@ namespace IdenticalStudios.BuildingSystem
             return Definitions.Where((BuildableDefinition def) => def.Prefab.GetType() == typeof(T)).ToArray();
         }
 
+#if UNITY_EDITOR
+        public override void Reset()
+        {
+            base.Reset();
 
+            m_Prefab = null;
+        }
+#endif
     }
 }

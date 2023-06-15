@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +14,7 @@ namespace IdenticalStudios.UISystem
         [Tooltip("The stamina bar image, the fill amount will be modified based on the current stamina value.")]
         private Image m_StaminaBar;
 
+        [SpaceArea]
 
         [SerializeField, Range(1f, 10f)]
         [Tooltip("Represents how much time it takes for the stamina bar to start fading after not decreasing.")]

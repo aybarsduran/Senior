@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace IdenticalStudios
 {
@@ -13,19 +13,21 @@ namespace IdenticalStudios
         public Transform Parent { get => m_Parent; set => m_Parent = value; }
         public UpdateMode UpdateType { get => m_UpdateMode; set => m_UpdateMode = value; }
 
-        [SerializeField]
+        [SerializeField, InLineEditor]
         private Transform m_Parent;
 
         [SerializeField]
         private UpdateMode m_UpdateMode = UpdateMode.Automatic;
 
+        [SpaceArea]
+
         [SerializeField]
         private bool m_CustomOffset;
 
-        [SerializeField]
+        [SerializeField, ShowIf(nameof(m_CustomOffset), true)]
         private Vector3 m_PositionOffset;
 
-        [SerializeField]
+        [SerializeField, ShowIf(nameof(m_CustomOffset), true)]
         private Vector3 m_RotationOffset;
 
 

@@ -1,11 +1,11 @@
-using IdenticalStudios;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 namespace IdenticalStudios
 {
-    
-    // Manages the parent character's health and death
+    /// <summary>
+    /// Manages the parent character's health and death
+    /// </summary>
     public class HealthManager : MonoBehaviour, IHealthManager, ISaveableComponent
     {
         [System.Serializable]
@@ -91,7 +91,7 @@ namespace IdenticalStudios
         [Tooltip("The starting max health of this character (can be modified at runtime).")]
         private float m_StartingMaxHealth = 100f;
 
-        
+        [SpaceArea]
 
         [SerializeField]
         private FloatEvent m_OnDamage;
@@ -102,10 +102,14 @@ namespace IdenticalStudios
         [SerializeField]
         private UnityEvent m_OnRespawn;
 
-
+#if UNITY_EDITOR
+        [SerializeField, Disable, SpaceArea, NewLabel("Health")]
+#endif
         private float m_CurrentHealth;
 
-
+#if UNITY_EDITOR
+        [SerializeField, Disable]
+#endif
         private float m_MaxHealth;
 
         private float m_PrevHealth;
@@ -176,6 +180,14 @@ namespace IdenticalStudios
         }
         #endregion
 
-
+        #region Editor
+#if UNITY_EDITOR
+        private void OnValidate()
+        {
+            MaxHealth = m_StartingMaxHealth;
+            Health = m_StartingHealth;
+        }
+#endif
+        #endregion
     }
 }

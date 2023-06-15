@@ -1,5 +1,4 @@
-using IdenticalStudios;
-using UnityEngine.Events;
+﻿using UnityEngine.Events;
 
 namespace IdenticalStudios
 {
@@ -11,7 +10,6 @@ namespace IdenticalStudios
         float PrevHealth { get; }
         float MaxHealth { get; set; }
 
-        //events
         event UnityAction<float, DamageContext> DamageTakenFullContext;
 
         event UnityAction<float> DamageTaken;

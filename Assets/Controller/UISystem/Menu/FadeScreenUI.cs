@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -9,14 +9,16 @@ namespace IdenticalStudios.UISystem
     {
         [SerializeField]
         private bool m_FadingEnabled = true;
-
-
+        
+        [SpaceArea]
+        
         [SerializeField]
         private CanvasGroup m_CanvasGroup;
 
         [SerializeField, Range(0f, 25f)]
         private float m_FadeSpeed = 2f;
 
+        [SpaceArea]
 
         [SerializeField]
         private AudioMixerSnapshot m_FadeSnapshot;
@@ -29,7 +31,7 @@ namespace IdenticalStudios.UISystem
         {
             if (!m_FadingEnabled)
                 return;
-
+            
             StopAllCoroutines();
 
             // Alpha
@@ -55,7 +57,7 @@ namespace IdenticalStudios.UISystem
                 m_CanvasGroup.alpha = Mathf.MoveTowards(m_CanvasGroup.alpha, targetAlpha, m_FadeSpeed * speedMod * Time.deltaTime);
                 yield return null;
             }
-
+            
             m_CanvasGroup.alpha = targetAlpha;
         }
 

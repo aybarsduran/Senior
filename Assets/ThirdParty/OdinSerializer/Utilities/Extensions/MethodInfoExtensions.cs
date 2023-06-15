@@ -16,8 +16,7 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-namespace IdenticalStudios
-    .OdinSerializer.Utilities
+namespace IdenticalStudios.OdinSerializer.Utilities
 {
     using System;
     using System.Linq;

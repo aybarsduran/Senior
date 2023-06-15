@@ -10,6 +10,8 @@ namespace IdenticalStudios.WieldableSystem
         [SerializeField]
         private Animator m_Animator;
 
+        [SpaceArea]
+        
         [SerializeField]
         private AnimationOverrideClips m_Clips;
         

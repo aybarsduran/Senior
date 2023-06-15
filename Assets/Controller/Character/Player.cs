@@ -1,58 +1,57 @@
-using IdenticalStudios;
-using UnityEngine.Events;
+﻿using UnityEngine.Events;
 
-public class Player : Character
+namespace IdenticalStudios
 {
-    // Static property that returns the local player instance
-    public static Player LocalPlayer
+    public class Player : Character
     {
-        get => s_LocalPlayer;
-        private set
+        public static Player LocalPlayer
         {
-            // If the local player instance is already set to the given value, return
-            if (s_LocalPlayer == value)
-                return;
-           
-            s_LocalPlayer = value;
-            // Invoke the LocalPlayerChanged event with the new local player instance
-            LocalPlayerChanged?.Invoke(s_LocalPlayer);
+            get => s_LocalPlayer;
+            private set
+            {
+                if (s_LocalPlayer == value)
+                    return;
+                
+                s_LocalPlayer = value;
+                LocalPlayerChanged?.Invoke(s_LocalPlayer);
+            }
         }
-    }
 
-    // Event that is invoked after the player object is initialized
-    public event UnityAction AfterInitialized;
+        /// <summary>
+        /// This message will be sent after the first initialized action.
+        /// </summary>
+        public event UnityAction AfterInitialized;
+        
+        /// <summary>
+        ///  Player: Current Player
+        /// </summary>
+        public static event PlayerChangedDelegate LocalPlayerChanged;
+        public delegate void PlayerChangedDelegate(Player player);
 
-    // Event that is invoked when the local player changes
-    public static event PlayerChangedDelegate LocalPlayerChanged;
-    public delegate void PlayerChangedDelegate(Player player);
+        private static Player s_LocalPlayer;
 
-    // Static field that holds the local player instance
-    private static Player s_LocalPlayer;
 
-   
-    protected override void Awake()
-    {
-        // If a local player object already exists, destroy this object
-        if (LocalPlayer != null)
-            Destroy(this);
-        // Otherwise, set this object as the local player and call the base Awake method
-        else
+        protected override void Awake()
         {
-            LocalPlayer = this;
-            base.Awake();
+            if (LocalPlayer != null)
+                Destroy(this);
+            else
+            {
+                LocalPlayer = this;
+                base.Awake();
+            }
         }
-    }
 
-    protected override void Start()
-    {
-        base.Start();
-        AfterInitialized?.Invoke();
-    }
+        protected override void Start()
+        {
+            base.Start();
+            AfterInitialized?.Invoke();
+        }
 
-    private void OnDestroy()
-    {
-        // If this object is the local player, set the local player instance to null
-        if (LocalPlayer == this)
-            LocalPlayer = null;
+        private void OnDestroy()
+        {
+            if (LocalPlayer == this)
+                LocalPlayer = null;
+        }
     }
 }

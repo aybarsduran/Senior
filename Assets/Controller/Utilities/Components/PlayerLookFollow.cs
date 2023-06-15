@@ -1,5 +1,4 @@
-using IdenticalStudios;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace IdenticalStudios
 {
@@ -11,10 +10,10 @@ namespace IdenticalStudios
         [SerializeField]
         private bool m_CustomOffset;
 
-        [SerializeField]
+        [SerializeField, EnableIf(nameof(m_CustomOffset), true)]
         private Vector3 m_PositionOffset;
 
-        [SerializeField]
+        [SerializeField, EnableIf(nameof(m_CustomOffset), true)]
         private Vector3 m_RotationOffset;
 
 

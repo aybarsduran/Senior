@@ -11,6 +11,8 @@ namespace IdenticalStudios.WieldableSystem
         public IMotionDataHandler DataHandler { get; set; }
         public MotionPreset MotionPreset => m_MotionPreset;
 
+        [Title("Data")]
+
         [SerializeField]
         private MotionPreset m_MotionPreset;
 

@@ -3,8 +3,10 @@ using UnityEngine.InputSystem;
 
 namespace IdenticalStudios.InputSystem.Behaviours
 {
+    [AddComponentMenu("Input/Lean Input")]
     public sealed class FPSBodyLeanInput : CharacterInputBehaviour
     {
+        [Title("Actions")]
 
         [SerializeField]
         private InputActionReference m_LeanAction;
@@ -12,6 +14,7 @@ namespace IdenticalStudios.InputSystem.Behaviours
         private IBodyLeanHandler m_LeanHandler;
 
 
+        #region Initialization
         protected override void OnBehaviourEnabled(ICharacter character)
         {
             character.GetModule(out m_LeanHandler);
@@ -28,7 +31,9 @@ namespace IdenticalStudios.InputSystem.Behaviours
             m_LeanHandler.SetLeanState(BodyLeanState.Center);
             m_LeanAction.UnregisterStarted(OnBodyLean);
         }
+        #endregion
 
+        #region Input Handling
         private void OnBodyLean(InputAction.CallbackContext context)
         {
             var leanState = m_LeanHandler.LeanState;
@@ -44,5 +49,6 @@ namespace IdenticalStudios.InputSystem.Behaviours
                     m_LeanHandler.SetLeanState(targetLeanState);
             }
         }
+        #endregion
     }
 }

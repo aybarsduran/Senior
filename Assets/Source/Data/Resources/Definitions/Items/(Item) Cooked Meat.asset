@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4213430bbd6313b4a89ea1d7e1185c38, type: 3}
+  m_Name: (Item) Cooked Meat
+  m_EditorClassIdentifier: 
+  m_Id: 1045632
+  m_ParentGroup: {fileID: 11400000, guid: 7086e42fbd522a0479e34273226dac6b, type: 2}
+  m_ItemName: Cooked Meat
+  m_Icon: {fileID: 21300000, guid: 1ac06b87277db8d4398f3489dbd89cbf, type: 3}
+  m_Pickup: {fileID: 2318995404924464061, guid: 9ddf95054868d0448889255cbb49623f, type: 3}
+  m_Description: Sates your hunger for a good amount of time.
+  m_Weight: 0.25
+  m_StackSize: 5
+  m_Tag:
+    m_Value: 0
+  m_Actions:
+  - {fileID: 11400000, guid: 59fe392297328864e80629d3fb6db5d1, type: 2}
+  m_Properties: []
+  m_Data:
+  - rid: 3692120816393388185
+  references:
+    version: 2
+    RefIds:
+    - rid: 3692120816393388185
+      type: {class: VitalsData, ns: IdenticalStudios.InventorySystem, asm: IdenticalStudios}
+      data:
+        m_MinHealthChange: 0
+        m_MaxHealthChange: 0
+        m_MinHungerChange: 0
+        m_MaxHungerChange: 0
+        m_MinThirstChange: 0
+        m_MaxThirstChange: 0
+        m_MinEnergyChange: 0
+        m_MaxEnergyChange: 0

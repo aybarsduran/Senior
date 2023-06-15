@@ -1,10 +1,7 @@
-using IdenticalStudios.MovementSystem;
-using IdenticalStudios;
-
-
 namespace IdenticalStudios.MovementSystem
 {
     [System.Serializable]
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceAssembly: "Assembly-CSharp")]
     public sealed class CharacterWalkState : CharacterGroundedState
     {
         public override MovementStateType StateType => MovementStateType.Walk;

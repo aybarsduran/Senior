@@ -1,7 +1,4 @@
-using IdenticalStudios.MovementSystem;
-using IdenticalStudios;
 using UnityEngine;
-using UnityEngine.InputSystem.XR;
 
 namespace IdenticalStudios.MovementSystem
 {

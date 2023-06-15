@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94880c3f6f2321d4ca749870023475cd, type: 3}
+  m_Name: (Buildable) Sleeping Bag
+  m_EditorClassIdentifier: 
+  m_Id: -4996552
+  m_ParentGroup: {fileID: 11400000, guid: e3e20d2051227a546a623e7251ebe23c, type: 2}
+  m_BuildableName: Sleeping Bag
+  m_Icon: {fileID: 21300000, guid: d3cb7879d9234a54b9476d4bb889ce55, type: 3}
+  m_Prefab: {fileID: -3725189722714725408, guid: 6583b44d70c8a294492567b92469a854, type: 3}
+  m_Description: Great place to sleep, much cozier than it looks.
+  m_BuildRequirements:
+  - m_BuildMaterial:
+      m_Value: -9290183
+    m_RequiredAmount: 3
+  - m_BuildMaterial:
+      m_Value: -6458467
+    m_RequiredAmount: 4
+  - m_BuildMaterial:
+      m_Value: -2805545
+    m_RequiredAmount: 3

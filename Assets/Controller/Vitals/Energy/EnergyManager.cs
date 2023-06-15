@@ -1,5 +1,4 @@
-using UnityEngine;
-
+﻿using UnityEngine;
 namespace IdenticalStudios
 {
     public sealed class EnergyManager : CharacterVitalModule, IEnergyManager, ISaveableComponent
@@ -13,17 +12,21 @@ namespace IdenticalStudios
         public float MaxEnergy
         {
             get => m_MaxEnergy;
-            set
+            set 
             {
                 m_MaxEnergy = Mathf.Max(value, 0f);
                 Energy = Mathf.Clamp(Energy, 0f, m_MaxEnergy);
             }
         }
 
-        [SerializeField] 
+#if UNITY_EDITOR
+        [SerializeField, Disable, SpaceArea]
+#endif
         private float m_Energy;
 
-        [SerializeField]
+#if UNITY_EDITOR
+        [SerializeField, Disable]
+#endif
         private float m_MaxEnergy;
 
 

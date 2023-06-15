@@ -13,6 +13,7 @@ namespace IdenticalStudios
             [SerializeField]
             private DataIdReference<ItemPropertyDefinition> m_AttachmentTypeProperty;
 
+            [SpaceArea]
 
             [SerializeField, ReorderableList]
             private AttachmentItemConfiguration[] m_Configurations;
@@ -48,7 +49,7 @@ namespace IdenticalStudios
         }
         #endregion
 
-        [SerializeField, ReorderableList]
+        [SerializeField, SpaceArea, ReorderableList]
         private AttachmentItemConfigurations[] m_Configurations;
         
         

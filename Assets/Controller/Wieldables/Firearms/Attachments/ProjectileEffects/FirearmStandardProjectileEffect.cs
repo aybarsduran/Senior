@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace IdenticalStudios.WieldableSystem
 {
+    [AddComponentMenu("IdenticalStudios/Wieldables/Firearms/BulletEffects/Standard Projectile Effect")]
     public class FirearmStandardProjectileEffect : FirearmProjectileEffectBehaviour
     {
         private enum FalloffType
@@ -19,6 +20,7 @@ namespace IdenticalStudios.WieldableSystem
         [Tooltip("The impact impulse that will be transferred to the rigidbodies at contact.")]
         private float m_Force = 15f;
 
+        [Title("Falloff")]
         
         [SerializeField]
         private FalloffType m_FalloffType;

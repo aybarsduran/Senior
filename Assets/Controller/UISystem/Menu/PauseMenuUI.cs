@@ -1,4 +1,4 @@
-using IdenticalStudios.InputSystem;
+﻿using IdenticalStudios.InputSystem;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -13,10 +13,12 @@ namespace IdenticalStudios.UISystem
         [SerializeField]
         private SerializedScene m_MainMenu;
 
+        [Title("Actions")]
 
         [SerializeField]
         private InputActionReference m_PauseInput;
 
+        [Title("Audio")]
 
         [SerializeField]
         private SoundPlayer m_PauseSound;
@@ -24,6 +26,7 @@ namespace IdenticalStudios.UISystem
         [SerializeField]
         private SoundPlayer m_ResumeSound;
 
+        [Title("Panels")]
 
         [SerializeField, ReorderableList(HasLabels = false)]
         private PanelUI[] m_PausePanels;

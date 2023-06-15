@@ -3,6 +3,7 @@ using UnityEngine;
 namespace IdenticalStudios.ProceduralMotion
 {
     [DisallowMultipleComponent]
+    [AddComponentMenu("IdenticalStudios/Motion/Recoil Motion")]
     public sealed class RecoilMotionModule : MotionModule
     {
         private Vector3 m_TargetRotation;

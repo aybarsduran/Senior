@@ -4,6 +4,7 @@ using UnityEngine;
 namespace IdenticalStudios.WieldableSystem.Effects
 {
     [Serializable]
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(false, null, "Assembly-CSharp", null)]
     public sealed class DelayedRandomSoundsEffect : WieldableEffect
     {
         [SerializeField, ReorderableList(ListStyle.Boxed)]

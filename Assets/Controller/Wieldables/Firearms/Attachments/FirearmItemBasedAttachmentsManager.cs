@@ -9,6 +9,7 @@ namespace IdenticalStudios.WieldableSystem
     /// <summary>
     /// TODO: Refactor.
     /// </summary>
+    [AddComponentMenu("IdenticalStudios/Wieldables/Firearms/Handlers/Item-Based Attachments")]
     [RequireComponent(typeof(IFirearm))]
     public class FirearmItemBasedAttachmentsManager : WieldableItemBehaviour
     {
@@ -19,9 +20,10 @@ namespace IdenticalStudios.WieldableSystem
             [NonSerialized]
             public UnityAction AttachmentChangedCallback;
 
-            [SerializeField]
+            [SerializeField, NewLabel("Property")]
             private DataIdReference<ItemPropertyDefinition> m_AttachmentTypeProperty;
 
+            [SpaceArea]
 
             [SerializeField, ReorderableList(ListStyle.Lined, childLabel: "m_Attachment")]
             private AttachmentItemConfiguration[] m_Configurations;
@@ -80,6 +82,7 @@ namespace IdenticalStudios.WieldableSystem
         [SerializeField, ReorderableList(childLabel: "Config", Foldable = true)]
         private AttachmentItemConfigurations[] m_Configurations;
 
+        [Title("Effects")]
 
         [SerializeField]
         private EffectCollection m_SwapEffects;

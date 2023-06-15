@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace IdenticalStudios.WieldableSystem
 {
+    [AddComponentMenu("IdenticalStudios/Wieldables/FP Compass Rose")]
     public sealed class FPCompassRose : WieldableItemBehaviour
     {
         [SerializeField]
@@ -14,6 +15,7 @@ namespace IdenticalStudios.WieldableSystem
         [SerializeField, Range(0f, 100f)]
         private float m_RotationSpeed = 3f;
 
+        [SpaceArea]
 
         [SerializeField]
         private DataIdReference<ItemPropertyDefinition> m_DurabilityProperty;

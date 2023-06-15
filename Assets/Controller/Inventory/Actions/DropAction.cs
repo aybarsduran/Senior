@@ -11,7 +11,9 @@ namespace IdenticalStudios.InventorySystem
         private float m_DropDuration = 0f;
 
 
-        // Checks if the given item can be dropped. In the current version of the asset, items can be dropped without restrictions.
+        /// <summary>
+        /// Checks if the given item can be dropped. In the current version of the asset, items can be dropped without restrictions.
+        /// </summary>
         public override bool IsViableForItem(ICharacter character, ItemSlot itemSlot) => true;
         public override float GetDuration(ICharacter character, ItemSlot itemSlot) => m_DropDuration;
 

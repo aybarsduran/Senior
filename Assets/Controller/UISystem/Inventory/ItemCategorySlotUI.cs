@@ -1,6 +1,5 @@
 using IdenticalStudios.InventorySystem;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace IdenticalStudios.UISystem
 {

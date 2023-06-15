@@ -95,6 +95,11 @@ namespace IdenticalStudios.InputSystem.Behaviours
         }
         #endregion
 
-
+#if UNITY_EDITOR
+        private void Reset()
+        {
+            m_DragHandler = gameObject.GetOrAddComponent<BasicItemDragger>();
+        }
+#endif
     }
 }

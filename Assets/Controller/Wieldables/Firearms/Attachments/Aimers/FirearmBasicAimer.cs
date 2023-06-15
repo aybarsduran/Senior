@@ -4,11 +4,13 @@ using UnityEngine;
 
 namespace IdenticalStudios.WieldableSystem
 {
+    [AddComponentMenu("IdenticalStudios/Wieldables/Firearms/Aimers/Basic Aimer")]
     public class FirearmBasicAimer : FirearmAimerBehaviour
     {
         public override float HipAccuracyMod => m_HipAccuracyMod;
         public override float AimAccuracyMod => m_AimAccuracyMod;
 
+        [Title("Aiming")]
 
         [SerializeField, Range(0f, 1f)]
         private float m_HipAccuracyMod = 1f;
@@ -22,6 +24,7 @@ namespace IdenticalStudios.WieldableSystem
         [SerializeField, Range(0f, 10f)]
         private float m_AimRecoilMod = 1f;
 
+        [Title("Field of View")]
 
         [SerializeField, Range(0f, 2f)]
         protected float m_FOVSetDuration = 0.4f;
@@ -32,10 +35,12 @@ namespace IdenticalStudios.WieldableSystem
         [SerializeField, Range(0f, 2f)]
         protected float m_OverlayFOVMod = 0.75f;
 
+        [Title("Crosshair")]
 
         [SerializeField, Range(-1, 100)]
         protected int m_AimCrosshairIndex = 0;
 
+        [Title("Effects")]
 
         [SerializeField]
         private EffectCollection m_AimEffects = new(new IWieldableEffect[]

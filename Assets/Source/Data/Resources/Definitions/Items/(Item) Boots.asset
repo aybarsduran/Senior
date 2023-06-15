@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4213430bbd6313b4a89ea1d7e1185c38, type: 3}
+  m_Name: (Item) Boots
+  m_EditorClassIdentifier: 
+  m_Id: -3870361
+  m_ParentGroup: {fileID: 11400000, guid: cf5dd5a63069e21458615566eb5d16e7, type: 2}
+  m_ItemName: Boots
+  m_Icon: {fileID: 21300000, guid: ca1263e17cc16a549a513153a014ec9b, type: 3}
+  m_Pickup: {fileID: 1847763772860184360, guid: 1348c6688e30bbe468d81fcc1b0f090a, type: 3}
+  m_Description: Basic boots, keeps you warm and comfortable while offering some
+    defense.
+  m_Weight: 0.3
+  m_StackSize: 1
+  m_Tag:
+    m_Value: -5796568
+  m_Actions: []
+  m_Properties: []
+  m_Data:
+  - rid: 3692120816393388181
+  - rid: 3692120816393388182
+  references:
+    version: 2
+    RefIds:
+    - rid: 3692120816393388181
+      type: {class: CraftingData, ns: IdenticalStudios.InventorySystem, asm: IdenticalStudios}
+      data:
+        m_Blueprint: []
+        m_CraftAmount: 1
+        m_CraftDuration: 3
+        m_CraftLevel: 0
+        m_DismantleEfficiency: 0.75
+    - rid: 3692120816393388182
+      type: {class: FuelData, ns: IdenticalStudios.InventorySystem, asm: IdenticalStudios}
+      data:
+        m_MinFuel: 30
+        m_MaxFuel: 40

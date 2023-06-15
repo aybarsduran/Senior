@@ -20,8 +20,7 @@
 #define CAN_EMIT
 #endif
 
-namespace IdenticalStudios
-    .OdinSerializer
+namespace IdenticalStudios.OdinSerializer
 {
     using IdenticalStudios.OdinSerializer.Utilities;
     using System;

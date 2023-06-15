@@ -1,5 +1,3 @@
-using IdenticalStudios.MovementSystem;
-using IdenticalStudios;
 using UnityEngine;
 
 namespace IdenticalStudios.MovementSystem
@@ -13,32 +11,40 @@ namespace IdenticalStudios.MovementSystem
         bool Enabled { get; set; }
 
 
-        
-        // Initializes/enables this state.
+        /// <summary>
+        /// Initializes/enables this state.
+        /// </summary>
         void InitializeState(IMovementController movement, IMovementInputProvider input, ICharacterMotor motor, ICharacter character);
 
-    
-        // Decommisions/disables this state.
+        /// <summary>
+        /// Decommisions/disables this state.
+        /// </summary>
         void DecommisionState();
 
-       
-        // Can this state be transitioned to.
+        /// <summary>
+        /// Can this state be transitioned to.
+        /// </summary>
         bool IsStateValid();
 
+        /// <summary>
         /// Called when entering this state.
+        /// </summary>
         void OnStateEnter(MovementStateType prevStateType);
 
-        
-        // Updates this state's logic, it also handles transitions.
+        /// <summary>
+        /// Updates this state's logic, it also handles transitions.
+        /// </summary>
         void UpdateLogic();
 
-       
-        // Passes the current velocity and returns a new one that will be used to move the parent character.
-        // returns New velocity </returns>
+        /// <summary>
+        /// Passes the current velocity and returns a new one that will be used to move the parent character.
+        /// </summary>
+        /// <returns> New velocity </returns>
         Vector3 UpdateVelocity(Vector3 currentVelocity, float deltaTime);
 
-        
-        // Called when exiting this state.
+        /// <summary>
+        /// Called when exiting this state.
+        /// </summary>
         void OnStateExit();
     }
 }

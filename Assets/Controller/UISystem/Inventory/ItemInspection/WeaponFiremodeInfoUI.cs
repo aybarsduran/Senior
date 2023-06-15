@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 namespace IdenticalStudios.UISystem
 {
+    [AddComponentMenu(k_AddMenuPath  + "Weapon Firemode Info")]
     public sealed class WeaponFiremodeInfoUI : PlayerDataInfoUI<IItem>
     {
         [SerializeField]

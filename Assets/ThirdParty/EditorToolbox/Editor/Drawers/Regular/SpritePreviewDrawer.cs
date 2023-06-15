@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace PolymindGames
+namespace IdenticalStudios
 {
     [CustomPropertyDrawer(typeof(SpritePreviewAttribute))]
     public class SpritePreviewDrawer : PropertyDrawerBase

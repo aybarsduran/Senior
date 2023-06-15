@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfff5b2fee909b4a9081ed5e566cb8e, type: 3}
+  m_Name: (BuildMaterial) Leather
+  m_EditorClassIdentifier: 
+  m_Id: -6458467
+  m_BuildMaterialName: Leather
+  m_Icon: {fileID: 21300000, guid: adc121a50f89a964797f3bd6c618a83f, type: 3}
+  m_UseAudio:
+    m_Volume: 0.65
+    m_VolumeJitter: 0.1
+    m_Pitch: 1
+    m_PitchJitter: 0.1
+    m_AudioClips:
+    - {fileID: 8300000, guid: f53008f447db1f54683a78c7931c8cbe, type: 3}
+    - {fileID: 8300000, guid: 9629ecb9ff55111419a6e5c5d39663b3, type: 3}

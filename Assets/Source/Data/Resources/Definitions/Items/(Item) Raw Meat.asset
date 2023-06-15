@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4213430bbd6313b4a89ea1d7e1185c38, type: 3}
+  m_Name: (Item) Raw Meat
+  m_EditorClassIdentifier: 
+  m_Id: -2332980
+  m_ParentGroup: {fileID: 11400000, guid: 7086e42fbd522a0479e34273226dac6b, type: 2}
+  m_ItemName: Raw Meat
+  m_Icon: {fileID: 21300000, guid: 049ddb027084f9d478086e53a985b32e, type: 3}
+  m_Pickup: {fileID: 369479471667832804, guid: 6b59289d0a2d4f04fb6e62dd73523f5a, type: 3}
+  m_Description: Very delicious cooked.
+  m_Weight: 0.25
+  m_StackSize: 5
+  m_Tag:
+    m_Value: 0
+  m_Actions: []
+  m_Properties:
+  - m_ItemPropertyId: 6313314
+    m_UseRandomValue: 0
+    m_ValueRange: {x: 0, y: 0}
+  m_Data:
+  - rid: 3692120816393388199
+  references:
+    version: 2
+    RefIds:
+    - rid: 3692120816393388199
+      type: {class: CookData, ns: IdenticalStudios.InventorySystem, asm: IdenticalStudios}
+      data:
+        m_CookTime: 20
+        m_CookedOutput:
+          m_Value: 0

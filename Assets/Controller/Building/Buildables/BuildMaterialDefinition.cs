@@ -14,13 +14,13 @@ namespace IdenticalStudios.BuildingSystem
         public override Sprite Icon => m_Icon;
         public SoundPlayer UseSound => m_UseAudio;
 
-        [SerializeField]
+        [SerializeField, NewLabel("Name")]
         private string m_BuildMaterialName;
 
         [SerializeField]
         private Sprite m_Icon;
 
-        [SerializeField]
+        [SerializeField, NewLabel("Sound")]
         private SoundPlayer m_UseAudio;
     }
 }

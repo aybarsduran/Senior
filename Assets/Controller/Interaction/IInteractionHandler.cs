@@ -1,5 +1,4 @@
-using IdenticalStudios;
-using UnityEngine.Events;
+﻿using UnityEngine.Events;
 
 namespace IdenticalStudios
 {

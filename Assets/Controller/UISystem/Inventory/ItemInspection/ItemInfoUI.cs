@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace IdenticalStudios.UISystem
 {
+    [AddComponentMenu(k_AddMenuPath + "Item Info")]
     public class ItemInfoUI : ItemInfoBasicUI
     {
         [Title("Stack")]

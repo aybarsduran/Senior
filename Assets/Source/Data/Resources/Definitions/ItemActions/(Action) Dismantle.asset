@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 438aff56bda94544a82b6a45b2b04f57, type: 3}
+  m_Name: (Action) Dismantle
+  m_EditorClassIdentifier: 
+  m_DisplayName: Dismantle
+  m_DisplayVerb: Dismantling
+  m_DisplayIcon: {fileID: 21300000, guid: b9644bf9f4305a44480067bd50cbf911, type: 3}
+  m_DurationPerGivenItem: 0.75
+  m_DurabilityProperty:
+    m_Value: -8792658
+  m_DismantleSound:
+    m_Volume: 0.65
+    m_VolumeJitter: 0.5
+    m_Pitch: 0.45
+    m_PitchJitter: 0.05
+    m_AudioClips:
+    - {fileID: 8300000, guid: 88c31ff57af6bbf44bd8b7c7dbd93d99, type: 3}

@@ -36,6 +36,8 @@ namespace IdenticalStudios.WieldableSystem
         [SerializeField, Range(0f, 5f)]
         private float m_AimRecoilMod = 0.7f;
 
+        [SpaceArea]
+
         [SerializeField]
         private HeadRecoil m_HeadRecoil;
 

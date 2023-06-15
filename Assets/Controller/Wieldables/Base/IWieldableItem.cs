@@ -1,4 +1,3 @@
-using IdenticalStudios.WieldableSystem;
 using IdenticalStudios.InventorySystem;
 using UnityEngine;
 using UnityEngine.Events;

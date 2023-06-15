@@ -12,6 +12,7 @@ namespace IdenticalStudios.UISystem
         [SerializeField]
         private InputContextGroup m_DeathContext;
 
+        [SpaceArea]
 
         [SerializeField, Range(0f, 10f)]
         private float m_FadeDeathDelay = 2f;
@@ -22,6 +23,7 @@ namespace IdenticalStudios.UISystem
         [SerializeField, Range(0f, 50f)]
         private float m_ShowRespawnButtonDelay = 5f;
 
+        [SpaceArea]
 
         [SerializeField]
         private TextMeshProUGUI m_RespawnTimeText;
@@ -29,6 +31,7 @@ namespace IdenticalStudios.UISystem
         [SerializeField]
         private Button m_RespawnButton;
 
+        [SpaceArea]
 
         [SerializeField]
         private AudioMixerSnapshot m_NotAliveSnapshot;
@@ -40,7 +43,7 @@ namespace IdenticalStudios.UISystem
         /// <summary>
         /// Respawn the player by restoring the health to the max amount
         /// </summary>
-        public void RespawnPlayer()
+        public void RespawnPlayer() 
         {
             if (!m_RespawnTimeText.enabled)
                 return;
@@ -82,7 +85,7 @@ namespace IdenticalStudios.UISystem
             StartCoroutine(C_ShowRespawnPanel());
         }
 
-        private IEnumerator C_ShowRespawnPanel()
+        private IEnumerator C_ShowRespawnPanel() 
         {
             m_RespawnButton.gameObject.SetActive(true);
             m_RespawnButton.interactable = false;

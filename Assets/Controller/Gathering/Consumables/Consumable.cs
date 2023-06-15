@@ -7,6 +7,8 @@ namespace IdenticalStudios
     {
         public event UnityAction<Consumable> Consumed;
 
+        [Title("Settings (Consumable)")]
+
         [SerializeField, Range(-100f, 100f)]
         [Tooltip("The minimum amount of hunger this consumable can restore.")]
         private int m_HungerRestoreMin = 15;
@@ -22,6 +24,8 @@ namespace IdenticalStudios
         [SerializeField, Range(-100f, 100f)]
         [Tooltip("The maximum amount of thirst this consumable can restore.")]
         private int m_ThirstRestoreMax = 10;
+
+        [SpaceArea]
 
         [SerializeField]
         [Tooltip("Audio that will be played after a character consumes this.")]

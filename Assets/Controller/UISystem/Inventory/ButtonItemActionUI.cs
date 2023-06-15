@@ -5,6 +5,7 @@ namespace IdenticalStudios.UISystem
 {
     public sealed class ButtonItemActionUI : ItemActionUI
     {
+        [SpaceArea]
 
         [SerializeField]
         private Button m_Button;

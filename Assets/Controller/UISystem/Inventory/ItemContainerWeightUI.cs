@@ -1,4 +1,4 @@
-using IdenticalStudios.InventorySystem;
+﻿using IdenticalStudios.InventorySystem;
 using TMPro;
 using UnityEngine;
 
@@ -17,7 +17,7 @@ namespace IdenticalStudios.UISystem
         private TextMeshProUGUI m_WeightText;
 
         private ContainerWeightRestriction m_ContainerWeight;
-
+        
 
         protected override void OnAttachment()
         {

@@ -2,28 +2,29 @@ using UnityEngine;
 
 namespace IdenticalStudios.ProceduralMotion
 {
-    
+    [DisallowMultipleComponent]
     [RequireComponent(typeof(AdditiveForceMotionModule))]
-    
+    [AddComponentMenu("IdenticalStudios/Motion/Offset Motion")]
     public sealed class OffsetMotionModule : DataMotionModule<OffsetMotionDataBase>
     {
-     
+        #region Internal
         [System.Serializable]
         private struct OffsetTransitionData
         {
             public MovementStateType From;
             public MovementStateType To;
         }
-      
+        #endregion
 
         [SerializeField]
         private AdditiveForceMotionModule m_ForceModule;
 
-        //Settings
+        [Title("Settings")]
 
         [SerializeField]
         private AnimationCurve m_InterpolationCurve;
 
+        [SpaceArea]
 
         [SerializeField, ReorderableList(childLabel: "From")]
         private OffsetTransitionData[] m_IgnoredTransitions;

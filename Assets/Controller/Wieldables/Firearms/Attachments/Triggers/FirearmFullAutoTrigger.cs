@@ -5,6 +5,7 @@ namespace IdenticalStudios.WieldableSystem
 	[AddComponentMenu("IdenticalStudios/Wieldables/Firearms/Triggers/Full Auto Trigger")]
 	public class FirearmFullAutoTrigger : FirearmTriggerBehaviour
 	{
+		[SpaceArea]
 		[SerializeField, Range(0, 10000)]
 		[Tooltip("The maximum amount of shots that can be executed in a minute.")]
 		private int m_RoundsPerMinute = 450;

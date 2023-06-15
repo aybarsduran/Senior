@@ -4,7 +4,9 @@ using UnityEngine.UI;
 
 namespace IdenticalStudios.UISystem
 {
-    
+    /// <summary>
+    /// TODO: REMOVE
+    /// </summary>
     public sealed class ButtonAudioUI : MonoBehaviour, IPointerEnterHandler
     {
         [SerializeField]

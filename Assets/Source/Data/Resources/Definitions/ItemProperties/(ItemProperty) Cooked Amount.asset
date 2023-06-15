@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1a2b97f66c37564b8dca76c3b54cfce, type: 3}
+  m_Name: (ItemProperty) Cooked Amount
+  m_EditorClassIdentifier: 
+  m_Id: 6313314
+  m_PropertyName: Cooked Amount
+  m_PropertyType: 2
+  m_Description: "Determines how \"cooked\" this item currently is.\n  Note: Used
+    by a cooking station (e.g. Campfire).\n  Type: Food\n  Default: 0\n  Range: 0-100"

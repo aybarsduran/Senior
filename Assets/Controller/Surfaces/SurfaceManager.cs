@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 namespace IdenticalStudios.Surfaces
 {
-    // Global surface effects system
+    /// <summary>
+    /// Global surface effects system
+    /// </summary>
     [CreateAssetMenu(menuName = "Identical Studios/Managers/Surfaces", fileName = "SurfaceManager")]
     public sealed class SurfaceManager : Manager<SurfaceManager>
 	{

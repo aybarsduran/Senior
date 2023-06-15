@@ -2,7 +2,9 @@ using UnityEngine;
 
 namespace IdenticalStudios.InventorySystem
 {
+    /// <summary>
     /// TODO: Implement
+    /// </summary>
     public sealed class RepairAction : ItemAction
     {
         [Title("Repairing")]

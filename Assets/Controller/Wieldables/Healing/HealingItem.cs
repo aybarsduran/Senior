@@ -17,6 +17,7 @@ namespace IdenticalStudios.WieldableSystem
         [SerializeField, Range(0f, 100f)]
         private float m_MaxHealAmount = 50f;
 
+        [Title("Effects")]
 
         [SerializeField]
         private EffectCollection m_HealEffects;

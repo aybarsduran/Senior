@@ -1,8 +1,9 @@
 using IdenticalStudios.Surfaces;
 using UnityEngine;
-    
+
 namespace IdenticalStudios.WieldableSystem
 {
+    [AddComponentMenu("IdenticalStudios/Wieldables/Firearms/BulletEffects/Basic Projectile Effect")]
     public class FirearmBasicProjectileEffect : FirearmProjectileEffectBehaviour
     {
         [SerializeField, Range(0f, 1000f)]

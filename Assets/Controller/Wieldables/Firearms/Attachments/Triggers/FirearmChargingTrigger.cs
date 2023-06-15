@@ -6,6 +6,7 @@ namespace IdenticalStudios.WieldableSystem
     [AddComponentMenu("IdenticalStudios/Wieldables/Firearms/Triggers/Charging Trigger")]
 	public class FirearmChargingTrigger : FirearmTriggerBehaviour, IChargeHandler
 	{
+		[SpaceArea]
 		[SerializeField, Range(0f, 10f)]
 		[Tooltip("The minimum time that can pass between consecutive shots.")]
 		private float m_PressCooldown;
@@ -20,8 +21,12 @@ namespace IdenticalStudios.WieldableSystem
 		[SerializeField]
 		private AnimationCurve m_ChargeCurve;
 
+		[SpaceArea]
+
 		[SerializeField]
 		private bool m_CanAimUncharged = false;
+
+		[Title("Field of View")]
 
 		[SerializeField, Range(0f, 2f)]
 		private float m_FOVSetDuration = 0.4f;
@@ -31,6 +36,8 @@ namespace IdenticalStudios.WieldableSystem
 
 		[SerializeField, Range(0f, 2f)]
 		private float m_OverlayFOVMod = 0.75f;
+
+		[Title("Effects")]
 
 		[SerializeField]
 		private EffectCollection m_ChargeStartEffects;

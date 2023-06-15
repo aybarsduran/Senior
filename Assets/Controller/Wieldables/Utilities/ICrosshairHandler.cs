@@ -4,7 +4,7 @@ namespace IdenticalStudios.WieldableSystem
 {
     public interface ICrosshairHandler
     {
-        int CrosshairIndex { get; set; }
+        int CrosshairIndex { get; set;  }
         float Accuracy { get; }
 
         event UnityAction<int> CrosshairChanged;

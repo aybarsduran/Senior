@@ -6,6 +6,8 @@ namespace IdenticalStudios.WieldableSystem
     [AddComponentMenu("IdenticalStudios/Wieldables/Firearms/Reloaders/Standard Reloader")]
     public class FirearmStandardReloader : FirearmBasicReloader
     {
+        [Title("Empty Reload")]
+        
         [SerializeField, Range(0.01f, 15f)]
         private float m_EmptyReloadDuration = 3f;
 

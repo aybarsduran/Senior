@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace IdenticalStudios.WieldableSystem
 {
@@ -29,14 +32,19 @@ namespace IdenticalStudios.WieldableSystem
         public event UnityAction<int> SelectedChanged;
 
         [SerializeField]
+        [Help("Found in the Inventory Module.")]
         [Tooltip("The corresponding inventory container (e.g. holster, backpack etc.) that this behaviour will use for selecting items.")]
         private string m_HolsterContainer = "Holster";
 
         [SerializeField, Range(1, 6)]
         private int m_StartingSlot = 1;
 
+        [Title("Wieldables")]
 
-        [SerializeField]
+        [SerializeField, ReorderableList(HasLabels = false)]
+#if UNITY_EDITOR
+        [EditorButton(nameof(LoadAllWieldables), "Find all Wieldables (templates excluded)")]
+#endif
         private List<WieldableItem> m_WieldablesList;
 
         private int m_SelectedIndex = -1;
@@ -202,6 +210,26 @@ namespace IdenticalStudios.WieldableSystem
         }
         #endregion
 
+        #region Editor
+#if UNITY_EDITOR
+        protected void LoadAllWieldables()
+        {
+            var allPrefabs = AssetDatabase.FindAssets($"t: prefab");
 
+            var wieldables = new List<WieldableItem>();
+            foreach (var guid in allPrefabs)
+            {
+                var path = AssetDatabase.GUIDToAssetPath(guid);
+                var obj = AssetDatabase.LoadAssetAtPath<GameObject>(path);
+
+                if (!obj.name.Contains("Template", System.StringComparison.OrdinalIgnoreCase) && obj.TryGetComponent(out WieldableItem wItem))
+                    wieldables.Add(wItem);
+            }
+
+            m_WieldablesList = wieldables;
+            EditorUtility.SetDirty(this);
+        }
+#endif
+        #endregion
     }
 }

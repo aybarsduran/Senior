@@ -10,7 +10,7 @@ namespace IdenticalStudios.WieldableSystem.Effects
     public sealed class CameraMotionEnablerEffect : WieldableEffect
     {
         [FormerlySerializedAs("m_Motions")]
-        [SerializeReference]
+        [SerializeReference, ReferencePicker]
         [ReorderableList(ListStyle.Boxed, childLabel: "Motion")]
         private MotionData[] m_OverridesToEnable = Array.Empty<MotionData>();
 

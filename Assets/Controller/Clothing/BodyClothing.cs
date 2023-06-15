@@ -15,6 +15,7 @@ namespace IdenticalStudios
 
             public string ObjectName;
 
+            [SpaceArea]
 
             public DataIdReference<ItemDefinition> Item;
 
@@ -22,6 +23,7 @@ namespace IdenticalStudios
 
             public Texture2D OpacityMask;
 
+            [SpaceArea]
             
             [ReorderableList(HasLabels = false)]
             public string[] BlendshapesToEnable;
@@ -31,6 +33,7 @@ namespace IdenticalStudios
         [SerializeField]
         private Transform m_BodyTransform;
         
+        [SpaceArea]
 
         [SerializeField, ReorderableList]
         private ClothingItem[] m_Clothing;

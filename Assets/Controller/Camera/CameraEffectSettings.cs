@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 namespace IdenticalStudios
@@ -6,6 +6,7 @@ namespace IdenticalStudios
     [Serializable]
     public sealed class CameraEffectSettings
     {
+        #region Internal
         [Serializable]
         public class Effect
         {
@@ -16,6 +17,7 @@ namespace IdenticalStudios
 
             public AnimationCurve ValueChangeOverTime = AnimationCurve.EaseInOut(0f, 1f, 1f, 0f);
         }
+        #endregion
 
         [Range(0.1f, 15f)]
         public float Duration = 1f;

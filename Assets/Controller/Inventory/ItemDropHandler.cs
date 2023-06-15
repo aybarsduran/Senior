@@ -17,8 +17,9 @@ namespace IdenticalStudios.InventorySystem
 		[SerializeField]
 		private StandardSound m_DropSound;
 
+		[Line]
 
-		[SerializeField]
+		[SerializeField, AssetPreview]
 		[Tooltip("The prefab used when an item that's being dropped doesn't have a pickup (e.g. clothes) or when dropping multiple items at once.")]
 		private GameObject m_GenericPrefab;
 

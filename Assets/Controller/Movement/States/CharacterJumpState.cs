@@ -1,8 +1,4 @@
-
-using IdenticalStudios.MovementSystem;
-using IdenticalStudios;
 using UnityEngine;
-using UnityEngine.InputSystem.XR;
 
 namespace IdenticalStudios.MovementSystem
 {
@@ -27,14 +23,16 @@ namespace IdenticalStudios.MovementSystem
             }
         }
 
-        public int DefaultJumpsCount => m_JumpsCount;
+        public int DefaultJumpsCount => m_JumpsCount; 
 
+        [Tooltip("The max height of a jump.")]
         [SerializeField, Range(0.1f, 10f)]
         private float m_JumpHeight = 1f;
 
         [SerializeField, Range(1, 10)]
         private int m_JumpsCount;
 
+        [Tooltip("How often can this character jump (in seconds).")]
         [SerializeField, Range(0f, 1.5f)]
         private float m_JumpCooldown = 0.3f;
 
@@ -113,5 +111,17 @@ namespace IdenticalStudios.MovementSystem
 
         private bool IsGrounded() => (Motor.LastGroundedChangeTime + m_CoyoteJumpTime > Time.time) || Motor.IsGrounded;
 
+        #region Editor
+#if UNITY_EDITOR
+        public override void OnEditorValidate()
+        {
+            if (Application.isPlaying && Motor != null)
+            {
+                m_MaxJumpsCount = m_JumpsCount;
+                ResetJumpsCount();
+            }
+        }
+#endif
+        #endregion
     }
 }

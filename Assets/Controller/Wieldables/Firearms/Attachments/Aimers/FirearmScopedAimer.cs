@@ -3,8 +3,10 @@ using UnityEngine;
 
 namespace IdenticalStudios.WieldableSystem
 {
+    [AddComponentMenu("IdenticalStudios/Wieldables/Firearms/Aimers/Scoped Aimer")]
     public class FirearmScopedAimer : FirearmBasicAimer
     {
+        [Title("Scope")]
 
         [SerializeField, Range(0f, 10f)]
         private float m_ScopeEnableDelay = 0.3f;
@@ -12,6 +14,7 @@ namespace IdenticalStudios.WieldableSystem
         [SerializeField, Range(0, 24)]
         private int m_ScopeIndex;
 
+        [SpaceArea]
 
         [SerializeField]
         private Transform m_ObjectToDisable;

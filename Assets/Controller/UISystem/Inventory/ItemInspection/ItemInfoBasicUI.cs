@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 namespace IdenticalStudios.UISystem
 {
+    [AddComponentMenu(k_AddMenuPath + "Item Basic Info")]
     public class ItemInfoBasicUI : DataInfoUI<IItem>
     {
         public Image IconImage => m_IconImg;

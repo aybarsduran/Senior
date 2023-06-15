@@ -1,13 +1,12 @@
-using IdenticalStudios.ProceduralMotion;
-using IdenticalStudios;
 using UnityEngine;
 
 namespace IdenticalStudios.ProceduralMotion
 {
-   
+    [DisallowMultipleComponent]
+    [AddComponentMenu("IdenticalStudios/Motion/Land Motion")]
     public sealed class LandMotionModule : DataMotionModule<CurvesMotionData>
     {
-   
+        [Title("Settings")]
 
         [SerializeField, Range(1f, 100f)]
         private float m_MinLandSpeed = 3f;
@@ -38,7 +37,7 @@ namespace IdenticalStudios.ProceduralMotion
         {
             if (dataHandler.TryGetData<GeneralMotionData>(out var data))
                 return data.Land;
-
+            
             return null;
         }
 

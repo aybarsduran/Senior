@@ -4,6 +4,7 @@ namespace IdenticalStudios.WieldableSystem
 {
     public class CharacterUseBlocker : WieldableInputBlocker
     {
+        [Title("Settings")]
 
         [SerializeField]
         private bool m_UseWhileAirborne;

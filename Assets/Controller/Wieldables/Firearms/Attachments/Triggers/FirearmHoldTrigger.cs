@@ -6,6 +6,7 @@ namespace IdenticalStudios.WieldableSystem
 	[AddComponentMenu("IdenticalStudios/Wieldables/Firearms/Triggers/Hold Trigger")]
 	public class FirearmHoldTrigger : FirearmTriggerBehaviour
 	{
+		[SpaceArea]
 		[SerializeField, Range(0f, 10f)]
 		[Tooltip("The minimum time that can pass between consecutive shots.")]
 		private float m_PressCooldown = 0.22f;

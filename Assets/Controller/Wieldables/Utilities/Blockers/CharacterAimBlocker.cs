@@ -4,17 +4,22 @@ namespace IdenticalStudios.WieldableSystem
 {
     public class CharacterAimBlocker : WieldableInputBlocker
     {
+        [Title("Settings")]
 
-        [SerializeField]
+        [BeginHorizontal]
+        [SerializeField, LeftToggle]
         private bool m_BlockRunning = true;
 
-        [SerializeField]
+        [EndHorizontal]
+        [SerializeField, LeftToggle]
         private bool m_BlockJumping;
 
-        [SerializeField]
+        [BeginHorizontal]
+        [SerializeField, LeftToggle]
         private bool m_AimWhileRunning = true;
 
-        [SerializeField]
+        [EndHorizontal]
+        [SerializeField, LeftToggle]
         private bool m_AimWhileAirborne;
 
         private IAimInputHandler m_AimInputHandler;

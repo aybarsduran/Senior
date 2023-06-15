@@ -15,12 +15,15 @@ namespace IdenticalStudios.WieldableSystem
 		private enum RotationMode { Local, Random }
 		private enum RootFollowMode { OnSpawn, Continuously }
 
+		[Title("References")]
 
-		[SerializeField]
+		[SerializeField, NotNull]
         private T m_Prefab;
 
-		[SerializeField]
+		[SerializeField, NotNull]
 		private Transform m_SpawnRoot;
+
+		[Title("Spawn Settings")]
 
 		[SerializeField, Range(0f, 10f)]
 		private float m_SpawnDelay = 0f;
@@ -36,6 +39,8 @@ namespace IdenticalStudios.WieldableSystem
 
 		[SerializeField]
 		private Vector3 m_RotationOffset;
+
+		[Title("Pooling")]
 
 		[SerializeField, Range(1, 100)]
 		private int m_PoolSize = 6;

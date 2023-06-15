@@ -4,6 +4,7 @@ using UnityEngine.Events;
 
 namespace IdenticalStudios.WieldableSystem
 {
+    [AddComponentMenu("IdenticalStudios/Wieldables/Wieldable Item")]
     [RequireComponent(typeof(IWieldable))]
     public class WieldableItem : MonoBehaviour, IWieldableItem
     {

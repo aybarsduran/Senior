@@ -6,11 +6,13 @@ namespace IdenticalStudios
     [RequireComponent(typeof(SphereCollider))]
     public sealed class HealthEffectorVolume : MonoBehaviour
     {
+        #region Internal
         private enum StatInfluenceMode
         {
             IncreaseStat,
             DecreaseStat
         }
+        #endregion
 
         public float RadiusMod { get; set; } = 1f;
         public float RadiationMod { get; set; } = 1f;
@@ -21,6 +23,7 @@ namespace IdenticalStudios
         [SerializeField]
         private StatInfluenceMode m_InfluenceMode;
 
+        [SpaceArea]
 
         [SerializeField, Range(0f, 100f)]
         private float m_Damage = 1f;
@@ -67,7 +70,7 @@ namespace IdenticalStudios
                 m_CharactersInsideTrigger.Remove(character);
         }
 
-        private void CalculateRadius()
+        private void CalculateRadius() 
         {
             m_TotalRadius = m_Radius * RadiusMod;
             m_InfluenceVolume.radius = m_TotalRadius;
@@ -86,7 +89,7 @@ namespace IdenticalStudios
         }
 
         private void OnValidate()
-        {
+        {    
             if (m_InfluenceVolume == null)
                 m_InfluenceVolume = GetComponent<SphereCollider>();
 

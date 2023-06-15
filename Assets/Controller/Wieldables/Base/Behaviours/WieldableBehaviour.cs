@@ -1,6 +1,4 @@
-using IdenticalStudios.WieldableSystem;
-using IdenticalStudios;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace IdenticalStudios.WieldableSystem
 {
@@ -9,7 +7,7 @@ namespace IdenticalStudios.WieldableSystem
         public IWieldable Wieldable { get; private set; }
         protected ICharacter Character => Wieldable.Character;
 
-
+        
         protected virtual void Awake()
         {
             Wieldable = GetComponentInParent<IWieldable>();

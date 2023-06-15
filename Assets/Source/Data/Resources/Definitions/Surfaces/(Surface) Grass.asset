@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5f455fef6aaad459434bb61682f7d4, type: 3}
+  m_Name: (Surface) Grass
+  m_EditorClassIdentifier: 
+  m_Id: 3834399
+  VelocityModifier: 1
+  SurfaceFriction: 0.9
+  PenetrationResistence: 0.2
+  SoftFootstepEffect:
+    AudioEffect:
+      m_Volume: 0.4
+      m_VolumeJitter: 0.05
+      m_Pitch: 1
+      m_PitchJitter: 0.05
+      m_AudioClips:
+      - {fileID: 8300000, guid: 174a190120c58cd42a130289ea2be313, type: 3}
+      - {fileID: 8300000, guid: a914253435ebc7840b2df66388269b9e, type: 3}
+      - {fileID: 8300000, guid: 38a22d82255be514ebb55160aa5e1c1e, type: 3}
+      - {fileID: 8300000, guid: 3e3ce6c0820ed6244afd5dac8a0a7450, type: 3}
+    VisualEffect: {fileID: 0}
+  HardFootstepEffect:
+    AudioEffect:
+      m_Volume: 0.4
+      m_VolumeJitter: 0.05
+      m_Pitch: 1
+      m_PitchJitter: 0.05
+      m_AudioClips:
+      - {fileID: 8300000, guid: c7d3cd232dc3b8f4bbb7179f94aa08ea, type: 3}
+      - {fileID: 8300000, guid: 34afa4663420a854ca4ace3b4f63132d, type: 3}
+      - {fileID: 8300000, guid: 0782668c4b91e2e458e88cf986b9b454, type: 3}
+      - {fileID: 8300000, guid: ba87c4ce2d1694449b40edc53a98ed82, type: 3}
+      - {fileID: 8300000, guid: 15875dfdfb77b3e47be501cb6cfd672e, type: 3}
+    VisualEffect: {fileID: 0}
+  FallImpactEffect:
+    AudioEffect:
+      m_Volume: 0.6
+      m_VolumeJitter: 0.05
+      m_Pitch: 1
+      m_PitchJitter: 0.05
+      m_AudioClips:
+      - {fileID: 8300000, guid: 89638789d3c089440b06d139e2daa361, type: 3}
+      - {fileID: 8300000, guid: e0014b3ed5963dc4290a5f5807129dc1, type: 3}
+      - {fileID: 8300000, guid: f40a216ddadc18e40b4597cd187724a5, type: 3}
+      - {fileID: 8300000, guid: a5e9793c90eb8264ea27492ed743c17d, type: 3}
+    VisualEffect: {fileID: 0}
+  BulletHitEffect:
+    AudioEffect:
+      m_Volume: 0.5
+      m_VolumeJitter: 0.1
+      m_Pitch: 1
+      m_PitchJitter: 0.1
+      m_AudioClips:
+      - {fileID: 8300000, guid: 2c6ad79609ef243488e413ba5151fd5c, type: 3}
+      - {fileID: 8300000, guid: 83d11567778251844b6e6389b8a8626f, type: 3}
+    VisualEffect: {fileID: 1400400831016474, guid: 4dbe4781eb7c01341bf0cf285021a2fa, type: 3}
+  SlashEffect:
+    AudioEffect:
+      m_Volume: 0.35
+      m_VolumeJitter: 0.1
+      m_Pitch: 1
+      m_PitchJitter: 0.1
+      m_AudioClips:
+      - {fileID: 8300000, guid: 2c6ad79609ef243488e413ba5151fd5c, type: 3}
+      - {fileID: 8300000, guid: 83d11567778251844b6e6389b8a8626f, type: 3}
+    VisualEffect: {fileID: 1400400831016474, guid: 4dbe4781eb7c01341bf0cf285021a2fa, type: 3}
+  StabEffect:
+    AudioEffect:
+      m_Volume: 0.35
+      m_VolumeJitter: 0.1
+      m_Pitch: 1
+      m_PitchJitter: 0.1
+      m_AudioClips:
+      - {fileID: 8300000, guid: 2c6ad79609ef243488e413ba5151fd5c, type: 3}
+      - {fileID: 8300000, guid: 83d11567778251844b6e6389b8a8626f, type: 3}
+    VisualEffect: {fileID: 1400400831016474, guid: 4dbe4781eb7c01341bf0cf285021a2fa, type: 3}

@@ -1,4 +1,3 @@
-using IdenticalStudios;
 using System.Linq;
 using UnityEngine;
 
@@ -8,29 +7,34 @@ namespace IdenticalStudios
     {
         public static bool HasInstance => Instance != null;
 
+#if UNITY_EDITOR
+        protected static T Instance { get; private set; }
+#else
         protected static T Instance;
+#endif
 
         private const string k_DefaultManagerPath = "Managers/";
 
+        
         protected static void SetInstance(string path = k_DefaultManagerPath)
         {
             if (path == null)
                 path = k_DefaultManagerPath;
 
             var managers = Resources.LoadAll<T>(path);
-
+            
             Instance = managers.FirstOrDefault();
 
             if (Instance == null)
                 Instance = CreateInstance<T>();
-
+            
             Instance.OnInitialized();
         }
 
         protected static void CreateInstance()
         {
-            Instance = CreateInstance<T>();
-            Instance.OnInitialized();
+           Instance = CreateInstance<T>();
+           Instance.OnInitialized();
         }
 
         protected U CreateRuntimeObject<U>(string objName = "RuntimeObject") where U : MonoBehaviour
@@ -53,6 +57,6 @@ namespace IdenticalStudios
             return runtimeObject.transform;
         }
 
-        protected virtual void OnInitialized() { }
+        protected virtual void OnInitialized() {}
     }
 }

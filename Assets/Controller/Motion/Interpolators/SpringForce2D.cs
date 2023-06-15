@@ -10,8 +10,8 @@ namespace IdenticalStudios.ProceduralMotion
 
         [Range(0, 100)]
         public float Duration;
-
-
+		
+		
         public SpringForce2D(Vector2 force, float frames)
         {
             Force = force;
@@ -29,13 +29,13 @@ namespace IdenticalStudios.ProceduralMotion
             return springForce;
         }
     }
-
+	
     [Serializable]
     public struct DelayedSpringForce2D
     {
         [Range(0f, 10f)]
         public float Delay;
-
+		
         public SpringForce2D SpringForce;
 
 

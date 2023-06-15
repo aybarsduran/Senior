@@ -1,14 +1,14 @@
-using IdenticalStudios.ProceduralMotion;
-using IdenticalStudios;
 using UnityEngine;
 
 namespace IdenticalStudios.ProceduralMotion
 {
+    [DisallowMultipleComponent]
+    [AddComponentMenu("IdenticalStudios/Motion/Camera Recoil Motion")]
     public sealed class CameraRecoilMotionModule : CharacterBehaviour, IMixedMotion
     {
         public IMotionMixer MotionMixer { get; private set; }
 
-        //Settings
+        [Title("Settings")]
 
         [SerializeField]
         private SpringSettings m_RecoilSpring = SpringSettings.Default;
@@ -17,7 +17,7 @@ namespace IdenticalStudios.ProceduralMotion
 
         private float m_XControlled;
         private float m_YControlled;
-
+        
         private Vector2 m_TargetRotation;
         private Vector2 m_StartRotation;
         private Vector2 m_CurrentRotation;
@@ -28,8 +28,8 @@ namespace IdenticalStudios.ProceduralMotion
 
         private SpringSettings m_RecoverySpring;
         private readonly Spring2D m_Spring = new();
-
-
+        
+        
         protected override void OnBehaviourEnabled()
         {
             m_Spring.Adjust(SpringSettings.Default);
@@ -69,14 +69,14 @@ namespace IdenticalStudios.ProceduralMotion
             m_RecoveryActive = false;
             m_RecoilActive = true;
         }
-
+        
         private void OnPostViewUpdate()
         {
             if (!m_RecoilActive)
                 return;
-
+            
             float deltaTime = Time.deltaTime;
-
+            
             if (!m_RecoveryActive)
             {
                 var internalMoveDelta = m_LookHandler.LookDelta;
@@ -105,7 +105,7 @@ namespace IdenticalStudios.ProceduralMotion
                     m_Spring.SetTargetValue(m_CurrentRotation);
                 }
             }
-
+            
             m_LookHandler.SetAdditiveLook(m_Spring.Evaluate(deltaTime));
 
             if (m_RecoveryActive && m_Spring.IsIdle)
@@ -120,7 +120,7 @@ namespace IdenticalStudios.ProceduralMotion
             m_RecoveryActive = false;
             m_LookHandler.MergeAdditiveLook();
             m_Spring.Reset();
-
+            
             m_XControlled = 0f;
             m_YControlled = 0f;
         }

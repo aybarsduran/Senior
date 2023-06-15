@@ -1,8 +1,11 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 namespace IdenticalStudios
 {
+    /// <summary>
+    /// TODO: Implement
+    /// </summary>
     public sealed class TemperatureManager : MonoBehaviour, ITemperatureManager, ISaveableComponent
     {
         public float Temperature
@@ -22,7 +25,9 @@ namespace IdenticalStudios
 
         public event UnityAction<float> TemperatureChanged;
 
-        [SerializeField]
+#if UNITY_EDITOR
+        [SerializeField, Disable, SpaceArea]
+#endif
         private float m_Temperature;
 
 

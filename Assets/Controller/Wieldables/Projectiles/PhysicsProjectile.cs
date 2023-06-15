@@ -8,11 +8,15 @@ namespace IdenticalStudios.WieldableSystem
     {
         private class CharacterEvent : UnityEvent<ICharacter> { }
 
+        [SpaceArea]
+
         [SerializeField]
         private float m_DetonateDelay;
 
         [SerializeField]
         private UnityEvent m_DetonateEvent;
+
+        [SpaceArea]
 
         [SerializeField]
         private ItemPickupBase m_ItemPickup;

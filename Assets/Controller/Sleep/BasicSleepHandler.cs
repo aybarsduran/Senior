@@ -35,6 +35,7 @@ namespace IdenticalStudios
         [SerializeField]
         private InputContextGroup m_SleepContext;
 
+        [Title("Settings")]
 
         [SerializeField, Range(0f, 10f)]
         [Tooltip("How much time it takes to transition to sleeping (e.g. moving to bed).")]
@@ -56,6 +57,7 @@ namespace IdenticalStudios
         [Tooltip("How much time it takes to transition from sleeping to standing up.")]
         private float m_WakeUpDuration = 2f;
 
+        [SpaceArea]
 
         [SerializeField, Range(0, 24)]
         [Tooltip("Max hours that can pass while sleeping")]
@@ -65,32 +67,33 @@ namespace IdenticalStudios
         [Tooltip("Max hour this character can wake up at, we don't want to be lazy :)")]
         private int m_MaxGetUpHour = 8;
 
-        //Conditions
+        [Title("Conditions")]
 
         [SerializeField]
         [Tooltip("If Enabled, this character will not be allowed to sleep during the day.")]
         private bool m_OnlySleepAtNight = true;
 
+        [SpaceArea]
 
         [SerializeField]
         [Tooltip("Check for enemies before sleeping, if any of the are found, this character will be unable to sleep.")]
         private bool m_CheckForEnemies;
 
-        [SerializeField]
+        [SerializeField, EnableIf(nameof(m_CheckForEnemies), true)]
         [Tooltip("The enemy check radius.")]
         private float m_CheckForEnemiesRadius;
 
-        [SerializeField]
+        [SerializeField, EnableIf(nameof(m_CheckForEnemies), true)]
         [Tooltip("The enemy layer, any object with this layer will be considered an enemy.")]
         private LayerMask m_EnemiesLayerMask;
 
-        //Audio
+        [Title("Audio")]
 
         [SerializeField]
         [Tooltip("Sound that will be played when attempting to sleep unsuccessfully.")]
         private StandardSound m_CantSleepSound;
 
-        //Animation
+        [Title("Animation")]
         
         [SerializeField]
         private Transform m_Camera;
@@ -98,7 +101,7 @@ namespace IdenticalStudios
         [SerializeField]
         private EaseType m_EaseType;
         
-        //Events
+        [Title("Events")]
 
         [SerializeField]
         private SleepEvent m_OnSleepStart;

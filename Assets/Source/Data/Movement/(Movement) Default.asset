@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5da911d8b50e9d4b95cdfb4214dc0b2, type: 3}
+  m_Name: (Movement) Default
+  m_EditorClassIdentifier: 
+  m_BasePreset: {fileID: 0}
+  m_SpeedMultiplier: 1
+  m_Acceleration: 8
+  m_Deceleration: 10
+  m_States:
+  - rid: 3692120816393388150
+  - rid: 3692120816393388151
+  - rid: 3692120816393388153
+  - rid: 3692120816393388159
+  - rid: 3692120816393388160
+  - rid: 3692120816393388161
+  - rid: 3692120816393388162
+  references:
+    version: 2
+    RefIds:
+    - rid: 3692120816393388150
+      type: {class: CharacterIdleState, ns: IdenticalStudios.MovementSystem, asm: IdenticalStudios}
+    - rid: 3692120816393388151
+      type: {class: CharacterWalkState, ns: IdenticalStudios.MovementSystem, asm: IdenticalStudios}
+      data:
+        m_StepLength: 1.2
+        m_ForwardSpeed: 2.5
+        m_BackSpeed: 2.5
+        m_SideSpeed: 2.5
+    - rid: 3692120816393388153
+      type: {class: CharacterRunState, ns: IdenticalStudios.MovementSystem, asm: IdenticalStudios}
+      data:
+        m_StepLength: 1.2
+        m_ForwardSpeed: 2.5
+        m_BackSpeed: 2.5
+        m_SideSpeed: 2.5
+        m_MinRunSpeed: 3
+    - rid: 3692120816393388159
+      type: {class: CharacterCrouchState, ns: IdenticalStudios.MovementSystem, asm: IdenticalStudios}
+      data:
+        m_StepLength: 1.2
+        m_ForwardSpeed: 2.5
+        m_BackSpeed: 2.5
+        m_SideSpeed: 2.5
+        m_CrouchHeight: 1
+        m_CrouchCooldown: 0.3
+    - rid: 3692120816393388160
+      type: {class: CharacterSlideState, ns: IdenticalStudios.MovementSystem, asm: IdenticalStudios}
+      data:
+        m_SlideSpeed:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: -0.05968704
+            value: 0.99501646
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1.4
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        m_SlideImpulse: 7.5
+        m_SlideAcceleration: 7.5
+        m_SlideHeight: 1
+        m_SlideEnterSpeed:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: -0.004159185
+            outSlope: -0.004159185
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0.047364537
+          - serializedVersion: 3
+            time: 3.4863281
+            value: 0.5083313
+            inSlope: 0.27070075
+            outSlope: 0.27070075
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.17682712
+          - serializedVersion: 3
+            time: 5
+            value: 1
+            inSlope: 0.021626959
+            outSlope: 0.021626959
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.2209568
+          - serializedVersion: 3
+            time: 6
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        m_MinSlideSpeed: 4.5
+        m_SlideStopSpeed: 2
+        m_InputFactor: 0.75
+        m_SlopeFactor: 2
+    - rid: 3692120816393388161
+      type: {class: CharacterJumpState, ns: IdenticalStudios.MovementSystem, asm: IdenticalStudios}
+      data:
+        m_JumpHeight: 1.1
+        m_JumpsCount: 1
+        m_JumpCooldown: 0.05
+        m_CoyoteJumpTime: 0.1
+    - rid: 3692120816393388162
+      type: {class: CharacterAirborneState, ns: IdenticalStudios.MovementSystem, asm: IdenticalStudios}
+      data:
+        m_MinAirborneControl: 3
+        m_MaxAirborneControl: 1.5
+        m_AirborneAcceleration: 4
+        m_LandVelocityMod: 1

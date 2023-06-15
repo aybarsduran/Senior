@@ -1,10 +1,11 @@
-using IdenticalStudios;
 using UnityEngine;
 
 namespace IdenticalStudios.InventorySystem
 {
     public abstract class ItemAction : ScriptableObject
     {
+        [Title("Display")]
+
         [SerializeField]
         private string m_DisplayName;
 

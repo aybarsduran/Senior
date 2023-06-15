@@ -11,6 +11,7 @@ namespace IdenticalStudios.WieldableSystem
         [SerializeField, Range(0f, 10f)]
         private float m_ReloadUpdateDelay = 0.5f;
 
+        [SpaceArea]
 
         [SerializeField]
         private Transform[] m_SpawnTransforms = null;

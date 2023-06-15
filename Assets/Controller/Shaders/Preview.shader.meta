@@ -1,8 +1,14 @@
 fileFormatVersion: 2
-guid: d82ad000f9ab3504aabc6ebe8ae78e44
+guid: 81078257ddc668a45a373d0d25eb0032
 ShaderImporter:
   externalObjects: {}
-  defaultTextures: []
+  defaultTextures:
+  - _MainTex: {instanceID: 0}
+  - _MetallicGlossMap: {instanceID: 0}
+  - _BumpMap: {instanceID: 0}
+  - _AmbientOcclusion: {instanceID: 0}
+  - _LineMap: {fileID: 2800000, guid: 73029b4cc5226b74dbabe07650f0ed0d, type: 3}
+  - _texcoord: {instanceID: 0}
   nonModifiableTextures: []
   preprocessorOverride: 0
   userData: 

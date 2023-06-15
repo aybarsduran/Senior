@@ -1,5 +1,3 @@
-using IdenticalStudios;
-
 namespace IdenticalStudios
 {
     public interface IDeathModule : ICharacterModule

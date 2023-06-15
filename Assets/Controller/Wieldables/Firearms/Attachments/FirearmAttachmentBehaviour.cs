@@ -1,5 +1,4 @@
-using IdenticalStudios.WieldableSystem;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 namespace IdenticalStudios.WieldableSystem
@@ -28,8 +27,8 @@ namespace IdenticalStudios.WieldableSystem
 
         [SerializeField, HideInInspector]
         private bool m_AttachOnStart;
-
-
+        
+        
         public void Attach()
         {
             switch (m_EnableMode)
@@ -60,7 +59,7 @@ namespace IdenticalStudios.WieldableSystem
         {
             Wieldable = GetComponentInParent<IWieldable>();
             Firearm = GetComponentInParent<IFirearm>();
-
+            
             if (m_AttachOnStart)
                 Attach();
             else

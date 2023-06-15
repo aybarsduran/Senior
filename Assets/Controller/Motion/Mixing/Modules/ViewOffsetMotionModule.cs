@@ -3,9 +3,10 @@ using UnityEngine;
 namespace IdenticalStudios.ProceduralMotion
 {
     [DisallowMultipleComponent]
+    [AddComponentMenu("IdenticalStudios/Motion/View Offset Motion")]
     public sealed class ViewOffsetMotionModule : MotionModule
     {
-        //Interpolation
+        [Title("Interpolation")]
 
         [SerializeField]
         private SpringSettings m_PositionSpring = SpringSettings.Default;
@@ -13,7 +14,7 @@ namespace IdenticalStudios.ProceduralMotion
         [SerializeField]
         private SpringSettings m_RotationSpring = SpringSettings.Default;
 
-        //Rotation Settings
+        [Title("Rotation Settings")]
 
         [SerializeField]
         private Vector3 m_PositionOffset;

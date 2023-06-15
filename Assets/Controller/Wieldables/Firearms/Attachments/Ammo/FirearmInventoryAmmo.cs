@@ -3,8 +3,10 @@ using UnityEngine;
 
 namespace IdenticalStudios.WieldableSystem
 {
+    [AddComponentMenu("IdenticalStudios/Wieldables/Firearms/Ammo/Inventory Ammo")]
     public class FirearmInventoryAmmo : FirearmAmmoBehaviour
     {
+        [SpaceArea]
         [SerializeField, DataReferenceDetails(HasNullElement = false)]
         private DataIdReference<ItemDefinition> m_AmmoItem;
 

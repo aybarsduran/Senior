@@ -1,5 +1,3 @@
-using IdenticalStudios.InventorySystem;
-using IdenticalStudios;
 using UnityEngine;
 
 namespace IdenticalStudios.InventorySystem

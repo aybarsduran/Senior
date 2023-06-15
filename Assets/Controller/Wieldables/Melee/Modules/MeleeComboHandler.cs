@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace IdenticalStudios.WieldableSystem
 {
+    [AddComponentMenu("IdenticalStudios/Wieldables/Melee/Combo Handler")]
     public class MeleeComboHandler : MonoBehaviour
     {
         #region Internal

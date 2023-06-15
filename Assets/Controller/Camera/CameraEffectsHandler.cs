@@ -1,4 +1,4 @@
-using IdenticalStudios.WorldManagement;
+﻿using IdenticalStudios.WorldManagement;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;

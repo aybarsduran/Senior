@@ -1,12 +1,14 @@
-using IdenticalStudios.ProceduralMotion;
-using IdenticalStudios;
 using UnityEngine;
 
 namespace IdenticalStudios.ProceduralMotion
 {
     public sealed class Spring2D
     {
+#if UNITY_EDITOR
+        public bool IsIdle { get; private set; }
+#else
         public bool IsIdle;
+#endif
 
         public Vector2 Value => m_Value;
         public Vector2 Velocity => m_Velocity;
@@ -23,7 +25,7 @@ namespace IdenticalStudios.ProceduralMotion
 
         public Spring2D() : this(SpringSettings.Default) { }
 
-        public Spring2D(SpringSettings settings)
+        public Spring2D(SpringSettings settings) 
         {
             IsIdle = true;
             m_TargetValue = Vector2.zero;
@@ -34,7 +36,9 @@ namespace IdenticalStudios.ProceduralMotion
 
         public void Adjust(SpringSettings settings) => m_Settings = settings;
 
-        // Reset all values to initial states.
+        /// <summary>
+        /// Reset all values to initial states.
+        /// </summary>
         public void Reset()
         {
             IsIdle = true;
@@ -43,18 +47,22 @@ namespace IdenticalStudios.ProceduralMotion
             m_Acceleration = Vector2.zero;
         }
 
-        // Sets the target value in the middle of motion.
-        // This reuse the current velocity and interpolate the value smoothly afterwards.
-        // <param name="value">Target value</param>
+        /// <summary>
+        /// Sets the target value in the middle of motion.
+        /// This reuse the current velocity and interpolate the value smoothly afterwards.
+        /// </summary>
+        /// <param name="value">Target value</param>
         public void SetTargetValue(Vector2 value)
         {
             SetTargetValue(value, m_Velocity);
             IsIdle = false;
         }
 
-        // Sets the target value in the middle of motion but using a new velocity.
-        // <param name="value">Target value</param>
-        // <param name="velocity">New velocity</param>
+        /// <summary>
+        /// Sets the target value in the middle of motion but using a new velocity.
+        /// </summary>
+        /// <param name="value">Target value</param>
+        /// <param name="velocity">New velocity</param>
         public void SetTargetValue(Vector2 value, Vector2 velocity)
         {
             m_TargetValue = value;
@@ -62,9 +70,11 @@ namespace IdenticalStudios.ProceduralMotion
             IsIdle = false;
         }
 
-        // Advance a step by deltaTime(seconds).
-        // <param name="deltaTime">Delta time since previous frame</param>
-        // <returns>Evaluated Value</returns>
+        /// <summary>
+        /// Advance a step by deltaTime(seconds).
+        /// </summary>
+        /// <param name="deltaTime">Delta time since previous frame</param>
+        /// <returns>Evaluated Value</returns>
         public Vector2 Evaluate(float deltaTime)
         {
             if (IsIdle)

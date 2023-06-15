@@ -11,9 +11,10 @@ namespace IdenticalStudios.WieldableSystem
     /// TODO: Refactor.
     /// </summary>
     [RequireComponent(typeof(IFirearm))]
+    [AddComponentMenu("IdenticalStudios/Wieldables/Firearms/Handlers/Index-Based Attachments")]
     public class FirearmIndexBasedAttachmentsManager : WieldableItemBehaviour
     {
-       
+        #region
         [Serializable]
         public class AttachmentIndexConfiguration
         {
@@ -32,7 +33,8 @@ namespace IdenticalStudios.WieldableSystem
 
             public void Attach() => m_Attachment.Attach();
         }
-        
+        #endregion
+
         public AttachmentIndexConfiguration[] Configurations => m_Configurations;
         public AttachmentIndexConfiguration CurrentMode => m_Configurations != null && m_Configurations.Length > 0 ? m_Configurations[m_SelectedIndex] : null;
 
@@ -44,10 +46,12 @@ namespace IdenticalStudios.WieldableSystem
         [SerializeField]
         private DataIdReference<ItemPropertyDefinition> m_AttachmentIndexProperty;
 
+        [SpaceArea]
 
         [SerializeField, ReorderableList(childLabel: "Attachment Configuration")]
         private AttachmentIndexConfiguration[] m_Configurations;
 
+        [Title("Effects")]
 
         [SerializeField, FormerlySerializedAs("m_SwapEffects")]
         private EffectCollection m_ChangeModeEffects;

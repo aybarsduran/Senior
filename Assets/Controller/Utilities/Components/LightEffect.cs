@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 namespace IdenticalStudios
@@ -16,9 +16,13 @@ namespace IdenticalStudios
 
             public PlayMode Mode;
 
+            [SpaceArea]
+
             [Range(0f, 3f)]
             public float Duration;
             public Color Color;
+
+            [SpaceArea]
 
             [Range(0f, 1f)]
             public float IntensityAmplitude;
@@ -49,6 +53,8 @@ namespace IdenticalStudios
         [SerializeField]
         private bool m_PlayOnAwake = false;
 
+        [Title("Settings")]
+
         [SerializeField]
         [Range(0f, 5f)]
         private float m_Intensity = 1f;
@@ -60,6 +66,8 @@ namespace IdenticalStudios
         [SerializeField]
         private Color m_Color = Color.yellow;
 
+        [Title("Fading")]
+
         [SerializeField]
         [Range(0f, 2f)]
         private float m_FadeInTime = 0.5f;
@@ -67,6 +75,8 @@ namespace IdenticalStudios
         [SerializeField]
         [Range(0f, 2f)]
         private float m_FadeOutTime = 0.5f;
+
+        [Title("Effects")]
 
         [SerializeField]
         private PulseSettings m_Pulse;
@@ -130,7 +140,7 @@ namespace IdenticalStudios
             if (m_IsPlaying)
             {
                 // Pulse handling
-                if (m_Pulse.Enabled && m_PulseActive)
+                if(m_Pulse.Enabled && m_PulseActive)
                 {
                     float time = m_PulseTimer / Mathf.Max(m_Pulse.Duration, 0.001f);
                     float param = (Mathf.Sin(Mathf.PI * (2f * time - 0.5f)) + 1f) * 0.5f;
@@ -141,9 +151,9 @@ namespace IdenticalStudios
 
                     m_PulseTimer += Time.deltaTime;
 
-                    if (m_PulseTimer > m_Pulse.Duration)
+                    if(m_PulseTimer > m_Pulse.Duration)
                     {
-                        if (m_Pulse.Mode == PlayMode.Once)
+                        if(m_Pulse.Mode == PlayMode.Once)
                             m_PulseActive = false;
 
                         m_PulseTimer = 0f;
@@ -151,7 +161,7 @@ namespace IdenticalStudios
                 }
 
                 // Auto stop when all effects finished playing
-                if (!m_PulseActive)
+                if(!m_PulseActive)
                 {
                     m_IsPlaying = false;
                     m_FadingOut = true;
@@ -159,7 +169,7 @@ namespace IdenticalStudios
             }
 
             // Noise
-            if (m_LightsEnabled && m_Noise.Enabled)
+            if(m_LightsEnabled && m_Noise.Enabled)
             {
                 float noise = Mathf.PerlinNoise(Time.time * m_Noise.Speed, 0f) * m_Noise.Intensity;
                 intensity += m_Intensity * noise;
@@ -167,18 +177,18 @@ namespace IdenticalStudios
             }
 
             // Fade in & out
-            if (m_FadingIn)
+            if(m_FadingIn)
             {
                 m_Weight = Mathf.MoveTowards(m_Weight, 1f, Time.deltaTime * (1f / m_FadeInTime));
 
-                if (m_Weight == 1f)
+                if(m_Weight == 1f)
                     m_FadingIn = false;
             }
-            else if (m_FadingOut)
+            else if(m_FadingOut)
             {
                 m_Weight = Mathf.MoveTowards(m_Weight, 0f, Time.deltaTime * (1f / m_FadeOutTime));
 
-                if (m_Weight == 0f)
+                if(m_Weight == 0f)
                 {
                     EnableLights(false);
                     SetLightsIntensity(0f);
@@ -197,7 +207,7 @@ namespace IdenticalStudios
 
         private void EnableLights(bool enable)
         {
-            for (int i = 0; i < m_Lights.Length; i++)
+            for(int i = 0;i < m_Lights.Length;i++)
                 m_Lights[i].enabled = enable;
 
             m_LightsEnabled = enable;
@@ -205,13 +215,13 @@ namespace IdenticalStudios
 
         private void SetLightsIntensity(float intensity)
         {
-            for (int i = 0; i < m_Lights.Length; i++)
+            for(int i = 0;i < m_Lights.Length;i++)
                 m_Lights[i].intensity = intensity;
         }
 
         private void SetLightsParameters(float intensity, float range, Color color)
         {
-            for (int i = 0; i < m_Lights.Length; i++)
+            for(int i = 0;i < m_Lights.Length;i++)
             {
                 m_Lights[i].intensity = intensity;
                 m_Lights[i].range = range;

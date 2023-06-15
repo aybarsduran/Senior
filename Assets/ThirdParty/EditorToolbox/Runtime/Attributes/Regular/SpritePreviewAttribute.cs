@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace PolymindGames
+namespace IdenticalStudios
 {
     public class SpritePreviewAttribute : PropertyAttribute
     {

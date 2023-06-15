@@ -4,7 +4,9 @@ using UnityEngine.Events;
 
 namespace IdenticalStudios
 {
-    // Handles any type of inventory inspection (e.g. Backpack, external containers etc.)
+    /// <summary>
+    /// Handles any type of inventory inspection (e.g. Backpack, external containers etc.)
+    /// </summary>
     public sealed class InventoryInspectManager : CharacterBehaviour, IInventoryInspectManager
     {
         public bool IsInspecting => m_IsInspecting;

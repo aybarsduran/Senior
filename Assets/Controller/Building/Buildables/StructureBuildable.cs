@@ -17,7 +17,7 @@ namespace IdenticalStudios.BuildingSystem
 			set => m_OccupiedSocketPosition = value;
 		}
 
-		//Settings (Sockets)
+		[Title("Settings (Sockets)")]
 
 		[SerializeField]
 		private bool m_RequiresSockets = true;
@@ -25,6 +25,7 @@ namespace IdenticalStudios.BuildingSystem
 		[SerializeField, DataReferenceDetails(HasNullElement = false)]
         private DataIdReference<BuildableCategoryDefinition> m_RequiredSpace;
 
+		[SpaceArea]
 
 		[SerializeField]
 		[DataReferenceDetails(HasNullElement = false)]

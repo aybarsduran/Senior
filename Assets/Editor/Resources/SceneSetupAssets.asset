@@ -19,4 +19,4 @@ MonoBehaviour:
     SetupType: 0
   m_EmptyObjects: []
   m_SpawnEmptyObjects: 0
-  m_AddSceneToBuild: 1
+  m_AddSceneToBuild: 0

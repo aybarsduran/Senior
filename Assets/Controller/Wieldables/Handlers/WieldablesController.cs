@@ -22,15 +22,16 @@ namespace IdenticalStudios.WieldableSystem
         [Tooltip("The parent of the spawned wieldables.")]
         private Transform m_SpawnRoot;
         
-        [SerializeField]
+        [SerializeField, NotNull]
         [Tooltip("The audio player that every wieldable will use.")]
         private AudioPlayer m_AudioPlayer;
         
-        [SerializeField]
+        [SerializeField, NotNull]
         private CharacterAccuracyHandler m_AccuracyHandler;
 
+        [SpaceArea]
 
-        [SerializeField]//The wieldable that will be equipped when equipping a NULL wieldable, can be left empty. (Tip: you can set it to an arms/unarmed wieldable).")]
+        [SerializeField, Help("The wieldable that will be equipped when equipping a NULL wieldable, can be left empty. (Tip: you can set it to an arms/unarmed wieldable).")]
         private Wieldable m_DefaultWieldable;
 
         private readonly List<IWieldable> m_Wieldables = new();

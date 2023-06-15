@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4213430bbd6313b4a89ea1d7e1185c38, type: 3}
+  m_Name: (Item) Compass
+  m_EditorClassIdentifier: 
+  m_Id: 6706095
+  m_ParentGroup: {fileID: 11400000, guid: c26c90643cd4e1346b73cebfb3e7b81e, type: 2}
+  m_ItemName: Compass
+  m_Icon: {fileID: 21300000, guid: be79e0e09ed726e4b845a5cb9cecffbe, type: 3}
+  m_Pickup: {fileID: 5708347702049585517, guid: d323e82c4b5bcbf43b05b34c16643904, type: 3}
+  m_Description: 'Basic navigation device.
+
+    Perhaps useful in finding the way
+    back home.'
+  m_Weight: 0.5
+  m_StackSize: 1
+  m_Tag:
+    m_Value: 6549466
+  m_Actions: []
+  m_Properties:
+  - m_ItemPropertyId: -8792658
+    m_UseRandomValue: 0
+    m_ValueRange: {x: 100, y: 0}
+  m_Data: []
+  references:
+    version: 2
+    RefIds: []

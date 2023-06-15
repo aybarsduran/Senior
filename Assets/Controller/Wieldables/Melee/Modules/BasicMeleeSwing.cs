@@ -4,13 +4,14 @@ using UnityEngine;
 
 namespace IdenticalStudios.WieldableSystem
 {
+    [AddComponentMenu("IdenticalStudios/Wieldables/Melee/Basic Swing")]
 	public class BasicMeleeSwing : MeleeSwingBehaviour
 	{
 		public override float SwingDuration => m_AttackThreeshold;
 		public override float AttackEffort => m_AttackEffort;
 		protected RaycastHit HitInfo => m_HitInfo;
 
-		//Attack
+		[Title("Attack")]
 
 		[SerializeField]
 		protected DamageType m_DamageType = DamageType.Hit;
@@ -24,7 +25,7 @@ namespace IdenticalStudios.WieldableSystem
 		[SerializeField, Range(0f, 1f)]
 		protected float m_AttackEffort = 0.05f;
 
-		//Object Detection
+		[Title("Object Detection")]
 
 		[SerializeField]
 		protected LayerMask m_HitMask = (LayerMask)172545;
@@ -41,7 +42,7 @@ namespace IdenticalStudios.WieldableSystem
 		[SerializeField, Range(0f, 5f)]
 		protected float m_HitDistance = 0.5f;
 
-		//Impact
+		[Title("Impact")]
 
 		[SerializeField, Range(0f, 1000f)]
 		protected float m_Damage = 15f;
@@ -52,7 +53,7 @@ namespace IdenticalStudios.WieldableSystem
 		[SerializeField, Range(0f, 100f)]
 		protected float m_DurabilityRemove = 5f;
 
-		//Effects
+		[Title("Effects")]
 
 		[SerializeField]
 		protected EffectCollection m_SwingEffects;

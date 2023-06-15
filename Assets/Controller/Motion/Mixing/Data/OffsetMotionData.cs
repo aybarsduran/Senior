@@ -1,10 +1,10 @@
-using IdenticalStudios.ProceduralMotion;
 using System;
 using UnityEngine;
 
 namespace IdenticalStudios.ProceduralMotion
 {
     [Serializable]
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(false, null, "Assembly-CSharp", null)]
     public sealed class OffsetMotionData : OffsetMotionDataBase
     {
         public override SpringSettings PositionSettings => m_PositionSpring;
@@ -17,11 +17,11 @@ namespace IdenticalStudios.ProceduralMotion
 
         [SerializeField]
         private SpringSettings m_PositionSpring = SpringSettings.Default;
-
+        
         [SerializeField]
         private SpringSettings m_RotationSpring = SpringSettings.Default;
 
-       
+        [SpaceArea]
 
         [SerializeField]
         private SpringForce3D m_EnterForce;
@@ -29,7 +29,7 @@ namespace IdenticalStudios.ProceduralMotion
         [SerializeField]
         private SpringForce3D m_ExitForce;
 
-       
+        [SpaceArea(spaceAfter: 5f)]
 
         [SerializeField, ReorderableList(ListStyle.Lined, "Offset", Foldable = false)]
         private OffsetData[] m_Offsets = Array.Empty<OffsetData>();

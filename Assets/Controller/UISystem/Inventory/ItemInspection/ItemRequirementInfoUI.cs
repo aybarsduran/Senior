@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace IdenticalStudios.UISystem
 {
+    [AddComponentMenu(k_AddMenuPath + "Item Requirement Info")]
     public sealed class ItemRequirementInfoUI : PlayerDataInfoUI<IItem>
     {
         [SerializeField, ReorderableList(HasLabels = false)]

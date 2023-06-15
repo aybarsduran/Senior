@@ -7,10 +7,12 @@ namespace IdenticalStudios.WieldableSystem.Effects
     [Serializable]
     public class WieldableMotionWeightEffect : WieldableEffect
     {
+        [DisableInPlayMode]
         [SerializeField, Range(0f, 1f)]
         private float m_Weight = 1f;
 
-        [SerializeField]
+        [DisableInPlayMode]
+        [SerializeField, TypeConstraint(typeof(MotionData))]
         [ReorderableList(ListStyle.Boxed, HasLabels = false)]
         private SerializedType[] m_Motions = Array.Empty<SerializedType>();
 

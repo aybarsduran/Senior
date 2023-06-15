@@ -3,10 +3,12 @@ using UnityEngine.EventSystems;
 
 namespace IdenticalStudios.InputSystem.Behaviours
 {
+    [AddComponentMenu("Input/Toggle UI Input")]
     public class ToggleUIInput : InputBehaviour
     {
+        [Title("Actions")]
 
-        [SerializeField]
+        [SerializeField, NotNull]
         private BaseInputModule m_InputModule;
 
 

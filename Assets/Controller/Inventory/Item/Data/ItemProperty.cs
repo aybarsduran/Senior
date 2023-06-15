@@ -1,10 +1,11 @@
-using IdenticalStudios.InventorySystem;
-using System;
+﻿using System;
 using UnityEngine;
 
 namespace IdenticalStudios.InventorySystem
 {
-    // Item properties hold values that can be changed and manipulated at runtime resulting in dynamic behaviour (float, bool and integer).
+    /// <summary>
+    /// Item properties hold values that can be changed and manipulated at runtime resulting in dynamic behaviour (float, bool and integer).
+    /// </summary>
     [Serializable]
     public sealed class ItemProperty : IItemProperty
     {

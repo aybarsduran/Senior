@@ -17,8 +17,9 @@ namespace IdenticalStudios.WieldableSystem
 		[SerializeField]
 		private Sprite m_DisplayIcon;
 
+		[SpaceArea]
 
-		[SerializeField]
+		[SerializeField, NotNull]
         private PhysicsProjectileBase m_Projectile;
 
 		[SerializeField, Range(0f, 5f)]
@@ -36,10 +37,12 @@ namespace IdenticalStudios.WieldableSystem
 		[SerializeField]
 		private ItemInteractionMode m_ItemInteraction = ItemInteractionMode.RemoveAndLinkToPickup;
 
+		[SpaceArea]
 
-		[SerializeField]
+		[SerializeField, ReorderableList(HasLabels = false)]
 		private Transform[] m_ObjectsToDisableOnThrow;
 
+		[Title("Effects")]
 
 		[SerializeField]
 		private EffectCollection m_ThrowStartEffects;

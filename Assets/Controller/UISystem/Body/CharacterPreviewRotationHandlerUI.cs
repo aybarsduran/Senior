@@ -11,6 +11,7 @@ namespace IdenticalStudios.UISystem
         [SerializeField]
         private Transform m_Root;
 
+        [SpaceArea]
 
         [SerializeField, Range(0.01f, 10f)]
         private float m_YRotationSpeed = 0.3f;
@@ -18,6 +19,7 @@ namespace IdenticalStudios.UISystem
         [SerializeField]
         private bool m_InvertYDirection = true;
 
+        [SpaceArea]
 
         [SerializeField, Range(0.01f, 10f)]
         private float m_XRotationSpeed = 0.3f;
@@ -28,6 +30,7 @@ namespace IdenticalStudios.UISystem
         [SerializeField, Range(0f, 180f)]
         private float m_MaxXRotation = 15f;
 
+        [SpaceArea]
 
         [SerializeField, Range(-100f, 100f)]
         private float m_CameraMoveSpeed = -10f;

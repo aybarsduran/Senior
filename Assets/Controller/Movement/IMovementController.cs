@@ -4,7 +4,9 @@ using UnityEngine.Events;
 
 namespace IdenticalStudios
 {
-    // Handles and controls motion states that are used in moving a character motor.
+    /// <summary>
+    /// Handles and controls motion states that are used in moving a character motor.
+    /// </summary>
     public interface IMovementController : ICharacterModule
     {
         MovementStateType ActiveState { get; }
@@ -17,11 +19,11 @@ namespace IdenticalStudios
 
         event UnityAction StepCycleEnded;
         event UnityAction StateChanged;
-       // event UnityAction<MovementPreset, MovementPreset> PresetChanged;
+        event UnityAction<MovementPreset, MovementPreset> PresetChanged;
 
 
         void ResetController();
-        //void SetMovementPreset(MovementPreset preset);
+        void SetMovementPreset(MovementPreset preset);
 
         void AddStateEnterListener(MovementStateType stateType, UnityAction callback);
         void AddStateExitListener(MovementStateType stateType, UnityAction callback);
@@ -32,10 +34,14 @@ namespace IdenticalStudios
         void AddStateLocker(Object locker, MovementStateType stateType);
         void RemoveStateLocker(Object locker, MovementStateType stateType);
 
-        // Transition to the given state.
+        /// <summary>
+        /// Transition to the given state.
+        /// </summary>
         bool TrySetState(ICharacterMotionState state);
 
-        // Transition to a state of the given type.
+        /// <summary>
+        /// Transition to a state of the given type.
+        /// </summary>
         bool TrySetState(MovementStateType stateType);
 
         ICharacterMotionState GetStateOfMotionType(MovementStateType stateType);

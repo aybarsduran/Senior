@@ -3,6 +3,7 @@
 namespace IdenticalStudios.UISystem
 {
     [RequireComponent(typeof(Animator))]
+	[AddComponentMenu("IdenticalStudios/UserInterface/Panels/Animated Panel")]
 	public class AnimatedPanelUI : AudioPanelUI
 	{
 		[Title("Animation")]
@@ -42,6 +43,12 @@ namespace IdenticalStudios.UISystem
 			base.Start();
 		}
 
-
+#if UNITY_EDITOR
+		protected override void Reset()
+		{
+			base.Reset();
+			m_Animator = GetComponent<Animator>();
+		}
+#endif
 	}
 }

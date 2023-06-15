@@ -6,6 +6,7 @@ namespace IdenticalStudios.InventorySystem
 {
     public sealed class ItemPickupBundle : ItemPickupBase, ISaveableComponent
     {
+	    [SpaceArea]
 		[SerializeField, ReorderableList]
 		private ItemGenerator[] m_Items = new ItemGenerator[1];
 

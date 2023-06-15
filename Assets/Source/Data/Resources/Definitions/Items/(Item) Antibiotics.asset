@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4213430bbd6313b4a89ea1d7e1185c38, type: 3}
+  m_Name: (Item) Antibiotics
+  m_EditorClassIdentifier: 
+  m_Id: -7174886
+  m_ParentGroup: {fileID: 11400000, guid: 7086e42fbd522a0479e34273226dac6b, type: 2}
+  m_ItemName: Antibiotics
+  m_Icon: {fileID: 21300000, guid: e93de62fae2244d488f5ee306f1ccac4, type: 3}
+  m_Pickup: {fileID: 209305994923648381, guid: c4beff218eedf084e95ef82c7810f796, type: 3}
+  m_Description: 'Use it when injured.
+
+    Can mean the difference between life
+    and death.'
+  m_Weight: 0.2
+  m_StackSize: 9
+  m_Tag:
+    m_Value: 0
+  m_Actions:
+  - {fileID: 11400000, guid: 44353a6f89da56549bcfe34dad07ed68, type: 2}
+  m_Properties: []
+  m_Data:
+  - rid: 3692120816393388179
+  references:
+    version: 2
+    RefIds:
+    - rid: 3692120816393388179
+      type: {class: VitalsData, ns: IdenticalStudios.InventorySystem, asm: IdenticalStudios}
+      data:
+        m_MinHealthChange: 0
+        m_MaxHealthChange: 0
+        m_MinHungerChange: 0
+        m_MaxHungerChange: 0
+        m_MinThirstChange: 0
+        m_MaxThirstChange: 0
+        m_MinEnergyChange: 0
+        m_MaxEnergyChange: 0

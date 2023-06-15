@@ -1,5 +1,4 @@
-using IdenticalStudios;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 namespace IdenticalStudios
@@ -40,13 +39,15 @@ namespace IdenticalStudios
         void Teleport(Vector3 position, Quaternion rotation);
         void AddForce(Vector3 force, ForceMode mode, bool snapToGround = false);
 
-        
-        // A method that will be called when the character motor needs input. 
+        /// <summary>
+        /// A method that will be called when the character motor needs input. 
+        /// </summary>
         void SetMotionInput(MotionInputCallback motionInput);
     }
 
-   
-    // A delegate that will be called when the character motor needs input.
+    /// <summary>
+    /// A delegate that will be called when the character motor needs input.
+    /// </summary>
     public delegate Vector3 MotionInputCallback(Vector3 velocity, out bool useGravity, out bool snapToGround);
 
     public static class CollisionFlagsExtensions

@@ -10,7 +10,10 @@ namespace IdenticalStudios.InventorySystem
         [SerializeField]
         private DataIdReference<ItemTagDefinition> m_WieldableTag;
 
-        // Checks if this item can be equipped.
+
+        /// <summary>
+        /// Checks if this item can be equipped.
+        /// </summary>
         public override bool IsViableForItem(ICharacter character, ItemSlot itemSlot)
         {
             bool isItemValid = itemSlot.HasItem && itemSlot.Item.Definition.Tag == m_WieldableTag && itemSlot.HasContainer;

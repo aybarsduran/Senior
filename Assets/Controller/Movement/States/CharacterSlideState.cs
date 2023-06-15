@@ -1,7 +1,4 @@
-using IdenticalStudios.MovementSystem;
-using IdenticalStudios;
 using UnityEngine;
-using UnityEngine.InputSystem.XR;
 
 namespace IdenticalStudios.MovementSystem
 {
@@ -14,6 +11,7 @@ namespace IdenticalStudios.MovementSystem
         public override bool SnapToGround => true;
         public override float StepCycleLength => Mathf.Infinity;
 
+        [Tooltip("Sliding speed over time.")]
         [SerializeField]
         private AnimationCurve m_SlideSpeed;
 
@@ -24,6 +22,9 @@ namespace IdenticalStudios.MovementSystem
         [Tooltip("How fast will the character stop when there's no input (a high value will make the movement feel snappier).")]
         private float m_SlideAcceleration = 10f;
 
+        [Space]
+
+        [Tooltip("The controllers height when sliding.")]
         [SerializeField, Range(0f, 2f)]
         private float m_SlideHeight = 1f;
 
@@ -36,6 +37,9 @@ namespace IdenticalStudios.MovementSystem
         [SerializeField, Range(0.1f, 10f)]
         private float m_SlideStopSpeed = 2f;
 
+        [Space]
+
+        [Tooltip("How much control does the Player input have on the slide direction.")]
         [SerializeField, Range(0f, 10f)]
         private float m_InputFactor;
 

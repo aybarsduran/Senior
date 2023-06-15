@@ -36,6 +36,8 @@ namespace IdenticalStudios.WieldableSystem
             public RandomSpringForce3D HeadForce = RandomSpringForce3D.Default;
             public ShakeSettings3D HeadShake = ShakeSettings3D.Default;
 
+            [Title("Pattern")]
+
             [Range(0.05f, 0.3f)]
             public float RecoveryDelay = 0.1f;
             public SpringSettings HeadPatternSpring = new SpringSettings(12, 100, 1, 1);
@@ -44,6 +46,8 @@ namespace IdenticalStudios.WieldableSystem
 
         #endregion
 
+        [Title("Motion")]
+        
         [SerializeField]
         private RecoilData m_HipfireRecoil;
         

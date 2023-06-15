@@ -1,9 +1,9 @@
-using IdenticalStudios.ProceduralMotion;
 using UnityEngine;
 
 namespace IdenticalStudios.ProceduralMotion
 {
     [System.Serializable]
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceAssembly: "Assembly-CSharp")]
     public sealed class RetractionMotionData : MotionData
     {
         public float RetractionDistance => m_RetractionDistance;
@@ -14,12 +14,12 @@ namespace IdenticalStudios.ProceduralMotion
         public Vector3 PositionOffset => m_PositionOffset;
         public Vector3 RotationOffset => m_RotationOffset;
 
-        //General Settings
+        [Title("General Settings")]
 
         [SerializeField, Range(0.1f, 5f)]
         private float m_RetractionDistance = 0.55f;
 
-        //Position Settings
+        [Title("Position Settings")]
 
         [SerializeField]
         private SpringSettings m_PositionSpring = SpringSettings.Default;
@@ -27,7 +27,7 @@ namespace IdenticalStudios.ProceduralMotion
         [SerializeField]
         private Vector3 m_PositionOffset;
 
-        //Rotation Settings
+        [Title("Rotation Settings")]
 
         [SerializeField]
         private SpringSettings m_RotationSpring = SpringSettings.Default;

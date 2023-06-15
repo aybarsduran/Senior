@@ -5,6 +5,7 @@ using UnityEngine;
 namespace IdenticalStudios.WieldableSystem.Effects
 {
     [Serializable]
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceAssembly: "Assembly-CSharp")]
     public sealed class WieldableForceEffect : WieldableEffect
     {
         [SerializeField]

@@ -1,5 +1,4 @@
-using IdenticalStudios;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace IdenticalStudios
 {
@@ -21,14 +20,14 @@ namespace IdenticalStudios
             }
         }
 
-
-        [SerializeField]
-
+#if UNITY_EDITOR
+        [SerializeField, Disable, SpaceArea]
+#endif
         private float m_Hunger;
 
-
-        [SerializeField] 
-
+#if UNITY_EDITOR
+        [SerializeField, Disable]
+#endif
         private float m_MaxHunger;
 
 

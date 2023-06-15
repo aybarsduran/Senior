@@ -5,7 +5,9 @@ using System.IO;
 
 namespace IdenticalStudios
 {
-    // TODO: Implement
+    /// <summary>
+    /// TODO: Implement
+    /// </summary>
     public abstract class UserSettingsBase : ScriptableObject
     {
         // protected abstract string SavePath { get; }

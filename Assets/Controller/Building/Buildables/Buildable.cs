@@ -8,11 +8,12 @@ namespace IdenticalStudios.BuildingSystem
 		public BuildableDefinition Definition => m_Definition.Def;
 		public MaterialEffect MaterialEffect => GetComponent<MaterialEffect>();
 
-		//Settings (Buildable)
+		[Title("Settings (Buildable)")]
 
 		[SerializeField, DataReferenceDetails(HasAssetReference = true, HasNullElement = false)]
 		private DataIdReference<BuildableDefinition> m_Definition;
 
+		[SpaceArea]
 
 		[SerializeField]
 		private GameObject m_BuildFX;

@@ -1,12 +1,14 @@
-using IdenticalStudios.ProceduralMotion;
-using IdenticalStudios;
 using UnityEngine;
 
 namespace IdenticalStudios.ProceduralMotion
 {
     public sealed class Spring1D
     {
+#if UNITY_EDITOR
+        public bool IsIdle { get; private set; }
+#else
         public bool IsIdle;
+#endif
 
         public float Value => m_Value;
         public float Velocity => m_Velocity;
@@ -23,7 +25,7 @@ namespace IdenticalStudios.ProceduralMotion
 
         public Spring1D() : this(SpringSettings.Default) { }
 
-        public Spring1D(SpringSettings settings)
+        public Spring1D(SpringSettings settings) 
         {
             m_Settings = settings;
 
@@ -35,7 +37,9 @@ namespace IdenticalStudios.ProceduralMotion
 
         public void Adjust(SpringSettings settings) => m_Settings = settings;
 
-        // Reset all values to initial states.
+        /// <summary>
+        /// Reset all values to initial states.
+        /// </summary>
         public void Reset()
         {
             IsIdle = true;
@@ -44,18 +48,22 @@ namespace IdenticalStudios.ProceduralMotion
             m_Acceleration = 0f;
         }
 
-        // Sets the target value in the middle of motion.
-        // This reuse the current velocity and interpolate the value smoothly afterwards.
-        // <param name="value">Target value</param>
+        /// <summary>
+        /// Sets the target value in the middle of motion.
+        /// This reuse the current velocity and interpolate the value smoothly afterwards.
+        /// </summary>
+        /// <param name="value">Target value</param>
         public void SetTargetValue(float value)
         {
             m_TargetValue = value;
             IsIdle = false;
         }
 
-        // Sets the target value in the middle of motion but using a new velocity.
-        // <param name="value">Target value</param>
-        // <param name="velocity">New velocity</param>
+        /// <summary>
+        /// Sets the target value in the middle of motion but using a new velocity.
+        /// </summary>
+        /// <param name="value">Target value</param>
+        /// <param name="velocity">New velocity</param>
         public void SetTargetValue(float value, float velocity)
         {
             m_TargetValue = value;
@@ -63,9 +71,11 @@ namespace IdenticalStudios.ProceduralMotion
             IsIdle = false;
         }
 
-        // Advance a step by deltaTime(seconds).
-        // <param name="deltaTime">Delta time since previous frame</param>
-        // <returns>Evaluated Value</returns>
+        /// <summary>
+        /// Advance a step by deltaTime(seconds).
+        /// </summary>
+        /// <param name="deltaTime">Delta time since previous frame</param>
+        /// <returns>Evaluated Value</returns>
         public float Evaluate(float deltaTime)
         {
             if (IsIdle)

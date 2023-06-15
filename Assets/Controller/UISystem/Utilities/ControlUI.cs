@@ -7,7 +7,7 @@ namespace IdenticalStudios.UISystem
     [RequireComponent(typeof(TextMeshProUGUI))]
     public sealed class ControlUI : MonoBehaviour
     {
-        [SerializeField]
+        [SerializeField, NotNull]
         private InputActionReference m_InputAction;
 
         [SerializeField]

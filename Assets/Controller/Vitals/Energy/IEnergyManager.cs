@@ -1,5 +1,4 @@
-
-namespace IdenticalStudios
+﻿namespace IdenticalStudios
 {
     public interface IEnergyManager : ICharacterModule
     {

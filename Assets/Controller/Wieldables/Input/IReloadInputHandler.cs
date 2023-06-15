@@ -1,5 +1,3 @@
-using IdenticalStudios.WieldableSystem;
-
 namespace IdenticalStudios.WieldableSystem
 {
     public interface IReloadInputHandler

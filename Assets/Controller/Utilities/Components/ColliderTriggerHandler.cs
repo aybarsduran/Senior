@@ -1,4 +1,3 @@
-using IdenticalStudios;
 using UnityEngine;
 
 namespace IdenticalStudios

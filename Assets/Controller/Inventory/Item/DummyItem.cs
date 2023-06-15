@@ -1,4 +1,3 @@
-using IdenticalStudios.InventorySystem;
 using System;
 using UnityEngine.Events;
 
@@ -23,7 +22,7 @@ namespace IdenticalStudios.InventorySystem
             add { }
             remove { }
         }
-
+        
         public event UnityAction StackCountChanged
         {
             add { }

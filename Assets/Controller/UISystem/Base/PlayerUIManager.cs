@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 namespace IdenticalStudios.UISystem
@@ -9,8 +9,10 @@ namespace IdenticalStudios.UISystem
 
         public Player Player { get; private set; }
         public bool IsAttached { get; private set; } = false;
-    
-        // This message will be sent after this UI has been attached to a player.
+
+        /// <summary>
+        /// This message will be sent after this UI has been attached to a player.
+        /// </summary>
         public event UnityAction OnAttached;
 
         private static PlayerUIManager s_LocalPlayerUI;

@@ -44,6 +44,7 @@ namespace IdenticalStudios.UISystem
         [SerializeField]
         private InputContextGroup m_ActionContext;
 
+        [SpaceArea]
 
         [SerializeField]
         private CanvasGroup m_CanvasGroup;

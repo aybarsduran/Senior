@@ -1,5 +1,4 @@
-using IdenticalStudios;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 namespace IdenticalStudios
@@ -56,17 +55,23 @@ namespace IdenticalStudios
         [Tooltip("How much time the stamina regeneration will be paused after it gets lowered.")]
         private float m_RegenerationPause = 3f;
 
+        [SpaceArea]
+
         [SerializeField]
         [ReorderableList(ListStyle.Boxed, childLabel: "StateType")]
         private StaminaState[] m_StaminaStates;
 
+        [SpaceArea]
 
         [SerializeField, Range(0.1f, 25f)]
         private float m_BreathingHeavyDuration;
-        
+
         [SerializeField]
         private StandardSound m_BreathingHeavyAudio;
 
+#if UNITY_EDITOR
+        [SerializeField, Disable, SpaceArea]
+#endif
         private float m_Stamina = 1f;
 
         private float m_NextAllowedRegenTime;
@@ -126,7 +131,7 @@ namespace IdenticalStudios
             }
         }
 
-        private StaminaState GetStateOfType(MovementStateType stateType)
+        private StaminaState GetStateOfType(MovementStateType stateType) 
         {
             for (int i = 0; i < m_StaminaStates.Length; i++)
             {
@@ -136,5 +141,13 @@ namespace IdenticalStudios
 
             return s_DefaultState;
         }
+
+#if UNITY_EDITOR
+        private void OnValidate()
+        {
+            if (GetStateOfType(MovementStateType.Idle) == null)
+                UnityEditor.ArrayUtility.Add(ref m_StaminaStates, s_DefaultState);
+        }
+#endif
     }
 }

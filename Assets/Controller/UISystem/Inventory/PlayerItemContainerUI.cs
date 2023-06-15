@@ -12,6 +12,7 @@ namespace IdenticalStudios.UISystem
 		}
 		#endregion
 
+		[SpaceArea]
 
 		[SerializeField]
 		private string m_ContainerName;

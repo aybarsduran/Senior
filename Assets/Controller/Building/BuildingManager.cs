@@ -31,15 +31,16 @@ namespace IdenticalStudios
             }
         }
 
-        //Custom Building"
+        [Title("Custom Building")]
 
         [SerializeField]
+        [NotNull("Structure manager prefab, handles socket based building.")]
         private StructureManager m_CustomStructure;
 
         [SerializeField, Range(0, 1000)]
         private int m_DefaultCustomBuildableIndex = 3;
 
-        //Masks & Layers
+        [Title("Masks & Layers")]
 
         [SerializeField]
         [Tooltip("Tells the controller on what layers can buildables be placed.")]
@@ -53,18 +54,18 @@ namespace IdenticalStudios
         [Tooltip("Layer mask to detect entities (AI or players).")]
         private LayerMask m_CharacterMask;
 
-        [SerializeField]
+        [SerializeField, Layer]
         private int m_BuildableLayer;
 
-        [SerializeField]
+        [SerializeField, Layer]
         private int m_BuildablePreviewLayer;
 
-        //Materials
+        [Title("Materials")]
 
-        [SerializeField]
+        [SerializeField, NewLabel("Placement Allowed"), InLineEditor]
         private MaterialEffectInfo m_PlacementAllowedMaterial;
 
-        [SerializeField]
+        [SerializeField, NewLabel("Placement Denied"), InLineEditor]
         private MaterialEffectInfo m_PlacementDeniedMaterial;
     }
 }

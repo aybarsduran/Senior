@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f711cd9e090aeaa4da02bd79f6c83e77, type: 3}
+  m_Name: (StartupItems) DefaultSTP
+  m_EditorClassIdentifier: 
+  m_ItemContainersStartupItems:
+  - Name: Backpack
+    StartupItems:
+    - m_Method: 0
+      m_SpecificItem:
+        m_Value: -2332980
+      m_Category:
+        m_Value: 0
+      m_MinCount: 1
+      m_MaxCount: 1
+    - m_Method: 0
+      m_SpecificItem:
+        m_Value: -20407
+      m_Category:
+        m_Value: 0
+      m_MinCount: 1
+      m_MaxCount: 3
+    - m_Method: 0
+      m_SpecificItem:
+        m_Value: 9878845
+      m_Category:
+        m_Value: 0
+      m_MinCount: 1
+      m_MaxCount: 3
+    - m_Method: 0
+      m_SpecificItem:
+        m_Value: 8505358
+      m_Category:
+        m_Value: 0
+      m_MinCount: 1
+      m_MaxCount: 3
+    - m_Method: 0
+      m_SpecificItem:
+        m_Value: -7862085
+      m_Category:
+        m_Value: 0
+      m_MinCount: 1
+      m_MaxCount: 1
+    - m_Method: 0
+      m_SpecificItem:
+        m_Value: 4548792
+      m_Category:
+        m_Value: 0
+      m_MinCount: 3
+      m_MaxCount: 5
+  - Name: Holster
+    StartupItems: []
+  - Name: Head
+    StartupItems: []
+  - Name: Torso
+    StartupItems:
+    - m_Method: 0
+      m_SpecificItem:
+        m_Value: 3640661
+      m_Category:
+        m_Value: 0
+      m_MinCount: 1
+      m_MaxCount: 1
+  - Name: Legs
+    StartupItems:
+    - m_Method: 0
+      m_SpecificItem:
+        m_Value: 5363886
+      m_Category:
+        m_Value: 0
+      m_MinCount: 1
+      m_MaxCount: 1
+  - Name: Feet
+    StartupItems:
+    - m_Method: 0
+      m_SpecificItem:
+        m_Value: -3870361
+      m_Category:
+        m_Value: 0
+      m_MinCount: 1
+      m_MaxCount: 1

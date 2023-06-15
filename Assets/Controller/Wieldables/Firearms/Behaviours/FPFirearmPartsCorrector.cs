@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace IdenticalStudios.WieldableSystem
 {
+    [AddComponentMenu("IdenticalStudios/Wieldables/First Person/FP Firearm Parts Corrector")]
     public sealed class FPFirearmPartsCorrector : MonoBehaviour
 	{
         #region Internal
@@ -18,6 +19,7 @@ namespace IdenticalStudios.WieldableSystem
         [SerializeField, Range(0f, 10f)]
         private float m_MoveDelay = 0.1f;
 
+        [SpaceArea]
 
         [SerializeField, ReorderableList(childLabel: "Part")]
         private MovingPart[] m_MovingParts;

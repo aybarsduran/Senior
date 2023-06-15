@@ -1,5 +1,4 @@
 using IdenticalStudios.ProceduralMotion;
-using IdenticalStudios;
 using UnityEngine;
 
 namespace IdenticalStudios
@@ -8,8 +7,8 @@ namespace IdenticalStudios
     public abstract class CameraShakeManagerBase : CharacterBehaviour
     {
         private static CameraShakeManagerBase s_Instance;
-
-
+        
+        
         public static void DoShake(Vector3 position, ShakeSettings3D shakeSettings, float radius, float scale = 1f)
         {
             if (s_Instance == null || shakeSettings.Duration < 0.01f)

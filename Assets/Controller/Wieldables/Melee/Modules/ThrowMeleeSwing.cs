@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace IdenticalStudios.WieldableSystem
 {
+    [AddComponentMenu("IdenticalStudios/Wieldables/Melee/Throw Swing")]
 	public class ThrowMeleeSwing : MeleeSwingBehaviour
 	{
 		[SerializeField]
@@ -12,7 +13,7 @@ namespace IdenticalStudios.WieldableSystem
 		[SerializeField]
 		private FirearmProjectileEffectBehaviour m_ProjectileEffect;
 
-		//Throw Settings
+		[Title("Throw Settings")]
 
 		[SerializeField, Range(0f, 100f)]
 		private float m_MinSpread = 1f;
@@ -33,7 +34,7 @@ namespace IdenticalStudios.WieldableSystem
 		[SerializeField, Range(0f, 1000f)]
 		private float m_ThrowSpeed = 50f;
 		
-		//Miscellaneous
+		[Title("Miscellaneous")]
 
 		[SerializeField, Range(0f, 100f)]
 		[Tooltip("The gravity for the projectile.")]
@@ -45,11 +46,12 @@ namespace IdenticalStudios.WieldableSystem
 		[SerializeField]
 		private bool m_RemoveFromInventory = true;
 
+		[SpaceArea]
 
 		[SerializeField, ReorderableList(HasLabels = false)]
 		private Transform[] m_ObjectsToDisableOnThrow;
 
-		//Effects
+		[Title("Effects")]
 
 		[SerializeField]
 		private EffectCollection m_ThrowStartEffects;

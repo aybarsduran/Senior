@@ -1,5 +1,3 @@
-using IdenticalStudios.MovementSystem;
-using IdenticalStudios;
 using System;
 using UnityEngine;
 
@@ -24,7 +22,7 @@ namespace IdenticalStudios.MovementSystem
         protected ICharacterMotor Motor { get; private set; }
         protected ICharacter Character { get; private set; }
 
-        [NonSerialized] //game state degistiginde default value' ya resetlenicek
+        [NonSerialized]
         private bool m_Enabled;
 
 

@@ -1,10 +1,8 @@
-using IdenticalStudios;
-
-namespace IdenticalStudios
+﻿namespace IdenticalStudios
 {
     public interface IHungerManager : ICharacterModule
     {
         float Hunger { get; set; }
-        float MaxHunger { get; set; }
+        float MaxHunger { get; set;  }
     }
 }

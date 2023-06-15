@@ -1,12 +1,11 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace IdenticalStudios.WieldableSystem
 {
-    
-    // Generates Rays based on the parent character state.
-    // shoot direction ray will be more random when moving
-    
-    
+    /// <summary>
+    /// Generates Rays based on the parent character state.
+    /// (e.g. shoot direction ray will be more random when moving)
+    /// </summary>
     public sealed class CharacterAccuracyHandler : CharacterBehaviour, IAccuracyHandler
     {
         [SerializeField]
@@ -20,7 +19,7 @@ namespace IdenticalStudios.WieldableSystem
 
         [SerializeField, Range(0.1f, 10f)]
         private float m_LerpSpeed = 0.5f;
-
+        
         private ICharacterMotor m_Motor;
         private float m_Accuracy = 1f;
 

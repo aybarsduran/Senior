@@ -1,14 +1,13 @@
-using IdenticalStudios.InputSystem.Behaviours;
-using IdenticalStudios.InputSystem;
-using IdenticalStudios.WieldableSystem;
-using IdenticalStudios;
+﻿using IdenticalStudios.WieldableSystem;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace IdenticalStudios.InputSystem.Behaviours
 {
+    [AddComponentMenu("Input/Wieldables Input")]
     public class FPSWieldablesInput : CharacterInputBehaviour
     {
+        [Title(label: "Actions")]
 
         [SerializeField]
         private InputActionReference m_UseInput;

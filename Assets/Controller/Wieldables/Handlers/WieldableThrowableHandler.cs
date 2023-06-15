@@ -39,7 +39,7 @@ namespace IdenticalStudios.WieldableSystem
         public event UnityAction ThrowableIndexChanged;
         public event UnityAction<Throwable> OnThrow;
 
-        [SerializeField, DataReferenceDetails(NullElementName = "Untagged", HasLabel = false)]
+        [SerializeField, DataReferenceDetails(NullElementName = "Untagged", HasLabel = false), ReorderableList]
         private DataIdReference<ItemTagDefinition>[] m_ContainerTags;
 
         private readonly List<IItemContainer> m_Containers = new();

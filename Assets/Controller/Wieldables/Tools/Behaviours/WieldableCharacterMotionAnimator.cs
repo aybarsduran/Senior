@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace IdenticalStudios.WieldableSystem
 {
+    [AddComponentMenu("IdenticalStudios/Wieldables/Character Motion Animator")]
     public class WieldableCharacterMotionAnimator : WieldableBehaviour
     {
         #region Internal
@@ -12,7 +13,7 @@ namespace IdenticalStudios.WieldableSystem
             public MovementStateType State;
             public TriggerType TriggerType;
 
-            [SerializeField]
+            [SerializeField, ReorderableList(ListStyle.Boxed)]
             private AnimatorParameterTrigger[] m_Parameters;
 
             private Animator m_Animator;
@@ -43,8 +44,9 @@ namespace IdenticalStudios.WieldableSystem
         [SerializeField]
         private WieldableAnimator m_WieldableAnimator;
 
+        [SpaceArea]
 
-        [SerializeField]
+        [SerializeField, ReorderableList]
         private AnimationTrigger[] m_AnimationTriggers;
 
         private IMovementController m_Movement;

@@ -1,6 +1,4 @@
-using IdenticalStudios.InventorySystem;
-using IdenticalStudios;
-using System;
+﻿using System;
 using System.Data.SqlTypes;
 using UnityEngine;
 

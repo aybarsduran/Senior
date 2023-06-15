@@ -1,113 +1,114 @@
-using IdenticalStudios.InventorySystem;
-using System;
+﻿using System;
 using UnityEngine;
 
 namespace IdenticalStudios.InventorySystem
 {
-    // Holds a reference to an item and listens to changes made to it.
+    /// <summary>
+    /// Holds a reference to an item and listens to changes made to it.
+    /// </summary>
     [Serializable]
-    public sealed class ItemSlot
-    {
-        public struct CallbackContext
-        {
-            public readonly ItemSlot Slot;
-            public readonly CallbackType Type;
+	public sealed class ItemSlot
+	{
+		public struct CallbackContext
+		{
+			public readonly ItemSlot Slot;
+			public readonly CallbackType Type;
 
 
-            public CallbackContext(ItemSlot slot, CallbackType type)
-            {
-                this.Slot = slot;
-                this.Type = type;
-            }
+			public CallbackContext(ItemSlot slot, CallbackType type)
+			{
+				this.Slot = slot;
+				this.Type = type;
+			}
         }
+		
+		public enum CallbackType
+		{
+			ItemAdded,
+			ItemRemoved,
+			StackChanged,
+			PropertyChanged
+		}
+		
+		public bool HasItem => m_Item != null;
 
-        public enum CallbackType
-        {
-            ItemAdded,
-            ItemRemoved,
-            StackChanged,
-            PropertyChanged
-        }
+		public IItem Item
+		{
+			get => m_Item;
+			set
+			{
+				if (m_Item == value)
+					return;
+				
+				// Stop listening for changes to the previously attached item.
+				if (m_Item != null)
+				{
+					m_Item.PropertyChanged -= OnPropertyChanged;
+					m_Item.StackCountChanged -= OnStackChanged;
+				}
 
-        public bool HasItem => m_Item != null;
+				m_Item = value;
 
-        public IItem Item
-        {
-            get => m_Item;
-            set
-            {
-                if (m_Item == value)
-                    return;
+				// Start listening for changes to the newly attached item.
+				if (m_Item != null)
+				{
+					m_Item.PropertyChanged += OnPropertyChanged;
+					m_Item.StackCountChanged += OnStackChanged;
 
-                // Stop listening for changes to the previously attached item.
-                if (m_Item != null)
-                {
-                    m_Item.PropertyChanged -= OnPropertyChanged;
-                    m_Item.StackCountChanged -= OnStackChanged;
-                }
+					ItemChanged?.Invoke(new CallbackContext(this, CallbackType.ItemAdded));
+				}
+				else
+					ItemChanged?.Invoke(new CallbackContext(this, CallbackType.ItemRemoved));
+				
+				void OnPropertyChanged() => ItemChanged?.Invoke(new CallbackContext(this, CallbackType.PropertyChanged));
 
-                m_Item = value;
+				void OnStackChanged()
+				{
+					if (m_Item.StackCount == 0)
+					{
+						Item = null;
+						return;
+					}
 
-                // Start listening for changes to the newly attached item.
-                if (m_Item != null)
-                {
-                    m_Item.PropertyChanged += OnPropertyChanged;
-                    m_Item.StackCountChanged += OnStackChanged;
+					ItemChanged?.Invoke(new CallbackContext(this, CallbackType.StackChanged));
+				}
+			}
+		}
 
-                    ItemChanged?.Invoke(new CallbackContext(this, CallbackType.ItemAdded));
-                }
-                else
-                    ItemChanged?.Invoke(new CallbackContext(this, CallbackType.ItemRemoved));
+		public bool HasContainer => m_Container != null;
 
-                void OnPropertyChanged() => ItemChanged?.Invoke(new CallbackContext(this, CallbackType.PropertyChanged));
+		public IItemContainer Container
+		{
+			get
+			{
+				if (m_Container == null)
+					Debug.LogError("This slot does not have a parent container.");
 
-                void OnStackChanged()
-                {
-                    if (m_Item.StackCount == 0)
-                    {
-                        Item = null;
-                        return;
-                    }
+				return m_Container;
+			}
+		}
 
-                    ItemChanged?.Invoke(new CallbackContext(this, CallbackType.StackChanged));
-                }
-            }
-        }
+		/// <summary> Sent when this slot has changed (e.g. when the attached item has changed).</summary>
+		public event ItemSlotChangedDelegate ItemChanged;
+		
+		[OdinSerializer.OdinSerialize]
+		private IItem m_Item;
 
-        public bool HasContainer => m_Container != null;
-
-        public IItemContainer Container
-        {
-            get
-            {
-                if (m_Container == null)
-                    Debug.LogError("This slot does not have a parent container.");
-
-                return m_Container;
-            }
-        }
-
-        /// <summary> Sent when this slot has changed (e.g. when the attached item has changed).</summary>
-        public event ItemSlotChangedDelegate ItemChanged;
-
-        [OdinSerializer.OdinSerialize]
-        private IItem m_Item;
-
-        private readonly IItemContainer m_Container;
+		private readonly IItemContainer m_Container;
 
 
-        public ItemSlot(IItemContainer container)
-        {
-            this.m_Item = null;
-            this.m_Container = container;
-        }
+		public ItemSlot(IItemContainer container)
+		{
+			this.m_Item = null;
+			this.m_Container = container;
+		}
 
-        public ItemSlot(IItem item, IItemContainer container)
-        {
-            this.m_Item = item;
-            this.m_Container = container;
-        }
-    }
+		public ItemSlot(IItem item, IItemContainer container)
+		{
+			this.m_Item = item;
+			this.m_Container = container;
+		}
+	}
 
-    public delegate void ItemSlotChangedDelegate(ItemSlot.CallbackContext context);
+	public delegate void ItemSlotChangedDelegate(ItemSlot.CallbackContext context);
 }

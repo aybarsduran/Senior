@@ -1,4 +1,4 @@
-namespace IdenticalStudios.WieldableSystem
+﻿namespace IdenticalStudios.WieldableSystem
 {
     public interface IAccuracyHandler
     {

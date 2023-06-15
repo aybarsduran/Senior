@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace IdenticalStudios.UISystem
 {
+    [AddComponentMenu("IdenticalStudios/UserInterface/Panels/Tween Panel")]
     public class TweenPanelUI : AudioPanelUI
     {
         [Title("Animation")]

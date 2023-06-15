@@ -5,6 +5,8 @@ namespace IdenticalStudios.WieldableSystem
 {
     public class FirearmComplexParabolicShooter : FirearmParabolicShooter
     {
+        [SpaceArea]
+
         [SerializeField, Range(0f, 10f)]
         private float m_InheritedVelocity = 0f;
 

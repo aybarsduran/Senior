@@ -1,5 +1,4 @@
-using IdenticalStudios.ProceduralMotion;
-using IdenticalStudios;
+﻿using IdenticalStudios.ProceduralMotion;
 using UnityEngine;
 
 namespace IdenticalStudios
@@ -18,6 +17,7 @@ namespace IdenticalStudios
         [SerializeField]
         private LayerMask m_Layers = Physics.DefaultRaycastLayers;
 
+        [SpaceArea]
 
         [SerializeField]
         private AudioSource m_AudioSource;
@@ -67,7 +67,7 @@ namespace IdenticalStudios
 
             damage = m_Damage * distanceFactor;
 
-            return new DamageContext(DamageType.Explosion, hit.position, (hit.position - transform.position).normalized * m_Force, Vector3.zero, detonator);
+            return new DamageContext(DamageType.Explosion, hit.position, (hit.position - transform.position).normalized * m_Force, Vector3.zero, detonator);  
         }
 
 #if UNITY_EDITOR

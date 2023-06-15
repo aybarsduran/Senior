@@ -1,22 +1,22 @@
-using IdenticalStudios.ProceduralMotion;
 using UnityEngine;
 
 namespace IdenticalStudios.ProceduralMotion
 {
     [DisallowMultipleComponent]
+    [AddComponentMenu("IdenticalStudios/Motion/Retraction Motion")]
     public sealed class RetractionMotionModule : DataMotionModule<RetractionMotionData>
     {
         private IInteractionHandler m_Interaction;
 
         private const float k_PositionForceMod = 0.02f;
-
-
+        
+        
         protected override void OnBehaviourEnabled()
         {
             base.OnBehaviourEnabled();
             GetModule(out m_Interaction);
         }
-
+        
         protected override RetractionMotionData GetDataFromPreset(IMotionDataHandler dataHandler)
         {
             return dataHandler.GetData<RetractionMotionData>();

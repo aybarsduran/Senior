@@ -3,6 +3,7 @@ using UnityEngine;
 namespace IdenticalStudios.MovementSystem
 {
     [System.Serializable]
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceAssembly: "Assembly-CSharp")]
     public sealed class CharacterRunState : CharacterGroundedState
     {
         public override MovementStateType StateType => MovementStateType.Run;

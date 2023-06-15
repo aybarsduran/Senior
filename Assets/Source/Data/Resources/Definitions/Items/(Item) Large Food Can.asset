@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4213430bbd6313b4a89ea1d7e1185c38, type: 3}
+  m_Name: (Item) Large Food Can
+  m_EditorClassIdentifier: 
+  m_Id: 6285896
+  m_ParentGroup: {fileID: 11400000, guid: 7086e42fbd522a0479e34273226dac6b, type: 2}
+  m_ItemName: Large Food Can
+  m_Icon: {fileID: 21300000, guid: eab3fcfbe94d7e14aae477a984df0e7b, type: 3}
+  m_Pickup: {fileID: 699599640, guid: 0f4270a8313d35d478ad6f397eb7c7f0, type: 3}
+  m_Description: While not delicious, this canned burger can keep you satiated for
+    a long time.
+  m_Weight: 0.5
+  m_StackSize: 1
+  m_Tag:
+    m_Value: 0
+  m_Actions:
+  - {fileID: 11400000, guid: 59fe392297328864e80629d3fb6db5d1, type: 2}
+  m_Properties: []
+  m_Data:
+  - rid: 3692120816393388193
+  references:
+    version: 2
+    RefIds:
+    - rid: 3692120816393388193
+      type: {class: VitalsData, ns: IdenticalStudios.InventorySystem, asm: IdenticalStudios}
+      data:
+        m_MinHealthChange: 0
+        m_MaxHealthChange: 0
+        m_MinHungerChange: 0
+        m_MaxHungerChange: 0
+        m_MinThirstChange: 0
+        m_MaxThirstChange: 0
+        m_MinEnergyChange: 0
+        m_MaxEnergyChange: 0

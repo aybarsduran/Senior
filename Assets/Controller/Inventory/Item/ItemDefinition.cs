@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using IdenticalStudios.InventorySystem;
-using IdenticalStudios;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -29,16 +27,21 @@ namespace IdenticalStudios.InventorySystem
         public DataIdReference<ItemTagDefinition> Tag => m_Tag;
 
         [SerializeField]
+        [NewLabel("Name ")]
         [Tooltip("Item name.")]
         private string m_ItemName;
 
-        [SerializeField]
+        [SpaceArea]
+
+        [SerializeField, SpritePreview]
         [Tooltip("Item Icon.")]
         private Sprite m_Icon;
 
         [SerializeField]
         [Tooltip("Corresponding pickup for this item, so you can actually drop it, or pick it up from the ground.")]
         private ItemPickup m_Pickup;
+
+        [SpaceArea]
 
         [SerializeField, Multiline]
         [Tooltip("Item description to display in the UI.")]
@@ -55,13 +58,17 @@ namespace IdenticalStudios.InventorySystem
         [SerializeField, DataReferenceDetails(NullElementName = "Untagged")]
         private DataIdReference<ItemTagDefinition> m_Tag;
 
+        [Help("Note: Availiable actions for this item (the base actions from the parent category are also included)")]
         [SerializeField, ReorderableList(ListStyle.Lined, HasLabels = false)]
         private ItemAction[] m_Actions;
 
+        [Help("Note: Simple data that can be changed at runtime (not shared between item instances)")]
         [SerializeField, ReorderableList(ListStyle.Lined, HasLabels = false)]
         private ItemPropertyGenerator[] m_Properties;
 
-        [SerializeReference]
+        [SpaceArea]
+        [Help("Note: Complex data, shared between every item instance of this type.")]
+        [SerializeReference, ReferencePicker]
         [ReorderableList(ListStyle.Lined, "Data")]
         private ItemData[] m_Data;
 
@@ -356,18 +363,18 @@ namespace IdenticalStudios.InventorySystem
         //    return false;
         //}
 
-        //public override void Reset()
-        //{
-        //    base.Reset();
-        //    m_Pickup = null;
-        //}
+        public override void Reset()
+        {
+            base.Reset();
+            m_Pickup = null;
+        }
 
-        //protected override void OnValidate()
-        //{
-        //    ListExtensions.DistinctPreserveNull(ref m_Actions);
+        protected override void OnValidate()
+        {
+            ListExtensions.DistinctPreserveNull(ref m_Actions);
 
-        //    base.OnValidate();
-        //}
+            base.OnValidate();
+        }
 #endif
         #endregion
     }

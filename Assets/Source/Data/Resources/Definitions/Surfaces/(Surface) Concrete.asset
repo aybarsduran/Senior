@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5f455fef6aaad459434bb61682f7d4, type: 3}
+  m_Name: (Surface) Concrete
+  m_EditorClassIdentifier: 
+  m_Id: -6406176
+  VelocityModifier: 1
+  SurfaceFriction: 1
+  PenetrationResistence: 0.55
+  SoftFootstepEffect:
+    AudioEffect:
+      m_Volume: 0.15
+      m_VolumeJitter: 0.05
+      m_Pitch: 1
+      m_PitchJitter: 0.05
+      m_AudioClips:
+      - {fileID: 8300000, guid: 2d84e68a178e9a04f8dd0f4d7e03fc5a, type: 3}
+      - {fileID: 8300000, guid: 2006c9bdc030dbe4aa687a03c701583d, type: 3}
+      - {fileID: 8300000, guid: 5df18e464f20ffc4b872b69f8354fcbe, type: 3}
+      - {fileID: 8300000, guid: b81ddd67c4e7ab740b081b27eb36309d, type: 3}
+      - {fileID: 8300000, guid: c1a25a3bee96fe94189f7faad13e8164, type: 3}
+      - {fileID: 8300000, guid: aa1e6fb0be59f694193d6538158b962a, type: 3}
+      - {fileID: 8300000, guid: 8aed68a2248662c4f990bb103d6c5662, type: 3}
+      - {fileID: 8300000, guid: 9d6698803997ed94299c17a08e3ee786, type: 3}
+    VisualEffect: {fileID: 0}
+  HardFootstepEffect:
+    AudioEffect:
+      m_Volume: 0.2
+      m_VolumeJitter: 0.05
+      m_Pitch: 1
+      m_PitchJitter: 0.05
+      m_AudioClips:
+      - {fileID: 8300000, guid: 3955e801bf2e87445bc5ce95a551c41f, type: 3}
+      - {fileID: 8300000, guid: de04e526ace7f5d40b6e2da310adfdea, type: 3}
+      - {fileID: 8300000, guid: 9dac2a222a5873e46abbc1e802120d23, type: 3}
+      - {fileID: 8300000, guid: b1c1302a5745a2344a681cb541a95192, type: 3}
+      - {fileID: 8300000, guid: 433b0aac50ddc35449df01ae32188c30, type: 3}
+      - {fileID: 8300000, guid: bfe1c39f82f77a441b8753f07f87c528, type: 3}
+      - {fileID: 8300000, guid: d8b8631ea04b0c64cb734cb75f8f9cd7, type: 3}
+      - {fileID: 8300000, guid: fa33c7624e839444b8bdcceab53f33df, type: 3}
+    VisualEffect: {fileID: 0}
+  FallImpactEffect:
+    AudioEffect:
+      m_Volume: 0.35
+      m_VolumeJitter: 0.05
+      m_Pitch: 1
+      m_PitchJitter: 0.05
+      m_AudioClips:
+      - {fileID: 8300000, guid: 826183f89905f974b8114610673b4ef9, type: 3}
+      - {fileID: 8300000, guid: d89e3e29a55236b4ebb59b8ea6153227, type: 3}
+      - {fileID: 8300000, guid: 429b8d024fa9f004ca17136b28d4b901, type: 3}
+      - {fileID: 8300000, guid: f6086e28908ad1a4280a2e9a6c9594dc, type: 3}
+    VisualEffect: {fileID: 0}
+  BulletHitEffect:
+    AudioEffect:
+      m_Volume: 0.65
+      m_VolumeJitter: 0.1
+      m_Pitch: 1
+      m_PitchJitter: 0.1
+      m_AudioClips:
+      - {fileID: 8300000, guid: 20aa996b2e2710040aa01a5fd421c93e, type: 3}
+      - {fileID: 8300000, guid: 7ffe87a839c48e84a815d178035868c7, type: 3}
+      - {fileID: 8300000, guid: 74b5f9e4802f9994eb464033fb2ca593, type: 3}
+      - {fileID: 8300000, guid: 6d0a525b17b1e9343901df81ce47aab6, type: 3}
+    VisualEffect: {fileID: 1400400831016474, guid: 965da8c91ddff5a4d8e7328e33e65cc3, type: 3}
+  SlashEffect:
+    AudioEffect:
+      m_Volume: 0.65
+      m_VolumeJitter: 0.1
+      m_Pitch: 1
+      m_PitchJitter: 0.1
+      m_AudioClips:
+      - {fileID: 8300000, guid: ed55afeb92476c04db2c8f86c3d84c65, type: 3}
+      - {fileID: 8300000, guid: c321bc53cbbcdf148a0f0e962c9b819c, type: 3}
+      - {fileID: 8300000, guid: f3aa4414df897934b98661b6c9302e8e, type: 3}
+      - {fileID: 8300000, guid: 65ac2a13013901543823b18ccc33bdb4, type: 3}
+    VisualEffect: {fileID: 1400400831016474, guid: 6c5fa66d89fb0a042aceaee4d9357980, type: 3}
+  StabEffect:
+    AudioEffect:
+      m_Volume: 0.65
+      m_VolumeJitter: 0.1
+      m_Pitch: 1
+      m_PitchJitter: 0.1
+      m_AudioClips:
+      - {fileID: 8300000, guid: f03edc95d6178354bbe38ffcc77c5ff2, type: 3}
+      - {fileID: 8300000, guid: 0a97f934f24e8324788f8159de3f0dda, type: 3}
+      - {fileID: 8300000, guid: dc4adcb4c257a6442bec50ddeb9aaddf, type: 3}
+      - {fileID: 8300000, guid: ab5991b243ab1804eaec5d269b3d0df3, type: 3}
+    VisualEffect: {fileID: 1400400831016474, guid: 6c5fa66d89fb0a042aceaee4d9357980, type: 3}

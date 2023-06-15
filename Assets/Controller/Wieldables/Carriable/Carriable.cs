@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace IdenticalStudios.WieldableSystem
 {
+    [AddComponentMenu("IdenticalStudios/Wieldables/Carriable")]
     public sealed class Carriable : Wieldable, ICarriable
     {
         public DataIdReference<CarriableDefinition> Definition => m_Definition;

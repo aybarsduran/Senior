@@ -1,8 +1,4 @@
-using IdenticalStudios.InventorySystem;
-using IdenticalStudios;
-using Unity.VisualScripting;
-using UnityEngine;
-using static UnityEditor.Progress;
+﻿using UnityEngine;
 
 namespace IdenticalStudios.InventorySystem
 {
@@ -11,80 +7,86 @@ namespace IdenticalStudios.InventorySystem
     /// References one item from the Database.
     /// </summary>
     public class ItemPickup : ItemPickupBase, ISaveableComponent
-    {
-        public IItem AttachedItem { get; private set; }
+	{
+		public IItem AttachedItem { get; private set; }
 
-        [SerializeField]
+		[SpaceArea()]
+		
+		[SerializeField]
         [DataReferenceDetails(HasAssetReference = true, HasIcon = true)]
         private DataIdReference<ItemDefinition> m_Item = new(0);
 
-        [SerializeField, Range(0, 100)]
+		[SerializeField, Range(0, 100)]
+#if UNITY_EDITOR
+		[ShowIf(nameof(IsItemValid), true)]
+#endif
+		private int m_MinCount = 1;
 
-        private int m_MinCount = 1;
+		[SerializeField, Range(0, 100)]
+#if UNITY_EDITOR
+		[ShowIf(nameof(IsItemStackable), true)]
+#endif
+		private int m_MaxCount;
 
-        [SerializeField, Range(0, 100)]
 
-        private int m_MaxCount;
+		public override void LinkWithItem(IItem item)
+		{
+			AttachedItem = item;
 
+			if (AttachedItem != null)
+			{
+				Description = item.Definition.Description;
+				Title = item.Name;
+			}
+		}
 
-        public override void LinkWithItem(IItem item)
-        {
-            AttachedItem = item;
+		public override void OnInteract(ICharacter character)
+		{
+			base.OnInteract(character);
 
-            if (AttachedItem != null)
-            {
-                Description = item.Definition.Description;
-                Title = item.Name;
-            }
-        }
-
-        public override void OnInteract(ICharacter character)
-        {
-            base.OnInteract(character);
-
-            if (InteractionEnabled)
-                PickUpItem(character, AttachedItem);
-        }
+			if (InteractionEnabled)
+				PickUpItem(character, AttachedItem);
+		}
 
         private void Start()
-        {
-            if (AttachedItem == null && !m_Item.IsNull)
-                LinkWithItem(new Item(m_Item.Def, Random.Range(m_MinCount, m_MaxCount + 1)));
-        }
+		{
+			if (AttachedItem == null && !m_Item.IsNull)
+				LinkWithItem(new Item(m_Item.Def, Random.Range(m_MinCount, m_MaxCount + 1)));
+		}
 
         #region Save & Load
         public void LoadMembers(object[] members)
         {
-            AttachedItem = members[0] as IItem;
-            LinkWithItem(AttachedItem);
+	        AttachedItem = members[0] as IItem;
+	        LinkWithItem(AttachedItem);
         }
 
         public object[] SaveMembers()
         {
-            object[] members = {
-                AttachedItem
-            };
+	        object[] members = {
+		        AttachedItem
+	        };
 
-            return members;
+	        return members;
         }
-        #endregion
+		#endregion
 
 #if UNITY_EDITOR
-        public bool IsItemValid()
-        {
-            return !m_Item.IsNull;
-        }
+		public bool IsItemValid()
+		{
+			return !m_Item.IsNull;
+		}
 
-        public bool IsItemStackable()
-        {
-            return IsItemValid() && m_Item.Def.StackSize > 1;
-        }
-
-        protected override void OnValidate()
-        {
-            base.OnValidate();
-            m_MaxCount = Mathf.Max(m_MaxCount, m_MinCount);
-        }
+		public bool IsItemStackable()
+		{
+			return IsItemValid() && m_Item.Def.StackSize > 1;
+		}
+		
+		protected override void OnValidate()
+		{
+			base.OnValidate();
+			m_MaxCount = Mathf.Max(m_MaxCount, m_MinCount);
+		}
 #endif
-    }
+	}
 }

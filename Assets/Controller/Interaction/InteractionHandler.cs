@@ -1,5 +1,4 @@
-using IdenticalStudios;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -60,6 +59,8 @@ namespace IdenticalStudios
         [SerializeField]
         [Tooltip("The transform used in raycasting.")]
         private Transform m_View;
+
+        [Title("Settings")]
 
         [SerializeField, Range(0.01f, 25f)]
         [Tooltip("The raycast max distance, anything further away will be ignored.")]
@@ -155,7 +156,7 @@ namespace IdenticalStudios
         {
             if (m_HoverInfo.Collider == m_LastHoveredInfo.Collider)
                 return;
-
+            
             // Hover Start
             if (m_HoverInfo.IsHoverable)
                 m_HoverInfo.Hoverable.OnHoverStart(Character);

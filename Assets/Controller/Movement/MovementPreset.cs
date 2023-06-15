@@ -2,6 +2,10 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 namespace IdenticalStudios.MovementSystem
 {
     [CreateAssetMenu(menuName = "Identical Studios/Movement/Movement Preset", fileName = "(Movement) ", order = 100)]
@@ -27,6 +31,9 @@ namespace IdenticalStudios.MovementSystem
         [SpaceArea]
 
         [SerializeReference, ReferencePicker]
+#if UNITY_EDITOR
+        [ReorderableListExposed(ListStyle.Boxed, "State", OverrideNewElementMethodName = nameof(GetNewState))]
+#endif
         private CharacterMotionState[] m_States = Array.Empty<CharacterMotionState>();
 
 
@@ -56,6 +63,33 @@ namespace IdenticalStudios.MovementSystem
             }
         }
 
+#if UNITY_EDITOR
+        public CharacterMotionState GetNewState() => null;
 
+        private void OnValidate()
+        {
+            for (int i = 0; i < m_States.Length; i++)
+            {
+                if (m_States[i] == null)
+                    continue;
+
+                var stateType = m_States[i].GetType();
+                for (int j = m_States.Length - 1; j > i; j--)
+                {
+                    if (m_States[j] == null)
+                        continue;
+
+                    if (m_States[j].GetType() == stateType)
+                        ArrayUtility.RemoveAt(ref m_States, j);
+                }
+            }
+
+            for (int i = 0; i < m_States.Length; i++)
+            {
+                if (m_States[i] != null)
+                    m_States[i].OnEditorValidate();
+            }
+        }
+#endif
     }
 }

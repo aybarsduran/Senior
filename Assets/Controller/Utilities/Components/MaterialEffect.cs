@@ -1,15 +1,19 @@
-using IdenticalStudios;
 using UnityEngine;
 
 namespace IdenticalStudios
 {
+    [DisallowMultipleComponent]
     public class MaterialEffect : MonoBehaviour
     {
         [SerializeField]
         private MaterialEffectInfo m_DefaultEffect;
 
-        [SerializeField, ReorderableList(ListStyle.Boxed, HasLabels = false)]
+        [SpaceArea]
 
+        [SerializeField, ReorderableList(ListStyle.Boxed, HasLabels = false)]
+#if UNITY_EDITOR
+        [EditorButton(nameof(Reset), "Reset", ButtonActivityType.OnEditMode)]
+#endif
         private Renderer[] m_Renderers;
 
         private MaterialEffectInfo m_ActiveEffect;
@@ -105,5 +109,38 @@ namespace IdenticalStudios
 
             return allMaterials;
         }
+
+#if UNITY_EDITOR
+        protected void Reset()
+        {
+            m_Renderers = GetComponentsInChildren<Renderer>(true);
+
+            var meshRenderers = GetComponentsInChildren<MeshRenderer>(true);
+            var skinnedRenderers = GetComponentsInChildren<SkinnedMeshRenderer>(true);
+
+            m_Renderers = new Renderer[meshRenderers.Length + skinnedRenderers.Length];
+
+            meshRenderers.CopyTo(m_Renderers, 0);
+            skinnedRenderers.CopyTo(m_Renderers, meshRenderers.Length);
+
+            m_DefaultEffect = GetDefaultInfo();
+        }
+
+        private MaterialEffectInfo GetDefaultInfo()
+        {
+            var infos = UnityExtensions.FindAndGetAssetOfType<MaterialEffectInfo>();
+
+            if (infos == null || infos.Count == 0)
+                return null;
+
+            foreach (var info in infos)
+            {
+                if (info.name.Contains("Outline"))
+                    return info;
+            }
+
+            return infos[0];
+        }
+#endif
     }
 }

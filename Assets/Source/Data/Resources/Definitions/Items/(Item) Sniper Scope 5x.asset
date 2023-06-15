@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4213430bbd6313b4a89ea1d7e1185c38, type: 3}
+  m_Name: (Item) Sniper Scope 5x
+  m_EditorClassIdentifier: 
+  m_Id: 3098573
+  m_ParentGroup: {fileID: 11400000, guid: bd5e66b46d1176c4aa64403d65c8dc70, type: 2}
+  m_ItemName: Sniper Scope 5x
+  m_Icon: {fileID: 21300000, guid: d7a7d596b55555d459a85a9655e3fbc1, type: 3}
+  m_Pickup: {fileID: 602261639079939396, guid: b13ac0f4caf42194590a800191d5684e, type: 3}
+  m_Description: Attach it to a sniper to increase its ranged visibility.
+  m_Weight: 1
+  m_StackSize: 1
+  m_Tag:
+    m_Value: 0
+  m_Actions: []
+  m_Properties: []
+  m_Data: []
+  references:
+    version: 2
+    RefIds: []

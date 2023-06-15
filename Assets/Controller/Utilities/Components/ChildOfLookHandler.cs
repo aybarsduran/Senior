@@ -1,5 +1,4 @@
-using IdenticalStudios;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,8 +8,10 @@ namespace IdenticalStudios
     {
         public event UnityAction OnMove;
 
-        [SerializeField]
+        [SerializeField, NotNull]
         private Transform m_Parent;
+
+        [SpaceArea]
 
         [SerializeField]
         private Vector3 m_PositionOffset;

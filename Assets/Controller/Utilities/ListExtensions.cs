@@ -86,14 +86,14 @@ namespace IdenticalStudios
                     next = Random.Range(0, array.Length);
                     break;
                 case SelectionType.RandomExcludeLast when array.Length > 1:
-                    {
-                        last = Mathf.Clamp(last, 0, array.Length - 1);
+                {
+                    last = Mathf.Clamp(last, 0, array.Length - 1);
 
-                        (array[0], array[last]) = (array[last], array[0]);
+                    (array[0], array[last]) = (array[last], array[0]);
 
-                        next = Random.Range(1, array.Length);
-                        break;
-                    }
+                    next = Random.Range(1, array.Length);
+                    break;
+                }
                 case SelectionType.Sequence:
                     next = (int)Mathf.Repeat(last + 1, array.Length);
                     break;
@@ -113,7 +113,7 @@ namespace IdenticalStudios
 
         public static T Select<T>(this List<T> list, ref int last, SelectionType selectionMethod = SelectionType.Random)
         {
-            if (list == null || list.Count == 0)
+            if(list == null || list.Count == 0)
                 return default;
 
             int next = 0;
@@ -122,16 +122,16 @@ namespace IdenticalStudios
             {
                 case SelectionType.Random: next = Random.Range(0, list.Count); break;
                 case SelectionType.RandomExcludeLast:
+                {
+                    if (list.Count > 1)
                     {
-                        if (list.Count > 1)
-                        {
-                            last = Mathf.Clamp(last, 0, list.Count - 1);
+                        last = Mathf.Clamp(last, 0, list.Count - 1);
 
-                            (list[0], list[last]) = (list[last], list[0]);
+                        (list[0], list[last]) = (list[last], list[0]);
 
-                            next = Random.Range(1, list.Count);
-                        }
+                        next = Random.Range(1, list.Count);
                     }
+                }
                     break;
                 case SelectionType.Sequence: next = (int)Mathf.Repeat(last + 1, list.Count); break;
             }
@@ -141,7 +141,9 @@ namespace IdenticalStudios
             return list[next];
         }
 
-        //Checks if the index is inside the list's bounds.
+        /// <summary>
+        /// Checks if the index is inside the list's bounds.
+        /// </summary>
         public static bool IndexIsValid<T>(this List<T> list, int index)
         {
             return index >= 0 && index < list.Count;
@@ -263,7 +265,7 @@ namespace IdenticalStudios
                     RemoveAtIndex(ref array, indexOfDuplicate);
                     continue;
                 }
-
+                
                 index++;
             }
         }
@@ -297,13 +299,13 @@ namespace IdenticalStudios
 
     public enum SelectionType
     {
-        // The item will be selected randomly.
+        /// <summary>The item will be selected randomly.</summary>
         Random,
 
-        // The item will be selected randomly, but will exclude the last selected.
+        /// <summary>The item will be selected randomly, but will exclude the last selected.</summary>
         RandomExcludeLast,
-         
-        // The items will be selected in sequence.
+
+        /// <summary>The items will be selected in sequence.</summary>
         Sequence
     }
 }

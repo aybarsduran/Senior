@@ -1,5 +1,3 @@
-using IdenticalStudios.ProceduralMotion;
-using IdenticalStudios;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,12 +22,13 @@ namespace IdenticalStudios.ProceduralMotion
         public Vector3 PivotPosition => m_TargetTransform.localPosition;
         public Quaternion PivotRotation => m_TargetTransform.localRotation;
 
-        //[SerializeField, InLineEditor]
-        [SerializeField]
+        [SerializeField, InLineEditor]
         private Transform m_TargetTransform;
 
         [SerializeField]
         private MixMode m_MixMode = MixMode.FixedLerpUpdate;
+
+        [Title("Offset")]
 
         [SerializeField]
         private Vector3 m_PivotPosition;
