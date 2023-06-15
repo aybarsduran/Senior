@@ -554,13 +554,6 @@ MonoBehaviour:
       m_Calls: []
   m_Maps:
   - Scene:
-      sceneReference: {fileID: 102900000, guid: a6e50490bf36ab04bbf75c74f74ce870, type: 3}
-      sceneName: Showcase
-      scenePath: Assets/Source/Demo/_Scenes/Showcase.unity
-      buildIndex: 1
-    Name: Showcase
-    Sprite: {fileID: 21300000, guid: 169435141e3d86a499b26b81fd0b0ad8, type: 3}
-  - Scene:
       sceneReference: {fileID: 102900000, guid: afcaeb59c360a39479751b5206e7cfa0, type: 3}
       sceneName: Forest
       scenePath: Assets/Source/Demo/_Scenes/Forest.unity

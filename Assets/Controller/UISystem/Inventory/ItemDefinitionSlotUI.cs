@@ -17,6 +17,7 @@ namespace IdenticalStudios.UISystem
         {
             if (itemSlot != null)
             {
+                print("deneme");
                 SetData(itemSlot.Item);
                 m_ItemDefinition = itemSlot.Item.Definition;
             }
@@ -31,6 +32,7 @@ namespace IdenticalStudios.UISystem
         {
             if (itemSlotUI != null)
             {
+                print("deneme");
                 SetData(itemSlotUI.Item);
                 m_ItemDefinition = itemSlotUI.Item?.Definition;
             }

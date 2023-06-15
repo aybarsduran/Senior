@@ -2823,6 +2823,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1283108973904555297, guid: f8cb92a3ebee7074fa030077b95ab21a, type: 3}
+      propertyPath: m_Alpha
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283108973904555297, guid: f8cb92a3ebee7074fa030077b95ab21a, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283108973904555297, guid: f8cb92a3ebee7074fa030077b95ab21a, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1333873842909206235, guid: f8cb92a3ebee7074fa030077b95ab21a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
