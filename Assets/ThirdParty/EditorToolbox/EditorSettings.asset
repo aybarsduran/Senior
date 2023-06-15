@@ -35,7 +35,7 @@ MonoBehaviour:
     smallIcon: {fileID: 2800000, guid: 58fb06efa51905048a9bd4d992d44ac4, type: 3}
     iconName: 
   - dataType: 1
-    name: PolymindGames
+    name: IdenticalStudios
     path: 
     tooltip: 'Here''s where you should place all your definitions.
 

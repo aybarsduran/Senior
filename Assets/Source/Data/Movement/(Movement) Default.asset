@@ -32,27 +32,27 @@ MonoBehaviour:
     - rid: 3692120816393388151
       type: {class: CharacterWalkState, ns: IdenticalStudios.MovementSystem, asm: IdenticalStudios}
       data:
-        m_StepLength: 1.2
-        m_ForwardSpeed: 2.5
+        m_StepLength: 1.3
+        m_ForwardSpeed: 2.8
         m_BackSpeed: 2.5
-        m_SideSpeed: 2.5
+        m_SideSpeed: 2.6
     - rid: 3692120816393388153
       type: {class: CharacterRunState, ns: IdenticalStudios.MovementSystem, asm: IdenticalStudios}
       data:
-        m_StepLength: 1.2
-        m_ForwardSpeed: 2.5
-        m_BackSpeed: 2.5
-        m_SideSpeed: 2.5
-        m_MinRunSpeed: 3
+        m_StepLength: 1.8
+        m_ForwardSpeed: 5.5
+        m_BackSpeed: 3
+        m_SideSpeed: 5
+        m_MinRunSpeed: 1.7
     - rid: 3692120816393388159
       type: {class: CharacterCrouchState, ns: IdenticalStudios.MovementSystem, asm: IdenticalStudios}
       data:
-        m_StepLength: 1.2
-        m_ForwardSpeed: 2.5
-        m_BackSpeed: 2.5
-        m_SideSpeed: 2.5
+        m_StepLength: 0.9
+        m_ForwardSpeed: 1.85
+        m_BackSpeed: 1.7
+        m_SideSpeed: 1.75
         m_CrouchHeight: 1
-        m_CrouchCooldown: 0.3
+        m_CrouchCooldown: 0.15
     - rid: 3692120816393388160
       type: {class: CharacterSlideState, ns: IdenticalStudios.MovementSystem, asm: IdenticalStudios}
       data:
