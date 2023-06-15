@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a04f97834fb4a4f9d55ef1108c779e, type: 3}
   m_Name: Building
   m_EditorClassIdentifier: 
-  m_GroupName: 
-  m_Members: []
+  m_GroupName: Building
+  m_Members:
+  - {fileID: 0}
   m_Icon: {fileID: 0}

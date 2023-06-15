@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef2ae37d7adb5449a2901724ac2c1e9, type: 3}
   m_Name: Cloth
   m_EditorClassIdentifier: 
-  m_BuildMaterialName: 
+  m_BuildMaterialName: Cloth
   m_Icon: {fileID: 0}
   m_UseAudio:
     m_Volume: 0.65

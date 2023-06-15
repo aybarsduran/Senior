@@ -16,20 +16,20 @@ MonoBehaviour:
   m_MotionData:
   - State: -1
     Data:
-    - rid: 3692120792855740416
-    - rid: 3692120792855740417
+    - rid: 858674932983791616
+    - rid: 858674932983791617
   references:
     version: 2
     RefIds:
-    - rid: 3692120792855740416
-      type: {class: NoiseMotionData, ns: IdenticalStudios.ProceduralMotion, asm: Assembly-CSharp}
+    - rid: 858674932983791616
+      type: {class: NoiseMotionData, ns: IdenticalStudios.ProceduralMotion, asm: IdenticalStudios}
       data:
         m_NoiseSpeed: 1
         m_NoiseJitter: 0
         m_PositionAmplitude: {x: 0, y: 0, z: 0}
         m_RotationAmplitude: {x: 0, y: 0, z: 0}
-    - rid: 3692120792855740417
-      type: {class: RetractionMotionData, ns: IdenticalStudios.ProceduralMotion, asm: Assembly-CSharp}
+    - rid: 858674932983791617
+      type: {class: RetractionMotionData, ns: IdenticalStudios.ProceduralMotion, asm: IdenticalStudios}
       data:
         m_RetractionDistance: 0.55
         m_PositionSpring:

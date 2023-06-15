@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16622b96e87935f4b990ac04f9aeeebc, type: 3}
   m_Name: (Buildable)
   m_EditorClassIdentifier: 
-  m_ParentGroup: {fileID: 0}
+  m_ParentGroup: {fileID: 11400000, guid: 9cb4926cb4200364d86598d7d5dab037, type: 2}
   m_BuildableName: 
   m_Icon: {fileID: 0}
   m_Prefab: {fileID: 0}
