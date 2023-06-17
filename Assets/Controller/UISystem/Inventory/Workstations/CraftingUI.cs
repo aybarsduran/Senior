@@ -146,7 +146,11 @@ namespace IdenticalStudios.UISystem
                 if (item.TryGetDataOfType<CraftingData>(out var data) && data.IsCraftable)
                 {
                     if (m_CraftableItemsDictionary.TryGetValue(data.CraftLevel, out var list))
+                    {
                         list.Add(item);
+                        Debug.Log(item.name);
+                        Debug.Log(data.CraftLevel);
+                    }
                     else
                     {
                         list = new List<ItemDefinition>() { item };

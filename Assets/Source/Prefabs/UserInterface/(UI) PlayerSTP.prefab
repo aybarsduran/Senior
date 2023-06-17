@@ -1630,10 +1630,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4382399603920198834, guid: 2de709ba65d95024d816bddad286c450, type: 3}
-      propertyPath: m_text
-      value: Pick Up
-      objectReference: {fileID: 0}
     - target: {fileID: 7344060337067234677, guid: 2de709ba65d95024d816bddad286c450, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2827,18 +2823,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1283108973904555297, guid: f8cb92a3ebee7074fa030077b95ab21a, type: 3}
-      propertyPath: m_Alpha
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1283108973904555297, guid: f8cb92a3ebee7074fa030077b95ab21a, type: 3}
-      propertyPath: m_Interactable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1283108973904555297, guid: f8cb92a3ebee7074fa030077b95ab21a, type: 3}
-      propertyPath: m_BlocksRaycasts
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1333873842909206235, guid: f8cb92a3ebee7074fa030077b95ab21a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3858,6 +3842,22 @@ PrefabInstance:
     - target: {fileID: 6399799853908858707, guid: f8cb92a3ebee7074fa030077b95ab21a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412873366314895914, guid: f8cb92a3ebee7074fa030077b95ab21a, type: 3}
+      propertyPath: m_InspectionStarted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: IdenticalStudios.UISystem.SelectableGroupBaseUI, IdenticalStudios
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412873366314895914, guid: f8cb92a3ebee7074fa030077b95ab21a, type: 3}
+      propertyPath: m_InspectionStopped.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: IdenticalStudios.UISystem.SelectableGroupBaseUI, IdenticalStudios
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412873366314895914, guid: f8cb92a3ebee7074fa030077b95ab21a, type: 3}
+      propertyPath: m_InspectionStarted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: IdenticalStudios.UISystem.SelectableUI, IdenticalStudios
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412873366314895914, guid: f8cb92a3ebee7074fa030077b95ab21a, type: 3}
+      propertyPath: m_InspectionStopped.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: IdenticalStudios.UISystem.SelectableUI, IdenticalStudios
       objectReference: {fileID: 0}
     - target: {fileID: 6420445324706678246, guid: f8cb92a3ebee7074fa030077b95ab21a, type: 3}
       propertyPath: m_SizeDelta.x
