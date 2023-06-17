@@ -2241,7 +2241,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exit Game
+  m_text: "Ex\u0131t Game"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33d5581bf6dc6814baf38f0b29fd1f54, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 52b0b28f70223da4e8ddeb16565746d9, type: 2}
@@ -2916,7 +2916,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Settings
+  m_text: "Sett\u0131ngs"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33d5581bf6dc6814baf38f0b29fd1f54, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 52b0b28f70223da4e8ddeb16565746d9, type: 2}

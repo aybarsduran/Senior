@@ -563,6 +563,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2220042922635801444, guid: 489bbf5f5e3317746a2725c3ce133208, type: 3}
+      propertyPath: m_text
+      value: "Sett\u0131ngs"
+      objectReference: {fileID: 0}
     - target: {fileID: 2720717704329342848, guid: 489bbf5f5e3317746a2725c3ce133208, type: 3}
       propertyPath: m_HideAnimation.m_Tweens.Array.data[0]
       value: 3692120816393388033

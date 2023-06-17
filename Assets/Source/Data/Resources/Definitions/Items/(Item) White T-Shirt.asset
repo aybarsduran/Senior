@@ -36,13 +36,19 @@ MonoBehaviour:
     - rid: 3692120816393388215
       type: {class: CraftingData, ns: IdenticalStudios.InventorySystem, asm: IdenticalStudios}
       data:
-        m_Blueprint: []
+        m_Blueprint:
+        - Item:
+            m_Value: 8505358
+          Amount: 5
+        - Item:
+            m_Value: 9727006
+          Amount: 2
         m_CraftAmount: 1
         m_CraftDuration: 3
-        m_CraftLevel: 0
+        m_CraftLevel: 1
         m_DismantleEfficiency: 0.75
     - rid: 3692120816393388216
       type: {class: FuelData, ns: IdenticalStudios.InventorySystem, asm: IdenticalStudios}
       data:
-        m_MinFuel: 30
-        m_MaxFuel: 40
+        m_MinFuel: 65
+        m_MaxFuel: 86

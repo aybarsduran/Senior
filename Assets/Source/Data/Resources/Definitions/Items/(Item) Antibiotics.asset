@@ -36,8 +36,8 @@ MonoBehaviour:
     - rid: 3692120816393388179
       type: {class: VitalsData, ns: IdenticalStudios.InventorySystem, asm: IdenticalStudios}
       data:
-        m_MinHealthChange: 0
-        m_MaxHealthChange: 0
+        m_MinHealthChange: 40
+        m_MaxHealthChange: 60
         m_MinHungerChange: 0
         m_MaxHungerChange: 0
         m_MinThirstChange: 0

@@ -35,10 +35,10 @@ MonoBehaviour:
       type: {class: BuildMaterialData, ns: IdenticalStudios.InventorySystem, asm: IdenticalStudios}
       data:
         m_BuildMaterial:
-          m_Value: 0
+          m_Value: -8615515
         m_MaterialCount: 1
     - rid: 3692120816393388189
       type: {class: FuelData, ns: IdenticalStudios.InventorySystem, asm: IdenticalStudios}
       data:
-        m_MinFuel: 30
-        m_MaxFuel: 40
+        m_MinFuel: 8
+        m_MaxFuel: 12

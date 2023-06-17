@@ -142,7 +142,7 @@ namespace IdenticalStudios.UISystem
             int craftableItemsCount = 0;
 
             foreach (var item in ItemDefinition.Definitions)
-            {
+            {   
                 if (item.TryGetDataOfType<CraftingData>(out var data) && data.IsCraftable)
                 {
                     if (m_CraftableItemsDictionary.TryGetValue(data.CraftLevel, out var list))
@@ -161,10 +161,9 @@ namespace IdenticalStudios.UISystem
         }
 
         private void InitializeCraftingSlots()
-        {
+        {    
             int instancesCount = Mathf.Min(m_MaxTemplateInstanceCount, m_CraftingItemsCount);
             m_CachedSlots = new ItemDefinitionSlotUI[instancesCount];
-
             var spawnRoot = m_ItemsSpawnRoot.transform;
             for (int i = 0; i < instancesCount; i++)
             {

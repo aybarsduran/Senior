@@ -38,7 +38,10 @@ MonoBehaviour:
     - rid: 3692120816393388220
       type: {class: CraftingData, ns: IdenticalStudios.InventorySystem, asm: IdenticalStudios}
       data:
-        m_Blueprint: []
+        m_Blueprint:
+        - Item:
+            m_Value: 9878845
+          Amount: 5
         m_CraftAmount: 1
         m_CraftDuration: 3
         m_CraftLevel: 0

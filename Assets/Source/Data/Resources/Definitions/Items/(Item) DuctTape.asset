@@ -32,5 +32,5 @@ MonoBehaviour:
     - rid: 3692120816393388186
       type: {class: FuelData, ns: IdenticalStudios.InventorySystem, asm: IdenticalStudios}
       data:
-        m_MinFuel: 30
-        m_MaxFuel: 40
+        m_MinFuel: 15
+        m_MaxFuel: 20

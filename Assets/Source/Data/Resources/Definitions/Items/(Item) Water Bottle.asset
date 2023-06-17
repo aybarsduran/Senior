@@ -35,9 +35,9 @@ MonoBehaviour:
       data:
         m_MinHealthChange: 0
         m_MaxHealthChange: 0
-        m_MinHungerChange: 0
+        m_MinHungerChange: 5
         m_MaxHungerChange: 0
-        m_MinThirstChange: 0
-        m_MaxThirstChange: 0
-        m_MinEnergyChange: 0
-        m_MaxEnergyChange: 0
+        m_MinThirstChange: 55
+        m_MaxThirstChange: 76
+        m_MinEnergyChange: 15
+        m_MaxEnergyChange: 25

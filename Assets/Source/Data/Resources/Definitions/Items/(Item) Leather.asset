@@ -33,5 +33,5 @@ MonoBehaviour:
       type: {class: BuildMaterialData, ns: IdenticalStudios.InventorySystem, asm: IdenticalStudios}
       data:
         m_BuildMaterial:
-          m_Value: 0
+          m_Value: -6458467
         m_MaterialCount: 1

@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Source/Demo/_Scenes/MainMenu.unity
     guid: 879e3b3dc7c20b1468f9bcced58b7289
   - enabled: 1
-    path: Assets/Source/Demo/_Scenes/Showcase.unity
-    guid: a6e50490bf36ab04bbf75c74f74ce870
-  - enabled: 1
     path: Assets/Source/Demo/_Scenes/Forest.unity
     guid: afcaeb59c360a39479751b5206e7cfa0
   m_configObjects:
